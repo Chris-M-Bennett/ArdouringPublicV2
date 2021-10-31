@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public static Dictionary<int, int> EmotionStrengths = new Dictionary<int, int>();
     // Start is called before the first frame update
     
-    void Start()
+    void Awake()
     {
         DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene("MainMenu");
