@@ -66,7 +66,7 @@ namespace Player{
         public void RunButton()
         {
             if(debateSystem.state == DebateState.Player){
-                debateSystem.state = DebateState.Lost;
+                StartCoroutine(debateSystem.EndDebate());
                 //SceneManager.LoadSceneAsync("Overworld");
             }
         }

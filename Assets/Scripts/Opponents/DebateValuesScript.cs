@@ -10,6 +10,7 @@ public class DebateValuesScript : MonoBehaviour
      public int maxES;
      public int currentES;
      public int emotionInt;
+     public int playerExp;
      public OpponentThresholds emotionThresholds;
      // Start is called before the first frame update
     void Start()
@@ -17,6 +18,11 @@ public class DebateValuesScript : MonoBehaviour
         if (CompareTag("Player")) {
             maxES = PlayerPrefs.GetInt("playerMax", 100);
             currentES = PlayerPrefs.GetInt("playerES", maxES);
+            debaterLevel = PlayerPrefs.GetInt("level", 1);
+        }
+        emotionInt = Random.Range(0,3);
+        if(emotionThresholds){
+            GetComponent<SpriteRenderer>().sprite = emotionThresholds.emotionSprites[emotionInt];
         }
     }
     

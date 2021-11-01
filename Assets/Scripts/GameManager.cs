@@ -1,7 +1,5 @@
-﻿﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,8 +12,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        SceneManager.LoadScene("MainMenu");
-        
+
         EmotionStrengths.Add(0,1);
         EmotionStrengths.Add(1,2);
         EmotionStrengths.Add(2,3);
