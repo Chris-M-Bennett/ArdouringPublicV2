@@ -13,10 +13,10 @@ namespace Player{
         // Start is called before the first frame update
         private void Start()
         {
-            if (GameManager.newGame)
+            if (GameManager.NewGame)
             {
                 transform.position = startPosition;
-                GameManager.newGame = false;
+                GameManager.NewGame = false;
             }
             else
             {
@@ -49,7 +49,7 @@ namespace Player{
 
             Collider2D hit = Physics2D.OverlapCircle(_currentPosition, 0.5f, opponentMask);
             if (Input.GetButtonDown("Activate") && hit){
-                GameManager.currentOpponent = hit.gameObject;
+                GameManager.CurrentOpponent = hit.gameObject;
                 PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                 PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
                 SceneManager.LoadSceneAsync("Debate");

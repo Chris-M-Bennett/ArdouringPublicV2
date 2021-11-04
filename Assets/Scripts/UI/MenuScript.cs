@@ -6,7 +6,7 @@ namespace UI{
     public class MenuScript : MonoBehaviour
     {
         public void NewGame(){
-            GameManager.newGame = true;
+            GameManager.NewGame = true;
             SceneManager.LoadSceneAsync("Overworld");
         }
         

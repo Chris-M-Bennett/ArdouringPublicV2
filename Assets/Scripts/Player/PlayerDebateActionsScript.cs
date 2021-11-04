@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Opponents;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -107,12 +109,12 @@ namespace Player{
             if (GameManager.EmotionStrengths[opponentEmot] == emotion)
             {
                 notifyText.text = "It was super effective";
-                opponentES -= _playerDamage * global::PlayerDebateActionsScript.NORMAL_MULT;
+                opponentES -= _playerDamage * global::Player.PlayerDebateActionsScript.NORMAL_MULT;
             }
             else
             {
                 notifyText.text = "It was ineffective";
-                opponentES += _playerDamage * global::PlayerDebateActionsScript.NORMAL_MULT;
+                opponentES += _playerDamage * global::Player.PlayerDebateActionsScript.NORMAL_MULT;
             }
 
             if (opponentES > _opponentValues.maxES)

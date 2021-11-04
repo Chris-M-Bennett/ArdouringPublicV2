@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [HideInInspector] public static GameObject currentOpponent;
-    [HideInInspector] public static bool newGame;
+    [HideInInspector] public static GameObject CurrentOpponent;
+    [HideInInspector] public static bool NewGame;
 
     public static Dictionary<int, int> EmotionStrengths = new Dictionary<int, int>();
     // Start is called before the first frame update

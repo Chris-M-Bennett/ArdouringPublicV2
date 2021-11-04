@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Opponents;
 using UnityEngine;
 using UnityEngine.UI;
 
