@@ -24,6 +24,7 @@ namespace System
         private bool _playerHadTurn = false;
         private DebateValuesScript _playerValues;
         private DebateValuesScript _opponentValues;
+        private int opponentPrevES;
         public bool PlayerHadTurn
         {
             get => _playerHadTurn;
@@ -40,6 +41,7 @@ namespace System
 
             opponentGO = Instantiate(opponentPrefab, opponentSpawn);
             _opponentValues = opponentGO.GetComponent<DebateValuesScript>();
+            opponentPrevES = _opponentValues.currentES;
 
             playerHUD.SetHUD(_playerValues);
             opponentHUD.SetHUD(_opponentValues);
@@ -60,7 +62,6 @@ namespace System
             }
 
             StartCoroutine(DamageAnim(opponentGO));
-            _opponentValues.CheckThreshold();
             if (_opponentValues.currentES <= 0)
             {
                 state = DebateState.Won;
@@ -76,9 +77,10 @@ namespace System
 
         IEnumerator OpponentTurn()
         {
+            _opponentValues.CheckThreshold(opponentPrevES);
             _playerValues.currentES -= _opponentValues.debaterDamage;
-            notifyText.text =
-                $"{_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
+            notifyText.text +=
+                $" {_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
             StartCoroutine(DamageAnim(player));
             playerHUD.SetES(_playerValues.currentES);
             if (_playerValues.currentES <= 0)
@@ -92,7 +94,8 @@ namespace System
                 PlayerHadTurn = false;
                 StartCoroutine(PlayerTurn());
             }
-
+            
+            opponentPrevES = _opponentValues.currentES;
             yield return null;
         }
 
@@ -129,7 +132,6 @@ namespace System
             Vector2 dir = new Vector2(0.1f, 0);
             while (i < 6)
             {
-                //Debug.Log(dir);
                 debaterGO.transform.Translate(dir);
                 dir *= -1;
                 i++;

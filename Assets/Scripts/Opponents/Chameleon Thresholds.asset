@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e19564ab5f4ed7bcb6b57a2cd0ef4e, type: 3}
   m_Name: Chameleon Thresholds
   m_EditorClassIdentifier: 
-  thresholds: 190000003200000046000000
+  thresholds: 14000000230000004100000050000000
   emotionSprites:
   - {fileID: 21300000, guid: b6fc477fae3155a4d94794f1f37a4e1c, type: 3}
   - {fileID: 21300000, guid: bbf5f66c281e83d49831b466140f2dec, type: 3}

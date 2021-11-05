@@ -4,14 +4,14 @@ namespace Opponents
 {
     public class DebateValuesScript : MonoBehaviour  
     {
-        public string debaterName;
-        public int debaterLevel;
-        public int debaterDamage;
-        public int maxES;
-        public int currentES;
-        public int emotionInt;
-        [Header("Only used for player")]public int playerExp;
-        public OpponentThresholds emotionThresholds;
+        [Header("Name of this debater")]public string debaterName;
+        [Header("Level of this debater. DO NOT CHANGE ON PLAYER")]public int debaterLevel;
+        [Header("Damage this debater does to their opponent's ES")]public int debaterDamage;
+        [Header("Maximum amount of ES this debater can have")]public int maxES;
+        [HideInInspector] public int currentES = 50;
+        [Header("Number for the emotion this debater starts in. Happy=0 Angry=1 Sad=2 Anxiety=3")]public int emotionInt;
+        [HideInInspector]public int playerExp;
+        [Header("Thresholds Scriptable Object '{}' for this opponent. The player does not have one")]public OpponentThresholds emotionThresholds;
 
         private SpriteRenderer _spriteRenderer;
 
@@ -30,21 +30,22 @@ namespace Opponents
             }
         }
 
-        public void CheckThreshold()
+        public void CheckThreshold(int prevES)
         {
             var thresh = emotionThresholds.thresholds;
-            if(currentES > 0 && currentES <= thresh[0])
+            /*if(currentES > thresh[0] && currentES <= thresh[0])
             {
                 emotionInt = Random.Range(0,3);
             }
             else if (currentES > maxES && currentES <= thresh[thresh.Count-1])
             {
                 emotionInt = Random.Range(0,3);
-            }else{
-                for (int i = 1; i < thresh.Count-1; i++)
+            }else{*/
+            for (int i = 1; i < thresh.Count-1; i++)
+            {
+                if (prevES >= thresh[i] && currentES < thresh[i])
                 {
-                    if(currentES > thresh[i] && currentES <= thresh[i+1])
-                        emotionInt = Random.Range(0,3);
+                    emotionInt = Random.Range(0, 3);
                 }
             }
             _spriteRenderer.sprite = emotionThresholds.emotionSprites[emotionInt];

@@ -179,8 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 135361c15bbbeee45a276b12df2db9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.001
-  runSpeedDif: 0.004
+  moveSpeed: 0.005
+  runSpeedDif: 0.005
   opponentMask:
     serializedVersion: 2
     m_Bits: 256

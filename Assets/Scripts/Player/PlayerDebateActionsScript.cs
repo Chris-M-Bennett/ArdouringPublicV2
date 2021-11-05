@@ -1,11 +1,11 @@
 ﻿using System;
 using Opponents;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Player{
-    public partial class PlayerDebateActionsScript : MonoBehaviour
+    public class PlayerDebateActionsScript : MonoBehaviour
     {
         [SerializeField] private Text notifyText;
         [SerializeField] private DebateHUDScript opponentHUD;
@@ -14,6 +14,7 @@ namespace Player{
         private static DebateValuesScript _opponentValues;
         private static int _playerDamage;
         private DebateState _turnState;
+        [SerializeField] private int strongMult = 2;
 
         public bool playerHadTurn;
 
@@ -69,7 +70,6 @@ namespace Player{
         {
             if(debateSystem.state == DebateState.Player){
                 StartCoroutine(debateSystem.EndDebate());
-                //SceneManager.LoadSceneAsync("Overworld");
             }
         }
 
@@ -104,17 +104,34 @@ namespace Player{
 
         void OpponentESChange(int emotion)
         {
+            int randDamage = Random.Range(-5, 5);
+            int normalDamage = _playerDamage + randDamage;
+            int strongDamage = normalDamage * strongMult;
             var opponentES = _opponentValues.currentES;
             var opponentEmot = _opponentValues.emotionInt;
-            if (GameManager.EmotionStrengths[opponentEmot] == emotion)
+            if (GameManager.EmotionStrengths[opponentEmot][0] == emotion)
             {
-                notifyText.text = "It was super effective";
-                opponentES -= _playerDamage * global::Player.PlayerDebateActionsScript.NORMAL_MULT;
+                notifyText.text = $"It was ineffective! {_opponentValues.debaterName} regained {normalDamage} points " +
+                                  $"of emotional stability.";
+                opponentES += normalDamage; 
+            }
+            else if (GameManager.EmotionStrengths[opponentEmot][1] == emotion)
+            {
+                notifyText.text = $"It was super effective! You dealt {strongDamage} points of emotional strain " +
+                                  $"to {_opponentValues.debaterName}.";
+                opponentES -= strongDamage;
+            }
+            else if (GameManager.EmotionStrengths[opponentEmot][2] == emotion)
+            {
+                notifyText.text = $"It was quite effective! You dealt {normalDamage} points of emotional strain " +
+                                  $"to {_opponentValues.debaterName}.";
+                opponentES -= normalDamage;
             }
             else
             {
-                notifyText.text = "It was ineffective";
-                opponentES += _playerDamage * global::Player.PlayerDebateActionsScript.NORMAL_MULT;
+                notifyText.text = $"It wasn't very effective! You dealt {randDamage} points of emotional strain " +
+                                  $"to {_opponentValues.debaterName}.";
+                opponentES -= randDamage;
             }
 
             if (opponentES > _opponentValues.maxES)

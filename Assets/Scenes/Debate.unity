@@ -1814,7 +1814,6 @@ MonoBehaviour:
   notifyText: {fileID: 497553}
   playerHUD: {fileID: 1905485770}
   opponentHUD: {fileID: 167449089}
-  playerHadTurn: 0
   opponentGO: {fileID: 0}
   state: 0
 --- !u!1 &1250096220
@@ -3260,6 +3259,7 @@ MonoBehaviour:
   notifyText: {fileID: 497553}
   opponentHUD: {fileID: 167449089}
   debateSystem: {fileID: 0}
+  strongMult: 2
   playerHadTurn: 0
 --- !u!114 &1905485770
 MonoBehaviour:
@@ -3873,7 +3873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debaterName: Protag
   debaterLevel: 1
-  debaterDamage: 5
+  debaterDamage: 7
   maxES: 100
   currentES: 100
   emotionInt: 0
