@@ -51,12 +51,12 @@ namespace Player{
             CheckPlayerTurn(0);
         }
 
-        public void AngryButton()
+        public void SadButton()
         {
             CheckPlayerTurn(1);
         }
-
-        public void SadButton()
+        
+        public void AngryButton()
         {
             CheckPlayerTurn(2);
         }

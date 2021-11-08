@@ -45,7 +45,10 @@ namespace Opponents
             {
                 if (prevES >= thresh[i] && currentES < thresh[i])
                 {
-                    emotionInt = Random.Range(0, 3);
+                    int prevEmot = emotionInt;
+                    while(emotionInt == prevEmot){
+                        emotionInt = Random.Range(0, 3);
+                    }
                 }
             }
             _spriteRenderer.sprite = emotionThresholds.emotionSprites[emotionInt];
