@@ -143,7 +143,7 @@ namespace Player{
                 opponentES = 0;
             }
             _opponentValues.currentES = opponentES;
-            opponentHUD.SetES(opponentES);
+            opponentHUD.SetES(_opponentValues);
             debateSystem.PlayerHadTurn = true;
         }
     }

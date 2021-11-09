@@ -1,21 +1,25 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 namespace Player{
-    public class PlayerOverworldControls : MonoBehaviour
+    public partial class PlayerOverworldControls : MonoBehaviour
     {
         private Vector3 _currentPosition;
         private bool _isRunning = false;
-        [SerializeField] private float moveSpeed = 0.001f;
-        [SerializeField] private float runSpeedDif = 0.004f;
+        [SerializeField] private float moveSpeed = 0.005f;
+        [SerializeField] private float runSpeedDif = 0.005f;
         [SerializeField] private LayerMask opponentMask;
         [SerializeField] private Vector2 startPosition;
+        [SerializeField] private GameObject infoOverlay;
+        [SerializeField] private Text infoText;
         // Start is called before the first frame update
         private void Start()
         {
             if (GameManager.NewGame)
             {
                 transform.position = startPosition;
+                infoText.text = _moveControls;
                 GameManager.NewGame = false;
             }
             else
@@ -48,11 +52,24 @@ namespace Player{
             transform.position = _currentPosition;
 
             Collider2D hit = Physics2D.OverlapCircle(_currentPosition, 0.5f, opponentMask);
-            if (Input.GetButtonDown("Activate") && hit){
-                GameManager.CurrentOpponent = hit.gameObject;
-                PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
-                PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
-                SceneManager.LoadSceneAsync("Debate");
+            if (hit)
+            {
+                infoText.text = _activateControls;
+                infoOverlay.SetActive(true);
+                if (Input.GetButtonDown("Activate"))
+                {
+                    GameManager.CurrentOpponent = hit.gameObject;
+                    PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
+                    PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
+                    SceneManager.LoadSceneAsync("Debate");
+                }
+            }
+            else
+            {
+                if (infoText.text == _activateControls)
+                {
+                    infoOverlay.SetActive(false);
+                }
             }
         }
     }

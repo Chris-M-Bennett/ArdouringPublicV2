@@ -82,7 +82,7 @@ namespace System
             notifyText.text +=
                 $" {_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
             StartCoroutine(DamageAnim(player));
-            playerHUD.SetES(_playerValues.currentES);
+            playerHUD.SetES(_playerValues);
             if (_playerValues.currentES <= 0)
             {
                 state = DebateState.Lost;
