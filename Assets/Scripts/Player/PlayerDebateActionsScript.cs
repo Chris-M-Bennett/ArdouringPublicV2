@@ -9,8 +9,8 @@ namespace Player{
     {
         [SerializeField] private Text notifyText;
         [SerializeField] private DebateHUDScript opponentHUD;
-        [SerializeField] private DebateSystemScript debateSystem;
-        private GameObject opponentGO;
+        private DebateSystemScript _debateSystem;
+        private GameObject _opponentGO;
         private static DebateValuesScript _opponentValues;
         private static int _playerDamage;
         private DebateState _turnState;
@@ -20,11 +20,11 @@ namespace Player{
 
         private void Start()
         {
-            debateSystem = GetComponentInParent<DebateSystemScript>();
-            opponentGO = GetComponentInParent<DebateSystemScript>().opponentGO;
-            if (opponentGO.GetComponent<DebateValuesScript>())
+            _debateSystem = GetComponentInParent<DebateSystemScript>();
+            _opponentGO = GetComponentInParent<DebateSystemScript>().opponentGO;
+            if (_opponentGO.GetComponent<DebateValuesScript>())
             {
-                _opponentValues = opponentGO.GetComponent<DebateValuesScript>();
+                _opponentValues = _opponentGO.GetComponent<DebateValuesScript>();
             }
             else
             {
@@ -42,7 +42,7 @@ namespace Player{
     }*/
 
         private void CheckPlayerTurn(int emotion){
-            if(debateSystem.state == DebateState.Player){
+            if(_debateSystem.state == DebateState.Player){
                 OpponentESChange(emotion);
             }
         }
@@ -68,8 +68,8 @@ namespace Player{
 
         public void RunButton()
         {
-            if(debateSystem.state == DebateState.Player){
-                StartCoroutine(debateSystem.EndDebate());
+            if(_debateSystem.state == DebateState.Player){
+                StartCoroutine(_debateSystem.EndDebate());
             }
         }
 
@@ -144,7 +144,7 @@ namespace Player{
             }
             _opponentValues.currentES = opponentES;
             opponentHUD.SetES(_opponentValues);
-            debateSystem.PlayerHadTurn = true;
+            _debateSystem.PlayerHadTurn = true;
         }
     }
 }

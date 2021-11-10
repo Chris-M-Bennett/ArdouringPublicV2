@@ -1,13 +1,14 @@
 using System.Collections;
 using Opponents;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.SceneManagement;
 
 namespace System
 {
     public enum DebateState {Start, Player, Opponent, Won, Lost}
 
-    public class DebateSystemScript : MonoBehaviour
+    public partial class DebateSystemScript : MonoBehaviour
     {
         [SerializeField, Header("The Player game object in the scene")]
         private GameObject player;
@@ -24,7 +25,7 @@ namespace System
         private bool _playerHadTurn = false;
         private DebateValuesScript _playerValues;
         private DebateValuesScript _opponentValues;
-        private int opponentPrevES;
+        private int _opponentPrevES;
         public bool PlayerHadTurn
         {
             get => _playerHadTurn;
@@ -41,18 +42,25 @@ namespace System
 
             opponentGO = Instantiate(opponentPrefab, opponentSpawn);
             _opponentValues = opponentGO.GetComponent<DebateValuesScript>();
-            opponentPrevES = _opponentValues.currentES;
+            _opponentPrevES = _opponentValues.currentES;
 
             playerHUD.SetHUD(_playerValues);
             opponentHUD.SetHUD(_opponentValues);
             state = DebateState.Player;
             StartCoroutine(PlayerTurn());
+            if (GameManager.tutorials)
+            {
+                notifyText.text =
+                    $"It's your turn. Selected an emotion button from your panel to debate with the creature.";
+                notifyText.text += EmotionDescript(_opponentValues.emotionInt);
+
+            }
         }
 
         /// <summary>
-        /// Co-routine for the player's turn
+        /// Co-routine for player's turn
         /// </summary>
-        /// <returns></returns>
+        /// <returns>5 second wait before opponent's turn</returns>
         IEnumerator PlayerTurn()
         {
             //Waits for Boolean to be set by PLayer Actions script
@@ -75,9 +83,13 @@ namespace System
             }
         }
 
+        /// <summary>
+        /// Co-routine for opponent's turn
+        /// </summary>
+        /// <returns></returns>
         IEnumerator OpponentTurn()
         {
-            _opponentValues.CheckThreshold(opponentPrevES);
+            _opponentValues.CheckThreshold(_opponentPrevES);
             _playerValues.currentES -= _opponentValues.debaterDamage;
             notifyText.text +=
                 $" {_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
@@ -95,7 +107,7 @@ namespace System
                 StartCoroutine(PlayerTurn());
             }
             
-            opponentPrevES = _opponentValues.currentES;
+            _opponentPrevES = _opponentValues.currentES;
             yield return null;
         }
 
@@ -126,6 +138,11 @@ namespace System
             SceneManager.LoadSceneAsync("Overworld");
         }
 
+        /// <summary>
+        /// Co-routine to make damaged debater appear to stagger
+        /// </summary>
+        /// <param name="debaterGO"></param>
+        /// <returns>100 millisecond wait before moving position</returns>
         IEnumerator DamageAnim(GameObject debaterGO)
         {
             int i = 0;
@@ -137,6 +154,50 @@ namespace System
                 i++;
                 yield return new WaitForSeconds(0.1f);
             }
+        }
+
+
+        private string EmotionDescript(int emotInt)
+        {
+            string colour ="";
+            string emot = "";
+            string very ="";
+            string fairly ="";
+            string barely ="";
+            if (emotInt == 0)
+            {
+                colour = "Green";
+                emot = "happy";
+                very = "sad";
+                fairly = "angry";
+                barely = "afraid";
+            }else if (emotInt == 1)
+            {
+                colour = "Blue";
+                emot = "sad";
+                very = "angry";
+                fairly = "afraid";
+                barely = "happy";
+            }else if (emotInt == 2)
+            {
+                colour = "Red";
+                emot = "angry";
+                very = "afraid";
+                fairly = "happy";
+                barely = "sad";
+            }else if (emotInt == 3)
+            {
+                colour = "Red";
+                emot = "afraid";
+                very = "happy";
+                fairly = "sad";
+                barely = "angry";
+            }else
+            {
+                Debug.LogError("Invalid emotion supplied to EmotionDescript function!");
+                return null;
+            }
+            return $"{colour} opponents are {emot} and are very weak to {very} actions, fairly weak to {fairly} actions, and barely weak to {barely} actions";
         }
     }
 }

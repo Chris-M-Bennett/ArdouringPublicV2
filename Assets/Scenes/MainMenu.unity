@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 34465631}
   m_Layer: 0
   m_Name: DDOL
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90b6e9edc8b4b6ba0281de5bd695bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorials: 1
 --- !u!4 &34465632
 Transform:
   m_ObjectHideFlags: 0

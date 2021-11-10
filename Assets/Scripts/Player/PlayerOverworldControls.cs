@@ -54,8 +54,12 @@ namespace Player{
             Collider2D hit = Physics2D.OverlapCircle(_currentPosition, 0.5f, opponentMask);
             if (hit)
             {
-                infoText.text = _activateControls;
                 infoOverlay.SetActive(true);
+                infoText.text = hit.gameObject.name;
+                if (GameManager.tutorials)
+                {
+                    infoText.text += $"\n\n{_activateControls}";
+                }
                 if (Input.GetButtonDown("Activate"))
                 {
                     GameManager.CurrentOpponent = hit.gameObject;
@@ -64,12 +68,14 @@ namespace Player{
                     SceneManager.LoadSceneAsync("Debate");
                 }
             }
+            else if (GameManager.tutorials)
+            {
+                infoOverlay.SetActive(true);
+                infoText.text = _moveControls;
+            }
             else
             {
-                if (infoText.text == _activateControls)
-                {
-                    infoOverlay.SetActive(false);
-                }
+                infoOverlay.SetActive(false);
             }
         }
     }
