@@ -1,7 +1,6 @@
 using System.Collections;
 using Opponents;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.SceneManagement;
 
 namespace System
@@ -48,13 +47,6 @@ namespace System
             opponentHUD.SetHUD(_opponentValues);
             state = DebateState.Player;
             StartCoroutine(PlayerTurn());
-            if (GameManager.tutorials)
-            {
-                notifyText.text =
-                    $"It's your turn. Selected an emotion button from your panel to debate with the creature.";
-                notifyText.text += EmotionDescript(_opponentValues.emotionInt);
-
-            }
         }
 
         /// <summary>
@@ -63,6 +55,14 @@ namespace System
         /// <returns>5 second wait before opponent's turn</returns>
         IEnumerator PlayerTurn()
         {
+            if (GameManager.tutorials)
+            {
+                int opponentEmot = _opponentValues.emotionInt;
+                notifyText.text =
+                    $"It's your turn! Selected an emotion button from your panel to debate with the creature.\n";
+                notifyText.text += EmotionDescript(opponentEmot);
+            }
+            
             //Waits for Boolean to be set by PLayer Actions script
             while (PlayerHadTurn == false)
             {
@@ -108,7 +108,7 @@ namespace System
             }
             
             _opponentPrevES = _opponentValues.currentES;
-            yield return null;
+            yield return new WaitForSeconds(1f);
         }
 
         public IEnumerator EndDebate()
@@ -159,11 +159,12 @@ namespace System
 
         private string EmotionDescript(int emotInt)
         {
-            string colour ="";
-            string emot = "";
-            string very ="";
-            string fairly ="";
-            string barely ="";
+            string colour;
+            string emot;
+            string very;
+            string fairly;
+            string barely;
+            Debug.Log(emotInt);
             if (emotInt == 0)
             {
                 colour = "Green";
@@ -197,7 +198,8 @@ namespace System
                 Debug.LogError("Invalid emotion supplied to EmotionDescript function!");
                 return null;
             }
-            return $"{colour} opponents are {emot} and are very weak to {very} actions, fairly weak to {fairly} actions, and barely weak to {barely} actions";
+            return $"{colour} opponents are {emot} and are very weak to {very} actions," +
+                   $" fairly weak to {fairly} actions, and barely weak to {barely} actions.";
         }
     }
 }

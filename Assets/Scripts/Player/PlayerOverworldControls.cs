@@ -13,6 +13,7 @@ namespace Player{
         [SerializeField] private Vector2 startPosition;
         [SerializeField] private GameObject infoOverlay;
         [SerializeField] private Text infoText;
+
         // Start is called before the first frame update
         private void Start()
         {

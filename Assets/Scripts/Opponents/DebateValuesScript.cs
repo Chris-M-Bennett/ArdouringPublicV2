@@ -4,14 +4,15 @@ namespace Opponents
 {
     public class DebateValuesScript : MonoBehaviour  
     {
-        [Header("Name of this debater")]public string debaterName;
-        [Header("Level of this debater. DO NOT CHANGE ON PLAYER")]public int debaterLevel;
-        [Header("Damage this debater does to their opponent's ES")]public int debaterDamage;
-        [Header("Maximum amount of ES this debater can have")]public int maxES;
+        [Tooltip("Name of this debater")]public string debaterName;
+        [Tooltip("Level of this debater. DO NOT CHANGE ON PLAYER!")]public int debaterLevel;
+        [Tooltip("Damage this debater does to their opponent's ES")]public int debaterDamage;
+        [Tooltip("Maximum amount of ES this debater can have")]public int maxES;
         [HideInInspector] public int currentES = 50;
-        [Header("Number for the emotion this debater starts in. Happy=0 Angry=1 Sad=2 Anxiety=3")]public int emotionInt;
+        [Tooltip("Number for the emotion this debater starts in. Happy=0 Angry=1 Sad=2 Anxiety=3." +
+                 "DO NOT CHANGE ON PLAYER!")]public int emotionInt;
         [HideInInspector]public int playerExp;
-        [Header("Thresholds Scriptable Object '{}' for this opponent. The player does not have one")]public OpponentThresholds emotionThresholds;
+        [Tooltip("Thresholds Scriptable Object '{}' for this opponent. Create from Assets task menu. The player does not have one")]public OpponentThresholds emotionThresholds;
 
         private SpriteRenderer _spriteRenderer;
 
