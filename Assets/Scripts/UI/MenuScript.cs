@@ -10,7 +10,7 @@ namespace UI{
         [SerializeField] private Toggle tutToggle;
         private void Start()
         {
-            tutToggle.isOn = GameManager.tutorials;
+            tutToggle.isOn = GameManager.Tutorials;
         }
 
         public void NewGame(){
@@ -29,7 +29,7 @@ namespace UI{
 
         public void ToggleTutorials(bool toggle)
         {
-            GameManager.tutorials = toggle;
+            GameManager.Tutorials = toggle;
         }
     }
 }

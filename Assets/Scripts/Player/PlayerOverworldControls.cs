@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UI;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -13,10 +15,13 @@ namespace Player{
         [SerializeField] private Vector2 startPosition;
         [SerializeField] private GameObject infoOverlay;
         [SerializeField] private Text infoText;
+        [SerializeField] private MoveBarsScript transBars;
+        private IEnumerator _enumerator;
 
         // Start is called before the first frame update
         private void Start()
         {
+            _enumerator = transBars.MoveThoseBars(false);
             if (GameManager.NewGame)
             {
                 transform.position = startPosition;
@@ -57,7 +62,7 @@ namespace Player{
             {
                 infoOverlay.SetActive(true);
                 infoText.text = hit.gameObject.name;
-                if (GameManager.tutorials)
+                if (GameManager.Tutorials)
                 {
                     infoText.text += $"\n\n{_activateControls}";
                 }
@@ -66,10 +71,10 @@ namespace Player{
                     GameManager.CurrentOpponent = hit.gameObject;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
-                    SceneManager.LoadSceneAsync("Debate");
+                    StartCoroutine(_enumerator);
                 }
             }
-            else if (GameManager.tutorials)
+            else if (GameManager.Tutorials)
             {
                 infoOverlay.SetActive(true);
                 infoText.text = _moveControls;

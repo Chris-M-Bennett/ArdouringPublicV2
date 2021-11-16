@@ -1,5 +1,6 @@
 ﻿using System;
 using Opponents;
+using UI;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;

@@ -4,10 +4,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
-    
-    [HideInInspector] public static GameObject CurrentOpponent;
-    [HideInInspector] public static bool NewGame;
-    [HideInInspector] public static bool tutorials = true;
+    public static GameObject CurrentOpponent;
+    public static bool NewGame;
+    public static bool Tutorials = true;
 
     public static Dictionary<int, int[]> EmotionStrengths = new Dictionary<int, int[]>();
     
@@ -22,6 +21,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }else
         {
+            //Destroys duplicate game manager
             Destroy(gameObject);
         }
         EmotionStrengths.Add(0, new int[] {0, 1, 2});

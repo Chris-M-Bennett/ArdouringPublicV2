@@ -1,5 +1,6 @@
 using System.Collections;
 using Opponents;
+using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -55,7 +56,7 @@ namespace System
         /// <returns>5 second wait before opponent's turn</returns>
         IEnumerator PlayerTurn()
         {
-            if (GameManager.tutorials)
+            if (GameManager.Tutorials)
             {
                 int opponentEmot = _opponentValues.emotionInt;
                 notifyText.text =

@@ -4,6 +4,7 @@ namespace Opponents
 {
     public class DebateValuesScript : MonoBehaviour  
     {
+        [Header("Mouse over field names for description of what to add")]
         [Tooltip("Name of this debater")]public string debaterName;
         [Tooltip("Level of this debater. DO NOT CHANGE ON PLAYER!")]public int debaterLevel;
         [Tooltip("Damage this debater does to their opponent's ES")]public int debaterDamage;
@@ -25,7 +26,7 @@ namespace Opponents
                 currentES = PlayerPrefs.GetInt("playerES", maxES);
                 debaterLevel = PlayerPrefs.GetInt("level", 1);
             }
-            emotionInt = Random.Range(0,3);
+            //emotionInt = Random.Range(0,3);
             if(emotionThresholds){
                 GetComponent<SpriteRenderer>().sprite = emotionThresholds.emotionSprites[emotionInt];
             }
@@ -34,14 +35,6 @@ namespace Opponents
         public void CheckThreshold(int prevES)
         {
             var thresh = emotionThresholds.thresholds;
-            /*if(currentES > thresh[0] && currentES <= thresh[0])
-            {
-                emotionInt = Random.Range(0,3);
-            }
-            else if (currentES > maxES && currentES <= thresh[thresh.Count-1])
-            {
-                emotionInt = Random.Range(0,3);
-            }else{*/
             for (int i = 1; i < thresh.Count-1; i++)
             {
                 if (prevES >= thresh[i] && currentES < thresh[i])

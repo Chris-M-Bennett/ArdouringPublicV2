@@ -19,11 +19,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
-      propertyPath: emotionInt
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
-        type: 3}
       propertyPath: debaterName
       value: Calmer Chameleon
       objectReference: {fileID: 0}
@@ -46,7 +41,7 @@ PrefabInstance:
     - target: {fileID: 4915289711706006720, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_Name
-      value: Debate Chameleon
+      value: Debate Chameleon Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4915289711706006721, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
