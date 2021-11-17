@@ -7,6 +7,7 @@ namespace Opponents
     {
         [Header("Mouse over field names for description of what to add")]
         [SerializeField, Tooltip("Thresholds Scriptable Object '{}' for this opponent")]private OpponentThresholds myThresholds;
+        [SerializeField, Tooltip("The prefab used for this opponent in debates")] public GameObject debatePrefab;
         private SpriteRenderer _mainRenderer;
         private Color _mainColour;
         private SpriteRenderer _otherRenderer;

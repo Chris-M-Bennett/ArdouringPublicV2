@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameObject CurrentOpponent;
     public static bool NewGame;
     public static bool Tutorials = true;
-
+    
     public static Dictionary<int, int[]> EmotionStrengths = new Dictionary<int, int[]>();
     
     // Start is called before the first frame update

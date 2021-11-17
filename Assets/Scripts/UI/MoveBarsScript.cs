@@ -6,34 +6,36 @@ namespace UI
 {
     public class MoveBarsScript : MonoBehaviour
     {
-        private Transform leftBars;
-        private Transform rightBars;
-
         [SerializeField] private float moveAmount;
+        [SerializeField] private Transform endTrans;
 
-        [SerializeField] private int endTrans = 0;
-    
-        private void Start()
+        public IEnumerator MoveThoseBars(bool change, string scene)
         {
-            leftBars = transform.GetChild(0);
-            rightBars = transform.GetChild(1);
-        }
 
-        internal IEnumerator MoveThoseBars(bool transIn)
-        {
-            Debug.Log("Moving");
-            while(leftBars.position.x != endTrans)
+            while(transform.position.x < endTrans.position.x)
             {
-                leftBars.Translate(moveAmount,0,0);
-                rightBars.Translate(moveAmount,0,0);
-                yield return new WaitForSeconds(0.01f);
+                transform.Translate(moveAmount,0,0);
+                yield return new WaitForSeconds(0.03f);
             }
-
-            if (!transIn)
+            
+            if (SceneManager.GetSceneByName(scene) != default)
+            {
+                Debug.LogError("Either no scene with the supplied name exists or no scene name was supplied");
+            }
+            else
             {
                 SceneManager.LoadScene("Debate");
             }
-            yield return null;
+        }
+
+        public IEnumerator MoveThoseBars(bool change)
+        {
+
+            while(transform.position.x < endTrans.position.x)
+            {
+                transform.Translate(moveAmount,0,0);
+                yield return new WaitForSeconds(0.03f);
+            }
         }
     }
 }

@@ -8,16 +8,17 @@ namespace System
 {
     public enum DebateState {Start, Player, Opponent, Won, Lost}
 
-    public partial class DebateSystemScript : MonoBehaviour
+    public class DebateSystemScript : MonoBehaviour
     {
         [SerializeField, Header("The Player game object in the scene")]
         private GameObject player;
         [SerializeField, Header("The point where the enemy is placed")]
         private Transform opponentSpawn;
-        [SerializeField, Header("The Opponent Prefab to spawn")] 
-        private GameObject opponentPrefab;
+        [SerializeField] private GameObject testPrefab;
         [SerializeField, Header("The text box for information")] 
         private UnityEngine.UI.Text notifyText;
+
+        [SerializeField] private MoveBarsScript tranBars;
 
         [Header("The player's HUD panel")]public DebateHUDScript playerHUD;
         [Header("The opponent's HUD panel")]public DebateHUDScript opponentHUD;
@@ -39,14 +40,21 @@ namespace System
         void Start()
         {
             _playerValues = player.GetComponent<DebateValuesScript>();
+            if (GameManager.CurrentOpponent)
+            {
+                opponentGO = Instantiate(GameManager.CurrentOpponent, opponentSpawn);
+            }else
+            {
+                opponentGO = Instantiate(testPrefab, opponentSpawn);   
+            }
 
-            opponentGO = Instantiate(opponentPrefab, opponentSpawn);
             _opponentValues = opponentGO.GetComponent<DebateValuesScript>();
             _opponentPrevES = _opponentValues.currentES;
 
             playerHUD.SetHUD(_playerValues);
             opponentHUD.SetHUD(_opponentValues);
             state = DebateState.Player;
+            StartCoroutine(tranBars.MoveThoseBars(false));
             StartCoroutine(PlayerTurn());
         }
 
@@ -165,7 +173,6 @@ namespace System
             string very;
             string fairly;
             string barely;
-            Debug.Log(emotInt);
             if (emotInt == 0)
             {
                 colour = "Green";

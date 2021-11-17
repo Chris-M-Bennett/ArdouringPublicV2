@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Opponents;
 using UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,12 +17,10 @@ namespace Player{
         [SerializeField] private GameObject infoOverlay;
         [SerializeField] private Text infoText;
         [SerializeField] private MoveBarsScript transBars;
-        private IEnumerator _enumerator;
 
         // Start is called before the first frame update
         private void Start()
         {
-            _enumerator = transBars.MoveThoseBars(false);
             if (GameManager.NewGame)
             {
                 transform.position = startPosition;
@@ -68,10 +67,10 @@ namespace Player{
                 }
                 if (Input.GetButtonDown("Activate"))
                 {
-                    GameManager.CurrentOpponent = hit.gameObject;
+                    GameManager.CurrentOpponent = hit.gameObject.GetComponent<OpponentOverworldScript>().debatePrefab;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
-                    StartCoroutine(_enumerator);
+                    StartCoroutine(transBars.MoveThoseBars(true, "Debate"));
                 }
             }
             else if (GameManager.Tutorials)
