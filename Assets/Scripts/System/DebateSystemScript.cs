@@ -2,6 +2,7 @@ using System.Collections;
 using Opponents;
 using UI;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 namespace System
@@ -87,7 +88,7 @@ namespace System
             else
             {
                 state = DebateState.Opponent;
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(2f);
                 StartCoroutine(OpponentTurn());
             }
         }
@@ -185,22 +186,29 @@ namespace System
                 colour = "Blue";
                 emot = "sad";
                 very = "angry";
-                fairly = "afraid";
-                barely = "happy";
+                fairly = "confident";
+                barely = "afraid";
             }else if (emotInt == 2)
             {
                 colour = "Red";
                 emot = "angry";
+                very = "confident";
+                fairly = "afraid";
+                barely = "happy";
+            }else if (emotInt == 3)
+            {
+                colour = "Purple";
+                emot = "confident";
                 very = "afraid";
                 fairly = "happy";
                 barely = "sad";
-            }else if (emotInt == 3)
+            }else if (emotInt == 4)
             {
-                colour = "Red";
+                colour = "Orange";
                 emot = "afraid";
                 very = "happy";
                 fairly = "sad";
-                barely = "angry";
+                barely = "angry"; 
             }else
             {
                 Debug.LogError("Invalid emotion supplied to EmotionDescript function!");

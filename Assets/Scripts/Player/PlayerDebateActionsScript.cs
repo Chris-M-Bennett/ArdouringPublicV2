@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Opponents;
 using UI;
 using UnityEngine;
@@ -9,12 +10,16 @@ namespace Player{
     public class PlayerDebateActionsScript : MonoBehaviour
     {
         [SerializeField] private Text notifyText;
+        [SerializeField] private Text damageText;
+        [SerializeField] private Transform damageEnd;
         [SerializeField] private DebateHUDScript opponentHUD;
         private DebateSystemScript _debateSystem;
         private GameObject _opponentGO;
         private static DebateValuesScript _opponentValues;
         private static int _playerDamage;
         private DebateState _turnState;
+        private Vector3 _damagePos;
+        private float _damageEndY;
         [SerializeField] private int strongMult = 2;
 
         public bool playerHadTurn;
@@ -32,7 +37,10 @@ namespace Player{
                 Debug.LogError("Supplied Game Object is not an opponent");
             }
 
+            _damageEndY = damageEnd.position.y;
+            _damagePos = damageText.transform.position;
             _playerDamage = GameObject.FindGameObjectWithTag("Player").GetComponent<DebateValuesScript>().debaterDamage;
+            
         }
 
 
@@ -108,31 +116,69 @@ namespace Player{
             int randDamage = Random.Range(-5, 5);
             int normalDamage = _playerDamage + randDamage;
             int strongDamage = normalDamage * strongMult;
-            var opponentES = _opponentValues.currentES;
-            var opponentEmot = _opponentValues.emotionInt;
-            if (GameManager.EmotionStrengths[opponentEmot][0] == emotion)
+            int damageDone = 0;
+            int opponentES = _opponentValues.currentES;
+            int opponentEmot = _opponentValues.emotionInt;
+            Color emotColor;
+            if (_opponentValues.emotionInt == 0)
             {
-                notifyText.text = $"It was ineffective! {_opponentValues.debaterName} regained {normalDamage} points " +
-                                  $"of emotional stability.";
-                opponentES += normalDamage; 
+                emotColor = Color.green;
+            }else if (_opponentValues.emotionInt == 1)
+            {
+                emotColor = Color.blue;
+            }else if (_opponentValues.emotionInt == 2)
+            {
+                emotColor = Color.red;
             }
-            else if (GameManager.EmotionStrengths[opponentEmot][1] == emotion)
+            else if (_opponentValues.emotionInt == 3)
+            {
+                emotColor = Color.yellow;
+            }
+            else
+            {
+                emotColor = Color.magenta;
+            }
+            
+
+            if (GameManager.EmotionStrengths[opponentEmot][1] == emotion)
             {
                 notifyText.text = $"It was super effective! You dealt {strongDamage} points of emotional strain " +
                                   $"to {_opponentValues.debaterName}.";
                 opponentES -= strongDamage;
+                damageDone = strongDamage;
             }
             else if (GameManager.EmotionStrengths[opponentEmot][2] == emotion)
             {
                 notifyText.text = $"It was quite effective! You dealt {normalDamage} points of emotional strain " +
                                   $"to {_opponentValues.debaterName}.";
                 opponentES -= normalDamage;
+                damageDone = normalDamage;
+            }
+            else if (GameManager.EmotionStrengths[opponentEmot][3] == emotion)
+            {
+                notifyText.text = $"It wasn't very effective! You dealt {randDamage} points of emotional strain " +
+                                  $"to {_opponentValues.debaterName}.";
+                opponentES -= randDamage;
+                damageDone = randDamage;
             }
             else
             {
                 notifyText.text = $"It wasn't very effective! You dealt {randDamage} points of emotional strain " +
                                   $"to {_opponentValues.debaterName}.";
                 opponentES -= randDamage;
+                damageDone = randDamage;
+            }
+            
+            if (GameManager.EmotionStrengths[opponentEmot][0] == emotion)
+            {
+                notifyText.text = $"It was ineffective! {_opponentValues.debaterName} regained {normalDamage} points " +
+                                  $"of emotional stability.";
+                opponentES += normalDamage;
+                StartCoroutine(DamageGrow(normalDamage, emotColor));
+            }
+            else
+            {
+                StartCoroutine(DamageGrow(damageDone*-1, emotColor));
             }
 
             if (opponentES > _opponentValues.maxES)
@@ -146,6 +192,25 @@ namespace Player{
             _opponentValues.currentES = opponentES;
             opponentHUD.SetES(_opponentValues);
             _debateSystem.PlayerHadTurn = true;
+        }
+
+        IEnumerator DamageGrow(int damageDone, Color emotColour)
+        {
+            damageText.text = damageDone.ToString();
+            damageText.gameObject.SetActive(true);
+            var damageTextColor = damageText.color;
+            while (damageText.transform.position.y < _damageEndY)
+            {
+                damageText.transform.Translate(0,1,0);
+                damageText.fontSize += 1;
+                damageTextColor.a -= 5f;
+                yield return new WaitForSeconds(0.1f);
+            }
+            damageText.gameObject.SetActive(false);
+            damageTextColor.a = 255;
+            damageText.transform.position = _damagePos;
+            damageText.fontSize = 30;
+            yield return null;
         }
     }
 }

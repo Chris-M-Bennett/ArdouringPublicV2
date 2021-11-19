@@ -24,9 +24,10 @@ public class GameManager : MonoBehaviour
             //Destroys duplicate game manager
             Destroy(gameObject);
         }
-        EmotionStrengths.Add(0, new int[] {0, 1, 2});
-        EmotionStrengths.Add(1, new int[] {1, 2, 3});
-        EmotionStrengths.Add(2, new int[] {2, 3, 0});
-        EmotionStrengths.Add(3, new int[] {3, 0, 1});
+        EmotionStrengths.Add(0, new int[] {0, 1, 2, 3});
+        EmotionStrengths.Add(1, new int[] {1, 2, 3, 4});
+        EmotionStrengths.Add(2, new int[] {2, 3, 4, 0});
+        EmotionStrengths.Add(3, new int[] {3, 4, 0, 1});
+        EmotionStrengths.Add(4, new int[] {4, 0, 1, 2});
     }
 }
