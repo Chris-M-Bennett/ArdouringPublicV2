@@ -9,6 +9,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
+      propertyPath: debatePrefab
+      value: 
+      objectReference: {fileID: 3055323939854202916, guid: b0c223353bf834043917a2b1edef557d,
+        type: 3}
+    - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
       propertyPath: myThresholds
       value: 
       objectReference: {fileID: 11400000, guid: 77cc7a7152e902644b87ddc521951e8a,
@@ -79,5 +85,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Calmer Chameleon Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2978396957682207817, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 188c8c2800d5cd940a9dcbcd47cdbb3e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e731a199acc924442a0d5fcba8122031, type: 3}

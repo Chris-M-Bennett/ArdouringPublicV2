@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 namespace Player{
     public partial class PlayerOverworldControls : MonoBehaviour
     {
-        private Vector3 _currentPosition;
+        private Vector2 _currentPosition;
         private bool _isRunning = false;
         [SerializeField] private float moveSpeed = 0.005f;
         [SerializeField] private float runSpeedDif = 0.005f;
