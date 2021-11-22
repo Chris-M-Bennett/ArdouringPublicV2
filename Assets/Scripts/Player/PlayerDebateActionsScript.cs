@@ -69,10 +69,15 @@ namespace Player{
         {
             CheckPlayerTurn(2);
         }
+        
+        public void ConfidentButton()
+        {
+            CheckPlayerTurn(3);
+        }
 
         public void AnxiousButton()
         {
-            CheckPlayerTurn(3);
+            CheckPlayerTurn(4);
         }
 
         public void RunButton()
@@ -120,23 +125,23 @@ namespace Player{
             int opponentES = _opponentValues.currentES;
             int opponentEmot = _opponentValues.emotionInt;
             Color emotColor;
-            if (_opponentValues.emotionInt == 0)
+            if (emotion == 0)
             {
                 emotColor = Color.green;
-            }else if (_opponentValues.emotionInt == 1)
+            }else if (emotion == 1)
             {
                 emotColor = Color.blue;
-            }else if (_opponentValues.emotionInt == 2)
+            }else if (emotion == 2)
             {
                 emotColor = Color.red;
             }
-            else if (_opponentValues.emotionInt == 3)
+            else if (emotion == 3)
             {
-                emotColor = Color.yellow;
+                emotColor = Color.magenta;
             }
             else
             {
-                emotColor = Color.magenta;
+                emotColor = Color.yellow;
             }
             
 
@@ -197,14 +202,19 @@ namespace Player{
         IEnumerator DamageGrow(int damageDone, Color emotColour)
         {
             damageText.text = damageDone.ToString();
+            if(damageDone > 0)
+            {
+                damageText.text = $"+{damageText.text}";
+            }
             damageText.gameObject.SetActive(true);
+            damageText.color = emotColour;
             var damageTextColor = damageText.color;
             while (damageText.transform.position.y < _damageEndY)
             {
-                damageText.transform.Translate(0,1,0);
-                damageText.fontSize += 1;
-                damageTextColor.a -= 5f;
-                yield return new WaitForSeconds(0.1f);
+                damageText.transform.Translate(0,10,0);
+                damageText.fontSize += 4;
+                damageTextColor.a -= 2f;
+                yield return new WaitForSeconds(0.05f);
             }
             damageText.gameObject.SetActive(false);
             damageTextColor.a = 255;

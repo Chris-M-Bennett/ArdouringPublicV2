@@ -7,7 +7,6 @@ namespace Opponents
     public class OpponentOverworldScript : MonoBehaviour
     {
         [Header("Mouse over field names for description of what to add")]
-        [SerializeField, Tooltip("Thresholds Scriptable Object '{}' for this opponent")]private OpponentThresholds myThresholds;
         [SerializeField, Tooltip("The prefab used for this opponent in debates")] public GameObject debatePrefab;
         private SpriteRenderer _mainRenderer;
         private Color _mainColour;
@@ -38,15 +37,6 @@ namespace Opponents
                 _otherColour.a = 0;
                 _mainRenderer.sprite = _otherRenderer.sprite;
                 current++;
-                if (current == myThresholds.emotionSprites.Count - 1)
-                {
-                    _otherRenderer.sprite = myThresholds.emotionSprites[0];
-                    current = 0;
-                }
-                else
-                {
-                    _otherRenderer.sprite = myThresholds.emotionSprites[current + 1];
-                }
                 yield return new WaitForSeconds(0.5f);
             }
             else
