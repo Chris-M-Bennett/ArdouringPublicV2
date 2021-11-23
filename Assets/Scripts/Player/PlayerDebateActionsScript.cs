@@ -17,6 +17,7 @@ namespace Player{
         private GameObject _opponentGO;
         private static DebateValuesScript _opponentValues;
         private static int _playerDamage;
+        private static DebateValuesScript _playerValues;
         private DebateState _turnState;
         private Vector3 _damagePos;
         private float _damageEndY;
@@ -39,7 +40,8 @@ namespace Player{
 
             _damageEndY = damageEnd.position.y;
             _damagePos = damageText.transform.position;
-            _playerDamage = GameObject.FindGameObjectWithTag("Player").GetComponent<DebateValuesScript>().debaterDamage;
+            _playerValues = GameObject.FindWithTag("Player").GetComponent<DebateValuesScript>();
+            _playerDamage = _playerValues.debaterDamage;
             
         }
 
@@ -121,50 +123,61 @@ namespace Player{
             int randDamage = Random.Range(-5, 5);
             int normalDamage = _playerDamage + randDamage;
             int strongDamage = normalDamage * strongMult;
+            int emotAddition = 0;
             int damageDone = 0;
             int opponentES = _opponentValues.currentES;
             int opponentEmot = _opponentValues.emotionInt;
+            
+            var emotStrengths = GameManager.EmotionStrengths[opponentEmot];
+            var emotAmounts = _playerValues.emotAmounts;
+            var opponentAmounts = _opponentValues.emotAmounts;
+            
             Color emotColor;
             if (emotion == 0)
             {
+                emotAddition = emotAmounts[0];
                 emotColor = Color.green;
             }else if (emotion == 1)
             {
+                emotAddition = emotAmounts[1];
                 emotColor = Color.blue;
             }else if (emotion == 2)
             {
+                emotAddition = emotAmounts[2];
                 emotColor = Color.red;
             }
             else if (emotion == 3)
             {
+                emotAddition = emotAmounts[3];
                 emotColor = Color.magenta;
             }
             else
             {
+                emotAddition = emotAmounts[4];
                 emotColor = Color.yellow;
             }
             
 
-            if (GameManager.EmotionStrengths[opponentEmot][1] == emotion)
+            if (emotStrengths[1] == emotion)
             {
-                notifyText.text = $"It was super effective! You dealt {strongDamage} points of emotional strain " +
+                notifyText.text = $"It was super effective! You dealt {strongDamage + emotAddition} points of emotional strain " +
                                   $"to {_opponentValues.debaterName}.";
                 opponentES -= strongDamage;
-                damageDone = strongDamage;
+                damageDone = strongDamage + emotAddition;
             }
-            else if (GameManager.EmotionStrengths[opponentEmot][2] == emotion)
+            else if (emotStrengths[2] == emotion)
             {
-                notifyText.text = $"It was quite effective! You dealt {normalDamage} points of emotional strain " +
+                notifyText.text = $"It was quite effective! You dealt {normalDamage + emotAddition} points of emotional strain " +
                                   $"to {_opponentValues.debaterName}.";
                 opponentES -= normalDamage;
-                damageDone = normalDamage;
+                damageDone = normalDamage + emotAddition;
             }
-            else if (GameManager.EmotionStrengths[opponentEmot][3] == emotion)
+            else if (emotStrengths[3] == emotion)
             {
-                notifyText.text = $"It wasn't very effective! You dealt {randDamage} points of emotional strain " +
+                notifyText.text = $"It wasn't very effective! You dealt {randDamage + emotAddition} points of emotional strain " +
                                   $"to {_opponentValues.debaterName}.";
                 opponentES -= randDamage;
-                damageDone = randDamage;
+                damageDone = randDamage + emotAddition;
             }
             else
             {
@@ -174,7 +187,7 @@ namespace Player{
                 damageDone = randDamage;
             }
             
-            if (GameManager.EmotionStrengths[opponentEmot][0] == emotion)
+            if (emotStrengths[0] == emotion)
             {
                 notifyText.text = $"It was ineffective! {_opponentValues.debaterName} regained {normalDamage} points " +
                                   $"of emotional stability.";
@@ -194,6 +207,24 @@ namespace Player{
             {
                 opponentES = 0;
             }
+
+            //Increases the power of the emotion the player 
+            if (emotAmounts[emotion] >= 20)
+            {
+                Mathf.Clamp(emotAmounts[emotion]++,0,20);
+            }
+
+            foreach (int emot in emotAmounts)
+            {
+                if (emot != emotion && emotAmounts[emot] > 0)
+                {
+                    emotAmounts[emot]--;
+                    Mathf.Clamp(emotAmounts[emotion],0,20);
+                }
+            }
+            _opponentValues.emotAmounts[emotion] += damageDone;
+            _opponentValues.emotAmounts[opponentEmot] -= damageDone;
+
             _opponentValues.currentES = opponentES;
             opponentHUD.SetES(_opponentValues);
             _debateSystem.PlayerHadTurn = true;

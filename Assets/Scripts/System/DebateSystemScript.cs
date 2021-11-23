@@ -27,6 +27,8 @@ namespace System
         private bool _playerHadTurn = false;
         private DebateValuesScript _playerValues;
         private DebateValuesScript _opponentValues;
+        private int _playerExp;
+        private int _playerLevel;
         private int _opponentPrevES;
         public bool PlayerHadTurn
         {
@@ -53,6 +55,7 @@ namespace System
             _opponentPrevES = _opponentValues.currentES;
 
             playerHUD.SetHUD(_playerValues);
+            _playerExp = PlayerPrefs.GetInt("playerEX", 0);
             opponentHUD.SetHUD(_opponentValues);
             state = DebateState.Player;
             StartCoroutine(tranBars.MoveThoseBars(false));
@@ -120,30 +123,43 @@ namespace System
             _opponentPrevES = _opponentValues.currentES;
             yield return new WaitForSeconds(1f);
         }
+        
+        /// <summary>
+        /// Co-routine for end of the debate
+        /// </summary>
+        /// <returns>2 second wait before loading Overworld</returns>
 
         public IEnumerator EndDebate()
         {
-            if (_playerValues.playerExp == 4)
+            if (_playerExp == 4)
             {
-                _playerValues.debaterLevel += 1;
-                _playerValues.playerExp = 0;
+                _playerLevel += 1;
+                PlayerPrefs.SetInt("playerLevel", _playerLevel);
+
+                foreach (int emot in _playerValues.emotAmounts)
+                {
+                    _playerValues.emotAmounts[emot]++;
+                }
+                _playerExp = 0;
             }
             if (state == DebateState.Won)
             {
-                _playerValues.playerExp += 2;
+                _playerExp += 2;
                 notifyText.text = "You won the debate!";
             }
             else if (state == DebateState.Lost)
             {
                 _playerValues.currentES = _playerValues.maxES;
                 PlayerPrefs.SetInt("playerES", _playerValues.maxES);
-                _playerValues.playerExp += 1;
+                _playerExp += 1;
                 notifyText.text = "You lost the debate!";
             }
             else
             {
                 notifyText.text = "You fled the fight.";
             }
+            
+            PlayerPrefs.SetInt("playerExp", _playerExp);
             yield return new WaitForSeconds(2f);
             SceneManager.LoadSceneAsync("Overworld");
         }
@@ -167,6 +183,11 @@ namespace System
         }
 
 
+        /// <summary>
+        /// Generates tutorial for player about opponent emotions and how other emotions effect them 
+        /// </summary>
+        /// <param name="emotInt"></param>
+        /// <returns></returns>
         private string EmotionDescript(int emotInt)
         {
             string colour;

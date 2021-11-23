@@ -100,5 +100,5 @@ MonoBehaviour:
   maxES: 0
   currentES: 0
   emotionInt: 0
-  playerExp: 0
   emotionThresholds: {fileID: 0}
+  emotAmounts: 6400000000000000000000000000000000000000
