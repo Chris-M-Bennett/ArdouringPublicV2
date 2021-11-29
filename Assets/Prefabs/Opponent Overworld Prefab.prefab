@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2978396957570500045}
   - component: {fileID: 2978396957570500046}
   - component: {fileID: 2978396957570500044}
-  - component: {fileID: -1962457442590009794}
   - component: {fileID: 6089023496477358676}
   m_Layer: 8
   m_Name: Opponent Overworld Prefab
@@ -146,27 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f8ec86f3ff4104ea5febc6e71c5e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myThresholds: {fileID: 0}
   debatePrefab: {fileID: 0}
---- !u!95 &-1962457442590009794
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2978396957570500081}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8dd92d15962c64941bf236b3816e794f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!195 &6089023496477358676
 NavMeshAgent:
   m_ObjectHideFlags: 0

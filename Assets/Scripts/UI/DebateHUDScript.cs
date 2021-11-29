@@ -10,13 +10,20 @@ namespace UI
         public Text levelText;
         public Text esText;
         public Slider esSlider;
+        [SerializeField] GameObject playerPanel;
     
         public void SetHUD(DebateValuesScript debater){
             nameText.text = debater.debaterName;
-            levelText.text = "Level: "+PlayerPrefs.GetInt("playerLevel",0);
             esText.text = $"Emotional Stability: {debater.currentES}";
             esSlider.value = debater.currentES;
             esSlider.maxValue = debater.maxES;
+            if(gameObject == playerPanel)
+            {
+                levelText.text = "Level: "+PlayerPrefs.GetInt("playerLevel",1);
+            }else
+            {
+                levelText.text = "Level: "+debater.debaterLevel;
+            }
         }
 
         public void SetES(DebateValuesScript debater){

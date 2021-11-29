@@ -21,7 +21,8 @@ namespace Player{
         private DebateState _turnState;
         private Vector3 _damagePos;
         private float _damageEndY;
-        [SerializeField] private int strongMult = 2;
+        [SerializeField] private int normalMult = 2;
+        [SerializeField] private int strongMult = 4;
 
         public bool playerHadTurn;
 
@@ -120,9 +121,10 @@ namespace Player{
 
         void OpponentESChange(int emotion)
         {
-            int randDamage = Random.Range(-5, 5);
-            int normalDamage = _playerDamage + randDamage;
-            int strongDamage = normalDamage * strongMult;
+            int randDamage = Random.Range(-3, 5);
+            int weakDamage = _playerDamage + randDamage;
+            int normalDamage = weakDamage * normalMult;
+            int strongDamage = weakDamage * strongMult;
             int emotAddition = 0;
             int damageDone = 0;
             int opponentES = _opponentValues.currentES;
@@ -162,37 +164,38 @@ namespace Player{
             {
                 notifyText.text = $"It was super effective! You dealt {strongDamage + emotAddition} points of emotional strain " +
                                   $"to {_opponentValues.debaterName}.";
-                opponentES -= strongDamage;
                 damageDone = strongDamage + emotAddition;
+                opponentES -= damageDone;
             }
             else if (emotStrengths[2] == emotion)
             {
-                notifyText.text = $"It was quite effective! You dealt {normalDamage + emotAddition} points of emotional strain " +
+                notifyText.text = $"It was quite effective! You dealt {weakDamage + emotAddition} points of emotional strain " +
                                   $"to {_opponentValues.debaterName}.";
-                opponentES -= normalDamage;
                 damageDone = normalDamage + emotAddition;
+                opponentES -= damageDone;
             }
             else if (emotStrengths[3] == emotion)
+            {
+                notifyText.text = $"It wasn't very effective! You dealt {weakDamage + emotAddition} points of emotional strain " +
+                                  $"to {_opponentValues.debaterName}.";
+                damageDone = weakDamage + emotAddition;
+                opponentES -= damageDone;
+            }
+            else
             {
                 notifyText.text = $"It wasn't very effective! You dealt {randDamage + emotAddition} points of emotional strain " +
                                   $"to {_opponentValues.debaterName}.";
                 opponentES -= randDamage;
-                damageDone = randDamage + emotAddition;
-            }
-            else
-            {
-                notifyText.text = $"It wasn't very effective! You dealt {randDamage} points of emotional strain " +
-                                  $"to {_opponentValues.debaterName}.";
-                opponentES -= randDamage;
                 damageDone = randDamage;
+                opponentES -= damageDone;
             }
             
             if (emotStrengths[0] == emotion)
             {
-                notifyText.text = $"It was ineffective! {_opponentValues.debaterName} regained {normalDamage} points " +
+                notifyText.text = $"It was ineffective! {_opponentValues.debaterName} regained {weakDamage} points " +
                                   $"of emotional stability.";
-                opponentES += normalDamage;
-                StartCoroutine(DamageGrow(normalDamage, emotColor));
+                opponentES += weakDamage;
+                StartCoroutine(DamageGrow(weakDamage, emotColor));
             }
             else
             {

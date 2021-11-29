@@ -83,7 +83,7 @@ namespace System
             }
 
             StartCoroutine(DamageAnim(opponentGO));
-            if (_opponentValues.currentES <= 0)
+            if (_opponentValues.currentES <= 0 || _opponentValues.currentES >= _opponentValues.maxES)
             {
                 state = DebateState.Won;
                 StartCoroutine(EndDebate());

@@ -48,35 +48,35 @@ namespace Opponents
                 {
                     var highest = 0;
                     var equals = 0;
-                    for (int emot = 0; emot < emotAmounts.Length; emot++)
+                    foreach (int emot in emotAmounts)
                     {
                         //Compares emotion's amount to emotion currently recorded as highest
-                        if (emotAmounts[emot]>highest)
+                       /* if (emot>highest)
                         {
-                            highest = emotAmounts[emot];
-                        //Records number of emotion amounts that are equal    
-                        }else if (emotAmounts[emot] == highest)
+                            highest = emot;
+                            //Records number of emotion amounts that are equal    
+                        }else if (emot == highest)
                         {
                             equals++;
-                        }
+                        }*/
 
-                        /*int prevEmot = emotionInt;
+                        int prevEmot = emotionInt;
                         while(emotionInt == prevEmot){
                             emotionInt = Random.Range(0, 3);
-                        }*/
+                        }
                     }
                     
                     //If two or more emotion amounts are equal, choose one at random
-                    if (equals > 0)
+                    /*if (equals > 0)
                     {
                         highest = Random.Range(0, equals);
                     }
                         
                     //Change emotion to whichever has the highest amount
-                    emotionInt = highest;
+                    emotionInt = highest;*/
                 }
+                _spriteRenderer.sprite = emotionThresholds.emotionSprites[emotionInt];
             }
-            _spriteRenderer.sprite = emotionThresholds.emotionSprites[emotionInt];
         }
     }
 }
