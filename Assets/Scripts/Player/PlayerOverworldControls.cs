@@ -8,19 +8,23 @@ using UnityEngine.SceneManagement;
 namespace Player{
     public partial class PlayerOverworldControls : MonoBehaviour
     {
-        private Vector2 _currentPosition;
-        private bool _isRunning = false;
+        
         [SerializeField] private float moveSpeed = 0.005f;
         [SerializeField] private float runSpeedDif = 0.005f;
-        [SerializeField] private LayerMask opponentMask;
         [SerializeField] private Vector2 startPosition;
         [SerializeField] private GameObject infoOverlay;
         [SerializeField] private Text infoText;
         [SerializeField] private MoveBarsScript transBars;
+        
+        private Vector2 _currentPosition;
+        private bool _isRunning = false;
+        private LayerMask _opponentMask;
 
         // Start is called before the first frame update
         private void Start()
         {
+            _opponentMask = LayerMask.GetMask("Opponent");
+            
             if (GameManager.NewGame)
             {
                 transform.position = startPosition;
@@ -56,7 +60,7 @@ namespace Player{
             }
             transform.position = _currentPosition;
 
-            Collider2D hit = Physics2D.OverlapCircle(_currentPosition, 0.5f, opponentMask);
+            Collider2D hit = Physics2D.OverlapCircle(_currentPosition, 0.5f, _opponentMask);
             if (hit)
             {
                 infoOverlay.SetActive(true);
