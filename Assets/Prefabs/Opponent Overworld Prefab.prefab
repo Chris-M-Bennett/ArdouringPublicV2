@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2978396957570500045}
   - component: {fileID: 2978396957570500046}
   - component: {fileID: 2978396957570500044}
+  - component: {fileID: 3073540072749954762}
   m_Layer: 8
   m_Name: Opponent Overworld Prefab
   m_TagString: Opponent
@@ -93,7 +94,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2978396957570500081}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -154,8 +155,28 @@ MonoBehaviour:
   upRightAnim: {fileID: 0}
   downLeftAnim: {fileID: 0}
   downRightAnim: {fileID: 0}
-  firstDest: {fileID: 0}
+  lastDest: {fileID: 0}
+  currentDest: {fileID: 0}
   moveSpeed: 0.05
+--- !u!95 &3073540072749954762
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2978396957570500081}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c029761104523104f9da636c618c48b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2978396957682207819
 GameObject:
   m_ObjectHideFlags: 0
