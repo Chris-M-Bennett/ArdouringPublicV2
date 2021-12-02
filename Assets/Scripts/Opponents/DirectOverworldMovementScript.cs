@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using UnityEditor;
-using UnityEngine;
-using UnityEngine.iOS;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Opponents
