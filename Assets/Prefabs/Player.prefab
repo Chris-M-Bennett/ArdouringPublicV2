@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8fc87e2e7a3411d45bf6ef0d289db6d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -72,8 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6917297535925941004, guid: 6e88588f51414e04a85bb111dd304c48,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 858464ddc6e016d49a6bb547818012e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -81,7 +80,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4184862976622893654
@@ -98,9 +97,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.03
   runSpeedDif: 0.03
-  opponentMask:
-    serializedVersion: 2
-    m_Bits: 256
   startPosition: {x: -0.2, y: -19}
   infoOverlay: {fileID: 0}
   infoText: {fileID: 0}
@@ -125,4 +121,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

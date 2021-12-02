@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9103096088062765404}
   m_Layer: 5
   m_Name: Transition Bars
-  m_TagString: Untagged
+  m_TagString: Transition Bars
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

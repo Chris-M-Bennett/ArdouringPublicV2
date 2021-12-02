@@ -94,7 +94,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2978396957570500081}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -106,7 +106,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2978396957570500046
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,18 +146,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debatePrefab: {fileID: 0}
-  idleAnim: {fileID: 0}
-  leftAnim: {fileID: 0}
-  rightAnim: {fileID: 0}
-  upAnim: {fileID: 0}
-  downAnim: {fileID: 0}
-  upLeftAnim: {fileID: 0}
-  upRightAnim: {fileID: 0}
-  downLeftAnim: {fileID: 0}
-  downRightAnim: {fileID: 0}
   lastDest: {fileID: 0}
   currentDest: {fileID: 0}
   moveSpeed: 0.05
+  animationClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!95 &3073540072749954762
 Animator:
   serializedVersion: 3
@@ -168,7 +169,7 @@ Animator:
   m_GameObject: {fileID: 2978396957570500081}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c029761104523104f9da636c618c48b0, type: 2}
+  m_Controller: {fileID: 22100000, guid: ea71a47d8354d2a499e3eb026235242f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

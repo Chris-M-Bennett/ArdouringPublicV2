@@ -24,6 +24,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
+      propertyPath: maxES
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotionInt
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
       propertyPath: debaterName
       value: Chice
       objectReference: {fileID: 0}
@@ -34,14 +44,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
+      propertyPath: debaterDamage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotionThresholds
+      value: 
+      objectReference: {fileID: 11400000, guid: 1b5dc75ebcf6139409aeb4253b9b2d8b,
+        type: 2}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
       propertyPath: emotAmounts.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
-      propertyPath: emotAmounts.Array.data[4]
-      value: 100
+      propertyPath: emotAmounts.Array.data[1]
+      value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[4]
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977881048577376066, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 97ac372b8ef463e47b6640a3a270ba12, type: 2}
     - target: {fileID: 4915289711706006720, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_Name

@@ -14,8 +14,8 @@ namespace Player{
         [SerializeField] private Vector2 startPosition;
         [SerializeField] private GameObject infoOverlay;
         [SerializeField] private Text infoText;
-        [SerializeField] private MoveBarsScript transBars;
         
+        private MoveBarsScript _transBars;
         private Vector2 _currentPosition;
         private bool _isRunning = false;
         private LayerMask _opponentMask;
@@ -24,7 +24,7 @@ namespace Player{
         private void Start()
         {
             _opponentMask = LayerMask.GetMask("Opponent");
-            
+            _transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
             if (GameManager.NewGame)
             {
                 transform.position = startPosition;
@@ -74,7 +74,7 @@ namespace Player{
                     GameManager.CurrentOpponent = hit.gameObject.GetComponent<OpponentOverworldScript>().debatePrefab;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
-                    StartCoroutine(transBars.MoveThoseBars(true, "Debate"));
+                    StartCoroutine(_transBars.MoveThoseBars(true, "Debate"));
                 }
             }
             else if (GameManager.Tutorials)

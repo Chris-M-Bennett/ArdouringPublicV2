@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections;
+using System.Linq.Expressions;
+using Player;
+using UI;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -10,19 +14,10 @@ namespace Opponents
     {
         [Header("Mouse over field names for description of what to add")]
         [SerializeField, Tooltip("The prefab used for this opponent in debates")] public GameObject debatePrefab;
-
-        [SerializeField] private Animation idleAnim;
-        [SerializeField] private Animation leftAnim;
-        [SerializeField] private Animation rightAnim;
-        [SerializeField] private Animation upAnim;
-        [SerializeField] private Animation downAnim;
-        [SerializeField] private Animation upLeftAnim;
-        [SerializeField] private Animation upRightAnim;
-        [SerializeField] private Animation downLeftAnim;
-        [SerializeField] private Animation downRightAnim;
         [SerializeField] public DirectOverworldMovementScript lastDest;
         [SerializeField] public DirectOverworldMovementScript currentDest;
         [SerializeField] private float moveSpeed = 0.05f;
+        
 
         private SpriteRenderer _mainRenderer;
         private Color _mainColour;
@@ -31,13 +26,22 @@ namespace Opponents
         private Vector2 _currentPosition;
         private Vector2 _lastPosition;
         private Vector2 _dir;
+        private Animator _anim;
+        private MoveBarsScript _transBars;
+        private static readonly int IsLeft = Animator.StringToHash("IsLeft");
+        private static readonly int IsDown = Animator.StringToHash("IsDown");
+        private static readonly int IsUp = Animator.StringToHash("IsUp");
+        private static readonly int IsRight = Animator.StringToHash("IsRight");
+
         void Start()
         {
             _mainRenderer = GetComponent<SpriteRenderer>();
             _mainColour = _mainRenderer.color;
             _otherRenderer = GetComponentInChildren<SpriteRenderer>();
             _otherColour = _otherRenderer.color;
+            _anim = GetComponent<Animator>();
             int current = 0;
+            _transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
             StartCoroutine(ChangeColour(current));
             _lastPosition = transform.position;
             StartCoroutine(MoveMe());
@@ -48,84 +52,34 @@ namespace Opponents
             _currentPosition = transform.position;
             _dir = (_currentPosition - _lastPosition).normalized;
 
-            bool isLeft, isRight, isUp, isDown = false;
+            //bool isLeft, isRight, isUp, isDown = false;
+            _anim.SetBool(IsDown, _dir.y < -0.5f);
+            _anim.SetBool(IsUp, _dir.y > 0.5f);
+            _anim.SetBool(IsLeft, _dir.x < -0.5f);
+            _anim.SetBool(IsRight, _dir.x > 0.5f);
+            
 
-            isLeft = (_dir.x > 0.5f);
-            isRight = (_dir.x < -0.5f);
-            isUp = (_dir.y > 0.5f);
-            isDown = (_dir.y < -0.5f) ;
-
-            if (isUp)
+           /* if (isDown)
             {
-                if (isRight)
-                {
-
-                }
-                else if (isLeft)
-                {
-
-                }
-                else
-                {
-
-                }
+                
             }
-            else if (isDown)
+            else if (isUp)
             {
-                if (isRight)
-                {
-
-                }
-                else if (isLeft)
-                {
-
-                }
-                else
-                {
-
-                }
+                
             }
-
-            if (_dir.y == 1)
+            if (isLeft)
             {
-                if (_dir.x == 1)
-                {
-                    //Play up right anim
-                }else if (_dir.x == -1)
-                {
-                    //Play up left anim
-                }
-                else
-                {
-                    //Play straight up anim 
-                }
-            } else if (_dir.y == -1)
-            {
-                if (_dir.x == 1)
-                {
-                    //Play down right anim
-                }else if (_dir.x == -1)
-                {
-                    //Play down left anim
-                }
-                else
-                {
-                    //Play straight anim
-                }
+                  
             }
-            else if (_dir.x == -1)
+            else if (isRight)
             {
-                //Play straight left anim
-            }
-            else if (_dir.x == 1)
-            {
-                //Play straight right anim
+                 
             }
             else
             {
-                //Play idle anim
-            }
-            //Collider2D hit = Physics2D.OverlapCircle(_currentPosition, 0.5f);
+                _anim.Play(animationClips[8].name);  
+            }*/
+            
             _lastPosition = transform.position;
         }
 
@@ -136,13 +90,11 @@ namespace Opponents
         }
         public IEnumerator MoveMe()
         {
-
             while (true)
             {
-                
                 while (transform.position != currentDest.transform.position)
                 {
-                    var direction = (currentDest.transform.position - transform.position);
+                    var direction = currentDest.transform.position - transform.position;
                     var dist = direction.normalized * moveSpeed;
                 
                     dist = Vector3.ClampMagnitude(dist, direction.magnitude);
@@ -152,23 +104,6 @@ namespace Opponents
                 }
                 yield return null;
             }
-
-            // lastDest = dest;
-            // if (dest == null)
-            // {
-            //     yield return null;
-            // }
-            // while (transform.position != dest.transform.position)
-            // {
-            //     var direction = (dest.transform.position - transform.position);
-            //     var dist = direction.normalized * moveSpeed;
-            //     
-            //     dist = Vector3.ClampMagnitude(dist, direction.magnitude);
-            //     
-            //     transform.Translate(dist);
-            //     yield return new WaitForSeconds(0.03f);
-            // }
-
         }
         
 
@@ -187,12 +122,12 @@ namespace Opponents
             yield return new WaitForSeconds(0.5f);
         }
 
-        private void OnCollisionEnter(Collision col)
+        private void OnCollisionEnter2D(Collision2D col)
         {
             if (col.gameObject.CompareTag("Player"))
             {
                 GameManager.CurrentOpponent = debatePrefab;
-                SceneManager.LoadSceneAsync("Debate");
+                StartCoroutine(_transBars.MoveThoseBars(true, "Debate"));
             }
         }
     }

@@ -15,21 +15,23 @@ namespace Opponents
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            Debug.Log("Ding");
             var ent = col.gameObject.GetComponent<OpponentOverworldScript>();
             
-            if (!ent ||ent.lastDest == null)
+            if (!ent || ent.lastDest == null)
             {
-                Debug.LogError("This should not be null");
+                if (!col.gameObject.CompareTag("Player"))
+                {
+                    Debug.LogError("This should not be null");
+                }
                 return;
             }
 
             var from = ent.lastDest;
             var to = nextPoints[Random.Range(0, nextPoints.Length)];
 
-            if (to == @from && !isEnd)
+            if (to == from && !isEnd)
             {
-                while (to == @from)
+                while (to == from)
                 {
                     to = nextPoints[Random.Range(0, nextPoints.Length)];
                 }

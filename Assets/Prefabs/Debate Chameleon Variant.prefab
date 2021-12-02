@@ -14,8 +14,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
-      propertyPath: currentES
-      value: 50
+      propertyPath: emotionInt
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
