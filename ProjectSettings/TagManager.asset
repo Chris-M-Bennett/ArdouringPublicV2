@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BattleOption
   - Opponent
+  - Transition Bars
   layers:
   - Default
   - TransparentFX
