@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.iOS;
+//using UnityEngine.iOS;
 using Random = UnityEngine.Random;
 
 namespace Opponents
