@@ -731,7 +731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -10, y: 9.999878}
+  m_AnchoredPosition: {x: -1100, y: 195}
   m_SizeDelta: {x: 780, y: 250}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &438129908
@@ -1852,6 +1852,10 @@ MonoBehaviour:
   tranBars: {fileID: 1419073307}
   playerHUD: {fileID: 1905485770}
   opponentHUD: {fileID: 167449089}
+  enemyTurn: {fileID: 4770124292554830722, guid: cd948803a6d13054fa3847be4a69ea88,
+    type: 3}
+  trackX: -4.25
+  trackY: -2.48
   opponentGO: {fileID: 0}
   state: 0
 --- !u!1001 &1130837212

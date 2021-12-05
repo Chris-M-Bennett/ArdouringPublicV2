@@ -169,7 +169,7 @@ namespace Player{
             }
             else if (emotStrengths[2] == emotion)
             {
-                notifyText.text = $"It was quite effective! You dealt {weakDamage + emotAddition} points of emotional strain " +
+                notifyText.text = $"It was quite effective! You dealt {normalDamage + emotAddition} points of emotional strain " +
                                   $"to {_opponentValues.debaterName}.";
                 damageDone = normalDamage + emotAddition;
                 opponentES -= damageDone;

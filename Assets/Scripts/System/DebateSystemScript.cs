@@ -24,6 +24,9 @@ namespace System
         [Header("The player's HUD panel")]public DebateHUDScript playerHUD;
         [Header("The opponent's HUD panel")]public DebateHUDScript opponentHUD;
         
+        public GameObject enemyTurn;
+        public float trackX = -4.25f, trackY = -2.48f;
+        
         private bool _playerHadTurn = false;
         private DebateValuesScript _playerValues;
         private DebateValuesScript _opponentValues;
@@ -102,12 +105,16 @@ namespace System
         /// <returns></returns>
         IEnumerator OpponentTurn()
         {
+            GameObject foe = Instantiate(enemyTurn,new Vector2(trackX,trackY),Quaternion.identity);
             _opponentValues.CheckThreshold(_opponentPrevES);
-            _playerValues.currentES -= _opponentValues.debaterDamage;
+            //GameObject go = GameObject.Find("EnemyTurn");
+            //PlayerController playerController = go.GetComponent<PlayerController>();
+            //_playerValues.currentES = playerController.currentES;
             notifyText.text +=
                 $" {_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
             StartCoroutine(DamageAnim(player));
             playerHUD.SetES(_playerValues);
+            yield return new WaitForSeconds(12f);
             if (_playerValues.currentES <= 0)
             {
                 state = DebateState.Lost;
@@ -117,6 +124,8 @@ namespace System
             {
                 state = DebateState.Player;
                 PlayerHadTurn = false;
+                //yield return new WaitForSeconds(1f);
+                Destroy(foe);
                 StartCoroutine(PlayerTurn());
             }
             
