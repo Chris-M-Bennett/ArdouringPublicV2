@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameObject CurrentOpponent;
     public static bool NewGame;
     public static bool Tutorials = true;
+    public static Sprite debateBG;
     
     public static Dictionary<int, int[]> EmotionStrengths = new Dictionary<int, int[]>();
     
@@ -24,10 +25,10 @@ public class GameManager : MonoBehaviour
             //Destroys duplicate game manager
             Destroy(gameObject);
         }
-        EmotionStrengths.Add(0, new int[] {0, 1, 2, 3});
-        EmotionStrengths.Add(1, new int[] {1, 2, 3, 4});
-        EmotionStrengths.Add(2, new int[] {2, 3, 4, 0});
-        EmotionStrengths.Add(3, new int[] {3, 4, 0, 1});
-        EmotionStrengths.Add(4, new int[] {4, 0, 1, 2});
+        EmotionStrengths.Add(0, new[] {0, 1, 2, 3});
+        EmotionStrengths.Add(1, new[] {1, 2, 3, 4});
+        EmotionStrengths.Add(2, new[] {2, 3, 4, 0});
+        EmotionStrengths.Add(3, new[] {3, 4, 0, 1});
+        EmotionStrengths.Add(4, new[] {4, 0, 1, 2});
     }
 }

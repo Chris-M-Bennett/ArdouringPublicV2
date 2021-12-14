@@ -795,7 +795,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439581894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.8, y: -0.023, z: 0}
+  m_LocalPosition: {x: -2.56, y: -0.023, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1849,6 +1849,7 @@ MonoBehaviour:
   testPrefab: {fileID: 3055323939854202916, guid: b0c223353bf834043917a2b1edef557d,
     type: 3}
   notifyText: {fileID: 497553}
+  background: {fileID: 122244846}
   tranBars: {fileID: 1419073307}
   playerHUD: {fileID: 1905485770}
   opponentHUD: {fileID: 167449089}
@@ -3505,7 +3506,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5098022821350343924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -1.3, z: 0}
+  m_LocalPosition: {x: -7, y: -1, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3550,8 +3551,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3880092730984273255, guid: 356d6a5a38eb4ef4dad06e0f701f2ce7,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa0a4791f5548ed4eb1f73e15974c911, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

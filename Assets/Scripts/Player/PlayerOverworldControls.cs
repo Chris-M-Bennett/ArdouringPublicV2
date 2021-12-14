@@ -14,17 +14,26 @@ namespace Player{
         [SerializeField] private Vector2 startPosition;
         [SerializeField] private GameObject infoOverlay;
         [SerializeField] private Text infoText;
+        [SerializeField] private Sprite interiorBG;
+        [SerializeField] private Sprite exteriorBG;
         
         private MoveBarsScript _transBars;
         private Vector2 _currentPosition;
         private bool _isRunning = false;
         private LayerMask _opponentMask;
+        private Animator _anim;
+        private static readonly int Y = Animator.StringToHash("Y");
+        private static readonly int X = Animator.StringToHash("X");
+        private static readonly int Running = Animator.StringToHash("Running");
+        private LayerMask _structureMask;
 
         // Start is called before the first frame update
         private void Start()
         {
             _opponentMask = LayerMask.GetMask("Opponent");
+            _structureMask = LayerMask.GetMask("Structures");
             _transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
+            _anim = GetComponent<Animator>();
             if (GameManager.NewGame)
             {
                 transform.position = startPosition;
@@ -43,35 +52,59 @@ namespace Player{
         private void Update()
         {
             _currentPosition = transform.position;
-            if (Input.GetAxis("Vertical") != 0)
+            if (Input.GetAxis("Vertical") == 0)
+            {
+                _anim.SetFloat(Y,0);    
+            }else
             {//Moves the player on the vertical axis in the direction of the input
                 _currentPosition.y += moveSpeed*Input.GetAxis("Vertical");
+                _anim.SetFloat(Y,Input.GetAxis("Vertical"));  
             }
-            if (Input.GetAxis("Horizontal") != 0)
+            if (Input.GetAxis("Horizontal") == 0)
+            {
+                _anim.SetFloat(X,0);
+            }else
             {//Moves the player on the horizontal axis in the direction of the input
                 _currentPosition.x += moveSpeed*Input.GetAxis("Horizontal");
+                _anim.SetFloat(X,Input.GetAxis("Horizontal"));
             }
             if(Input.GetButtonDown("Run")){
                 if(_isRunning){
                     moveSpeed -= runSpeedDif;
+                    _anim.SetBool(Running,false);
                 }
-                else{moveSpeed += runSpeedDif;}
+                else
+                {
+                    moveSpeed += runSpeedDif;
+                    _anim.SetBool(Running,true);
+                }
                 _isRunning = !_isRunning;
             }
             transform.position = _currentPosition;
 
-            Collider2D hit = Physics2D.OverlapCircle(_currentPosition, 0.5f, _opponentMask);
-            if (hit)
+            Collider2D opponentHit = Physics2D.OverlapCircle(_currentPosition, 0.8f, _opponentMask);
+
+            if (opponentHit)
             {
+
                 infoOverlay.SetActive(true);
-                infoText.text = hit.gameObject.name;
+                infoText.text = opponentHit.gameObject.name;
                 if (GameManager.Tutorials)
                 {
                     infoText.text += $"\n\n{_activateControls}";
                 }
                 if (Input.GetButtonDown("Activate"))
                 {
-                    GameManager.CurrentOpponent = hit.gameObject.GetComponent<OpponentOverworldScript>().debatePrefab;
+                    Collider2D structureHit = Physics2D.OverlapCircle(_currentPosition, 7f, _structureMask);
+                    if (structureHit)
+                    {
+                        GameManager.debateBG = interiorBG;
+                    }else
+                    {
+                        GameManager.debateBG = exteriorBG;
+                    }
+                    
+                    GameManager.CurrentOpponent = opponentHit.gameObject.GetComponent<OpponentOverworldScript>().debatePrefab;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
                     StartCoroutine(_transBars.MoveThoseBars(true, "Debate"));
@@ -87,5 +120,6 @@ namespace Player{
                 infoOverlay.SetActive(false);
             }
         }
+        
     }
 }

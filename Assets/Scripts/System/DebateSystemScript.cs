@@ -2,8 +2,8 @@ using System.Collections;
 using Opponents;
 using UI;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Image = UnityEngine.UI.Image;
 
 namespace System
 {
@@ -18,6 +18,7 @@ namespace System
         [SerializeField] private GameObject testPrefab;
         [SerializeField, Header("The text box for information")] 
         private UnityEngine.UI.Text notifyText;
+        [SerializeField] private Image background;
 
         [SerializeField] private MoveBarsScript tranBars;
 
@@ -45,6 +46,7 @@ namespace System
 
         void Start()
         {
+            background.sprite = GameManager.debateBG;
             _playerValues = player.GetComponent<DebateValuesScript>();
             if (GameManager.CurrentOpponent)
             {

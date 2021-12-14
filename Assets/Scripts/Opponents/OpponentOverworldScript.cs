@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Linq.Expressions;
+﻿using System.Collections;
 using Player;
 using UI;
-//using UnityEditor.Animations;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
+using UnityEngine.AI;
 
 namespace Opponents
 {
@@ -17,7 +13,7 @@ namespace Opponents
         [SerializeField] public DirectOverworldMovementScript lastDest;
         [SerializeField] public DirectOverworldMovementScript currentDest;
         [SerializeField] private float moveSpeed = 0.05f;
-        
+
 
         private SpriteRenderer _mainRenderer;
         private Color _mainColour;
@@ -28,6 +24,8 @@ namespace Opponents
         private Vector2 _dir;
         private Animator _anim;
         private MoveBarsScript _transBars;
+        private NavMeshAgent _agent;
+        private PlayerOverworldControls _player;
         private static readonly int IsLeft = Animator.StringToHash("IsLeft");
         private static readonly int IsDown = Animator.StringToHash("IsDown");
         private static readonly int IsUp = Animator.StringToHash("IsUp");
@@ -39,12 +37,17 @@ namespace Opponents
             _mainColour = _mainRenderer.color;
             _otherRenderer = GetComponentInChildren<SpriteRenderer>();
             _otherColour = _otherRenderer.color;
+            _agent = GetComponent<NavMeshAgent>();
+            _agent.updateRotation = false;
+            _agent.updateUpAxis = false;
             _anim = GetComponent<Animator>();
+            _player = GameObject.FindWithTag("Player").GetComponent<PlayerOverworldControls>();
             int current = 0;
             _transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
             StartCoroutine(ChangeColour(current));
             _lastPosition = transform.position;
-            StartCoroutine(MoveMe());
+            _agent.destination = currentDest.transform.position;
+            //StartCoroutine(MoveMe());
         }
 
         private void Update()
@@ -87,8 +90,9 @@ namespace Opponents
         {
             lastDest = currentDest;
             currentDest = moveTo;
+            _agent.destination = moveTo.transform.position;
         }
-        public IEnumerator MoveMe()
+       /* public IEnumerator MoveMe()
         {
             while (true)
             {
@@ -98,13 +102,13 @@ namespace Opponents
                     var dist = direction.normalized * moveSpeed;
                 
                     dist = Vector3.ClampMagnitude(dist, direction.magnitude);
-                
-                    transform.Translate(dist);
+                    
+                    //transform.Translate(dist);
                     yield return new WaitForSeconds(0.03f);
                 }
                 yield return null;
             }
-        }
+        }*/
         
 
         IEnumerator ChangeColour(int current)
@@ -122,13 +126,14 @@ namespace Opponents
             yield return new WaitForSeconds(0.5f);
         }
 
-        private void OnCollisionEnter2D(Collision2D col)
+       /* private void OnCollisionEnter2D(Collision2D col)
         {
-            if (col.gameObject.CompareTag("Player"))
+            if (col.gameObject == _player.gameObject)
             {
+                _player.SetDebateBG();
                 GameManager.CurrentOpponent = debatePrefab;
                 StartCoroutine(_transBars.MoveThoseBars(true, "Debate"));
             }
-        }
+        }*/
     }
 }
