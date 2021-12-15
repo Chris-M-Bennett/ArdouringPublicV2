@@ -26,6 +26,8 @@ namespace Player{
         private static readonly int X = Animator.StringToHash("X");
         private static readonly int Running = Animator.StringToHash("Running");
         private LayerMask _structureMask;
+        private Rigidbody2D _rb;
+        private SpriteRenderer _sprite;
 
         // Start is called before the first frame update
         private void Start()
@@ -34,6 +36,8 @@ namespace Player{
             _structureMask = LayerMask.GetMask("Structures");
             _transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
             _anim = GetComponent<Animator>();
+            _rb = GetComponent<Rigidbody2D>();
+            _sprite = GetComponent<SpriteRenderer>();
             if (GameManager.NewGame)
             {
                 transform.position = startPosition;
@@ -57,7 +61,11 @@ namespace Player{
                 _anim.SetFloat(Y,0);    
             }else
             {//Moves the player on the vertical axis in the direction of the input
-                _currentPosition.y += moveSpeed*Input.GetAxis("Vertical");
+                if (Mathf.Abs(_rb.velocity.y) < 0.1f)
+                {
+                    _rb.AddForce(new Vector2(0, moveSpeed * Input.GetAxis("Vertical")),ForceMode2D.Impulse);
+                }
+
                 _anim.SetFloat(Y,Input.GetAxis("Vertical"));  
             }
             if (Input.GetAxis("Horizontal") == 0)
@@ -65,7 +73,11 @@ namespace Player{
                 _anim.SetFloat(X,0);
             }else
             {//Moves the player on the horizontal axis in the direction of the input
-                _currentPosition.x += moveSpeed*Input.GetAxis("Horizontal");
+                if (Mathf.Abs(_rb.velocity.x) <0.1f)
+                {
+                    _rb.AddForce(new Vector2(moveSpeed * Input.GetAxis("Horizontal"), 0),ForceMode2D.Impulse);
+                }
+
                 _anim.SetFloat(X,Input.GetAxis("Horizontal"));
             }
             if(Input.GetButtonDown("Run")){

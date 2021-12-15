@@ -10,7 +10,7 @@ namespace UI{
         [SerializeField] private Toggle tutToggle;
         private void Start()
         {
-            tutToggle.isOn = GameManager.Tutorials;
+            tutToggle.isOn = Convert.ToBoolean(PlayerPrefs.GetInt("Tutorials", 1));
         }
 
         public void NewGame(){
@@ -29,6 +29,7 @@ namespace UI{
 
         public void ToggleTutorials(bool toggle)
         {
+            PlayerPrefs.SetInt("Tutorials", Convert.ToInt32(toggle));
             GameManager.Tutorials = toggle;
         }
     }

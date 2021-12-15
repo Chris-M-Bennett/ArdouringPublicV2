@@ -4,25 +4,46 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 1419218770153125915
-    second: Starting Town Debate Hall Sprite
+    second: Starting Town Debate Hall Bottom Sprite
   - first:
       213: -956368353684741054
-    second: Starting Town Long Building Sprite
+    second: Starting Town Long Building Bottom Sprite
   - first:
       213: -3926669146287119538
-    second: Starting Town Tall House Sprite
+    second: Starting Town Tall House Bottom Sprite
   - first:
       213: -4390753088539072313
-    second: Starting Town Squat House Sprite
+    second: Starting Town Squat House Bottom Sprite
   - first:
       213: -8812118583650954544
-    second: Starting Town Shed Sprite
+    second: Starting Town Shed Bottom Sprite
   - first:
       213: -5702178523128407109
-    second: Starting Town Fence Sprite
+    second: Starting Town Fence Bottom Sprite
   - first:
       213: -4596007601975492917
-    second: Starting Town Tree Sprite
+    second: Starting Town Tree Bottom Sprite
+  - first:
+      213: -4740749982565472688
+    second: Starting Town Shed Top Sprite
+  - first:
+      213: -3027698887676191085
+    second: Starting Town Fence Top Sprite
+  - first:
+      213: -7903616036539809368
+    second: Starting Town Squat House Top Sprite
+  - first:
+      213: -6571043141126935
+    second: Starting Town Tall House Top Sprite
+  - first:
+      213: 4561381787844424181
+    second: Starting Town Tree Top Sprite
+  - first:
+      213: 1581097635992894770
+    second: Starting Town Debate Hall Top Sprite
+  - first:
+      213: 1546297059313494555
+    second: Starting Town Long Building Top Sprite
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -120,22 +141,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Starting Town Debate Hall Sprite
+      name: Starting Town Debate Hall Bottom Sprite
       rect:
         serializedVersion: 2
         x: 18
-        y: 215
-        width: 162
-        height: 78
+        y: 218
+        width: 161
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 3, z: 0, w: 23}
+      border: {x: 3, y: 0, z: 12, w: 0}
       outline: []
       physicsShape:
-      - - {x: -78, y: -36}
-        - {x: -78, y: 23}
-        - {x: 80, y: 23}
-        - {x: 79, y: -36}
+      - - {x: -77.5, y: -5}
+        - {x: -77.5, y: 5}
+        - {x: 68.5, y: 5}
+        - {x: 68.5, y: -5}
       tessellationDetail: 0
       bones: []
       spriteID: b183b8db3f312b310800000000000000
@@ -145,21 +166,21 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Starting Town Long Building Sprite
+      name: Starting Town Long Building Bottom Sprite
       rect:
         serializedVersion: 2
         x: 196
         y: 230
         width: 140
-        height: 62
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 22}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
       - - {x: -70, y: -31}
-        - {x: -70, y: 17}
-        - {x: 70, y: 16}
+        - {x: -70, y: 24}
+        - {x: 70, y: 24}
         - {x: 70, y: -31}
       tessellationDetail: 0
       bones: []
@@ -170,22 +191,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Starting Town Tall House Sprite
+      name: Starting Town Tall House Bottom Sprite
       rect:
         serializedVersion: 2
         x: 18
         y: 89
         width: 70
-        height: 109
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 21}
+      border: {x: 3, y: 0, z: 4, w: 0}
       outline: []
       physicsShape:
-      - - {x: -32, y: -54.5}
-        - {x: -32, y: 41.5}
-        - {x: 31, y: 41.5}
-        - {x: 31, y: -54.5}
+      - - {x: -32, y: -12.5}
+        - {x: -32, y: 12.5}
+        - {x: 31, y: 12.5}
+        - {x: 31, y: -12.5}
       tessellationDetail: 0
       bones: []
       spriteID: e43e111473ba189c0800000000000000
@@ -195,22 +216,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Starting Town Squat House Sprite
+      name: Starting Town Squat House Bottom Sprite
       rect:
         serializedVersion: 2
         x: 97
         y: 117
         width: 72
-        height: 80
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 20}
+      border: {x: 2, y: 0, z: 2, w: 0}
       outline: []
       physicsShape:
-      - - {x: -34, y: -40}
-        - {x: -34, y: 23}
-        - {x: 34, y: 23}
-        - {x: 34, y: -40}
+      - - {x: -34, y: -16}
+        - {x: -34, y: 16}
+        - {x: 34, y: 16}
+        - {x: 34, y: -16}
       tessellationDetail: 0
       bones: []
       spriteID: 7c8ed254459e013c0800000000000000
@@ -220,22 +241,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Starting Town Shed Sprite
+      name: Starting Town Shed Bottom Sprite
       rect:
         serializedVersion: 2
         x: 178
         y: 137
-        width: 56
-        height: 60
+        width: 54
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 20}
+      border: {x: 2, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -26, y: -30}
-        - {x: -26, y: 23}
-        - {x: 26, y: 23}
-        - {x: 26, y: -30}
+      - - {x: -25, y: -11.5}
+        - {x: -25, y: 11.5}
+        - {x: 27, y: 11.5}
+        - {x: 27, y: -11.5}
       tessellationDetail: 0
       bones: []
       spriteID: 0d2ddd636d015b580800000000000000
@@ -245,13 +266,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Starting Town Fence Sprite
+      name: Starting Town Fence Bottom Sprite
       rect:
         serializedVersion: 2
         x: 311
         y: 175
         width: 11
-        height: 12
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,13 +287,59 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Starting Town Tree Sprite
+      name: Starting Town Tree Bottom Sprite
       rect:
         serializedVersion: 2
         x: 18
         y: 19
         width: 47
-        height: 53
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 16, y: 0, z: 10, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce714bcf63b730c0800000000000000
+      internalID: -4596007601975492917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town Shed Top Sprite
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 160
+        width: 56
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 0, z: 2, w: 6}
+      outline: []
+      physicsShape:
+      - - {x: -26, y: -18.5}
+        - {x: -26, y: 13.5}
+        - {x: 26, y: 13.5}
+        - {x: 26, y: -18.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056ee382209753eb0800000000000000
+      internalID: -4740749982565472688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town Fence Top Sprite
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 180
+        width: 11
+        height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,8 +347,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bce714bcf63b730c0800000000000000
-      internalID: -4596007601975492917
+      spriteID: 39e173137e37bf5d0800000000000000
+      internalID: -3027698887676191085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town Squat House Top Sprite
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 149
+        width: 72
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 0, z: 2, w: 15}
+      outline: []
+      physicsShape:
+      - - {x: -34, y: -24}
+        - {x: -34, y: 10}
+        - {x: 34, y: 10}
+        - {x: 34, y: -24}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1c6f40717b05290800000000000000
+      internalID: -7903616036539809368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town Tall House Top Sprite
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 114
+        width: 70
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 5}
+      outline: []
+      physicsShape:
+      - - {x: -32, y: -42}
+        - {x: -32, y: 33}
+        - {x: 31, y: 33}
+        - {x: 31, y: -42}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4f4cbcba7a8eff0800000000000000
+      internalID: -6571043141126935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town Tree Top Sprite
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 28
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 16, y: 0, z: 10, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1376d91984d4f30800000000000000
+      internalID: 4561381787844424181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town Debate Hall Top Sprite
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 228
+        width: 161
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 3, y: 0, z: 12, w: 6}
+      outline: []
+      physicsShape:
+      - - {x: -77.5, y: -32}
+        - {x: -77.5, y: 25}
+        - {x: 68.5, y: 25}
+        - {x: 68.5, y: -32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23df0944cef21f510800000000000000
+      internalID: 1581097635992894770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town Long Building Top Sprite
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 251
+        width: 140
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1aac999bfc857510800000000000000
+      internalID: 1546297059313494555
       vertices: []
       indices: 
       edges: []
