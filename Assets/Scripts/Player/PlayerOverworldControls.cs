@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Opponents;
 using UI;
 using UnityEngine;
@@ -11,6 +12,7 @@ namespace Player{
         
         [SerializeField] private float moveSpeed = 0.005f;
         [SerializeField] private float runSpeedDif = 0.005f;
+        [SerializeField] private float maxSpeed = 0.1f;
         [SerializeField] private Vector2 startPosition;
         [SerializeField] private GameObject infoOverlay;
         [SerializeField] private Text infoText;
@@ -52,48 +54,51 @@ namespace Player{
             }
         }
 
-        // Update is called once per frame
-        private void Update()
-        {
-            _currentPosition = transform.position;
-            if (Input.GetAxis("Vertical") == 0)
-            {
-                _anim.SetFloat(Y,0);    
-            }else
-            {//Moves the player on the vertical axis in the direction of the input
-                if (Mathf.Abs(_rb.velocity.y) < 0.1f)
-                {
-                    _rb.AddForce(new Vector2(0, moveSpeed * Input.GetAxis("Vertical")),ForceMode2D.Impulse);
-                }
-
-                _anim.SetFloat(Y,Input.GetAxis("Vertical"));  
-            }
-            if (Input.GetAxis("Horizontal") == 0)
-            {
-                _anim.SetFloat(X,0);
-            }else
-            {//Moves the player on the horizontal axis in the direction of the input
-                if (Mathf.Abs(_rb.velocity.x) <0.1f)
-                {
-                    _rb.AddForce(new Vector2(moveSpeed * Input.GetAxis("Horizontal"), 0),ForceMode2D.Impulse);
-                }
-
-                _anim.SetFloat(X,Input.GetAxis("Horizontal"));
-            }
+        private void FixedUpdate(){
             if(Input.GetButtonDown("Run")){
                 if(_isRunning){
                     moveSpeed -= runSpeedDif;
+                    maxSpeed -= runSpeedDif;
                     _anim.SetBool(Running,false);
                 }
                 else
                 {
                     moveSpeed += runSpeedDif;
+                    maxSpeed += runSpeedDif;
                     _anim.SetBool(Running,true);
                 }
                 _isRunning = !_isRunning;
             }
-            transform.position = _currentPosition;
+            
+            _rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * moveSpeed,Input.GetAxis("Vertical")* moveSpeed));
+            float xLimit = Mathf.Clamp(_rb.velocity.x, -maxSpeed, maxSpeed);
+            float yLimit = Mathf.Clamp(_rb.velocity.x, -maxSpeed, maxSpeed);
+            _rb.velocity = new Vector2(xLimit, yLimit);
+            //Moves the player on the vertical axis in the direction of the input
 
+            //Moves the player on the horizontal axis in the direction of the input
+
+            if (Input.GetAxis("Vertical") == 0)
+            {
+                _anim.SetFloat(Y,0);    
+            }else
+            {
+                _anim.SetFloat(Y,Input.GetAxis("Vertical"));
+            }
+
+            if (Input.GetAxis("Horizontal") == 0)
+            {
+                _anim.SetFloat(X,0);
+            }else
+            {
+                _anim.SetFloat(X,Input.GetAxis("Horizontal"));
+            }
+        }
+
+        // Update is called once per frame
+        private void Update()
+        {
+            _currentPosition = transform.position;
             Collider2D opponentHit = Physics2D.OverlapCircle(_currentPosition, 0.8f, _opponentMask);
 
             if (opponentHit)
