@@ -795,7 +795,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439581894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.03, y: 0.96, z: 0}
+  m_LocalPosition: {x: -7.05, y: 0.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1134,7 +1134,7 @@ GameObject:
   - component: {fileID: 733254544}
   - component: {fileID: 733254543}
   m_Layer: 5
-  m_Name: +
+  m_Name: O
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1156,7 +1156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 622, y: -3}
+  m_AnchoredPosition: {x: 630, y: -3}
   m_SizeDelta: {x: 55, y: 55}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &733254543
@@ -1191,7 +1191,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: +
+  m_Text: 'O
+
+'
 --- !u!222 &733254544
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1529,7 +1531,7 @@ GameObject:
   - component: {fileID: 946809164}
   - component: {fileID: 946809163}
   m_Layer: 5
-  m_Name: '-'
+  m_Name: P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1551,7 +1553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -26, y: -3}
+  m_AnchoredPosition: {x: -35, y: -3}
   m_SizeDelta: {x: 55, y: 55}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &946809163
@@ -1586,7 +1588,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-'
+  m_Text: P
 --- !u!222 &946809164
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1850,6 +1852,7 @@ MonoBehaviour:
   notifyText: {fileID: 497553}
   background: {fileID: 122244846}
   tranBars: {fileID: 1419073307}
+  eventSystem: {fileID: 1672373864}
   playerHUD: {fileID: 1905485770}
   opponentHUD: {fileID: 167449089}
   enemyTurn: {fileID: 4770124292554830722, guid: cd948803a6d13054fa3847be4a69ea88,

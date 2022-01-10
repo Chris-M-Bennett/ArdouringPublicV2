@@ -2,6 +2,7 @@ using System.Collections;
 using Opponents;
 using UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using Image = UnityEngine.UI.Image;
 
@@ -21,6 +22,7 @@ namespace System
         [SerializeField] private Image background;
 
         [SerializeField] private MoveBarsScript tranBars;
+        [SerializeField] private EventSystem eventSystem;
 
         [Header("The player's HUD panel")]public DebateHUDScript playerHUD;
         [Header("The opponent's HUD panel")]public DebateHUDScript opponentHUD;
@@ -48,9 +50,9 @@ namespace System
         {
             background.sprite = GameManager.debateBG;
             _playerValues = player.GetComponent<DebateValuesScript>();
-            if (GameManager.CurrentOpponent)
+            if (GameManager.debateOpponent)
             {
-                opponentGO = Instantiate(GameManager.CurrentOpponent, opponentSpawn);
+                opponentGO = Instantiate(GameManager.debateOpponent, opponentSpawn);
             }else
             {
                 opponentGO = Instantiate(testPrefab, opponentSpawn);   
@@ -73,7 +75,7 @@ namespace System
         /// <returns>5 second wait before opponent's turn</returns>
         IEnumerator PlayerTurn()
         {
-            if (GameManager.Tutorials)
+            if (GameManager.tutorials)
             {
                 int opponentEmot = _opponentValues.emotionInt;
                 notifyText.text =
@@ -109,11 +111,9 @@ namespace System
         {
             GameObject foe = Instantiate(enemyTurn,new Vector2(trackX,trackY),Quaternion.identity);
             _opponentValues.CheckThreshold(_opponentPrevES);
-            //GameObject go = GameObject.Find("EnemyTurn");
-            //PlayerController playerController = go.GetComponent<PlayerController>();
-            //_playerValues.currentES = playerController.currentES;
             notifyText.text +=
                 $" {_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
+            eventSystem.enabled = false;
             StartCoroutine(DamageAnim(player));
             playerHUD.SetES(_playerValues);
             yield return new WaitForSeconds(12f);
@@ -128,6 +128,7 @@ namespace System
                 PlayerHadTurn = false;
                 //yield return new WaitForSeconds(1f);
                 Destroy(foe);
+                eventSystem.enabled = true;
                 StartCoroutine(PlayerTurn());
             }
             
@@ -157,6 +158,7 @@ namespace System
             {
                 _playerExp += 2;
                 notifyText.text = "You won the debate!";
+                GameManager.wonDebate = true;
             }
             else if (state == DebateState.Lost)
             {

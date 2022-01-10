@@ -40,11 +40,11 @@ namespace Player{
             _anim = GetComponent<Animator>();
             _rb = GetComponent<Rigidbody2D>();
             _sprite = GetComponent<SpriteRenderer>();
-            if (GameManager.NewGame)
+            if (GameManager.newGame)
             {
                 transform.position = startPosition;
                 infoText.text = _moveControls;
-                GameManager.NewGame = false;
+                GameManager.newGame = false;
             }
             else
             {
@@ -106,7 +106,7 @@ namespace Player{
 
                 infoOverlay.SetActive(true);
                 infoText.text = opponentHit.gameObject.name;
-                if (GameManager.Tutorials)
+                if (GameManager.tutorials)
                 {
                     infoText.text += $"\n\n{_activateControls}";
                 }
@@ -121,13 +121,14 @@ namespace Player{
                         GameManager.debateBG = exteriorBG;
                     }
                     
-                    GameManager.CurrentOpponent = opponentHit.gameObject.GetComponent<OpponentOverworldScript>().debatePrefab;
+                    GameManager.currentOpponent = opponentHit.gameObject;
+                    GameManager.debateOpponent = GameManager.currentOpponent.GetComponent<OpponentOverworldScript>().debatePrefab;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
                     StartCoroutine(_transBars.MoveThoseBars(true, "Debate"));
                 }
             }
-            else if (GameManager.Tutorials)
+            else if (GameManager.tutorials)
             {
                 infoOverlay.SetActive(true);
                 infoText.text = _moveControls;

@@ -5,9 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
-    public static GameObject CurrentOpponent;
-    public static bool NewGame;
-    public static bool Tutorials = true;
+    public static GameObject currentOpponent;
+    public static GameObject debateOpponent;
+    public static bool wonDebate = false;
+    public static bool newGame;
+    public static bool tutorials = true;
     public static Sprite debateBG;
     
     public static Dictionary<int, int[]> EmotionStrengths = new Dictionary<int, int[]>();

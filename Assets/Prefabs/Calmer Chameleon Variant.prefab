@@ -21,6 +21,12 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
+      propertyPath: defeatedPrefab
+      value: 
+      objectReference: {fileID: 1497256308422217852, guid: 1478a9994951af947925aeef9bdac4d2,
+        type: 3}
+    - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
       propertyPath: animationClips.Array.data[0]
       value: 
       objectReference: {fileID: 7400000, guid: 5129181c61d34fa44a0620055686d916, type: 2}

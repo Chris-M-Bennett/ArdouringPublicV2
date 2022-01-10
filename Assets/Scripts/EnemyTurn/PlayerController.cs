@@ -76,13 +76,13 @@ public class PlayerController : MonoBehaviour
         {
             posX += xStrafe;
             Player.transform.position = new Vector2 (posX, posY);
-            Debug.Log("Player X: " + posX);
+            //Debug.Log("Player X: " + posX);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow) && posX > farLeftX) //this was originally posX != farLeftX but due to floating point arithmetic farLextX is 0.67999999999999 etc instead of 0.68 so the > circumvents this.
         {
             posX -= xStrafe;
             Player.transform.position = new Vector2 (posX, posY);
-            Debug.Log("Player X: " + posX);
+            //Debug.Log("Player X: " + posX);
         }
     }
 

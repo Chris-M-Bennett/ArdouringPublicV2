@@ -14,7 +14,7 @@ namespace UI{
         }
 
         public void NewGame(){
-            GameManager.NewGame = true;
+            GameManager.newGame = true;
             SceneManager.LoadSceneAsync("Overworld");
         }
         
@@ -30,7 +30,7 @@ namespace UI{
         public void ToggleTutorials(bool toggle)
         {
             PlayerPrefs.SetInt("Tutorials", Convert.ToInt32(toggle));
-            GameManager.Tutorials = toggle;
+            GameManager.tutorials = toggle;
         }
     }
 }

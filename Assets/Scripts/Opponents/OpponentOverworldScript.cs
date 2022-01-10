@@ -10,9 +10,11 @@ namespace Opponents
     {
         [Header("Mouse over field names for description of what to add")]
         [SerializeField, Tooltip("The prefab used for this opponent in debates")] public GameObject debatePrefab;
+        [SerializeField] private GameObject defeatedPrefab;
+        [SerializeField] private Transform defeatPoint;
         [SerializeField] public DirectOverworldMovementScript lastDest;
         [SerializeField] public DirectOverworldMovementScript currentDest;
-        [SerializeField] private float moveSpeed = 0.05f;
+        [SerializeField] private float moveSpeed = 2f;
 
 
         private SpriteRenderer _mainRenderer;
@@ -30,7 +32,6 @@ namespace Opponents
         private static readonly int IsDown = Animator.StringToHash("IsDown");
         private static readonly int IsUp = Animator.StringToHash("IsUp");
         private static readonly int IsRight = Animator.StringToHash("IsRight");
-
         void Start()
         {
             _mainRenderer = GetComponent<SpriteRenderer>();
@@ -43,11 +44,18 @@ namespace Opponents
             _anim = GetComponent<Animator>();
             _player = GameObject.FindWithTag("Player").GetComponent<PlayerOverworldControls>();
             int current = 0;
-            _transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
+            //_transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
             StartCoroutine(ChangeColour(current));
-            _lastPosition = transform.position;
-            _agent.destination = currentDest.transform.position;
-            //StartCoroutine(MoveMe());
+            if (GameManager.currentOpponent == gameObject && GameManager.wonDebate)
+            {
+               Instantiate(defeatedPrefab,defeatPoint);
+               Destroy(gameObject);
+            }else
+            {
+                _lastPosition = transform.position;
+                _agent.speed = moveSpeed;
+                _agent.destination = currentDest.transform.position;  
+            }
         }
 
         private void Update()
