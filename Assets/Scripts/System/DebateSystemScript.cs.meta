@@ -3,7 +3,21 @@ guid: 8be8aa75b2568db4f8aa1072f06f5209
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - player: {fileID: 4184862976622893649, guid: 6a7e6bea90373a7478ae503186ffb65e,
+      type: 3}
+  - opponentSpawn: {instanceID: 0}
+  - testPrefab: {instanceID: 0}
+  - notifyText: {instanceID: 0}
+  - background: {instanceID: 0}
+  - tranBars: {fileID: 3446328930846121455, guid: 3365ea3f76296fa419c859b8283ff04b,
+      type: 3}
+  - playerHUD: {instanceID: 0}
+  - opponentHUD: {instanceID: 0}
+  - enemyTurn: {fileID: 4770124292554830722, guid: cd948803a6d13054fa3847be4a69ea88,
+      type: 3}
+  - opponentGO: {fileID: 2978396957570500081, guid: e731a199acc924442a0d5fcba8122031,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

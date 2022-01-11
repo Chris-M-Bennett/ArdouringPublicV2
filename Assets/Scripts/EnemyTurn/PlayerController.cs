@@ -22,8 +22,9 @@ public class PlayerController : MonoBehaviour
     //private GameObject player;
     public GameObject text;
     public GameObject ESbar;
-    //private DebateValuesScript _playerValues;
-    
+    private static DebateValuesScript _playerValues;
+    //public GameObject dss;
+    //public int debateES;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,12 +36,25 @@ public class PlayerController : MonoBehaviour
         Player.transform.position = new Vector2 (posX, posY);
         //_playerValues = player.GetComponent<DebateValuesScript>();
         maxES = 100;
-        currentES = 100;
-        //currentES = _playerValues.currentES;  //maxES;
+        //currentES = 100;
+        _playerValues = GameObject.FindWithTag("Player").GetComponent<DebateValuesScript>();
+        /*
+        dss = GameObject.FindGameObjectWithTag("Debate");
+        if (dss != null)
+        {
+            //currentES = dss.GetComponent<DebateSystemScript>().debatePlayerES;
+        }
+        else
+        {
+            currentES = maxES;
+        }
+        */
+        currentES = _playerValues.currentES;
+         
        // Debug.Log("CurrentES: " + currentES);
         esDrop = 0.133f;
         barX = -2.335f;
-        barY = -1.565f; //- (esDrop * (maxES - currentES));
+        barY = -1.565f - (esDrop * (maxES - currentES)/10);
         //HandleBarDrop();
         
         
@@ -72,13 +86,13 @@ public class PlayerController : MonoBehaviour
 
     private void HandleStrafe()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow) && posX < farRightX)
+        if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && posX < farRightX)
         {
             posX += xStrafe;
             Player.transform.position = new Vector2 (posX, posY);
             //Debug.Log("Player X: " + posX);
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && posX > farLeftX) //this was originally posX != farLeftX but due to floating point arithmetic farLextX is 0.67999999999999 etc instead of 0.68 so the > circumvents this.
+        if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && posX > farLeftX) //this was originally posX != farLeftX but due to floating point arithmetic farLextX is 0.67999999999999 etc instead of 0.68 so the > circumvents this.
         {
             posX -= xStrafe;
             Player.transform.position = new Vector2 (posX, posY);
@@ -93,10 +107,19 @@ public class PlayerController : MonoBehaviour
         if (hit.gameObject.tag == "Bullet")
         {
             currentES -= hit.GetComponent<BulletController>().damage;
+            _playerValues.currentES = currentES;
+            
             barY -= esDrop;
             ESbar.transform.position = new Vector2 (barX, barY);
             Debug.Log("Emotional Stability: " + currentES);
+            /*
+            if (dss != null)
+            {
+                //dss.GetComponent<DebateSystemScript>().debatePlayerES = currentES;
+            }
+            */
             //HandleBarDrop();
+            //dss._playerValues.currentES = currentES;
         }
         
     }

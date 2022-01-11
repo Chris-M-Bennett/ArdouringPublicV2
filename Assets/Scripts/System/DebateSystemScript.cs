@@ -90,6 +90,7 @@ namespace System
             }
 
             StartCoroutine(DamageAnim(opponentGO));
+            
             if (_opponentValues.currentES <= 0)// || _opponentValues.currentES >= _opponentValues.maxES)
             {
                 state = DebateState.Won;
@@ -109,6 +110,7 @@ namespace System
         /// <returns></returns>
         IEnumerator OpponentTurn()
         {
+            
             GameObject foe = Instantiate(enemyTurn,new Vector2(trackX,trackY),Quaternion.identity);
             _opponentValues.CheckThreshold(_opponentPrevES);
             notifyText.text +=
