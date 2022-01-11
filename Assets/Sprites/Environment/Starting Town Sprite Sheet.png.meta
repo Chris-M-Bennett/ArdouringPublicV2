@@ -44,6 +44,24 @@ TextureImporter:
   - first:
       213: 1546297059313494555
     second: Starting Town Long Building Top Sprite
+  - first:
+      213: -5250788495163665342
+    second: Starting Town Stone Bottom Sprite
+  - first:
+      213: 6088049586433192044
+    second: Starting Town Stone Top Sprite
+  - first:
+      213: 5724063918875423726
+    second: Starting Town Spirit Top Sprite
+  - first:
+      213: 3099533401597554849
+    second: Starting Town Spirit Bottom Sprite
+  - first:
+      213: 6817390353691847698
+    second: Starting Town End Bottom Sprite
+  - first:
+      213: -205312628182860423
+    second: Starting Town End Top Sprite
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -145,7 +163,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 218
+        y: 225
         width: 161
         height: 10
       alignment: 0
@@ -170,7 +188,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 196
-        y: 230
+        y: 237
         width: 140
         height: 21
       alignment: 0
@@ -195,7 +213,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 89
+        y: 96
         width: 70
         height: 25
       alignment: 0
@@ -222,7 +240,7 @@ TextureImporter:
         x: 97
         y: 117
         width: 72
-        height: 32
+        height: 39
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 2, y: 0, z: 2, w: 0}
@@ -245,7 +263,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 178
-        y: 137
+        y: 144
         width: 54
         height: 23
       alignment: 0
@@ -270,7 +288,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 311
-        y: 175
+        y: 182
         width: 11
         height: 5
       alignment: 0
@@ -291,9 +309,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 19
+        y: 25
         width: 47
-        height: 9
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 16, y: 0, z: 10, w: 0}
@@ -312,7 +330,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 178
-        y: 160
+        y: 167
         width: 56
         height: 37
       alignment: 0
@@ -337,7 +355,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 311
-        y: 180
+        y: 187
         width: 11
         height: 7
       alignment: 0
@@ -358,7 +376,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 97
-        y: 149
+        y: 156
         width: 72
         height: 48
       alignment: 0
@@ -383,12 +401,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 114
+        y: 121
         width: 70
-        height: 84
+        height: 83
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 5}
+      border: {x: 3, y: 0, z: 4, w: 5}
       outline: []
       physicsShape:
       - - {x: -32, y: -42}
@@ -408,9 +426,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 28
+        y: 36
         width: 47
-        height: 44
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 16, y: 0, z: 10, w: 10}
@@ -429,9 +447,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 18
-        y: 228
+        y: 235
         width: 161
-        height: 64
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 3, y: 0, z: 12, w: 6}
@@ -454,9 +472,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 196
-        y: 251
+        y: 258
         width: 140
-        height: 41
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 5}
@@ -466,6 +484,132 @@ TextureImporter:
       bones: []
       spriteID: b1aac999bfc857510800000000000000
       internalID: 1546297059313494555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town Stone Bottom Sprite
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 27
+        width: 40
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244df0bfea37127b0800000000000000
+      internalID: -5250788495163665342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town Stone Top Sprite
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 36
+        width: 40
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60705ec7d81d7450800000000000000
+      internalID: 6088049586433192044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town Spirit Top Sprite
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 41
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3333c8ec5ff6f40800000000000000
+      internalID: 5724063918875423726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town Spirit Bottom Sprite
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 27
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a03eabe431c30b20800000000000000
+      internalID: 3099533401597554849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town End Bottom Sprite
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 9
+        width: 60
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c2af6186c3c9e50800000000000000
+      internalID: 6817390353691847698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Starting Town End Top Sprite
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 76
+        width: 60
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 0, z: 0, w: 8}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d3241a045962df0800000000000000
+      internalID: -205312628182860423
       vertices: []
       indices: 
       edges: []

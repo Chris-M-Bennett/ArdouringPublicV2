@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90b6e9edc8b4b6ba0281de5bd695bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorials: 1
 --- !u!4 &34465632
 Transform:
   m_ObjectHideFlags: 0
@@ -271,6 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2250346f86e3f7a4295357fcaaa6c603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutToggle: {fileID: 0}
 --- !u!114 &663182011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,7 +381,7 @@ RectTransform:
   m_GameObject: {fileID: 690605547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 4.2875, z: 1}
   m_Children: []
   m_Father: {fileID: 663182014}
   m_RootOrder: 1
@@ -410,8 +410,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3929774282953249155, guid: c52af2c793cc55a458b6fcc1b31abba9,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 433391f135d8c314a912503942786b4c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
