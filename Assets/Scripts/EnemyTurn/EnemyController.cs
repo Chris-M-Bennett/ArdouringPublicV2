@@ -47,7 +47,7 @@ namespace EnemyTurn{
         private int rows;
         public string[,] patternLibrary = new string[2,3]
         {
-            {"Calmer Chameleon","~~..~~~......~~..~~~......~..~~..~...~.~......~.~.~.~...~..~.....~.....~.....~.....~..........~...~...~...~........~....","0.33f"},
+            {"Calmer Chameleon","~~..~~~......~~..~~~......~..~~..~...~.~......~.~.~.~...~..~.....~.....~.....~.....~..........~...~...~...~........~....","0.33"},
             {"Chice","~.~.~.~.~.~.~.~.~.~.~.~.~","0.3"}
         };
     
@@ -72,18 +72,21 @@ namespace EnemyTurn{
             //patternString = "~~..~~~......~~..~~~......~..~~..~...~.~......~.~.~.~...~..~.....~.....~.....~.....~..........~...~...~...~........~....";
             _opponentValues = GameObject.FindWithTag("Opponent").GetComponent<DebateValuesScript>();
             Debug.Log("Opponent: " + _opponentValues.debaterName);
+            bool matchedDebater = false;
             for (int m = 0; m < patternLibrary.GetLength(0); m++)
             {
                 if (patternLibrary[m, 0] == _opponentValues.debaterName)
                 {
                     patternString = patternLibrary[m, 1];
                     bulletInterval = float.Parse(patternLibrary[m, 2], CultureInfo.InvariantCulture.NumberFormat);
+                    matchedDebater = true;
                 }
-                else
-                {
-                    patternString = "~.~~.......~~.~.....";
-                    bulletInterval = 0.33f;
-                }
+
+            }
+            if (!matchedDebater)
+            {
+                patternString = "~.~~.......~~.~.....";
+                bulletInterval = 0.33f;
             }
             patternLength = patternString.Length;
             rows = (int)Math.Floor((decimal) (patternLength/5));
