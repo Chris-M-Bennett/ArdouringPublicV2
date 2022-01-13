@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using Opponents;
 using UnityEngine;
 using Random = System.Random;
 
@@ -18,7 +20,7 @@ namespace EnemyTurn{
         public char currentEmotion;
         public int maxEnemyES;
         public string nickname;
-    
+        private static DebateValuesScript _opponentValues;
         //public Vector2 startPos;
         /*
     public bool[,] attackPattern = new bool[4,5]
@@ -28,10 +30,10 @@ namespace EnemyTurn{
         {true, true, false, false, true},
         {false, true, false, true, false}
     }; */// an array of sets of x coordiantes
-        public string patternString;
+        private string patternString;
         private int patternLength;
         //public char[,] attackPattern;
-
+    
         public char[,] attackPattern;
         /*
     {
@@ -43,7 +45,11 @@ namespace EnemyTurn{
     */
         private int patternRow;
         private int rows;
-
+        public string[,] patternLibrary = new string[2,3]
+        {
+            {"Calmer Chameleon","~~..~~~......~~..~~~......~..~~..~...~.~......~.~.~.~...~..~.....~.....~.....~.....~..........~...~...~...~........~....","0.33"},
+            {"Chice","~.~.~.~.~.~.~.~.~.~.~.~.~","0.3"}
+        };
     
         /*
     public EnemyController(char[,] attackPattern)
@@ -61,9 +67,27 @@ namespace EnemyTurn{
             timer = 0f;
             turnTimer = 0f;
             turnLimit = 10f;
-            bulletInterval = 0.33f; //0.66f;
+            //bulletInterval = 0.33f; //0.66f;
             patternRow = 0;
-            patternString = "~~..~~~......~~..~~~......~..~~..~...~.~......~.~.~.~...~..~.....~.....~.....~.....~..........~...~...~...~........~....";
+            //patternString = "~~..~~~......~~..~~~......~..~~..~...~.~......~.~.~.~...~..~.....~.....~.....~.....~..........~...~...~...~........~....";
+            _opponentValues = GameObject.FindWithTag("Opponent").GetComponent<DebateValuesScript>();
+            Debug.Log("Opponent: " + _opponentValues.debaterName);
+            bool matchedDebater = false;
+            for (int m = 0; m < patternLibrary.GetLength(0); m++)
+            {
+                if (patternLibrary[m, 0] == _opponentValues.debaterName)
+                {
+                    patternString = patternLibrary[m, 1];
+                    bulletInterval = float.Parse(patternLibrary[m, 2], CultureInfo.InvariantCulture.NumberFormat);
+                    matchedDebater = true;
+                }
+
+            }
+            if (!matchedDebater)
+            {
+                patternString = "~.~~.......~~.~.....";
+                bulletInterval = 0.33f;
+            }
             patternLength = patternString.Length;
             rows = (int)Math.Floor((decimal) (patternLength/5));
             attackPattern = new char[rows, 5];

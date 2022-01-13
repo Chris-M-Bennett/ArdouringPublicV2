@@ -35,7 +35,7 @@ public class CreateCustomCharacter : ScriptableWizard
         foe.maxEnemyES = maxEnemyES;
         foe.nickname = nickname;
         foe.currentEmotion = currentEmotion;
-        foe.patternString = patternString;
+        //   foe.patternString = patternString;
         /*
         foe.rows = rows;
         foe.attackPattern[rows,5] = attackPattern[rows,5];
@@ -59,7 +59,7 @@ public class CreateCustomCharacter : ScriptableWizard
                 opponent.maxEnemyES = maxEnemyES;
                 opponent.nickname = nickname;
                 opponent.currentEmotion = currentEmotion;
-                opponent.patternString = patternString;
+                //   opponent.patternString = patternString;
                 /*
                 opponent.rows = rows;
                 opponent.attackPattern[rows, 5] = attackPattern[rows,5];
