@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using Player;
 using UI;
 using UnityEngine;
@@ -9,12 +9,13 @@ namespace Opponents
     public class OpponentOverworldScript : MonoBehaviour
     {
         [Header("Mouse over field names for description of what to add")]
+        [SerializeField, Tooltip("The opponent's name")] public string myName;
         [SerializeField, Tooltip("The prefab used for this opponent in debates")] public GameObject debatePrefab;
-        [SerializeField] private GameObject defeatedPrefab;
-        [SerializeField] private Transform defeatPoint;
-        [SerializeField] public DirectOverworldMovementScript lastDest;
-        [SerializeField] public DirectOverworldMovementScript currentDest;
-        [SerializeField] private float moveSpeed = 2f;
+        [SerializeField, Tooltip("The prefab used if this opponent is defeated")] private GameObject defeatedPrefab;
+        [SerializeField, Tooltip("The point game object where the defeated prefab should be placed")] private Transform defeatPoint;
+        [SerializeField, Tooltip("The movement point the opponent should by moving away from")] public DirectOverworldMovementScript lastDest;
+        [SerializeField, Tooltip("The movement point the opponent should by moving towards")] public DirectOverworldMovementScript currentDest;
+        [SerializeField, Tooltip("The speed at which the opponent should move between points")] private float moveSpeed = 2f;
 
 
         private SpriteRenderer _mainRenderer;
@@ -32,6 +33,7 @@ namespace Opponents
         private static readonly int IsDown = Animator.StringToHash("IsDown");
         private static readonly int IsUp = Animator.StringToHash("IsUp");
         private static readonly int IsRight = Animator.StringToHash("IsRight");
+
         void Start()
         {
             _mainRenderer = GetComponent<SpriteRenderer>();
@@ -43,11 +45,11 @@ namespace Opponents
             _agent.updateUpAxis = false;
             _anim = GetComponent<Animator>();
             _player = GameObject.FindWithTag("Player").GetComponent<PlayerOverworldControls>();
-            int current = 0;
             //_transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
-            StartCoroutine(ChangeColour(current));
-            if (GameManager.currentOpponent == gameObject && GameManager.wonDebate)
+            
+           /* if (GameManager.currentOpponent == gameObject && GameManager.wonDebate)
             {
+                GameManager.wonDebate = false;
                Instantiate(defeatedPrefab,defeatPoint);
                Destroy(gameObject);
             }else
@@ -55,44 +57,22 @@ namespace Opponents
                 _lastPosition = transform.position;
                 _agent.speed = moveSpeed;
                 _agent.destination = currentDest.transform.position;  
-            }
+            }*/
         }
 
         private void Update()
         {
             _currentPosition = transform.position;
             _dir = (_currentPosition - _lastPosition).normalized;
-
-            //bool isLeft, isRight, isUp, isDown = false;
+            
             _anim.SetBool(IsDown, _dir.y < -0.5f);
             _anim.SetBool(IsUp, _dir.y > 0.5f);
             _anim.SetBool(IsLeft, _dir.x < -0.5f);
             _anim.SetBool(IsRight, _dir.x > 0.5f);
-            
 
-           /* if (isDown)
-            {
-                
-            }
-            else if (isUp)
-            {
-                
-            }
-            if (isLeft)
-            {
-                  
-            }
-            else if (isRight)
-            {
-                 
-            }
-            else
-            {
-                _anim.Play(animationClips[8].name);  
-            }*/
-            
             _lastPosition = transform.position;
         }
+        
 
         public void MoveMe(DirectOverworldMovementScript moveTo)
         {
@@ -100,26 +80,9 @@ namespace Opponents
             currentDest = moveTo;
             _agent.destination = moveTo.transform.position;
         }
-       /* public IEnumerator MoveMe()
-        {
-            while (true)
-            {
-                while (transform.position != currentDest.transform.position)
-                {
-                    var direction = currentDest.transform.position - transform.position;
-                    var dist = direction.normalized * moveSpeed;
-                
-                    dist = Vector3.ClampMagnitude(dist, direction.magnitude);
-                    
-                    //transform.Translate(dist);
-                    yield return new WaitForSeconds(0.03f);
-                }
-                yield return null;
-            }
-        }*/
-        
 
-        IEnumerator ChangeColour(int current)
+
+       /* IEnumerator ChangeColour(int current)
         {
             while (_otherColour.a != 1)
             {
@@ -132,7 +95,7 @@ namespace Opponents
             _mainRenderer.sprite = _otherRenderer.sprite;
             current++;
             yield return new WaitForSeconds(0.5f);
-        }
+        }*/
 
        /* private void OnCollisionEnter2D(Collision2D col)
         {

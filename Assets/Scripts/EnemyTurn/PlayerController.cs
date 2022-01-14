@@ -61,9 +61,9 @@ public class PlayerController : MonoBehaviour
         ESbar.transform.position = new Vector2 (barX, barY);
         
         // debug messages I used to figure out why the player could move off the left side of the screen instead of stopping.
-        Debug.Log("Right strafe limit: " + farRightX);
-        Debug.Log("Left strafe limit: " + farLeftX);
-        Debug.Log("X strafe amount: " + xStrafe); //*/
+        //Debug.Log("Right strafe limit: " + farRightX);
+        //Debug.Log("Left strafe limit: " + farLeftX);
+        //Debug.Log("X strafe amount: " + xStrafe);
     }
 
     // Update is called once per frame
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
             if (quitTimer == 0)
             {
                 GameObject note = Instantiate(text,new Vector2(2f,0f),Quaternion.identity);
-                Debug.Log("Game Over");
+                //Debug.Log("Game Over");
             }
             GameOver();
         }
@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
             
             barY -= esDrop;
             ESbar.transform.position = new Vector2 (barX, barY);
-            Debug.Log("Emotional Stability: " + currentES);
+            //Debug.Log("Emotional Stability: " + currentES);
             /*
             if (dss != null)
             {

@@ -5,13 +5,13 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
-    public static GameObject currentOpponent;
+    public static int currentOpponent;
     public static GameObject debateOpponent;
     public static bool wonDebate = false;
     public static bool newGame;
     public static bool tutorials = true;
     public static Sprite debateBG;
-    
+
     public static Dictionary<int, int[]> EmotionStrengths = new Dictionary<int, int[]>();
     
     // Start is called before the first frame update

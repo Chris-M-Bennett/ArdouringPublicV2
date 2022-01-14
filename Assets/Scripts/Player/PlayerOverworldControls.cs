@@ -105,7 +105,7 @@ namespace Player{
             {
 
                 infoOverlay.SetActive(true);
-                infoText.text = opponentHit.gameObject.name;
+                infoText.text = opponentHit.gameObject.GetComponent<OpponentOverworldScript>().myName;
                 if (GameManager.tutorials)
                 {
                     infoText.text += $"\n\n{_activateControls}";
@@ -121,8 +121,8 @@ namespace Player{
                         GameManager.debateBG = exteriorBG;
                     }
                     
-                    GameManager.currentOpponent = opponentHit.gameObject;
-                    GameManager.debateOpponent = GameManager.currentOpponent.GetComponent<OpponentOverworldScript>().debatePrefab;
+                    //GameManager.currentOpponent = opponentHit.GetInstanceID();
+                    GameManager.debateOpponent = opponentHit.GetComponent<OpponentOverworldScript>().debatePrefab;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
                     StartCoroutine(_transBars.MoveThoseBars(true, "Debate"));

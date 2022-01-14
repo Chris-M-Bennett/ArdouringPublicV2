@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
+      propertyPath: myName
+      value: Calmer Chameleon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
       propertyPath: debatePrefab
       value: 
       objectReference: {fileID: 3055323939854202916, guid: b0c223353bf834043917a2b1edef557d,

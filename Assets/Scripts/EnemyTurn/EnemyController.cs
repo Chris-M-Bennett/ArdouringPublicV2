@@ -71,7 +71,7 @@ namespace EnemyTurn{
             patternRow = 0;
             //patternString = "~~..~~~......~~..~~~......~..~~..~...~.~......~.~.~.~...~..~.....~.....~.....~.....~..........~...~...~...~........~....";
             _opponentValues = GameObject.FindWithTag("Opponent").GetComponent<DebateValuesScript>();
-            Debug.Log("Opponent: " + _opponentValues.debaterName);
+            //Debug.Log("Opponent: " + _opponentValues.debaterName);
             bool matchedDebater = false;
             for (int m = 0; m < patternLibrary.GetLength(0); m++)
             {
@@ -91,8 +91,8 @@ namespace EnemyTurn{
             patternLength = patternString.Length;
             rows = (int)Math.Floor((decimal) (patternLength/5));
             attackPattern = new char[rows, 5];
-            Debug.Log("Pattern String Length: " + patternLength);
-            Debug.Log("Number of Rows: " + rows);
+            //Debug.Log("Pattern String Length: " + patternLength);
+            //Debug.Log("Number of Rows: " + rows);
             //for(int p = 0; p < patternLength; p++)
             //{
             int p = 0;

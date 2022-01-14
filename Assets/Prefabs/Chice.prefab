@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
+      propertyPath: myName
+      value: Chice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
       propertyPath: debatePrefab
       value: 
       objectReference: {fileID: 7975759165973573710, guid: 67976cdb3ce7a604e945069501a987c9,

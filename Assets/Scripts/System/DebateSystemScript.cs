@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Opponents;
 using UI;
 using UnityEngine;
@@ -12,6 +13,11 @@ namespace System
 
     public class DebateSystemScript : MonoBehaviour
     {
+        public List<Vector2> Directions = new List<Vector2>();
+        public List<float> Values = new List<float>();
+
+        public Vector2 Result = new Vector2(0, 0);
+        
         [SerializeField, Header("The Player game object in the scene")]
         private GameObject player;
         [SerializeField, Header("The point where the enemy is placed")]
@@ -197,6 +203,16 @@ namespace System
             }
         }
 
+        private void Update()
+        {
+            Result = Vector3.zero;
+            for (int i = 0; i < Directions.Count; i++)
+            {
+                var v = Directions[i] * Values[i];
+                Result += v;
+            }
+            Debug.DrawLine(Vector3.zero,Result,Color.red,0.1f);
+        }
 
         /// <summary>
         /// Generates tutorial for player about opponent emotions and how other emotions effect them 
