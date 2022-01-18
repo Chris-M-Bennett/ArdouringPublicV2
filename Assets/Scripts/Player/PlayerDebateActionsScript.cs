@@ -21,8 +21,6 @@ namespace Player{
         private DebateState _turnState;
         private Vector3 _damagePos;
         private float _damageEndY;
-        [SerializeField] private int normalMult = 2;
-        [SerializeField] private int strongMult = 4;
 
         public bool playerHadTurn;
 
@@ -42,7 +40,7 @@ namespace Player{
             _damageEndY = damageEnd.position.y;
             _damagePos = damageText.transform.position;
             _playerValues = GameObject.FindWithTag("Player").GetComponent<DebateValuesScript>();
-            _playerDamage = _playerValues.debaterDamage;
+            _playerDamage = _playerValues.debaterLevel;
             
         }
 
@@ -90,6 +88,12 @@ namespace Player{
             }
         }
 
+        public void WinButton()
+        {
+            _opponentValues.currentES = 0;
+            _debateSystem.PlayerHadTurn = true;
+        }
+
         /*void ChangeTexts(string text1, string text2, string text3, string text4){
        //Removes listeners previous added to buttons
         _choice1Button.onClick.RemoveAllListeners();
@@ -121,20 +125,17 @@ namespace Player{
 
         void OpponentESChange(int emotion)
         {
-            int randDamage = Random.Range(-3, 5);
-            int weakDamage = _playerDamage + randDamage;
-            int normalDamage = weakDamage * normalMult;
-            int strongDamage = weakDamage * strongMult;
-            int emotMult = 0;
-            int damageDone = 0;
-            int overloads = PlayerPrefs.GetInt("Overloads", 0);
-            int pacifies = PlayerPrefs.GetInt("Pacifies", 0);
-            int opponentES = _opponentValues.currentES;
-            int opponentEmot = _opponentValues.emotionInt;
+            float emotMult = 0;
+            var damageDone = 0;
+            var randDamage = Random.Range(-3, 3);
             
+            var overloads = PlayerPrefs.GetInt("Overloads", 0);
+            var pacifies = PlayerPrefs.GetInt("Pacifies", 0);
+            var opponentES = _opponentValues.currentES;
+            var opponentEmot = _opponentValues.emotionInt;
             var emotStrengths = GameManager.EmotionStrengths[opponentEmot];
             var emotAmounts = _playerValues.emotAmounts;
-            var opponentAmounts = _opponentValues.emotAmounts;
+            var opponentDifficulty = _opponentValues.emotAmounts[emotion]/10f;
             
             Color emotColor;
             if (emotion == 0)
@@ -161,27 +162,28 @@ namespace Player{
             }
             if (emotStrengths[1] == emotion)
             {
-                emotMult = 3;
+                emotMult = -6;
             }
             else if (emotStrengths[2] == emotion)
             {
-                emotMult = 2;
+                emotMult = -4.5f;
             }
             else if (emotStrengths[3] == emotion)
             {
-                emotMult = -1;
+                emotMult = 4.5f;
             }
             else
             {
-                emotMult = -2;
+                emotMult = 6;
             }
-            int modEmot = _playerDamage*emotMult;
-            int modOP = modEmot*(overloads-pacifies);
-            damageDone = ((2*modEmot)+modOP)/3+randDamage;
-            opponentES -= damageDone/opponentAmounts[emotion];
+            var modEmot = _playerDamage*emotMult;
+            var moddedDamage = ((2 * modEmot)+(modEmot*overloads-pacifies)) / 3;
+            damageDone = Mathf.RoundToInt(moddedDamage/opponentDifficulty)+randDamage;
+            opponentES -= damageDone;
             StartCoroutine(DamageGrow(damageDone*-1, emotColor));
-            string changedBy = "not changed";
-            string overOrPass = "unaffected";
+            
+            var changedBy = "not changed";
+            var overOrPass = "unaffected";
             if(damageDone > 0)
             {
                 changedBy = $"decreased by {damageDone}";
@@ -198,9 +200,9 @@ namespace Player{
             {
                 opponentES = _opponentValues.maxES;
             }
-            else if (opponentES < 0)
+            else if (opponentES < -100)
             {
-                opponentES = 0;
+                opponentES = -100;
             }
 
             //Increases the power of the emotion the player 

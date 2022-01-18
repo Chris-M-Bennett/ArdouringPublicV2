@@ -9,7 +9,7 @@ namespace Opponents
         [Tooltip("Level of this debater. DO NOT CHANGE ON PLAYER!")]public int debaterLevel;
         [Tooltip("Damage this debater does to their opponent's ES")]public int debaterDamage;
         [Tooltip("Maximum amount of ES this debater can have")]public int maxES;
-        [HideInInspector] public int currentES = 50;
+        public int currentES = 0;
         [Tooltip("Number for the emotion this debater starts in. Happy=0 Angry=1 Sad=2 Anxiety=3." +
                  "DO NOT CHANGE ON PLAYER!")]public int emotionInt;
         [Tooltip("Thresholds Scriptable Object '{}' for this opponent. Create from Assets task menu."+

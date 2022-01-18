@@ -97,8 +97,16 @@ namespace System
 
             StartCoroutine(DamageAnim(opponentGO));
             
-            if (_opponentValues.currentES <= 0)// || _opponentValues.currentES >= _opponentValues.maxES)
+            if (_opponentValues.currentES <= -100 || _opponentValues.currentES >= 100)
             {
+                if (_opponentValues.currentES <= -100)
+                {
+                    PlayerPrefs.SetInt("Pacifies",PlayerPrefs.GetInt("Pacifies",0)+1);
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("Overloads",PlayerPrefs.GetInt("Overloads",0)+1);
+                }
                 state = DebateState.Won;
                 StartCoroutine(EndDebate());
             }
@@ -156,10 +164,10 @@ namespace System
                 _playerLevel += 1;
                 PlayerPrefs.SetInt("playerLevel", _playerLevel);
 
-                foreach (int emot in _playerValues.emotAmounts)
+                /*foreach (int emot in _playerValues.emotAmounts)
                 {
                     _playerValues.emotAmounts[emot]++;
-                }
+                }*/
                 _playerExp = 0;
             }
             if (state == DebateState.Won)

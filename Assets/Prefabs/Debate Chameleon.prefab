@@ -38,10 +38,35 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 77cc7a7152e902644b87ddc521951e8a,
         type: 2}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[2]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[3]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4915289711706006720, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_Name
-      value: Debate Chameleon Variant
+      value: Debate Chameleon
       objectReference: {fileID: 0}
     - target: {fileID: 4915289711706006721, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}

@@ -14,7 +14,7 @@ namespace UI
     
         public void SetHUD(DebateValuesScript debater){
             nameText.text = debater.debaterName;
-            esText.text = $"Emotional Stability: {debater.currentES}";
+            esText.text = $"Emotional Strain: {debater.currentES}";
             esSlider.value = debater.currentES;
             esSlider.maxValue = debater.maxES;
             if(gameObject == playerPanel)
@@ -27,7 +27,7 @@ namespace UI
         }
 
         public void SetES(DebateValuesScript debater){
-            esText.text = $"Emotional Stability: {debater.currentES}";
+            esText.text = $"Emotional Strain: {debater.currentES}";
             esSlider.value = debater.currentES;
         }
     }
