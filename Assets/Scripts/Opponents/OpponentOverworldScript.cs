@@ -16,6 +16,7 @@ namespace Opponents
         [SerializeField, Tooltip("The movement point the opponent should by moving away from")] public DirectOverworldMovementScript lastDest;
         [SerializeField, Tooltip("The movement point the opponent should by moving towards")] public DirectOverworldMovementScript currentDest;
         [SerializeField, Tooltip("The speed at which the opponent should move between points")] private float moveSpeed = 2f;
+        [SerializeField] private LastOpponent lastOpponent;
 
 
         private SpriteRenderer _mainRenderer;
@@ -47,7 +48,7 @@ namespace Opponents
             _player = GameObject.FindWithTag("Player").GetComponent<PlayerOverworldControls>();
             //_transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
             
-           /* if (GameManager.currentOpponent == gameObject && GameManager.wonDebate)
+            if (LastOpponent.lastOpponent == gameObject && GameManager.wonDebate)
             {
                 GameManager.wonDebate = false;
                Instantiate(defeatedPrefab,defeatPoint);
@@ -57,7 +58,7 @@ namespace Opponents
                 _lastPosition = transform.position;
                 _agent.speed = moveSpeed;
                 _agent.destination = currentDest.transform.position;  
-            }*/
+            }
         }
 
         private void Update()

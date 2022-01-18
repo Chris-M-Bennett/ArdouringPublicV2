@@ -18,6 +18,7 @@ namespace Player{
         [SerializeField] private Text infoText;
         [SerializeField] private Sprite interiorBG;
         [SerializeField] private Sprite exteriorBG;
+        [SerializeField] private LastOpponent lastOpponent;
         
         private MoveBarsScript _transBars;
         private Vector2 _currentPosition;
@@ -121,7 +122,7 @@ namespace Player{
                         GameManager.debateBG = exteriorBG;
                     }
                     
-                    //GameManager.currentOpponent = opponentHit.GetInstanceID();
+                    LastOpponent.lastOpponent = opponentHit.gameObject;
                     GameManager.debateOpponent = opponentHit.GetComponent<OpponentOverworldScript>().debatePrefab;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);

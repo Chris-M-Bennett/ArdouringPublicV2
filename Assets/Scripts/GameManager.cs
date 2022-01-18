@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
-    public static int currentOpponent;
     public static GameObject debateOpponent;
     public static bool wonDebate = false;
     public static bool newGame;

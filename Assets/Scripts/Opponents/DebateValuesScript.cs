@@ -46,15 +46,6 @@ namespace Opponents
             {
                 if (prevES >= thresh[i] && currentES < thresh[i])
                 {
-                    var highest = 0;
-                    var equals = 0;
-                    foreach (int emot in emotAmounts)
-                    {
-                        int prevEmot = emotionInt;
-                        while(emotionInt == prevEmot){
-                            emotionInt = Random.Range(0, 3);
-                        }
-                    }
                 }
                 _spriteRenderer.sprite = emotionThresholds.emotionSprites[emotionInt];
             }

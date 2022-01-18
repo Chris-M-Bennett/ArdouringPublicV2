@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections;
 using Opponents;
 using UI;
@@ -125,8 +125,10 @@ namespace Player{
             int weakDamage = _playerDamage + randDamage;
             int normalDamage = weakDamage * normalMult;
             int strongDamage = weakDamage * strongMult;
-            int emotAddition = 0;
+            int emotMult = 0;
             int damageDone = 0;
+            int overloads = PlayerPrefs.GetInt("Overloads", 0);
+            int pacifies = PlayerPrefs.GetInt("Pacifies", 0);
             int opponentES = _opponentValues.currentES;
             int opponentEmot = _opponentValues.emotionInt;
             
@@ -137,70 +139,60 @@ namespace Player{
             Color emotColor;
             if (emotion == 0)
             {
-                emotAddition = emotAmounts[0];
                 emotColor = Color.green;
             }else if (emotion == 1)
             {
-                emotAddition = emotAmounts[1];
                 emotColor = Color.blue;
             }else if (emotion == 2)
             {
-                emotAddition = emotAmounts[2];
                 emotColor = Color.red;
             }
             else if (emotion == 3)
             {
-                emotAddition = emotAmounts[3];
                 emotColor = Color.magenta;
             }
             else
             {
-                emotAddition = emotAmounts[4];
                 emotColor = Color.yellow;
             }
-            
-
+            if (emotStrengths[0] == emotion)
+            {
+                emotMult = 1;
+            }
             if (emotStrengths[1] == emotion)
             {
-                notifyText.text = $"It was super effective! You dealt {strongDamage + emotAddition} points of emotional strain " +
-                                  $"to {_opponentValues.debaterName}.";
-                damageDone = strongDamage + emotAddition;
-                opponentES -= damageDone;
+                emotMult = 3;
             }
             else if (emotStrengths[2] == emotion)
             {
-                notifyText.text = $"It was quite effective! You dealt {normalDamage + emotAddition} points of emotional strain " +
-                                  $"to {_opponentValues.debaterName}.";
-                damageDone = normalDamage + emotAddition;
-                opponentES -= damageDone;
+                emotMult = 2;
             }
             else if (emotStrengths[3] == emotion)
             {
-                notifyText.text = $"It wasn't very effective! You dealt {weakDamage + emotAddition} points of emotional strain " +
-                                  $"to {_opponentValues.debaterName}.";
-                damageDone = weakDamage + emotAddition;
-                opponentES -= damageDone;
+                emotMult = -1;
             }
             else
             {
-                notifyText.text = $"It wasn't very effective! You dealt {randDamage + emotAddition} points of emotional strain " +
-                                  $"to {_opponentValues.debaterName}.";
-                opponentES -= randDamage;
-                damageDone = randDamage;
-                opponentES -= damageDone;
+                emotMult = -2;
             }
-            
-            if (emotStrengths[0] == emotion)
+            int modEmot = _playerDamage*emotMult;
+            int modOP = modEmot*(overloads-pacifies);
+            damageDone = ((2*modEmot)+modOP)/3+randDamage;
+            opponentES -= damageDone/opponentAmounts[emotion];
+            StartCoroutine(DamageGrow(damageDone*-1, emotColor));
+            string changedBy = "not changed";
+            string overOrPass = "unaffected";
+            if(damageDone > 0)
             {
-                notifyText.text = $"It was ineffective! {_opponentValues.debaterName} regained {weakDamage} points " +
-                                  $"of emotional stability.";
-                opponentES += weakDamage;
-                StartCoroutine(DamageGrow(weakDamage, emotColor));
-            }
-            else
+                changedBy = $"decreased by {damageDone}";
+                overOrPass = "more passive";
+            }else if(damageDone < 0)
             {
-                StartCoroutine(DamageGrow(damageDone*-1, emotColor));
+                changedBy = $"increased by {damageDone}";
+                overOrPass = "more emotional";
             }
+            notifyText.text = $"The {_opponentValues.debaterName}'s emotional strain has {changedBy}.";
+            notifyText.text += $"They seem {overOrPass}";
 
             if (opponentES > _opponentValues.maxES)
             {
@@ -212,7 +204,7 @@ namespace Player{
             }
 
             //Increases the power of the emotion the player 
-            if (emotAmounts[emotion] >= 20)
+            /*if (emotAmounts[emotion] >= 20)
             {
                 Mathf.Clamp(emotAmounts[emotion]++,0,20);
             }
@@ -224,9 +216,7 @@ namespace Player{
                     emotAmounts[emot]--;
                     Mathf.Clamp(emotAmounts[emotion],0,20);
                 }
-            }
-            _opponentValues.emotAmounts[emotion] += damageDone;
-            _opponentValues.emotAmounts[opponentEmot] -= damageDone;
+            }*/
 
             _opponentValues.currentES = opponentES;
             opponentHUD.SetES(_opponentValues);
