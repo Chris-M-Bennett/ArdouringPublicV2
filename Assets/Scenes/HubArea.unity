@@ -852,9 +852,8 @@ PrefabInstance:
     - target: {fileID: 6652133467002802254, guid: 2ae793dac9d3a5c4c83772e757b0745a,
         type: 3}
       propertyPath: sceneToLoad
-      value: 
-      objectReference: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729,
-        type: 3}
+      value: Overworld
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ae793dac9d3a5c4c83772e757b0745a, type: 3}
 --- !u!1 &654870495
@@ -2610,7 +2609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802695789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.714245, y: -2.1758242, z: -10}
+  m_LocalPosition: {x: -19.7197, y: -2.1758242, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1084885431}
@@ -2729,7 +2728,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806604656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.8971748, y: -2.1758232, z: -10}
+  m_LocalPosition: {x: -3.2695694, y: -2.1758232, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

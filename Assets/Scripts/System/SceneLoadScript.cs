@@ -6,12 +6,12 @@ namespace System
 {
    public class SceneLoadScript : MonoBehaviour
    {
-      [SerializeField] SceneAsset sceneToLoad;
+      [SerializeField] string sceneToLoad;
       private void OnTriggerEnter2D(Collider2D player)
       {
          if (player.CompareTag("Player"))
          {
-            SceneManager.LoadSceneAsync(sceneToLoad.name);
+            SceneManager.LoadSceneAsync(sceneToLoad);
          }
       }
    }
