@@ -85,7 +85,7 @@ namespace System
             {
                 int opponentEmot = _opponentValues.emotionInt;
                 notifyText.text =
-                    $"It's your turn! Selected an emotion button from your panel to debate with the creature.\n";
+                    $"It's your turn! Select an emotion button from your panel to debate with the creature.\n";
                 notifyText.text += EmotionDescript(opponentEmot);
             }
             

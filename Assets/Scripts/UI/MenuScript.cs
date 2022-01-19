@@ -17,7 +17,7 @@ namespace UI{
             GameManager.newGame = true;
             SceneManager.LoadSceneAsync("Overworld");
         }
-        
+
         public void MainMenu(){
             SceneManager.LoadSceneAsync("MainMenu");
         }
