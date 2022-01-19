@@ -155,7 +155,7 @@ TextureImporter:
         width: 208
         height: 278
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,10 +173,10 @@ TextureImporter:
         serializedVersion: 2
         x: 8
         y: 54
-        width: 82
+        width: 224
         height: 248
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,12 +192,12 @@ TextureImporter:
       name: hub sprite sheet_2
       rect:
         serializedVersion: 2
-        x: 827
+        x: 694
         y: 59
-        width: 85
+        width: 218
         height: 241
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,99 +210,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hub sprite sheet_3
-      rect:
-        serializedVersion: 2
-        x: 740
-        y: 60
-        width: 87
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a76683dbbc3c9b220800000000000000
-      internalID: 2502246347801388666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hub sprite sheet_4
-      rect:
-        serializedVersion: 2
-        x: 694
-        y: 59
-        width: 46
-        height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8774344769d7c0380800000000000000
-      internalID: -9003683469871331464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hub sprite sheet_5
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 183
-        width: 142
-        height: 117
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ff41ead8adf99a30800000000000000
-      internalID: 4222685027305082872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hub sprite sheet_6
-      rect:
-        serializedVersion: 2
-        x: 247
-        y: 175
-        width: 139
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a53619382f47d5a0800000000000000
-      internalID: -6496636903283608158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: hub sprite sheet_7
       rect:
         serializedVersion: 2
-        x: 386
+        x: 247
         y: 10
-        width: 82
+        width: 221
         height: 290
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
