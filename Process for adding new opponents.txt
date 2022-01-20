@@ -1,0 +1,34 @@
+Process for adding new opponents:
+1. In the Scripts\Opponents folder, right click and from the "Create" submenu select "Opponents Thresholds". Name the new thresholds object "(Opponent's Name) Emotion Thresholds"
+
+2. Select the new thresholds object and click the arrow next to "Thresholds". Set size to the number of percentage thresholds this opponent should have for changing emotion.
+
+3. In the "Element" fields generated, enter each of the percentage thresholds in acsneding order. E.g. 10, 35, 73
+
+4.Click the arrow next to "Emotion Sprites" and set "Size" to 5. From the Sprites\Debate folder for the opponent, drag the debate sprites to the generated element fields in the following order; Happy, Sad, Angry, Confident, Afraid
+
+5. Drag the "Debate Opponent Prefab" from the Prefabs folder into the scene, rename the generated object to "Debate (Opponent Name)" and drag the opponent's base sprite to the Sprite field of the Sprite Renderer
+
+6.Scroll the Inspector to the "Debate Values" script and fill out the opponent's name, level, base damage, maximum emotional stability, and the number of its starting emotion; Happy = 0, Sad = 1, Angry = 2, Confident = 3, Afraid = 4
+
+7. Drag the previously created thresholds object to the field of the same name.
+
+8. Click the arrow next to "Emot Amounts" and set "Size" to 5. In the "Element" fields generated, enter percentages for emotion with the numbers as step 6.
+
+9. Drag the Debate object to Prefabs folder to create a prefab of it and remove the object from the scene.
+
+10. Drag the "Defeated Opponent Prefab" from the Prefabs folder into the scene and rename the generated object to "Defeated (Opponent Name)" and drag the opponent's base sprite to the Sprite field of the Sprite Renderer.
+
+11. Drag the Defeated object to Prefabs folder to create a prefab of it and remove the object from the scene.
+
+12. Drag the "Overworld Opponent Prefab" from the Prefabs folder into the Overworld scene, rename the generated object to "(Opponent Name)" and drag the opponent's base sprite to the Sprite field of the Sprite Renderer
+
+13.Scroll the Inspector to the "Opponent Overworld Script" and drag the previously created debate and defeated prefabs of the same name.
+
+14. Create an empty game object and move it to the point in the environment where this opponent should stay once defeated. Name it "Defeat Point (Opponent Name)".
+
+15. Drag this point from the Hierarchy to the "Defeat Point" field on the overworld opponent object.
+
+16. From the list of "Move To" Points in the Hierarchy, drag a point for the opponent to move away from to the "Last Dest" field and a point for the opponent to move toward to the "Current Dest" field. Ensure the opponent overworld object is between these points.
+
+17. Set the "Move Speed" field to speed at which the opponent should move between points. Default is 2.

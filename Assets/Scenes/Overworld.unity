@@ -1552,6 +1552,7 @@ GameObject:
   - component: {fileID: 569210574}
   - component: {fileID: 569210573}
   - component: {fileID: 569210572}
+  - component: {fileID: 569210575}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -1651,7 +1652,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 105e619be094d3c4eb2af9d0d7985b60, type: 3}
+  m_Sprite: {fileID: -459959462651995656, guid: 164097bea64ddb349b812def74b7eecd,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1669,6 +1671,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569210570}
   m_CullTransparentMesh: 0
+--- !u!95 &569210575
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569210570}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fdf25194f506a5b4aae6e2150847a694, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &587942914
 GameObject:
   m_ObjectHideFlags: 0
