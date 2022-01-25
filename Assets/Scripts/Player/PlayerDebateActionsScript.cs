@@ -40,7 +40,7 @@ namespace Player{
             _damageEndY = damageEnd.position.y;
             _damagePos = damageText.transform.position;
             _playerValues = GameObject.FindWithTag("Player").GetComponent<DebateValuesScript>();
-            _playerDamage = _playerValues.debaterLevel;
+            _playerDamage = _playerValues.debaterLevel*2;
             
         }
 
@@ -177,7 +177,7 @@ namespace Player{
                 emotMult = 6;
             }
             var modEmot = _playerDamage*emotMult;
-            var moddedDamage = ((2 * modEmot)+(modEmot*overloads-pacifies)) / 3;
+            var moddedDamage = (2 * modEmot+(modEmot*overloads-pacifies)) / 3;
             damageDone = Mathf.RoundToInt(moddedDamage/opponentDifficulty)+randDamage;
             opponentES -= damageDone;
             StartCoroutine(DamageGrow(damageDone*-1, emotColor));
@@ -186,11 +186,11 @@ namespace Player{
             var overOrPass = "unaffected";
             if(damageDone > 0)
             {
-                changedBy = $"decreased by {damageDone}";
+                changedBy = $"decreased by {Mathf.Abs(damageDone)}";
                 overOrPass = "more passive";
             }else if(damageDone < 0)
             {
-                changedBy = $"increased by {damageDone}";
+                changedBy = $"increased by {Mathf.Abs(damageDone)}";
                 overOrPass = "more emotional";
             }
             notifyText.text = $"The {_opponentValues.debaterName}'s emotional strain has {changedBy}.";

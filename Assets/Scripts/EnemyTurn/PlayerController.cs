@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Opponents;
+using UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public int currentES = 100;
     public GameObject Player;
     //private GameObject player;
-    public GameObject text;
+    //public GameObject text;
     public GameObject ESbar;
     private static DebateValuesScript _playerValues;
     //public GameObject dss;
@@ -59,7 +61,7 @@ public class PlayerController : MonoBehaviour
         
         
         ESbar.transform.position = new Vector2 (barX, barY);
-        
+
         // debug messages I used to figure out why the player could move off the left side of the screen instead of stopping.
         //Debug.Log("Right strafe limit: " + farRightX);
         //Debug.Log("Left strafe limit: " + farLeftX);
@@ -77,10 +79,10 @@ public class PlayerController : MonoBehaviour
         {
             if (quitTimer == 0)
             {
-                GameObject note = Instantiate(text,new Vector2(2f,0f),Quaternion.identity);
+                //GameObject note = Instantiate(text,new Vector2(2f,0f),Quaternion.identity);
                 //Debug.Log("Game Over");
             }
-            GameOver();
+            //GameOver();
         }
     }
 
@@ -137,7 +139,7 @@ public class PlayerController : MonoBehaviour
         quitTimer += Time.deltaTime;
         if (quitTimer > 3f)
         {
-            Application.Quit();
+            SceneManager.LoadSceneAsync("Overworld");
         }
     }
 }
