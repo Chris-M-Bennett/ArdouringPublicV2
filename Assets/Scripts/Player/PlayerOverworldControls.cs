@@ -47,12 +47,12 @@ namespace Player{
                 infoText.text = _moveControls;
                 GameManager.newGame = false;
             }
-            else
-            {
-                _currentPosition = transform.position;
-                transform.position = new Vector2(PlayerPrefs.GetFloat("playerXPos", _currentPosition.x), 
-                    PlayerPrefs.GetFloat("playerYPos", _currentPosition.y));
-            }
+            /* else
+             {
+                 transform.position = new Vector2(PlayerPrefs.GetFloat("playerXPos", _currentPosition.x), 
+                     PlayerPrefs.GetFloat("playerYPos", _currentPosition.y));
+                 _currentPosition = transform.position;
+             }*/
         }
 
         private void FixedUpdate(){
