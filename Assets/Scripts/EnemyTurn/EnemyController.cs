@@ -45,10 +45,11 @@ namespace EnemyTurn{
     */
         private int patternRow;
         private int rows;
-        public string[,] patternLibrary = new string[2,3]
+        public string[,] patternLibrary = new string[3,5]
         {
-            {"Calmer Chameleon","~~..~~~......~~..~~~......~..~~..~...~.~......~.~.~.~...~..~.....~.....~.....~.....~..........~...~...~...~........~....","0.33"},
-            {"Chice","~.~.~.~.~.~.~.~.~.~.~.~.~","0.3"}
+            {"Calmer Chameleon","......~~~.~...~~.~.~~~.~~.~~~.",".~..~.~..~~~.~~~..~.~..~..~~.~~~.~~","~...~.~.~...~...~.~.~...~..~....~..~~.~~..~....~..","0.33"},
+            {"Chice",".....~.~..~~~...~..........~.~..~~~...~.......~.~..~~~...~..",".....~....~~....~~......~...~~..~~.",".....~.~.~.~.~.~.~.~.....~.~.~~.~.~.~.~..~.~.","0.3"},
+            {"Storming Cloud","........~...~~..~~..~~.~~..~~..~~...~...","~..~.~..~..~..~.~..~..~....~..","~~~~.......~~~~.....~~~.........~~~.....","0.33"}
         };
     
         /*
@@ -77,8 +78,21 @@ namespace EnemyTurn{
             {
                 if (patternLibrary[m, 0] == _opponentValues.debaterName)
                 {
-                    patternString = patternLibrary[m, 1];
-                    bulletInterval = float.Parse(patternLibrary[m, 2], CultureInfo.InvariantCulture.NumberFormat);
+                    Random rnd = new Random();
+                    int patternVarient = rnd.Next(1, 3);
+                    //Debug.Log("pattern number:" + patternVarient);
+                    switch (patternVarient)
+                    {
+                        case 1:
+                            patternString = patternLibrary[m, 1];
+                            break;
+                        case 2:
+                            patternString = patternLibrary[m, 2];
+                            break;
+                        default: patternString = patternLibrary[m, 3];
+                            break;
+                    }
+                    bulletInterval = float.Parse(patternLibrary[m, 4], CultureInfo.InvariantCulture.NumberFormat);
                     matchedDebater = true;
                 }
 
@@ -169,8 +183,6 @@ namespace EnemyTurn{
         {
             //Random rnd = new Random();
             //int i = rnd.Next(1, 5)-1;
-        
-            
             //Debug.Log("Timer: " + timer);
             
             for (int j = attackPattern.GetLength(1) -1; j > -1; j--)

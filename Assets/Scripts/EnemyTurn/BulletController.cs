@@ -15,7 +15,7 @@ public class BulletController : MonoBehaviour
     {
         damage = 10;
         speed = 1f;
-        targetY = -1.8f; //1.32f; //0.32f; used to stop off screen, now stop immediately before player (still collide but don't stick around after being dodged)
+        targetY = -1.8f;//-4.2f;//-1.8f; //1.32f; //0.32f; used to stop off screen, now stop immediately before player (still collide but don't stick around after being dodged)
         _bullet = GetComponent<BulletController>();
 
     }
@@ -36,7 +36,6 @@ public class BulletController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D end)
