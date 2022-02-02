@@ -48,7 +48,7 @@ namespace Opponents
             _player = GameObject.FindWithTag("Player").GetComponent<PlayerOverworldControls>();
             //_transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
             
-            if (LastOpponent.lastOpponent == gameObject && GameManager.wonDebate)
+            if (LastOpponent.lastOpponent == transform.GetSiblingIndex() && GameManager.wonDebate)
             {
                 GameManager.wonDebate = false;
                Instantiate(defeatedPrefab,defeatPoint);

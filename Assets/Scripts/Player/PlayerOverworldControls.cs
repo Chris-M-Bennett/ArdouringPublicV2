@@ -14,6 +14,7 @@ namespace Player{
         [SerializeField] private float runSpeedDif = 0.005f;
         [SerializeField] private float maxSpeed = 0.1f;
         [SerializeField] private Vector2 startPosition;
+        [SerializeField] private Vector2 enterPosition;
         [SerializeField] private GameObject infoOverlay;
         [SerializeField] private Text infoText;
         [SerializeField] private Sprite interiorBG;
@@ -41,18 +42,22 @@ namespace Player{
             _anim = GetComponent<Animator>();
             _rb = GetComponent<Rigidbody2D>();
             _sprite = GetComponent<SpriteRenderer>();
+            infoText.text = _moveControls;
             if (GameManager.newGame)
             {
                 transform.position = startPosition;
-                infoText.text = _moveControls;
                 GameManager.newGame = false;
-            }
-            /* else
-             {
+            }else if (GameManager.movedArea)
+            {
+                transform.position = enterPosition;
+                GameManager.movedArea = false;
+            }else
+            {
                  transform.position = new Vector2(PlayerPrefs.GetFloat("playerXPos", _currentPosition.x), 
                      PlayerPrefs.GetFloat("playerYPos", _currentPosition.y));
                  _currentPosition = transform.position;
-             }*/
+                 
+            }
         }
 
         private void FixedUpdate(){
@@ -122,7 +127,7 @@ namespace Player{
                         GameManager.debateBG = exteriorBG;
                     }
                     
-                    LastOpponent.lastOpponent = opponentHit.gameObject;
+                    LastOpponent.lastOpponent = opponentHit.transform.GetSiblingIndex();
                     GameManager.debateOpponent = opponentHit.GetComponent<OpponentOverworldScript>().debatePrefab;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);

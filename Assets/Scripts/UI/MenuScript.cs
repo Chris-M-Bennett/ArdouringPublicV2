@@ -17,11 +17,5 @@ namespace UI{
             Application.Quit();
             //EditorApplication.isPlaying = false;
         }
-
-        public void ToggleTutorials(bool toggle)
-        {
-            PlayerPrefs.SetInt("Tutorials", Convert.ToInt32(toggle));
-            GameManager.tutorials = toggle;
-        }
     }
 }

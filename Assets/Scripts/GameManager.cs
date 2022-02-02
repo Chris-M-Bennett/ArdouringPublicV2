@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameObject debateOpponent;
     public static bool wonDebate = false;
     public static bool newGame;
+    public static bool movedArea;
     public static bool tutorials = true;
     public static Sprite debateBG;
 
