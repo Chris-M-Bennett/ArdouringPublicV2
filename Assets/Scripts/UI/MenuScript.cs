@@ -7,6 +7,9 @@ using UnityEngine.UI;
 namespace UI{
     public class MenuScript : MonoBehaviour
     {
+        private void Awake(){
+            Time.timeScale = 1;
+        }
 
         public void NewGame(){
             GameManager.newGame = true;

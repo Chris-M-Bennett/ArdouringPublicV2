@@ -92,6 +92,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a63adb036c113c942a27ba8e1f8c243f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  title: {fileID: 4102513330132173314}
+  butts:
+  - {fileID: 4102513329744296601}
+  - {fileID: 4102513330648623539}
+  - {fileID: 4102513330225558720}
   tutToggle: {fileID: 4102513330583514920}
 --- !u!1 &4102513329291269279
 GameObject:
@@ -257,6 +262,7 @@ GameObject:
   - component: {fileID: 4102513329744296603}
   - component: {fileID: 4102513329744296602}
   - component: {fileID: 4102513329744296601}
+  - component: {fileID: 3648249968643363834}
   m_Layer: 5
   m_Name: Resume Button
   m_TagString: Untagged
@@ -345,7 +351,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -363,7 +369,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4102513329744296602}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5296842398986120075}
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!95 &3648249968643363834
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4102513329744296607}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 54087ba22f8c7d34e925b91824215958, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4102513330132173314
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +412,7 @@ GameObject:
   - component: {fileID: 4102513330132173341}
   - component: {fileID: 4102513330132173340}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Pause Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -585,7 +621,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: fdf25194f506a5b4aae6e2150847a694, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 

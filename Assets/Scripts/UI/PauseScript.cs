@@ -9,6 +9,8 @@ namespace UI
     public class PauseScript : MenuScript
     {
         private float prevScale = 1;
+        [SerializeField] private GameObject title;
+        [SerializeField] private Button[] butts;
         [SerializeField] private Toggle tutToggle;
         private void Start()
         {
@@ -26,25 +28,26 @@ namespace UI
 
         private void Pause()
         {
-            for (int i = 0 ; i < transform.childCount ; i++)
-            {
-                transform.GetChild(i).gameObject.SetActive(true);
-            }
-
             GetComponent<Image>().enabled = true;
+            title.SetActive(true);
+            tutToggle.gameObject.SetActive(true);
+            for (int i = 0 ; i < butts.Length ; i++)
+            {
+                butts[i].gameObject.SetActive(true);
+            }
             prevScale = Time.timeScale;
             Time.timeScale = 0;
         }
 
         public void Resume()
         {
-            Debug.Log(transform.childCount);
-            for (int i = 0 ; i < transform.childCount ; i++)
-            {
-                transform.GetChild(i).gameObject.SetActive(false);
-            }
-
             GetComponent<Image>().enabled = false;
+            title.SetActive(false);
+            tutToggle.gameObject.SetActive(false);
+            for (int i = 0 ; i < butts.Length ; i++)
+            {
+                butts[i].gameObject.SetActive(false);
+            }
             Time.timeScale = prevScale;
         }
         
