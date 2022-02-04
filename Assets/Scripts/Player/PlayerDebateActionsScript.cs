@@ -15,9 +15,9 @@ namespace Player{
         [SerializeField] private DebateHUDScript opponentHUD;
         private DebateSystemScript _debateSystem;
         private GameObject _opponentGO;
-        private static DebateValuesScript _opponentValues;
+        private static OpponentDebateValues _opponentValues;
         private static int _playerDamage;
-        private static DebateValuesScript _playerValues;
+        private static PlayerDebateValues _playerValues;
         private DebateState _turnState;
         private Vector3 _damagePos;
         private float _damageEndY;
@@ -30,7 +30,7 @@ namespace Player{
             _opponentGO = GetComponentInParent<DebateSystemScript>().opponentGO;
             if (_opponentGO.GetComponent<DebateValuesScript>())
             {
-                _opponentValues = _opponentGO.GetComponent<DebateValuesScript>();
+                _opponentValues = _opponentGO.GetComponent<OpponentDebateValues>();
             }
             else
             {
@@ -39,17 +39,10 @@ namespace Player{
 
             _damageEndY = damageEnd.position.y;
             _damagePos = damageText.transform.position;
-            _playerValues = GameObject.FindWithTag("Player").GetComponent<DebateValuesScript>();
+            _playerValues = GameObject.FindWithTag("Player").GetComponent<PlayerDebateValues>();
             _playerDamage = _playerValues.debaterLevel*2;
             
         }
-
-
-        /*void SetButtonUnlock(bool state)
-    {
-        _choice4Button.enabled = state;
-        choice4.GetComponent<Image>().color = state ? Color.white : Color.gray;
-    }*/
 
         private void CheckPlayerTurn(int emotion){
             if(_debateSystem.state == DebateState.Player){

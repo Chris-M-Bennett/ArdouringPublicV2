@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Opponents;
+using Player;
 using UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -38,7 +39,7 @@ namespace System
         
         private bool _playerHadTurn = false;
         private DebateValuesScript _playerValues;
-        private DebateValuesScript _opponentValues;
+        private OpponentDebateValues _opponentValues;
         private int _playerExp;
         private int _playerLevel;
         private int _opponentPrevES;
@@ -55,7 +56,7 @@ namespace System
         void Start()
         {
             background.sprite = GameManager.debateBG;
-            _playerValues = player.GetComponent<DebateValuesScript>();
+            _playerValues = player.GetComponent<PlayerDebateValues>();
             if (GameManager.debateOpponent)
             {
                 opponentGO = Instantiate(GameManager.debateOpponent, opponentSpawn);
@@ -64,8 +65,7 @@ namespace System
                 opponentGO = Instantiate(testPrefab, opponentSpawn);   
             }
 
-            _opponentValues = opponentGO.GetComponent<DebateValuesScript>();
-            _opponentPrevES = _opponentValues.currentES;
+            _opponentValues = opponentGO.GetComponent<OpponentDebateValues>();
 
             playerHUD.SetHUD(_playerValues);
             _playerExp = PlayerPrefs.GetInt("playerEX", 0);
@@ -124,11 +124,10 @@ namespace System
         /// <returns></returns>
         IEnumerator OpponentTurn()
         {
-            
+            _opponentValues.CheckThreshold(_opponentValues.currentES);
             GameObject foe = Instantiate(enemyTurn,new Vector2(trackX,trackY),Quaternion.identity);
-            _opponentValues.CheckThreshold(_opponentPrevES);
-            notifyText.text +=
-                $" {_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
+            //notifyText.text +=
+            //    $" {_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
             eventSystem.enabled = false;
             StartCoroutine(DamageAnim(player));
             playerHUD.SetES(_playerValues);

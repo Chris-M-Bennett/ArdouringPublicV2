@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4915289711706006734}
   - component: {fileID: 4915289711706006721}
-  - component: {fileID: 912509662349270247}
+  - component: {fileID: 8211629860587874396}
   - component: {fileID: 1977881048577376066}
   m_Layer: 8
   m_Name: Debate Opponent Prefab
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &912509662349270247
+--- !u!114 &8211629860587874396
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,17 +92,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4915289711706006720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a942ccb9b670af409c85b0ffd774b34, type: 3}
+  m_Script: {fileID: 11500000, guid: 05ebedb033bca4c4fa57aa25f0a18367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   debaterName: 
   debaterLevel: 0
   debaterDamage: 0
-  maxES: 0
+  maxES: 100
+  startES: 0
   currentES: 0
-  emotionInt: 0
+  emotAmounts: 0000000000000000000000000000000000000000
   emotionThresholds: {fileID: 0}
-  emotAmounts: 6400000000000000000000000000000000000000
+  emotionInt: 0
 --- !u!95 &1977881048577376066
 Animator:
   serializedVersion: 3

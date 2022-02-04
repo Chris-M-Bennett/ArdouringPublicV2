@@ -13,9 +13,4 @@ MonoBehaviour:
   m_Name: Chice Emotion Thresholds
   m_EditorClassIdentifier: 
   thresholds: 32000000
-  emotionSprites:
-  - {fileID: -2890148124162952948, guid: 42b19fdd8ee2b384db182b9222a04b28, type: 3}
-  - {fileID: -2890148124162952948, guid: 42b19fdd8ee2b384db182b9222a04b28, type: 3}
-  - {fileID: -2890148124162952948, guid: 42b19fdd8ee2b384db182b9222a04b28, type: 3}
-  - {fileID: -2890148124162952948, guid: 42b19fdd8ee2b384db182b9222a04b28, type: 3}
-  - {fileID: -2890148124162952948, guid: 42b19fdd8ee2b384db182b9222a04b28, type: 3}
+  emotions: 0000000004000000

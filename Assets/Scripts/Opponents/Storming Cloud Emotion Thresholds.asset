@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e19564ab5f4ed7bcb6b57a2cd0ef4e, type: 3}
   m_Name: Storming Cloud Emotion Thresholds
   m_EditorClassIdentifier: 
-  thresholds: 
-  emotionSprites: []
+  thresholds: 46000000
+  emotions: 0200000003000000
+  emotionAnims:
+  - {fileID: 9100000, guid: 9aa495a3d13efb646b55488beb8b5c64, type: 2}
+  - {fileID: 9100000, guid: 9f2db727b15b42b4691556a4fe6e619a, type: 2}

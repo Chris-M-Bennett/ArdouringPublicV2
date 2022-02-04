@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 namespace Opponents
@@ -7,6 +8,6 @@ namespace Opponents
     public class OpponentThresholds : ScriptableObject
     {
         [Header("The ES thresholds at which the opponent should change emotion from lowest to highest")]public List<int> thresholds;
-        [Header("The opponents emotion sprites in the following order: Happy, Sad, Angry, Afraid")]public List<Sprite> emotionSprites;
+        [Header("The emotions this opponent can experience in the following order: Happy = 0, Sad = 1, Angry = 2, Confident = 3, Afraid = 4")]public List<int> emotions;
     }
 }

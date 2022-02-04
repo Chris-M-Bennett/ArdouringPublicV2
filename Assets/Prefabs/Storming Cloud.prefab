@@ -16,7 +16,7 @@ PrefabInstance:
         type: 3}
       propertyPath: debatePrefab
       value: 
-      objectReference: {fileID: 3985076485903466295, guid: f90d75809efd72f40929feef49178096,
+      objectReference: {fileID: 7975759165973573710, guid: a201cedf5dfe6304e8f3a4070162fa1a,
         type: 3}
     - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}

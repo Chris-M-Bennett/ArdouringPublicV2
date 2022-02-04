@@ -100,8 +100,9 @@ MonoBehaviour:
   debaterDamage: 10
   maxES: 100
   currentES: 0
-  emotionInt: 2
   emotionThresholds: {fileID: 11400000, guid: 25e42daa37f3ea5448798755c98684be, type: 2}
+  emotion: 
+  emotionInt: 2
   emotAmounts: 0300000003000000080000000700000003000000
 --- !u!95 &7496681753629271221
 Animator:
