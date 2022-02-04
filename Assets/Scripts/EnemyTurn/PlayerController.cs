@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     //public GameObject text;
     public GameObject ESbar;
     private static DebateValuesScript _playerValues;
+    
     //public GameObject dss;
     //public int debateES;
     // Start is called before the first frame update
