@@ -278,7 +278,6 @@ MonoBehaviour:
   maxES: 0
   currentES: 0
   Player: {fileID: 3631827488357627367}
-  text: {fileID: 345066202756093981, guid: fabc86c9111bb674b8f3cc09c10d352e, type: 3}
   ESbar: {fileID: 3631827488502341035}
 --- !u!50 &3631827488357627371
 Rigidbody2D:
@@ -456,11 +455,11 @@ MonoBehaviour:
   turnLimit: 0
   startY: 0
   bulletX: 0
+  bulletSpeed: 0
   enemyTurn: {fileID: 4770124292554830722}
   currentEmotion: 104
   maxEnemyES: 100
   nickname: Calmer Chameleon
-  patternString: ~~..~~~......~~..~~~......~..~~..~...~.~......~.~.~.~...~..~.....~.....~.....~.....~..........~...~...~...~........~....
 --- !u!1 &4770124292554830722
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,7 +471,7 @@ GameObject:
   - component: {fileID: 6341219398884271218}
   m_Layer: 0
   m_Name: EnemyTurn
-  m_TagString: Untagged
+  m_TagString: EnemyTurn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
