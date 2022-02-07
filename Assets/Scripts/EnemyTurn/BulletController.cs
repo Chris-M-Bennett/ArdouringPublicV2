@@ -10,21 +10,28 @@ public class BulletController : MonoBehaviour
     private BulletController _bullet;
     public int damage;
     private static DebateValuesScript _opponentValues;
+    private static EnemyController _enemy;
     private float speed;
     private float distance;
     private float targetY;
-
+    /**/
     public string[,] bulletLibrary = new string[3, 3]
     {
-        {"Calmer Chameleon","1.2","10"},
+        {"Calmer Chameleon","1.2","12"},
         {"Chice","1.5","10"},
         {"Storming Cloud","2","10"}
     };
-
+    //*/
     // Start is called before the first frame update
     void Start()
     {
         _opponentValues = GameObject.FindWithTag("Opponent").GetComponent<DebateValuesScript>();
+        /*
+        _enemy = GameObject.FindWithTag("EnemyTurn").GetComponent<EnemyController>();
+        damage = _enemy.bulletDamage;
+        speed = _enemy.bulletSpeed;
+        */
+        /**/
         bool matchedDebater = false;
         for (int b = 0; b < bulletLibrary.GetLength(0); b++)
         {
@@ -40,12 +47,13 @@ public class BulletController : MonoBehaviour
             speed = 1f;
             damage = 10;
         }
+        //*/
         //damage = 10;
         
         targetY = -1.8f;//-4.2f;//-1.8f; //1.32f; //0.32f; used to stop off screen, now stop immediately before player (still collide but don't stick around after being dodged)
         _bullet = GetComponent<BulletController>();
         //speed = 1f;//_opponent.bulletSpeed;
-        Debug.Log("bullet speed: " + speed);
+        //Debug.Log("bullet speed: " + speed);
     }
 
     // Update is called once per frame
