@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Opponents
 {
@@ -16,8 +18,9 @@ namespace Opponents
 
         private Animator _animator;
         private static readonly int EmotionInt = Animator.StringToHash("EmotionInt");
+        [HideInInspector] public int prevES;
 
-       /* void OnValidate()
+        /* void OnValidate()
         {
             if (!emotionThresholds.emotions.Contains(emotionInt))
             {
@@ -27,7 +30,7 @@ namespace Opponents
         }*/
     
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             _animator = GetComponent<Animator>();
             if(emotionThresholds)
@@ -42,16 +45,16 @@ namespace Opponents
 
         public void CheckThreshold(int currentES)
         {
-            for (int i = 1; i < thresh.Count; i++)
+            for (int i = 0; i < thresh.Count-1; i++)
             {
-                if (currentES > thresh[i] || currentES < -thresh[i])
+                if ((currentES > thresh[i] && prevES < thresh[i]) || (currentES < -thresh[i] && prevES > thresh[i]))
                 {
                     var rand = Random.Range(0, myEmotions.Count - 1);
                     while (rand == emotionInt)
                     {
                         rand = Random.Range(0, myEmotions.Count - 1);
+                        //Debug.Log(rand);
                     }
-                    Debug.Log(rand);
                     emotionInt = myEmotions[rand];
                     _animator.SetInteger(EmotionInt, emotionInt);
 

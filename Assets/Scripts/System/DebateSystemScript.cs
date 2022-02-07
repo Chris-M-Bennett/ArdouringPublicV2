@@ -89,6 +89,8 @@ namespace System
                 notifyText.text += EmotionDescript(opponentEmot);
             }
             
+            _opponentValues.prevES = _opponentValues.currentES;
+            
             //Waits for Boolean to be set by PLayer Actions script
             while (PlayerHadTurn == false)
             {
@@ -102,6 +104,7 @@ namespace System
                 if (_opponentValues.currentES <= -100)
                 {
                     PlayerPrefs.SetInt("Pacifies",PlayerPrefs.GetInt("Pacifies",0)+1);
+                    GameManager.wasPacified = true;
                 }
                 else
                 {
@@ -173,7 +176,6 @@ namespace System
             {
                 _playerExp += 2;
                 notifyText.text = "You won the debate!";
-                GameManager.wonDebate = true;
             }
             else if (state == DebateState.Lost)
             {

@@ -86,35 +86,7 @@ namespace Player{
             _opponentValues.currentES = 100;
             _debateSystem.PlayerHadTurn = true;
         }
-
-        /*void ChangeTexts(string text1, string text2, string text3, string text4){
-       //Removes listeners previous added to buttons
-        _choice1Button.onClick.RemoveAllListeners();
-        _choice2Button.onClick.RemoveAllListeners();
-        _choice3Button.onClick.RemoveAllListeners();
-        _choice4Button.onClick.RemoveAllListeners();
         
-        //Checks text for buttons to see if they should be active
-        choice1.SetActive(text1 != "");
-        choice2.SetActive(text2 != "");
-        choice3.SetActive(text3 != "");
-        choice4.SetActive(text4 != "");
-        
-        _choice1Text.text = text1;
-        _choice2Text.text = text2;
-        _choice3Text.text = text3;
-        _choice4Text.text = text4;
-    }
-    
-    void ChangeState(string text1, States state1, string text2, States state2,
-        string text3, States state3, string text4, States state4)
-    {
-        ChangeTexts(text1, text2, text3, text4);
-        _choice1Button.onClick.AddListener(()=>PanelButton(state1));
-        _choice2Button.onClick.AddListener(()=>PanelButton(state2));
-        _choice3Button.onClick.AddListener(()=>PanelButton(state3));
-        _choice4Button.onClick.AddListener(()=>PanelButton(state4));
-    }*/
 
         void OpponentESChange(int emotion)
         {
@@ -151,23 +123,23 @@ namespace Player{
             }
             if (emotStrengths[0] == emotion)
             {
-                emotMult = 1;
+                emotMult = 1f;
             }
             if (emotStrengths[1] == emotion)
             {
-                emotMult = -6;
+                emotMult = -2f;
             }
             else if (emotStrengths[2] == emotion)
             {
-                emotMult = -4.5f;
+                emotMult = -1.5f;
             }
             else if (emotStrengths[3] == emotion)
             {
-                emotMult = 4.5f;
+                emotMult = 1.5f;
             }
             else
             {
-                emotMult = 6;
+                emotMult = 2f;
             }
             var modEmot = _playerDamage*emotMult;
             var moddedDamage = (2 * modEmot+(modEmot*overloads-pacifies)) / 3;
@@ -187,7 +159,7 @@ namespace Player{
                 overOrPass = "more emotional";
             }
             notifyText.text = $"The {_opponentValues.debaterName}'s emotional strain has {changedBy}.";
-            notifyText.text += $"They seem {overOrPass}";
+            notifyText.text += $" They seem {overOrPass}";
 
             if (opponentES > _opponentValues.maxES)
             {

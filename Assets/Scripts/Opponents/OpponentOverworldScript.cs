@@ -13,8 +13,6 @@ namespace Opponents
         [SerializeField, Tooltip("The prefab used for this opponent in debates")] public GameObject debatePrefab;
         [SerializeField, Tooltip("The prefab used if this opponent is defeated")] private GameObject defeatedPrefab;
         [SerializeField, Tooltip("The point game object where the defeated prefab should be placed")] private Transform defeatPoint;
-        [SerializeField, Tooltip("The movement point the opponent should by moving away from")] public DirectOverworldMovementScript lastDest;
-        [SerializeField, Tooltip("The movement point the opponent should by moving towards")] public DirectOverworldMovementScript currentDest;
         [SerializeField, Tooltip("The speed at which the opponent should move between points")] private float moveSpeed = 2f;
         [SerializeField] private LastOpponent lastOpponent;
 
@@ -34,6 +32,19 @@ namespace Opponents
         private static readonly int IsDown = Animator.StringToHash("IsDown");
         private static readonly int IsUp = Animator.StringToHash("IsUp");
         private static readonly int IsRight = Animator.StringToHash("IsRight");
+        
+        private DirectOverworldMovementScript lastDest;
+        public DirectOverworldMovementScript LastDest
+        {
+            get { return lastDest; }
+            set { lastDest = value; }
+        } 
+        private DirectOverworldMovementScript currentDest;
+        public DirectOverworldMovementScript CurrentDest
+        {
+            get { return currentDest; }
+            set { currentDest = value; }
+        } 
 
         void Start()
         {
@@ -48,9 +59,9 @@ namespace Opponents
             _player = GameObject.FindWithTag("Player").GetComponent<PlayerOverworldControls>();
             //_transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
             
-            if (LastOpponent.lastOpponent == transform.GetSiblingIndex() && GameManager.wonDebate)
+            if (LastOpponent.lastOpponent == transform.GetSiblingIndex() && GameManager.wasPacified)
             {
-                GameManager.wonDebate = false;
+                GameManager.wasPacified = false;
                Instantiate(defeatedPrefab,defeatPoint);
                Destroy(gameObject);
             }else

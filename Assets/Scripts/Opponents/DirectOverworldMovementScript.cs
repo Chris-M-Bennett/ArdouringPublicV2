@@ -11,13 +11,12 @@ namespace Opponents
     {
         [SerializeField] private DirectOverworldMovementScript[] nextPoints;
         [SerializeField] private bool isEnd = false;
-        
 
         private void OnTriggerEnter2D(Collider2D col)
         {
             var ent = col.gameObject.GetComponent<OpponentOverworldScript>();
             
-            if (!ent || ent.lastDest == null)
+            if (!ent || ent.LastDest == null)
             {
                 if (!col.gameObject.CompareTag("Player"))
                 {
@@ -26,7 +25,7 @@ namespace Opponents
                 return;
             }
 
-            var from = ent.lastDest;
+            var from = ent.LastDest;
             var to = nextPoints[Random.Range(0, nextPoints.Length)];
 
             if (to == from && !isEnd)
