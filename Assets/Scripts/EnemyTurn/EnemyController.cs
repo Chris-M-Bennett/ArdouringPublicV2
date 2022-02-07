@@ -10,6 +10,8 @@ namespace EnemyTurn{
         //public EnemyController _bullet;
         public GameObject bullet;
         private float bulletInterval;
+        public int bulletDamage;
+        public float bulletSpeed;
         private float timer;
         public float turnTimer;
         public float turnLimit;
@@ -45,11 +47,11 @@ namespace EnemyTurn{
     */
         private int patternRow;
         private int rows;
-        public string[,] patternLibrary = new string[3,5]
+        public string[,] patternLibrary = new string[3,7]
         {
-            {"Calmer Chameleon","......~~~.~...~~.~.~~~.~~.~~~.",".~..~.~..~~~.~~~..~.~..~..~~.~~~.~~","~...~.~.~...~...~.~.~...~..~....~..~~.~~..~....~..","0.33"},
-            {"Chice",".....~.~..~~~...~..........~.~..~~~...~.......~.~..~~~...~..",".....~....~~....~~......~...~~..~~.",".....~.~.~.~.~.~.~.~.....~.~.~~.~.~.~.~..~.~.","0.3"},
-            {"Storming Cloud","........~...~~..~~..~~.~~..~~..~~...~...","~..~.~..~..~..~.~..~..~....~..","~~~~.......~~~~.....~~~.........~~~.....","0.16"}
+            {"Calmer Chameleon","......~~~.~...~~.~.~~~.~~.~~~.",".~..~.~..~~~.~~~..~.~..~..~~.~~~.~~","~...~.~.~...~...~.~.~...~..~....~..~~.~~..~....~..","0.33","1.2","12"},
+            {"Chice",".....~.~..~~~...~..........~.~..~~~...~.......~.~..~~~...~..",".....~....~~....~~......~...~~..~~.",".....~.~.~.~.~.~.~.~.....~.~.~~.~.~.~.~..~.~.","0.3","1.5","10"},
+            {"Storming Cloud","........~...~~..~~..~~.~~..~~..~~...~...","~..~.~..~..~..~.~..~..~....~..","~~~~.......~~~~.....~~~.........~~~.....","0.16","2","10"}
         };
     
         /*
@@ -93,6 +95,8 @@ namespace EnemyTurn{
                             break;
                     }
                     bulletInterval = float.Parse(patternLibrary[m, 4], CultureInfo.InvariantCulture.NumberFormat);
+                    bulletSpeed = float.Parse(patternLibrary[m, 5], CultureInfo.InvariantCulture.NumberFormat);
+                    bulletDamage = int.Parse(patternLibrary[m, 5], CultureInfo.InvariantCulture.NumberFormat);
                     matchedDebater = true;
                 }
 
@@ -101,6 +105,8 @@ namespace EnemyTurn{
             {
                 patternString = "~.~~.......~~.~.....";
                 bulletInterval = 0.33f;
+                bulletSpeed = 1f;
+                bulletDamage = 10;
             }
             patternLength = patternString.Length;
             rows = (int)Math.Floor((decimal) (patternLength/5));
