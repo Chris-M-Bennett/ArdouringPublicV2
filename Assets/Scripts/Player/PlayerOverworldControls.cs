@@ -20,7 +20,7 @@ namespace Player{
         [SerializeField] private Sprite interiorBG;
         [SerializeField] private Sprite exteriorBG;
         [SerializeField] private LastOpponent lastOpponent;
-        
+
         private MoveBarsScript _transBars;
         private Vector2 _currentPosition;
         private bool _isRunning = false;
@@ -43,14 +43,14 @@ namespace Player{
             _rb = GetComponent<Rigidbody2D>();
             _sprite = GetComponent<SpriteRenderer>();
             infoText.text = _moveControls;
-            if (GameManager.newGame)
+            if (GameManager.NewGame)
             {
                 transform.position = startPosition;
-                GameManager.newGame = false;
-            }else if (GameManager.movedArea)
+                GameManager.NewGame = false;
+            }else if (GameManager.MovedArea)
             {
                 transform.position = enterPosition;
-                GameManager.movedArea = false;
+                GameManager.MovedArea = false;
             }else
             {
                  transform.position = new Vector2(PlayerPrefs.GetFloat("playerXPos", _currentPosition.x), 
@@ -112,7 +112,7 @@ namespace Player{
 
                 infoOverlay.SetActive(true);
                 infoText.text = opponentHit.gameObject.GetComponent<OpponentOverworldScript>().myName;
-                if (GameManager.tutorials)
+                if (GameManager.Tutorials)
                 {
                     infoText.text += $"\n\n{_activateControls}";
                 }
@@ -121,20 +121,20 @@ namespace Player{
                     Collider2D structureHit = Physics2D.OverlapCircle(_currentPosition, 7f, _structureMask);
                     if (structureHit)
                     {
-                        GameManager.debateBG = interiorBG;
+                        GameManager.DebateBG = interiorBG;
                     }else
                     {
-                        GameManager.debateBG = exteriorBG;
+                        GameManager.DebateBG = exteriorBG;
                     }
                     
-                    LastOpponent.lastOpponent = opponentHit.transform.GetSiblingIndex();
-                    GameManager.debateOpponent = opponentHit.GetComponent<OpponentOverworldScript>().debatePrefab;
+                    LastOpponent.lastOpponent = opponentHit.transform.parent.GetComponent<OpponentSpawnScript>();
+                    GameManager.DebateOpponent = opponentHit.GetComponent<OpponentOverworldScript>().debatePrefab;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
                     StartCoroutine(_transBars.MoveThoseBars(true, "Debate"));
                 }
             }
-            else if (GameManager.tutorials)
+            else if (GameManager.Tutorials)
             {
                 infoOverlay.SetActive(true);
                 infoText.text = _moveControls;

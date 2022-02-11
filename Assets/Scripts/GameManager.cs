@@ -5,12 +5,13 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
-    public static GameObject debateOpponent;
-    public static bool wasPacified = false;
-    public static bool newGame;
-    public static bool movedArea;
-    public static bool tutorials = true;
-    public static Sprite debateBG;
+    public static GameObject DebateOpponent;
+    //public static bool wasPacified = false;
+    public static OpponentOverworldStatuses AreaStatuses;
+    public static bool NewGame = true;
+    public static bool MovedArea;
+    public static bool Tutorials = true;
+    public static Sprite DebateBG;
 
     public static Dictionary<int, int[]> EmotionStrengths = new Dictionary<int, int[]>();
     
@@ -33,5 +34,10 @@ public class GameManager : MonoBehaviour
         EmotionStrengths.Add(2, new[] {2, 3, 4, 0});
         EmotionStrengths.Add(3, new[] {3, 4, 0, 1});
         EmotionStrengths.Add(4, new[] {4, 0, 1, 2});
+        if (NewGame)
+        {
+            PlayerPrefs.SetInt("Overloads", 0);
+            PlayerPrefs.SetInt("Pacifies", 0);
+        }
     }
 }

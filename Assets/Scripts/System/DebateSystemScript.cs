@@ -55,17 +55,18 @@ namespace System
 
         void Start()
         {
-            background.sprite = GameManager.debateBG;
+            background.sprite = GameManager.DebateBG;
             _playerValues = player.GetComponent<PlayerDebateValues>();
-            if (GameManager.debateOpponent)
+            if (GameManager.DebateOpponent)
             {
-                opponentGO = Instantiate(GameManager.debateOpponent, opponentSpawn);
+                opponentGO = Instantiate(GameManager.DebateOpponent, opponentSpawn);
             }else
             {
                 opponentGO = Instantiate(testPrefab, opponentSpawn);   
             }
 
             _opponentValues = opponentGO.GetComponent<OpponentDebateValues>();
+            
 
             playerHUD.SetHUD(_playerValues);
             _playerExp = PlayerPrefs.GetInt("playerEX", 0);
@@ -81,7 +82,7 @@ namespace System
         /// <returns>5 second wait before opponent's turn</returns>
         IEnumerator PlayerTurn()
         {
-            if (GameManager.tutorials)
+            if (GameManager.Tutorials)
             {
                 int opponentEmot = _opponentValues.emotionInt;
                 notifyText.text =
@@ -101,15 +102,18 @@ namespace System
             
             if (_opponentValues.currentES <= -100 || _opponentValues.currentES >= 100)
             {
+                var status = 0;
                 if (_opponentValues.currentES <= -100)
                 {
                     PlayerPrefs.SetInt("Pacifies",PlayerPrefs.GetInt("Pacifies",0)+1);
-                    GameManager.wasPacified = true;
+                    status = 1;
                 }
                 else
                 {
                     PlayerPrefs.SetInt("Overloads",PlayerPrefs.GetInt("Overloads",0)+1);
+                    status = -1;
                 }
+                //GameManager.AreaStatuses.statuses[LastOpponent.lastOpponent.ID] = status;
                 state = DebateState.Won;
                 StartCoroutine(EndDebate());
             }
