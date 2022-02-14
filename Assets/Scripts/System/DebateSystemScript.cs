@@ -57,6 +57,10 @@ namespace System
         {
             background.sprite = GameManager.DebateBG;
             _playerValues = player.GetComponent<PlayerDebateValues>();
+            _playerValues.currentES = PlayerPrefs.GetInt("playerES", 100);
+            playerHUD.SetES(_playerValues);
+            _playerExp = PlayerPrefs.GetInt("playerEX", 0);
+
             if (GameManager.DebateOpponent)
             {
                 opponentGO = Instantiate(GameManager.DebateOpponent, opponentSpawn);
@@ -67,9 +71,6 @@ namespace System
 
             _opponentValues = opponentGO.GetComponent<OpponentDebateValues>();
             
-
-            playerHUD.SetHUD(_playerValues);
-            _playerExp = PlayerPrefs.GetInt("playerEX", 0);
             opponentHUD.SetHUD(_opponentValues);
             state = DebateState.Player;
             StartCoroutine(tranBars.MoveThoseBars(false));
@@ -91,8 +92,8 @@ namespace System
             }
             
             _opponentValues.prevES = _opponentValues.currentES;
-            
-            //Waits for Boolean to be set by PLayer Actions script
+
+            //Waits for Boolean to be set by Player Actions script
             while (PlayerHadTurn == false)
             {
                 yield return null;
@@ -113,7 +114,7 @@ namespace System
                     PlayerPrefs.SetInt("Overloads",PlayerPrefs.GetInt("Overloads",0)+1);
                     status = -1;
                 }
-                //GameManager.AreaStatuses.statuses[LastOpponent.lastOpponent.ID] = status;
+                GameManager.AreaStatuses.statuses[LastOpponent.lastOpponent] = status;
                 state = DebateState.Won;
                 StartCoroutine(EndDebate());
             }
@@ -165,7 +166,7 @@ namespace System
 
         public IEnumerator EndDebate()
         {
-            if (_playerExp == 4)
+            if (_playerExp == 10)
             {
                 _playerLevel += 1;
                 PlayerPrefs.SetInt("playerLevel", _playerLevel);
@@ -183,9 +184,7 @@ namespace System
             }
             else if (state == DebateState.Lost)
             {
-                _playerValues.currentES = _playerValues.maxES;
-                PlayerPrefs.SetInt("playerES", _playerValues.maxES);
-                _playerExp += 1;
+                // _playerExp += 1;
                 notifyText.text = "You lost the debate!";
             }
             else
@@ -193,6 +192,7 @@ namespace System
                 notifyText.text = "You fled the fight.";
             }
             
+            PlayerPrefs.SetInt("playerES", _playerValues.currentES);
             PlayerPrefs.SetInt("playerExp", _playerExp);
             yield return new WaitForSeconds(2f);
             SceneManager.LoadSceneAsync("Overworld");

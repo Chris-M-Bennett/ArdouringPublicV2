@@ -1,7 +1,94 @@
 fileFormatVersion: 2
 guid: 39092874edae3b441803a4d8676ff025
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2945489907537263669
+    second: Stat Block_0
+  - first:
+      213: 5846651322097178238
+    second: Stat Block_1
+  - first:
+      213: 7981898691705290534
+    second: Stat Block_2
+  - first:
+      213: -6206384528746756108
+    second: Stat Block_3
+  - first:
+      213: -6242061582918142154
+    second: Stat Block_4
+  - first:
+      213: 7252439136674862727
+    second: Stat Block_5
+  - first:
+      213: -5375917589372100165
+    second: Stat Block_6
+  - first:
+      213: 163873501887600846
+    second: Stat Block_7
+  - first:
+      213: 6211349311105872562
+    second: Stat Block_8
+  - first:
+      213: 646678019890986544
+    second: Stat Block_9
+  - first:
+      213: 3884034906654672050
+    second: Stat Block_10
+  - first:
+      213: 7420799756432919380
+    second: Stat Block_11
+  - first:
+      213: -8950297018107959943
+    second: Stat Block_12
+  - first:
+      213: 8591690357396691528
+    second: Stat Block_13
+  - first:
+      213: -1646777005687026372
+    second: Stat Block_14
+  - first:
+      213: -6733643279909801263
+    second: Stat Block_15
+  - first:
+      213: 2928208692150391441
+    second: Stat Block_16
+  - first:
+      213: 719416910069698061
+    second: Stat Block_17
+  - first:
+      213: 3079470626255968003
+    second: Stat Block_18
+  - first:
+      213: -8219245586124505376
+    second: Stat Block_19
+  - first:
+      213: 182907517908428304
+    second: Stat Block_20
+  - first:
+      213: 4403174102320729679
+    second: Stat Block_21
+  - first:
+      213: 2084991727421203896
+    second: Stat Block_22
+  - first:
+      213: -3055476360293854088
+    second: Stat Block_23
+  - first:
+      213: -4094212039612287486
+    second: Stat Block_24
+  - first:
+      213: -301634417325823407
+    second: Stat Block_25
+  - first:
+      213: -8297374670106639374
+    second: Stat Block_26
+  - first:
+      213: 603988013411828727
+    second: Stat Block_27
+  - first:
+      213: 6910355370621902408
+    second: Stat Block_28
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +118,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -40,12 +127,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1.2
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,9 +158,666 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Stat Block_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 5370
+        width: 878
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc34eb3f8848f17d0800000000000000
+      internalID: -2945489907537263669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_1
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 5367
+        width: 896
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e769b2b866a732150800000000000000
+      internalID: 5846651322097178238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_2
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 5370
+        width: 882
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62fbf38f19665ce60800000000000000
+      internalID: 7981898691705290534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_3
+      rect:
+        serializedVersion: 2
+        x: 3055
+        y: 5370
+        width: 882
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7c198672e7ed9a0800000000000000
+      internalID: -6206384528746756108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_4
+      rect:
+        serializedVersion: 2
+        x: 4054
+        y: 5370
+        width: 882
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6373d0cef0ebf59a0800000000000000
+      internalID: -6242061582918142154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_5
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 4368
+        width: 878
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78655a048f6d5a460800000000000000
+      internalID: 7252439136674862727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_6
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 4368
+        width: 882
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1a3bf6f67e465b0800000000000000
+      internalID: -5375917589372100165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_7
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 4368
+        width: 882
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec81c1ce412364200800000000000000
+      internalID: 163873501887600846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_8
+      rect:
+        serializedVersion: 2
+        x: 3055
+        y: 4368
+        width: 882
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b235501a45233650800000000000000
+      internalID: 6211349311105872562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_9
+      rect:
+        serializedVersion: 2
+        x: 4051
+        y: 4356
+        width: 896
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03eb7ab9b3679f800800000000000000
+      internalID: 646678019890986544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_10
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 3369
+        width: 920
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b48e5a4b2dd6e530800000000000000
+      internalID: 3884034906654672050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_11
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 3369
+        width: 882
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b4d77bf0afbf660800000000000000
+      internalID: 7420799756432919380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_12
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 3369
+        width: 882
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975ef6168482ac380800000000000000
+      internalID: -8950297018107959943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_13
+      rect:
+        serializedVersion: 2
+        x: 3055
+        y: 3369
+        width: 882
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a57ccfbd0db3770800000000000000
+      internalID: 8591690357396691528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_14
+      rect:
+        serializedVersion: 2
+        x: 4054
+        y: 3369
+        width: 882
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d4ebfc9097529e0800000000000000
+      internalID: -1646777005687026372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_15
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 2370
+        width: 878
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d2b7c00d1b4d82a0800000000000000
+      internalID: -6733643279909801263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_16
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 2350
+        width: 908
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192d5db8a4613a820800000000000000
+      internalID: 2928208692150391441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_17
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 2625
+        width: 888
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e0d1a3ed1ebf900800000000000000
+      internalID: 719416910069698061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_18
+      rect:
+        serializedVersion: 2
+        x: 3055
+        y: 2370
+        width: 882
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3079c36083a7cba20800000000000000
+      internalID: 3079470626255968003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_19
+      rect:
+        serializedVersion: 2
+        x: 4054
+        y: 2370
+        width: 882
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eef955dfaf5fed80800000000000000
+      internalID: -8219245586124505376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_20
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 2350
+        width: 888
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0162eaf1b61d98200800000000000000
+      internalID: 182907517908428304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_21
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1368
+        width: 878
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ec60d54873b1d30800000000000000
+      internalID: 4403174102320729679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_22
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1368
+        width: 882
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5a198ede06fec10800000000000000
+      internalID: 2084991727421203896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_23
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 1368
+        width: 882
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874d41d5074c895d0800000000000000
+      internalID: -3055476360293854088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_24
+      rect:
+        serializedVersion: 2
+        x: 3052
+        y: 1351
+        width: 935
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20638cf87df6e27c0800000000000000
+      internalID: -4094212039612287486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_25
+      rect:
+        serializedVersion: 2
+        x: 4054
+        y: 1351
+        width: 934
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a2347781160dbf0800000000000000
+      internalID: -301634417325823407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_26
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 349
+        width: 934
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f348fbe2bdc9dc80800000000000000
+      internalID: -8297374670106639374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_27
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 624
+        width: 917
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3810ce5ebc16800800000000000000
+      internalID: 603988013411828727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stat Block_28
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 349
+        width: 911
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e91a1d89386ef50800000000000000
+      internalID: 6910355370621902408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -45,7 +45,7 @@ namespace Opponents
 
         public void CheckThreshold(int currentES)
         {
-            for (int i = 0; i < thresh.Count-1; i++)
+            for (int i = 0; i < thresh.Count; i++)
             {
                 if ((currentES > thresh[i] && prevES < thresh[i]) || (currentES < -thresh[i] && prevES > thresh[i]))
                 {

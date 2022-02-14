@@ -127,7 +127,7 @@ namespace Player{
                         GameManager.DebateBG = exteriorBG;
                     }
                     
-                    LastOpponent.lastOpponent = opponentHit.transform.parent.GetComponent<OpponentSpawnScript>();
+                    LastOpponent.lastOpponent = opponentHit.transform.parent.GetComponent<OpponentSpawnScript>().ID;
                     GameManager.DebateOpponent = opponentHit.GetComponent<OpponentOverworldScript>().debatePrefab;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
