@@ -19,11 +19,12 @@ namespace System
 
         private void Start()
         {
-            if (!(AreaStatuses is null) && AreaStatuses != areaStatuses)
+            if (AreaStatuses != areaStatuses)
             {
                 AreaStatuses = areaStatuses;
             }
             defeatState = areaStatuses.statuses[ID];
+            AreaStatuses.statuses[ID] = defeatState;
             if (defeatState > 0)
             {
                 Instantiate(defeatedOpponent, transform);

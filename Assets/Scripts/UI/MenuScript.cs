@@ -12,7 +12,7 @@ namespace UI{
         }
 
         public void NewGame(){
-            GameManager.NewGame = true;
+            //GameManager.NewGame = true;
             SceneManager.LoadSceneAsync("Overworld");
         }
 

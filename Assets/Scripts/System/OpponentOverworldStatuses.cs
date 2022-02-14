@@ -16,5 +16,16 @@ namespace System{
                 }
             }
         }
+
+        private void OnAwake()
+        {
+            if (GameManager.NewGame)
+            {
+                for (var i = 0; i < statuses.Length; i++)
+                {
+                    statuses[i] = 0;
+                }
+            }
+        }
     }
 }
