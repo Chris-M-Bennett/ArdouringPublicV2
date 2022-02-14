@@ -96,7 +96,7 @@ namespace EnemyTurn{
                     }
                     bulletInterval = float.Parse(patternLibrary[m, 4], CultureInfo.InvariantCulture.NumberFormat);
                     bulletSpeed = float.Parse(patternLibrary[m, 5], CultureInfo.InvariantCulture.NumberFormat);
-                    bulletDamage = int.Parse(patternLibrary[m, 5], CultureInfo.InvariantCulture.NumberFormat);
+                    bulletDamage = int.Parse(patternLibrary[m, 6], CultureInfo.InvariantCulture.NumberFormat);
                     matchedDebater = true;
                 }
 
