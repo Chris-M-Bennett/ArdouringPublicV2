@@ -11,7 +11,7 @@ namespace System
       {
          if (player.CompareTag("Player"))
          {
-            GameManager.movedArea = true;
+            GameManager.MovedArea = true;
             SceneManager.LoadSceneAsync(sceneToLoad);
          }
       }

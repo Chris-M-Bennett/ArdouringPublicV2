@@ -3635,7 +3635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debaterName: Protag
   debaterLevel: 1
-  debaterDamage: 7
+  debaterDamage: 3
   maxES: 100
   startES: 100
   currentES: 100

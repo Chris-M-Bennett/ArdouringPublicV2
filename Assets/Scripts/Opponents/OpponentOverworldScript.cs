@@ -12,9 +12,9 @@ namespace Opponents
         [SerializeField, Tooltip("The opponent's name")] public string myName;
         [SerializeField, Tooltip("The prefab used for this opponent in debates")] public GameObject debatePrefab;
         [SerializeField, Tooltip("The prefab used if this opponent is defeated")] private GameObject defeatedPrefab;
-        [SerializeField, Tooltip("The point game object where the defeated prefab should be placed")] private Transform defeatPoint;
+        //[SerializeField, Tooltip("The point game object where the defeated prefab should be placed")] private Transform defeatPoint;
         [SerializeField, Tooltip("The speed at which the opponent should move between points")] private float moveSpeed = 2f;
-        [SerializeField] private LastOpponent lastOpponent;
+        //[SerializeField] private LastOpponent lastOpponent;
 
 
         private SpriteRenderer _mainRenderer;
@@ -57,19 +57,20 @@ namespace Opponents
             _agent.updateUpAxis = false;
             _anim = GetComponent<Animator>();
             _player = GameObject.FindWithTag("Player").GetComponent<PlayerOverworldControls>();
-            //_transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
-            
-            if (LastOpponent.lastOpponent == transform.GetSiblingIndex() && GameManager.wasPacified)
+
+            /*if (LastOpponent.lastOpponent == transform.GetSiblingIndex() && GameManager.wasPacified)
             {
                 GameManager.wasPacified = false;
                Instantiate(defeatedPrefab,defeatPoint);
                Destroy(gameObject);
             }else
             {
-                _lastPosition = transform.position;
-                _agent.speed = moveSpeed;
-                _agent.destination = currentDest.transform.position;  
-            }
+                 
+            }*/
+            transform.eulerAngles = Vector3.zero;
+            _lastPosition = transform.position;
+            _agent.speed = moveSpeed;
+            _agent.destination = currentDest.transform.position; 
         }
 
         private void Update()

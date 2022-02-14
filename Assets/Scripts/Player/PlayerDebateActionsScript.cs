@@ -95,6 +95,7 @@ namespace Player{
             var randDamage = Random.Range(-3, 3);
             
             var overloads = PlayerPrefs.GetInt("Overloads", 0);
+            Debug.Log(overloads);
             var pacifies = PlayerPrefs.GetInt("Pacifies", 0);
             var opponentES = _opponentValues.currentES;
             var opponentEmot = _opponentValues.emotionInt;
@@ -142,7 +143,7 @@ namespace Player{
                 emotMult = 2f;
             }
             var modEmot = _playerDamage*emotMult;
-            var moddedDamage = (2 * modEmot+(modEmot*overloads-pacifies)) / 3;
+            var moddedDamage = (2*modEmot+(modEmot*overloads-pacifies));
             damageDone = Mathf.RoundToInt(moddedDamage/opponentDifficulty)+randDamage;
             opponentES -= damageDone;
             StartCoroutine(DamageGrow(damageDone*-1, emotColor));
