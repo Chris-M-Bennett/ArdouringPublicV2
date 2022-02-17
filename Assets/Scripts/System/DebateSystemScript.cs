@@ -26,6 +26,8 @@ namespace System
         [SerializeField] private GameObject testPrefab;
         [SerializeField, Header("The text box for information")] 
         private UnityEngine.UI.Text notifyText;
+        [SerializeField, Header("The text box for player statistics")] 
+        private UnityEngine.UI.Text statsText;
         [SerializeField] private Image background;
 
         [SerializeField] private MoveBarsScript tranBars;
@@ -72,6 +74,14 @@ namespace System
             _opponentValues = opponentGO.GetComponent<OpponentDebateValues>();
             
             opponentHUD.SetHUD(_opponentValues);
+            statsText.text = $"Happy Power: {PlayerPrefs.GetInt("playerHappy", 2)}" +
+                             $"\n\nSad Power: {PlayerPrefs.GetInt("playerSad", 2)}" +
+                             $"\n\nAngry Power: {PlayerPrefs.GetInt("playerAngry", 2)}" +
+                             $"\n\nConfident Power: {PlayerPrefs.GetInt("playerConfident", 2)}" +
+                             $"\n\nAfraid Power: {PlayerPrefs.GetInt("playerAfraid", 2)}" +
+                             $"\n\nOverloads: {PlayerPrefs.GetInt("overloads",0)}" +
+                             $"\n\nPacifies: {PlayerPrefs.GetInt("pacifies", 0)}";
+            
             state = DebateState.Player;
             StartCoroutine(tranBars.MoveThoseBars(false));
             StartCoroutine(PlayerTurn());
