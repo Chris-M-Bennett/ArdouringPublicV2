@@ -57,7 +57,6 @@ namespace Opponents
                     }
                     emotionInt = myEmotions[rand];
                     _animator.SetInteger(EmotionInt, emotionInt);
-
                 }
             }
         }
