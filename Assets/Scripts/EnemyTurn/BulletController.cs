@@ -15,11 +15,16 @@ public class BulletController : MonoBehaviour
     private float distance;
     private float targetY;
     /**/
-    public string[,] bulletLibrary = new string[3, 3]
+    public string[,] bulletLibrary = new string[8, 3]
     {
         {"Calmer Chameleon","1.2","12"},
         {"Chice","1.5","10"},
-        {"Storming Cloud","2","10"}
+        {"Storming Cloud","2","10"},
+        {"Inferno","2.1","10"},
+        {"Laughing Cat","1","10"},
+        {"Sadgull","0.8","12"},
+        {"Space Whale","0.9","10"},
+        {"The Upset Post","1","10"}
     };
     //*/
     // Start is called before the first frame update
