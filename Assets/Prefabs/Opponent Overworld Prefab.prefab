@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7533625459476346611}
   - component: {fileID: 5972394680213914946}
   m_Layer: 8
-  m_Name: GameObject
+  m_Name: Speech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 3465675741188777260}
   - component: {fileID: 6937867611233293399}
   m_Layer: 8
-  m_Name: Box
+  m_Name: Speech Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
