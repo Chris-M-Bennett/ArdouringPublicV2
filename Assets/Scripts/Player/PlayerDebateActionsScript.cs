@@ -103,37 +103,41 @@ namespace Player{
             var opponentDifficulty = _opponentValues.emotAmounts[emotion]/10f;
             
             Color emotColor;
-            if (emotion == 0)
+            switch (emotion)
             {
-                emotColor = Color.green;
-            }else if (emotion == 1)
-            {
-                emotColor = Color.blue;
-            }else if (emotion == 2)
-            {
-                emotColor = Color.red;
+                case 0:
+                    emotColor = Color.green;
+                    break;
+                case 1:
+                    emotColor = Color.blue;
+                    break;
+                case 2:
+                    emotColor = Color.red;
+                    break;
+                case 3:
+                    emotColor = Color.magenta;
+                    break;
+                case 4:
+                    emotColor = Color.yellow;
+                    break;
+                default:
+                    emotColor = Color.white;
+                    break;
             }
-            else if (emotion == 3)
-            {
-                emotColor = Color.magenta;
-            }
-            else
-            {
-                emotColor = Color.yellow;
-            }
-            if (emotStrengths[0] == emotion)
+
+            if (emotion == emotStrengths[0])
             {
                 emotMult = 1f;
             }
-            if (emotStrengths[1] == emotion)
+            else if (emotion == emotStrengths[1])
             {
                 emotMult = -2f;
             }
-            else if (emotStrengths[2] == emotion)
+            else if (emotion == emotStrengths[2])
             {
                 emotMult = -1.5f;
             }
-            else if (emotStrengths[3] == emotion)
+            else if (emotion == emotStrengths[3])
             {
                 emotMult = 1.5f;
             }
@@ -141,7 +145,8 @@ namespace Player{
             {
                 emotMult = 2f;
             }
-            var modEmot = _playerDamage*emotMult;
+            
+            var modEmot = _playerDamage*emotMult*(emotAmounts[emotion]/10+1);
             var moddedDamage = (2*modEmot+(modEmot+overloads-pacifies));
             damageDone = Mathf.RoundToInt(moddedDamage/opponentDifficulty)+randDamage;
             opponentES -= damageDone;
@@ -170,23 +175,9 @@ namespace Player{
                 opponentES = -100;
             }
 
-            //Increases the power of the emotion the player 
-            /*if (emotAmounts[emotion] >= 20)
-            {
-                Mathf.Clamp(emotAmounts[emotion]++,0,20);
-            }
-
-            foreach (int emot in emotAmounts)
-            {
-                if (emot != emotion && emotAmounts[emot] > 0)
-                {
-                    emotAmounts[emot]--;
-                    Mathf.Clamp(emotAmounts[emotion],0,20);
-                }
-            }*/
-
             _opponentValues.currentES = opponentES;
             opponentHUD.SetES(_opponentValues);
+            _debateSystem.PlayerEmot = emotion;
             _debateSystem.PlayerHadTurn = true;
         }
 

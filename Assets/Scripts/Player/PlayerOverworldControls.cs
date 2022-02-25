@@ -81,9 +81,6 @@ namespace Player{
             float yLimit = Mathf.Clamp(_rb.velocity.x, -maxSpeed, maxSpeed);
             _rb.velocity = new Vector2(xLimit, yLimit);
             //Moves the player on the vertical axis in the direction of the input
-
-            //Moves the player on the horizontal axis in the direction of the input
-
             if (Input.GetAxis("Vertical") == 0)
             {
                 _anim.SetFloat(Y,0);    
@@ -92,6 +89,7 @@ namespace Player{
                 _anim.SetFloat(Y,Input.GetAxis("Vertical"));
             }
 
+            //Moves the player on the horizontal axis in the direction of the input
             if (Input.GetAxis("Horizontal") == 0)
             {
                 _anim.SetFloat(X,0);
@@ -109,7 +107,6 @@ namespace Player{
 
             if (opponentHit)
             {
-
                 infoOverlay.SetActive(true);
                 infoText.text = opponentHit.gameObject.GetComponent<OpponentOverworldScript>().myName;
                 if (GameManager.Tutorials)

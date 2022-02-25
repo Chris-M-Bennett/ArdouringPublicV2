@@ -49,9 +49,15 @@ namespace Opponents
             {
                 if ((currentES > thresh[i] && prevES < thresh[i]) || (currentES < -thresh[i] && prevES > thresh[i]))
                 {
-                    //List<int> validEmots = myEmotions.Remove(emotionInt);
-                    var rand = Random.Range(0, myEmotions.Count);
-                    emotionInt = myEmotions[rand];
+                    var validEmots = new List<int>();
+                    for (int j=0; j < myEmotions.Count-1; j++)
+                    {
+                        if (myEmotions[j] != myEmotions.IndexOf(emotionInt))
+                        {
+                            validEmots.Add(myEmotions[j]);
+                        }
+                    }
+                    emotionInt = validEmots[Random.Range(0, validEmots.Count)];
                     _animator.SetInteger(EmotionInt, emotionInt);
                 }
             }

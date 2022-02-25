@@ -34,10 +34,5 @@ public class GameManager : MonoBehaviour
         EmotionStrengths.Add(2, new[] {2, 3, 4, 0});
         EmotionStrengths.Add(3, new[] {3, 4, 0, 1});
         EmotionStrengths.Add(4, new[] {4, 0, 1, 2});
-        if (NewGame)
-        {
-            PlayerPrefs.SetInt("Overloads", 0);
-            PlayerPrefs.SetInt("Pacifies", 0);
-        }
     }
 }

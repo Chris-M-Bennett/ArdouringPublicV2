@@ -6,6 +6,7 @@ using UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
 
 namespace System
@@ -44,11 +45,21 @@ namespace System
         private OpponentDebateValues _opponentValues;
         private int _playerExp;
         private int _playerLevel;
+        private int _playerEmot;
         private int _opponentPrevES;
+        private int _opponentStatus = 0;
+
+        [HideInInspector] public bool confirmExit = false; 
         public bool PlayerHadTurn
         {
-            get => _playerHadTurn;
-            set => _playerHadTurn = value;
+            get { return _playerHadTurn; }
+            set { _playerHadTurn = value; }
+        }
+
+        public int PlayerEmot
+        {
+            get { return _playerEmot; }
+            set { _playerEmot = value;}
         }
 
         [HideInInspector] public GameObject opponentGO;
@@ -61,7 +72,7 @@ namespace System
             _playerValues = player.GetComponent<PlayerDebateValues>();
             _playerValues.currentES = PlayerPrefs.GetInt("playerES", 100);
             playerHUD.SetES(_playerValues);
-            _playerExp = PlayerPrefs.GetInt("playerEX", 0);
+            _playerExp = PlayerPrefs.GetInt("playerExp", 0);
 
             if (GameManager.DebateOpponent)
             {
@@ -74,11 +85,11 @@ namespace System
             _opponentValues = opponentGO.GetComponent<OpponentDebateValues>();
             
             opponentHUD.SetHUD(_opponentValues);
-            statsText.text = $"Happy Power: {PlayerPrefs.GetInt("playerHappy", 2)}" +
-                             $"\n\nSad Power: {PlayerPrefs.GetInt("playerSad", 2)}" +
-                             $"\n\nAngry Power: {PlayerPrefs.GetInt("playerAngry", 2)}" +
-                             $"\n\nConfident Power: {PlayerPrefs.GetInt("playerConfident", 2)}" +
-                             $"\n\nAfraid Power: {PlayerPrefs.GetInt("playerAfraid", 2)}" +
+            statsText.text = $"Happy Power: {PlayerPrefs.GetInt("playerHappy", 1)}" +
+                             $"\n\nSad Power: {PlayerPrefs.GetInt("playerSad", 1)}" +
+                             $"\n\nAngry Power: {PlayerPrefs.GetInt("playerAngry", 1)}" +
+                             $"\n\nConfident Power: {PlayerPrefs.GetInt("playerConfident", 1)}" +
+                             $"\n\nAfraid Power: {PlayerPrefs.GetInt("playerAfraid", 1)}" +
                              $"\n\nOverloads: {PlayerPrefs.GetInt("overloads",0)}" +
                              $"\n\nPacifies: {PlayerPrefs.GetInt("pacifies", 0)}";
             
@@ -93,6 +104,7 @@ namespace System
         /// <returns>5 second wait before opponent's turn</returns>
         IEnumerator PlayerTurn()
         {
+            StopCoroutine(OpponentTurn());
             if (GameManager.Tutorials)
             {
                 int opponentEmot = _opponentValues.emotionInt;
@@ -113,18 +125,43 @@ namespace System
             
             if (_opponentValues.currentES <= -100 || _opponentValues.currentES >= 100)
             {
-                var status = 0;
                 if (_opponentValues.currentES <= -100)
                 {
                     PlayerPrefs.SetInt("Pacifies",PlayerPrefs.GetInt("Pacifies",0)+1);
-                    status = 1;
+                    
+                    _opponentStatus = 1;
                 }
                 else
                 {
                     PlayerPrefs.SetInt("Overloads",PlayerPrefs.GetInt("Overloads",0)+1);
-                    status = -1;
+                    var emotString = "";
+                    switch (_playerEmot)
+                    {
+                        case 0:
+                            emotString = "playerHappy";
+                            break;
+                        case 1:
+                            emotString = "playerSad";
+                            break;
+                        case 2:
+                            emotString = "playerAngry";
+                            break;
+                        case 3:
+                            emotString = "playerConfident";
+                            break;
+                        case 4:
+                            emotString = "playerAfraid";
+                            break;
+                        default:
+                            Debug.LogError("Invalid player emotion");
+                            yield return null;
+                            break;
+                    }
+                    PlayerPrefs.SetInt(emotString,PlayerPrefs.GetInt(emotString)+1);
+                    
+                    _opponentStatus = -1;
                 }
-                GameManager.AreaStatuses.statuses[LastOpponent.lastOpponent] = status;
+                GameManager.AreaStatuses.statuses[LastOpponent.lastOpponent] = _opponentStatus;
                 state = DebateState.Won;
                 StartCoroutine(EndDebate());
             }
@@ -142,6 +179,7 @@ namespace System
         /// <returns></returns>
         IEnumerator OpponentTurn()
         {
+            StopCoroutine(PlayerTurn());
             _opponentValues.CheckThreshold(_opponentValues.currentES);
             GameObject foe = Instantiate(enemyTurn,new Vector2(trackX,trackY),Quaternion.identity);
             //notifyText.text +=
@@ -150,6 +188,7 @@ namespace System
             StartCoroutine(DamageAnim(player));
             playerHUD.SetES(_playerValues);
             yield return new WaitForSeconds(12f);
+            _opponentPrevES = _opponentValues.currentES;
             if (_playerValues.currentES <= 0)
             {
                 state = DebateState.Lost;
@@ -164,8 +203,6 @@ namespace System
                 eventSystem.enabled = true;
                 StartCoroutine(PlayerTurn());
             }
-            
-            _opponentPrevES = _opponentValues.currentES;
             yield return new WaitForSeconds(1f);
         }
         
@@ -176,6 +213,7 @@ namespace System
 
         public IEnumerator EndDebate()
         {
+            StopCoroutine(OpponentTurn());
             if (_playerExp == 10)
             {
                 _playerLevel += 1;
@@ -191,6 +229,10 @@ namespace System
             {
                 _playerExp += 2;
                 notifyText.text = "You won the debate!";
+                if (_opponentStatus != 1)
+                {
+                    confirmExit = true;
+                }
             }
             else if (state == DebateState.Lost)
             {
@@ -205,6 +247,10 @@ namespace System
             PlayerPrefs.SetInt("playerES", _playerValues.currentES);
             PlayerPrefs.SetInt("playerExp", _playerExp);
             yield return new WaitForSeconds(2f);
+            /*while (confirmExit == false)
+            {
+                yield return null;
+            }*/
             SceneManager.LoadSceneAsync("Overworld");
         }
 
@@ -235,6 +281,11 @@ namespace System
                 Result += v;
             }
             Debug.DrawLine(Vector3.zero,Result,Color.red,0.1f);
+        }
+
+        private void ChangeStats(string emotion)
+        {
+            
         }
 
         /// <summary>
