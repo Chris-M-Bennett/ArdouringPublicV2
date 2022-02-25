@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06e19564ab5f4ed7bcb6b57a2cd0ef4e, type: 3}
-  m_Name: Space Whale Emotion Thresholds
+  m_Name: Inferno New Emotion Thresholds
   m_EditorClassIdentifier: 
-  thresholds: 1e00000046000000
-  emotions: 0000000001000000
+  thresholds: 
+  emotions: 02000000
