@@ -52,25 +52,17 @@ namespace Opponents
             _mainColour = _mainRenderer.color;
             _otherRenderer = GetComponentInChildren<SpriteRenderer>();
             _otherColour = _otherRenderer.color;
-            _agent = GetComponent<NavMeshAgent>();
-            _agent.updateRotation = false;
-            _agent.updateUpAxis = false;
             _anim = GetComponent<Animator>();
             _player = GameObject.FindWithTag("Player").GetComponent<PlayerOverworldControls>();
-
-            /*if (LastOpponent.lastOpponent == transform.GetSiblingIndex() && GameManager.wasPacified)
-            {
-                GameManager.wasPacified = false;
-               Instantiate(defeatedPrefab,defeatPoint);
-               Destroy(gameObject);
-            }else
-            {
-                 
-            }*/
             transform.eulerAngles = Vector3.zero;
-            _lastPosition = transform.position;
-            _agent.speed = moveSpeed;
-            _agent.destination = currentDest.transform.position; 
+            if(GetComponent<NavMeshAgent>()){
+                _agent = GetComponent<NavMeshAgent>();
+                _agent.updateRotation = false;
+                _agent.updateUpAxis = false;
+                _lastPosition = transform.position;
+                _agent.speed = moveSpeed;
+                _agent.destination = currentDest.transform.position; 
+            }
         }
 
         private void Update()
@@ -93,31 +85,5 @@ namespace Opponents
             currentDest = moveTo;
             _agent.destination = moveTo.transform.position;
         }
-
-
-       /* IEnumerator ChangeColour(int current)
-        {
-            while (_otherColour.a != 1)
-            {
-                _otherColour.a += 0.1f;
-                _otherRenderer.color = _otherColour;
-                yield return new WaitForSeconds(0.1f);
-            }
-            _mainColour.a = 1;
-            _otherColour.a = 0;
-            _mainRenderer.sprite = _otherRenderer.sprite;
-            current++;
-            yield return new WaitForSeconds(0.5f);
-        }*/
-
-       /* private void OnCollisionEnter2D(Collision2D col)
-        {
-            if (col.gameObject == _player.gameObject)
-            {
-                _player.SetDebateBG();
-                GameManager.CurrentOpponent = debatePrefab;
-                StartCoroutine(_transBars.MoveThoseBars(true, "Debate"));
-            }
-        }*/
     }
 }
