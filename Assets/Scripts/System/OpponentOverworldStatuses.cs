@@ -17,7 +17,7 @@ namespace System{
             }
         }
 
-        private void OnAwake()
+        private void Start()
         {
             if (GameManager.NewGame)
             {

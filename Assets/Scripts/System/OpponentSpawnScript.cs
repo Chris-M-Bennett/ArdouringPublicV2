@@ -13,7 +13,8 @@ namespace System
         private DirectOverworldMovementScript currentDest;
         [SerializeField] private Vector2 offSet;
         [SerializeField] private OpponentOverworldStatuses areaStatuses;
-        [SerializeField] public int ID;
+        public int ID;
+        [SerializeField] private GameObject SceneLoader;
 
         private int defeatState = 0;
 
@@ -33,9 +34,15 @@ namespace System
             {
                 var pos = transform.position;
                 var live = Instantiate(liveOpponent, new Vector3(pos.x+offSet.x,pos.y+offSet.y,0f),Quaternion.identity,transform);
-                var myComponent = live.GetComponent<OpponentOverworldScript>();
-                myComponent.LastDest = lastDest;
-                myComponent.CurrentDest = currentDest;
+                if (live.GetComponent<OpponentOverworldScript>()){
+                    var myComponent = live.GetComponent<OpponentOverworldScript>();
+                    myComponent.LastDest = lastDest;
+                    myComponent.CurrentDest = currentDest;
+                }
+                if(SceneLoader != null)
+                {
+                    SceneLoader.SetActive(false);
+                }
             }
         }
     }

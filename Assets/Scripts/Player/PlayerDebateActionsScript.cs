@@ -83,7 +83,7 @@ namespace Player{
 
         public void WinButton()
         {
-            _opponentValues.currentES = 100;
+            _opponentValues.currentES = -100;
             _debateSystem.PlayerHadTurn = true;
         }
         
