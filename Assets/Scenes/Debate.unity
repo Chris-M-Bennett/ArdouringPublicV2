@@ -3899,7 +3899,7 @@ MonoBehaviour:
   levelText: {fileID: 1818927983}
   esText: {fileID: 554183080}
   esSlider: {fileID: 2084739283}
-  playerPanel: {fileID: 0}
+  playerPanel: {fileID: 1905485765}
 --- !u!1 &2048547900
 GameObject:
   m_ObjectHideFlags: 0

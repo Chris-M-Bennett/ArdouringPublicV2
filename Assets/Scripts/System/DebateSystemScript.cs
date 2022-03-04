@@ -11,7 +11,7 @@ using Image = UnityEngine.UI.Image;
 
 namespace System
 {
-    public enum DebateState {Start, Player, Opponent, Won, Lost}
+    public enum DebateState {Start, Player, Opponent, End, Won, Lost}
 
     public class DebateSystemScript : MonoBehaviour
     {
@@ -107,7 +107,7 @@ namespace System
             StopCoroutine(OpponentTurn());
             if (GameManager.Tutorials)
             {
-                int opponentEmot = _opponentValues.emotionInt;
+                int opponentEmot = (int)_opponentValues.emotionEnum;
                 notifyText.text =
                     $"It's your turn! Select an emotion button from your panel to debate with the creature.\n";
                 notifyText.text += EmotionDescript(opponentEmot);
@@ -210,7 +210,6 @@ namespace System
         /// Co-routine for end of the debate
         /// </summary>
         /// <returns>2 second wait before loading Overworld</returns>
-
         public IEnumerator EndDebate()
         {
             StopCoroutine(OpponentTurn());
