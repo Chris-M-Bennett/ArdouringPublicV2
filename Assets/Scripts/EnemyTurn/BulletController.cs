@@ -62,7 +62,7 @@ public class BulletController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float currentY = _bullet.transform.position.y;
 

@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     //public GameObject text;
     public GameObject ESbar;
     private static DebateValuesScript _playerValues;
+    //private static SavePoint _save;
     //private static EnemyController _opponent;
     //private int opponentDamage;
     private float barScale;
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
         maxES = 100;
         //currentES = 100;
         _playerValues = GameObject.FindWithTag("Player").GetComponent<DebateValuesScript>();
+        //_save = GameObject.FindWithTag("Save").GetComponent<SavePoint>();
         //_opponent = GameObject.FindWithTag("EnemyTurn").GetComponent<EnemyController>();
         //opponentDamage = _opponent.bulletDamage;
         /*
@@ -58,6 +60,16 @@ public class PlayerController : MonoBehaviour
         }
         */
         currentES = _playerValues.currentES;
+        /*
+        if (_save.healed)
+        {
+            currentES = maxES;
+        }
+        else
+        {
+            currentES = _playerValues.currentES;
+        } */
+        
         //barScale = maxES / opponentDamage;
         // Debug.Log("CurrentES: " + currentES);
         esDrop = 0.133f; // * 10) / barScale;
@@ -117,6 +129,7 @@ public class PlayerController : MonoBehaviour
         {
             currentES -= hit.GetComponent<BulletController>().damage;
             _playerValues.currentES = currentES;
+            //_save.healed = false;
             
             barY -= (esDrop * 10) / (maxES/hit.GetComponent<BulletController>().damage);
             ESbar.transform.position = new Vector2 (barX, barY);
