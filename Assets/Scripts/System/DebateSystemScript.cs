@@ -107,7 +107,7 @@ namespace System
             StopCoroutine(OpponentTurn());
             if (GameManager.Tutorials)
             {
-                int opponentEmot = (int)_opponentValues.emotionEnum;
+                var opponentEmot = _opponentValues.emotionEnum;
                 notifyText.text =
                     $"It's your turn! Select an emotion button from your panel to debate with the creature.\n";
                 notifyText.text += EmotionDescript(opponentEmot);
@@ -290,44 +290,44 @@ namespace System
         /// <summary>
         /// Generates tutorial for player about opponent emotions and how other emotions effect them 
         /// </summary>
-        /// <param name="emotInt"></param>
+        /// <param name="emotEnum"></param>
         /// <returns></returns>
-        private string EmotionDescript(int emotInt)
+        private string EmotionDescript(Emotions emotEnum)
         {
             string colour;
             string emot;
             string very;
             string fairly;
             string barely;
-            if (emotInt == 0)
+            if (emotEnum == Emotions.Happy)
             {
                 colour = "Green";
                 emot = "happy";
                 very = "sad";
                 fairly = "angry";
                 barely = "afraid";
-            }else if (emotInt == 1)
+            }else if (emotEnum == Emotions.Sad)
             {
                 colour = "Blue";
                 emot = "sad";
                 very = "angry";
                 fairly = "confident";
                 barely = "afraid";
-            }else if (emotInt == 2)
+            }else if (emotEnum == Emotions.Angry)
             {
                 colour = "Red";
                 emot = "angry";
                 very = "confident";
                 fairly = "afraid";
                 barely = "happy";
-            }else if (emotInt == 3)
+            }else if (emotEnum == Emotions.Proud)
             {
                 colour = "Purple";
-                emot = "confident";
+                emot = "proud";
                 very = "afraid";
                 fairly = "happy";
                 barely = "sad";
-            }else if (emotInt == 4)
+            }else if (emotEnum == Emotions.Afraid)
             {
                 colour = "Orange";
                 emot = "afraid";

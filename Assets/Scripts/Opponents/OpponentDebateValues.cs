@@ -34,14 +34,14 @@ namespace Opponents
                     //myEmotions = emotionThresholds.emotions;
                     thresh = emotionThresholds.thresholds;
                     //emotionInt = myEmotions[rand];
-                    emotionEnum = emotionThresholds.ChangeOpponentEmot(new Emotions());
+                    emotionEnum = emotionThresholds.ChangeOpponentEmot(emotionEnum);
                     _animator.SetInteger(EmotionEnum, (int)emotionEnum);
             }
         }
 
         public void CheckThreshold(int currentES)
         {
-            var validEmots = new List<int>();
+            //var validEmots = new List<int>();
             foreach (var i in thresh)
             {
                 if ((currentES > i && prevES < i) || (currentES < i && prevES > i))
