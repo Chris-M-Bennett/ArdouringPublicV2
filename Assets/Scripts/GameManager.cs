@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public static bool Tutorials = true;
     public static Sprite DebateBG;
 
-    public static Dictionary<int, int[]> EmotionStrengths = new Dictionary<int, int[]>();
+    public static Dictionary<Emotions, int[]> EmotionStrengths = new Dictionary<Emotions, int[]>();
     
     // Start is called before the first frame update
 
@@ -29,10 +29,10 @@ public class GameManager : MonoBehaviour
             //Destroys duplicate game manager
             Destroy(gameObject);
         }
-        EmotionStrengths.Add(0, new[] {0, 1, 2, 3});
-        EmotionStrengths.Add(1, new[] {1, 2, 3, 4});
-        EmotionStrengths.Add(2, new[] {2, 3, 4, 0});
-        EmotionStrengths.Add(3, new[] {3, 4, 0, 1});
-        EmotionStrengths.Add(4, new[] {4, 0, 1, 2});
+        EmotionStrengths.Add(Emotions.Happy, new[] {0, 1, 2, 3});
+        EmotionStrengths.Add(Emotions.Sad, new[] {1, 2, 3, 4});
+        EmotionStrengths.Add(Emotions.Angry, new[] {2, 3, 4, 0});
+        EmotionStrengths.Add(Emotions.Proud, new[] {3, 4, 0, 1});
+        EmotionStrengths.Add(Emotions.Afraid, new[] {4, 0, 1, 2});
     }
 }
