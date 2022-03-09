@@ -17,7 +17,7 @@ public class BulletController : MonoBehaviour
     /**/
     public string[,] bulletLibrary = new string[8, 3]
     {
-        {"Calmer Chameleon","1.2","12"},
+        {"Chameleon","1.2","12"}, //used to be Calmer Chameleon, now only Chameleon works, idk why
         {"Chice","1.5","10"},
         {"Storming Cloud","2","10"},
         {"Inferno","2.1","10"},
