@@ -6,12 +6,18 @@ using Opponents;
 using Player;
 using UnityEngine;
 using Newtonsoft.Json;
+using UnityEngine.SceneManagement;
+using static GameManager;
+
 public class SavePoint : MonoBehaviour
 {
     private static DebateValuesScript _playerValues;
     public bool healed;
+    //private static GameManager _gameManager;
+
     private void Start()
     {
+        //_gameManager = GetComponent<GameManager>();
         _playerValues = GameObject.FindWithTag("Player").GetComponent<PlayerDebateValues>();
         healed = false;
     }
@@ -28,13 +34,18 @@ public class SavePoint : MonoBehaviour
     */
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P)) //save code goes here
+        if (Input.GetKeyDown(KeyCode.P))// && _gameManager != null) //save code goes here
         {
-            File.WriteAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json", JsonConvert.SerializeObject(healed));
+            //File.WriteAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json", JsonConvert.SerializeObject(healed));
+            File.WriteAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json", JsonConvert.SerializeObject(AreaStatuses));
+
         }
         if (Input.GetKeyDown(KeyCode.L)) //load save file code goes here
         {
-            healed = JsonConvert.DeserializeObject<bool>(File.ReadAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json"));
-        }
+            AreaStatuses = JsonConvert.DeserializeObject<OpponentOverworldStatuses>(File.ReadAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json"));
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            AreaStatuses = JsonConvert.DeserializeObject<OpponentOverworldStatuses>(File.ReadAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json"));
+
+        }    
     }
 }
