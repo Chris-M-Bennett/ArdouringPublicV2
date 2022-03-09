@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: The Upset Post Emotion Thresholds
   m_EditorClassIdentifier: 
   thresholds: 1e000000
-  emotions: 0200000001000000
+  MyEmotions: 0100000003000000

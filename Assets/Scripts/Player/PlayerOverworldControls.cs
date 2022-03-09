@@ -33,6 +33,23 @@ namespace Player{
         private Rigidbody2D _rb;
         private SpriteRenderer _sprite;
 
+        private void Awake(){
+            if (GameManager.NewGame)
+            {
+                transform.position = startPosition;
+            }else if (GameManager.MovedArea)
+            {
+                transform.position = enterPosition;
+                GameManager.MovedArea = false;
+            }else
+            {
+                transform.position = new Vector2(PlayerPrefs.GetFloat("playerXPos", _currentPosition.x), 
+                    PlayerPrefs.GetFloat("playerYPos", _currentPosition.y));
+                _currentPosition = transform.position;
+                 
+            }
+        }
+
         // Start is called before the first frame update
         private void Start()
         {
@@ -43,21 +60,6 @@ namespace Player{
             _rb = GetComponent<Rigidbody2D>();
             _sprite = GetComponent<SpriteRenderer>();
             infoText.text = _moveControls;
-            if (GameManager.NewGame)
-            {
-                transform.position = startPosition;
-                GameManager.NewGame = false;
-            }else if (GameManager.MovedArea)
-            {
-                transform.position = enterPosition;
-                GameManager.MovedArea = false;
-            }else
-            {
-                 transform.position = new Vector2(PlayerPrefs.GetFloat("playerXPos", _currentPosition.x), 
-                     PlayerPrefs.GetFloat("playerYPos", _currentPosition.y));
-                 _currentPosition = transform.position;
-                 
-            }
         }
 
         private void FixedUpdate(){

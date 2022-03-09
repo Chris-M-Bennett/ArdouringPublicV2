@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Inferno Emotion Thresholds
   m_EditorClassIdentifier: 
   thresholds: 
-  emotions: 00000000
+  MyEmotions: 03000000

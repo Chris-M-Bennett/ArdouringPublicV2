@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace System{
     [CreateAssetMenu(fileName = "AreaStatuses", menuName = "Opponent Statuses", order = 0)]
@@ -17,7 +18,7 @@ namespace System{
             }
         }
 
-        private void Start()
+        public void Reset()
         {
             if (GameManager.NewGame)
             {

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Sadgull Emotion Thresholds
   m_EditorClassIdentifier: 
   thresholds: 5a000000
-  emotions: 0400000001000000
+  MyEmotions: 0100000005000000

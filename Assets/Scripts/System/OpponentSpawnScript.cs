@@ -24,6 +24,11 @@ namespace System
             {
                 AreaStatuses = areaStatuses;
             }
+            if (NewGame)
+            {
+                AreaStatuses.Reset();
+                NewGame = false;
+            }
             defeatState = areaStatuses.statuses[ID];
             AreaStatuses.statuses[ID] = defeatState;
             if (defeatState > 0)
