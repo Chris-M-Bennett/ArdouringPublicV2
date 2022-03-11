@@ -22,7 +22,13 @@ namespace UI
         {
             if (Input.GetKeyUp(KeyCode.Escape))
             {
-                Pause();
+                if (Time.timeScale == 0)
+                {
+                    Resume();
+                }else
+                {
+                    Pause(); 
+                }
             }
         }
 
