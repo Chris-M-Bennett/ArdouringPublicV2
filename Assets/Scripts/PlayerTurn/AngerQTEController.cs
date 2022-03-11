@@ -12,7 +12,7 @@ public class AngerQTEController : MonoBehaviour
     {
         timeLimit = 5f;
         timer = 0f;
-        upForce = 20f;
+        upForce = 35f; //20f;
         dropSpeed = 1f;
         _marker = GetComponent<AngerQTEController>();
         // marker start y = -1.65f, marker x = -0.25
