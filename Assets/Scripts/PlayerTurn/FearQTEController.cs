@@ -27,7 +27,7 @@ public class FearQteController : MonoBehaviour
         if (timer >= timeLimit || hit)
         {
             multiplierF = (_marker.transform.position.y / 3.6f) + 1f; // may need adjustment
-            //Debug.Log("Anger damage multiplier: " + multiplierF);
+            //Debug.Log("Fear damage multiplier: " + multiplierF);
         }
         else
         {
