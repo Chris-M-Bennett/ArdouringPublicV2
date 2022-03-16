@@ -12,7 +12,7 @@ namespace UI{
         }
 
         public void NewGame(){
-            GameManager.NewGame = true;
+            GameManager.newGame = true;
             PlayerPrefs.SetInt("Overloads", 0);
             PlayerPrefs.SetInt("Pacifies", 0);
             PlayerPrefs.SetInt("playerExp", 0);

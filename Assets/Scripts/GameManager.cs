@@ -5,15 +5,15 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
-    public static GameObject DebateOpponent;
+    public static GameObject debateOpponent;
     //public static bool wasPacified = false;
-    public static OpponentOverworldStatuses AreaStatuses;
-    public static bool NewGame = true;
-    public static bool MovedArea;
-    public static bool Tutorials = true;
-    public static Sprite DebateBG;
+    public static OpponentOverworldStatuses areaStatuses;
+    public static bool newGame = true;
+    public static bool movedArea;
+    public static bool tutorials = true;
+    public static Sprite debateBg;
 
-    public static Dictionary<Emotions, int[]> EmotionStrengths = new Dictionary<Emotions, int[]>();
+    public static Dictionary<Emotions, int[]> emotionStrengths = new Dictionary<Emotions, int[]>();
     
     // Start is called before the first frame update
 
@@ -29,10 +29,10 @@ public class GameManager : MonoBehaviour
             //Destroys duplicate game manager
             Destroy(gameObject);
         }
-        EmotionStrengths.Add(Emotions.Happy, new[] {0, 1, 2, 3});
-        EmotionStrengths.Add(Emotions.Sad, new[] {1, 2, 3, 4});
-        EmotionStrengths.Add(Emotions.Angry, new[] {2, 3, 4, 0});
-        EmotionStrengths.Add(Emotions.Proud, new[] {3, 4, 0, 1});
-        EmotionStrengths.Add(Emotions.Afraid, new[] {4, 0, 1, 2});
+        emotionStrengths.Add(Emotions.Happy, new[] {0, 1, 2, 3});
+        emotionStrengths.Add(Emotions.Sad, new[] {1, 2, 3, 4});
+        emotionStrengths.Add(Emotions.Angry, new[] {2, 3, 4, 0});
+        emotionStrengths.Add(Emotions.Proud, new[] {3, 4, 0, 1});
+        emotionStrengths.Add(Emotions.Afraid, new[] {4, 0, 1, 2});
     }
 }

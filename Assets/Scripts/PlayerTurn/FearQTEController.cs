@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FearQTEController : MonoBehaviour
+public class FearQteController : MonoBehaviour
 {
     private float timeLimit, timer, speed, barSpeed;
     public float multiplierF;
     private bool hit;
-    private FearQTEController _marker;
-    public GameObject Bar;
+    private FearQteController _marker;
+    public GameObject bar;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class FearQTEController : MonoBehaviour
         speed = 3f;
         barSpeed = 1f;
         hit = false;
-        _marker = GetComponent<FearQTEController>();
+        _marker = GetComponent<FearQteController>();
     }
 
     // Update is called once per frame
@@ -57,13 +57,13 @@ public class FearQTEController : MonoBehaviour
     {
         if (timer >= 1.5f)
         {
-            Bar.transform.Translate(0f, -1f * barSpeed * Time.deltaTime, 0f, Space.World);
+            bar.transform.Translate(0f, -1f * barSpeed * Time.deltaTime, 0f, Space.World);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D obstacle)
     {
-        if (obstacle.gameObject == Bar)
+        if (obstacle.gameObject == bar)
         {
             hit = true;
         }

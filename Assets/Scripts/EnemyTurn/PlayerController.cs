@@ -21,10 +21,10 @@ public class PlayerController : MonoBehaviour
     private float esDrop;
     public int maxES = 100;
     public int currentES = 100;
-    public GameObject Player;
+    public GameObject player;
     //private GameObject player;
     //public GameObject text;
-    public GameObject ESbar;
+    public GameObject eSbar;
     private static DebateValuesScript _playerValues;
     //private static SavePoint _save;
     //private static EnemyController _opponent;
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         xStrafe = 0.33f;
         farRightX = posX - 0.01f + 2 * xStrafe;
         farLeftX = posX + 0.01f - 2 * xStrafe;
-        Player.transform.position = new Vector2 (posX, posY);
+        player.transform.position = new Vector2 (posX, posY);
         //_playerValues = player.GetComponent<DebateValuesScript>();
         maxES = 100;
         //currentES = 100;
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
         //HandleBarDrop();
         
         
-        ESbar.transform.position = new Vector2 (barX, barY);
+        eSbar.transform.position = new Vector2 (barX, barY);
 
         // debug messages I used to figure out why the player could move off the left side of the screen instead of stopping.
         //Debug.Log("Right strafe limit: " + farRightX);
@@ -110,13 +110,13 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && posX < farRightX)
         {
             posX += xStrafe;
-            Player.transform.position = new Vector2 (posX, posY);
+            player.transform.position = new Vector2 (posX, posY);
             //Debug.Log("Player X: " + posX);
         }
         if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && posX > farLeftX) //this was originally posX != farLeftX but due to floating point arithmetic farLextX is 0.67999999999999 etc instead of 0.68 so the > circumvents this.
         {
             posX -= xStrafe;
-            Player.transform.position = new Vector2 (posX, posY);
+            player.transform.position = new Vector2 (posX, posY);
             //Debug.Log("Player X: " + posX);
         }
     }
@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
             //_save.healed = false;
             
             barY -= (esDrop * 10) / (maxES/hit.GetComponent<BulletController>().damage);
-            ESbar.transform.position = new Vector2 (barX, barY);
+            eSbar.transform.position = new Vector2 (barX, barY);
             //Debug.Log("Emotional Stability: " + currentES);
             /*
             if (dss != null)

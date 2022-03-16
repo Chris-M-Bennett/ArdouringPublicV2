@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class DebateHUDScript : MonoBehaviour
+    public class DebateHudScript : MonoBehaviour
     {
         public Text nameText;
         public Text levelText;
@@ -12,7 +12,7 @@ namespace UI
         public Slider esSlider;
         [SerializeField] GameObject playerPanel;
     
-        public void SetHUD(DebateValuesScript debater){
+        public void SetHud(DebateValuesScript debater){
             nameText.text = debater.debaterName;
             esText.text = $"Emotional Strain: {debater.currentES}";
             esSlider.value = debater.currentES;

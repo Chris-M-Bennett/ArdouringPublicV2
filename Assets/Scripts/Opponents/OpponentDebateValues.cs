@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Opponents
 {
@@ -23,6 +20,14 @@ namespace Opponents
         private Animator _animator;
         private static readonly int EmotionEnum = Animator.StringToHash("EmotionInt");
         [HideInInspector] public int prevES;
+        
+        [SerializeField,TextArea,Tooltip("The bark said by the opponent at the start of a debate")]
+        private string openingLine;
+        [SerializeField,TextArea,Tooltip("The bark said by the opponent at the end of a debate if they have been overloaded")]
+        private string overloadedLine;
+        [SerializeField,TextArea,Tooltip("The bark said by the opponent at the end of a debate if they have been overloaded")]
+        private string pacifiedLine;
+        
         
     
         // Start is called before the first frame update

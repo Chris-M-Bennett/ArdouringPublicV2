@@ -37,14 +37,14 @@ public class SavePoint : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))// && _gameManager != null) //save code goes here
         {
             //File.WriteAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json", JsonConvert.SerializeObject(healed));
-            File.WriteAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json", JsonConvert.SerializeObject(AreaStatuses));
+            File.WriteAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json", JsonConvert.SerializeObject(areaStatuses));
 
         }
         if (Input.GetKeyDown(KeyCode.L)) //load save file code goes here
         {
-            AreaStatuses = JsonConvert.DeserializeObject<OpponentOverworldStatuses>(File.ReadAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json"));
+            areaStatuses = JsonConvert.DeserializeObject<OpponentOverworldStatuses>(File.ReadAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json"));
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            AreaStatuses = JsonConvert.DeserializeObject<OpponentOverworldStatuses>(File.ReadAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json"));
+            areaStatuses = JsonConvert.DeserializeObject<OpponentOverworldStatuses>(File.ReadAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json"));
 
         }    
     }

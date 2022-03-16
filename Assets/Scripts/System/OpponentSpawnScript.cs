@@ -1,4 +1,5 @@
-﻿using Opponents;
+﻿using System.Collections;
+using Opponents;
 using UnityEngine;
 using static GameManager;
 
@@ -13,27 +14,31 @@ namespace System
         private DirectOverworldMovementScript currentDest;
         [SerializeField] private Vector2 offSet;
         [SerializeField] private OpponentOverworldStatuses areaStatuses;
-        public int ID;
-        [SerializeField] private GameObject SceneLoader;
+        public int id;
+        private string _overworldTalk;
+        private TextMesh _speechBubble;
+        [SerializeField] private GameObject sceneLoader;
 
         private int defeatState = 0;
 
         private void Start()
         {
-            if (AreaStatuses != areaStatuses)
+            if (GameManager.areaStatuses != areaStatuses)
             {
-                AreaStatuses = areaStatuses;
+                GameManager.areaStatuses = areaStatuses;
             }
-            if (NewGame)
+            if (newGame)
             {
-                AreaStatuses.Reset();
-                NewGame = false;
+                GameManager.areaStatuses.Reset();
+                newGame = false;
             }
-            defeatState = areaStatuses.statuses[ID];
-            AreaStatuses.statuses[ID] = defeatState;
+            defeatState = areaStatuses.statuses[id];
+            GameManager.areaStatuses.statuses[id] = defeatState;
             if (defeatState > 0)
             {
                 Instantiate(defeatedOpponent, transform);
+                _speechBubble = defeatedOpponent.GetComponentInChildren<TextMesh>();
+                _overworldTalk = _speechBubble.text;
             }
             else if (defeatState == 0)
             {
@@ -44,10 +49,20 @@ namespace System
                     myComponent.LastDest = lastDest;
                     myComponent.CurrentDest = currentDest;
                 }
-                if(SceneLoader != null)
+                if(sceneLoader != null)
                 {
-                    SceneLoader.SetActive(false);
+                    sceneLoader.SetActive(false);
                 }
+            }
+        }
+
+        public IEnumerator Speak(){
+            _speechBubble.gameObject.SetActive(true);
+            var chars = _overworldTalk.Split();
+            for (int i = 0; i < chars.Length-1; i++)
+            {
+                _speechBubble.text += chars[i];
+                yield return new WaitForSeconds(0.5f);
             }
         }
     }

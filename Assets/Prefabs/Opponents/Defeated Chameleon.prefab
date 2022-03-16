@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 220909362454128482, guid: a701cde17cf6bf24880153841a477c7b,
+        type: 3}
+      propertyPath: m_Text
+      value: "I\u2019m Not The Only One Who Was Changed"
+      objectReference: {fileID: 0}
     - target: {fileID: 8165881675529058524, guid: a701cde17cf6bf24880153841a477c7b,
         type: 3}
       propertyPath: m_RootOrder

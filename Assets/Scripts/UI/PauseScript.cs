@@ -60,7 +60,7 @@ namespace UI
         public void ToggleTutorials(bool toggle)
         {
             PlayerPrefs.SetInt("Tutorials", Convert.ToInt32(toggle));
-            GameManager.Tutorials = toggle;
+            GameManager.tutorials = toggle;
         }
 
         public void MainMenu()

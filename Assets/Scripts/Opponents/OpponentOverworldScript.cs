@@ -16,7 +16,6 @@ namespace Opponents
         [SerializeField, Tooltip("The speed at which the opponent should move between points")] private float moveSpeed = 2f;
         //[SerializeField] private LastOpponent lastOpponent;
 
-
         private SpriteRenderer _mainRenderer;
         private Color _mainColour;
         private SpriteRenderer _otherRenderer;

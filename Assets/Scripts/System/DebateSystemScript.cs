@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using Opponents;
 using Player;
 using UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
 
 namespace System
@@ -15,10 +15,10 @@ namespace System
 
     public class DebateSystemScript : MonoBehaviour
     {
-        public List<Vector2> Directions = new List<Vector2>();
-        public List<float> Values = new List<float>();
+        public List<Vector2> directions = new List<Vector2>();
+        public List<float> values = new List<float>();
 
-        public Vector2 Result = new Vector2(0, 0);
+        public Vector2 result = new Vector2(0, 0);
         
         [SerializeField, Header("The Player game object in the scene")]
         private GameObject player;
@@ -34,11 +34,12 @@ namespace System
         [SerializeField] private MoveBarsScript tranBars;
         [SerializeField] private EventSystem eventSystem;
 
-        [Header("The player's HUD panel")]public DebateHUDScript playerHUD;
-        [Header("The opponent's HUD panel")]public DebateHUDScript opponentHUD;
+        [Header("The player's HUD panel")]public DebateHudScript playerHud;
+        [Header("The opponent's HUD panel")]public DebateHudScript opponentHud;
         
         public GameObject enemyTurn;
         public float trackX = -4.25f, trackY = -2.48f;
+        public string file;
         
         private bool _playerHadTurn = false;
         private DebateValuesScript _playerValues;
@@ -46,7 +47,6 @@ namespace System
         private int _playerExp;
         private int _playerLevel;
         private int _playerEmot;
-        private int _opponentPrevES;
         private int _opponentStatus = 0;
 
         [HideInInspector] public bool confirmExit = false; 
@@ -68,15 +68,15 @@ namespace System
 
         void Start()
         {
-            background.sprite = GameManager.DebateBG;
+            background.sprite = GameManager.debateBg;
             _playerValues = player.GetComponent<PlayerDebateValues>();
             _playerValues.currentES = PlayerPrefs.GetInt("playerES", 100);
-            playerHUD.SetES(_playerValues);
+            playerHud.SetES(_playerValues);
             _playerExp = PlayerPrefs.GetInt("playerExp", 0);
 
-            if (GameManager.DebateOpponent)
+            if (GameManager.debateOpponent)
             {
-                opponentGO = Instantiate(GameManager.DebateOpponent, opponentSpawn);
+                opponentGO = Instantiate(GameManager.debateOpponent, opponentSpawn);
             }else
             {
                 opponentGO = Instantiate(testPrefab, opponentSpawn);   
@@ -84,7 +84,7 @@ namespace System
 
             _opponentValues = opponentGO.GetComponent<OpponentDebateValues>();
             
-            opponentHUD.SetHUD(_opponentValues);
+            opponentHud.SetHud(_opponentValues);
             statsText.text = $"Happy Power: {PlayerPrefs.GetInt("playerHappy", 1)}" +
                              $"\n\nSad Power: {PlayerPrefs.GetInt("playerSad", 1)}" +
                              $"\n\nAngry Power: {PlayerPrefs.GetInt("playerAngry", 1)}" +
@@ -94,6 +94,17 @@ namespace System
                              $"\n\nPacifies: {PlayerPrefs.GetInt("pacifies", 0)}";
             
             state = DebateState.Player;
+            
+            /*var address = "Assets/Dialogue/Dialogue.csv";
+            if(File.Exists(getPath(address),FileMode.Open, FileAccess.ReadWrite))
+            {'
+                StreamReader dialStream = new StreamReader("(Assets/Dialogue/Dialogue.csv)");
+                file = dialStream.ReadToEnd(); 
+            } else
+            {
+                Debug.LogError($"File at {address} does not exist");
+            }*/
+
             StartCoroutine(tranBars.MoveThoseBars(false));
             StartCoroutine(PlayerTurn());
         }
@@ -105,11 +116,11 @@ namespace System
         IEnumerator PlayerTurn()
         {
             StopCoroutine(OpponentTurn());
-            if (GameManager.Tutorials)
+            if (GameManager.tutorials)
             {
                 int opponentEmot = (int)_opponentValues.emotionEnum;
                 notifyText.text =
-                    $"It's your turn! Select an emotion button from your panel to debate with the creature.\n";
+                    "It's your turn! Select an emotion button from your panel to debate with the creature.\n";
                 notifyText.text += EmotionDescript(opponentEmot);
             }
             
@@ -161,7 +172,7 @@ namespace System
                     
                     _opponentStatus = -1;
                 }
-                GameManager.AreaStatuses.statuses[LastOpponent.lastOpponent] = _opponentStatus;
+                GameManager.areaStatuses.statuses[LastOpponent.lastOpponent] = _opponentStatus;
                 state = DebateState.Won;
                 StartCoroutine(EndDebate());
             }
@@ -186,9 +197,8 @@ namespace System
             //    $" {_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
             eventSystem.enabled = false;
             StartCoroutine(DamageAnim(player));
-            playerHUD.SetES(_playerValues);
+            playerHud.SetES(_playerValues);
             yield return new WaitForSeconds(12f);
-            _opponentPrevES = _opponentValues.currentES;
             if (_playerValues.currentES <= 0)
             {
                 state = DebateState.Lost;
@@ -273,13 +283,13 @@ namespace System
 
         private void Update()
         {
-            Result = Vector3.zero;
-            for (int i = 0; i < Directions.Count; i++)
+            result = Vector3.zero;
+            for (int i = 0; i < directions.Count; i++)
             {
-                var v = Directions[i] * Values[i];
-                Result += v;
+                var v = directions[i] * values[i];
+                result += v;
             }
-            Debug.DrawLine(Vector3.zero,Result,Color.red,0.1f);
+            Debug.DrawLine(Vector3.zero,result,Color.red,0.1f);
         }
 
         private void ChangeStats(string emotion)

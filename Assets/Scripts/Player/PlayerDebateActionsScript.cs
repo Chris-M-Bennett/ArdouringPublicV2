@@ -12,7 +12,7 @@ namespace Player{
         [SerializeField] private Text notifyText;
         [SerializeField] private Text damageText;
         [SerializeField] private Transform damageEnd;
-        [SerializeField] private DebateHUDScript opponentHUD;
+        [SerializeField] private DebateHudScript opponentHud;
         private DebateSystemScript _debateSystem;
         private GameObject _opponentGO;
         private static OpponentDebateValues _opponentValues;
@@ -98,7 +98,7 @@ namespace Player{
             var pacifies = PlayerPrefs.GetInt("Pacifies", 0);
             var opponentES = _opponentValues.currentES;
             var opponentEmot = _opponentValues.emotionEnum;
-            var emotStrengths = GameManager.EmotionStrengths[opponentEmot];
+            var emotStrengths = GameManager.emotionStrengths[opponentEmot];
             var emotAmounts = _playerValues.emotAmounts;
             Debug.Log(emotion);
             //var opponentDifficulty = _opponentValues.emotAmounts[emotion]/10f;
@@ -177,7 +177,7 @@ namespace Player{
             }
 
             _opponentValues.currentES = opponentES;
-            opponentHUD.SetES(_opponentValues);
+            opponentHud.SetES(_opponentValues);
             _debateSystem.PlayerEmot = emotion;
             _debateSystem.PlayerHadTurn = true;
         }

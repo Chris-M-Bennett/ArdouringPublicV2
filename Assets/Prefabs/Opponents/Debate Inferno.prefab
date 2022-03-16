@@ -103,8 +103,9 @@ MonoBehaviour:
   currentES: 0
   emotAmounts: 02000000
   emotionThresholds: {fileID: 11400000, guid: 1c52c5c268220884e91d5b900a1a3524, type: 2}
-  emotionInt: 0
+  emotionEnum: 0
   prevES: 0
+  _startBark: 
 --- !u!95 &7123329786991498574
 Animator:
   serializedVersion: 3

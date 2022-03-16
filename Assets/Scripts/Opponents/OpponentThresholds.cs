@@ -15,11 +15,11 @@ namespace Opponents
        // [Header("The emotions this opponent can experience in the following order: Happy = 0, Sad = 1, Angry = 2, Confident = 3, Afraid = 4")]
        // public List<int> emotions;
         
-        public List<Emotions> MyEmotions = new List<Emotions>();
+        public List<Emotions> myEmotions = new List<Emotions>();
 
         public Emotions ChangeOpponentEmot(Emotions currentEmotion)
         {
-            var validEmots = MyEmotions.Where(e => e != currentEmotion).ToList();
+            var validEmots = myEmotions.Where(e => e != currentEmotion).ToList();
 
             return validEmots[Random.Range(0, validEmots.Count)];
         }

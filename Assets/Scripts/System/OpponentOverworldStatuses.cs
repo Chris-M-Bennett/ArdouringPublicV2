@@ -20,7 +20,7 @@ namespace System{
 
         public void Reset()
         {
-            if (GameManager.NewGame)
+            if (GameManager.newGame)
             {
                 for (var i = 0; i < statuses.Length; i++)
                 {

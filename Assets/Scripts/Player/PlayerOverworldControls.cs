@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Runtime.CompilerServices;
 using Opponents;
 using UI;
 using UnityEngine;
@@ -17,30 +18,32 @@ namespace Player{
         [SerializeField] private Vector2 enterPosition;
         [SerializeField] private GameObject infoOverlay;
         [SerializeField] private Text infoText;
-        [SerializeField] private Sprite interiorBG;
-        [SerializeField] private Sprite exteriorBG;
+        [SerializeField] private Sprite interiorBg;
+        [SerializeField] private Sprite exteriorBg;
         [SerializeField] private LastOpponent lastOpponent;
 
         private MoveBarsScript _transBars;
         private Vector2 _currentPosition;
         private bool _isRunning = false;
         private LayerMask _opponentMask;
+        private LayerMask _structureMask;
+        private LayerMask _defeatedMask;
         private Animator _anim;
         private static readonly int Y = Animator.StringToHash("Y");
         private static readonly int X = Animator.StringToHash("X");
         private static readonly int Running = Animator.StringToHash("Running");
-        private LayerMask _structureMask;
         private Rigidbody2D _rb;
         private SpriteRenderer _sprite;
+        private Collider2D hitOpponent;
 
         private void Awake(){
-            if (GameManager.NewGame)
+            if (GameManager.newGame)
             {
                 transform.position = startPosition;
-            }else if (GameManager.MovedArea)
+            }else if (GameManager.movedArea)
             {
                 transform.position = enterPosition;
-                GameManager.MovedArea = false;
+                GameManager.movedArea = false;
             }else
             {
                 transform.position = new Vector2(PlayerPrefs.GetFloat("playerXPos", _currentPosition.x), 
@@ -55,6 +58,8 @@ namespace Player{
         {
             _opponentMask = LayerMask.GetMask("Opponent");
             _structureMask = LayerMask.GetMask("Structures");
+            _defeatedMask = LayerMask.GetMask("Defeated");
+            
             _transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
             _anim = GetComponent<Animator>();
             _rb = GetComponent<Rigidbody2D>();
@@ -106,12 +111,11 @@ namespace Player{
         {
             _currentPosition = transform.position;
             Collider2D opponentHit = Physics2D.OverlapCircle(_currentPosition, 0.8f, _opponentMask);
-
             if (opponentHit)
             {
                 infoOverlay.SetActive(true);
                 infoText.text = opponentHit.gameObject.GetComponent<OpponentOverworldScript>().myName;
-                if (GameManager.Tutorials)
+                if (GameManager.tutorials)
                 {
                     infoText.text += $"\n\n{_activateControls}";
                 }
@@ -120,20 +124,20 @@ namespace Player{
                     Collider2D structureHit = Physics2D.OverlapCircle(_currentPosition, 7f, _structureMask);
                     if (structureHit)
                     {
-                        GameManager.DebateBG = interiorBG;
+                        GameManager.debateBg = interiorBg;
                     }else
                     {
-                        GameManager.DebateBG = exteriorBG;
+                        GameManager.debateBg = exteriorBg;
                     }
                     
-                    LastOpponent.lastOpponent = opponentHit.transform.parent.GetComponent<OpponentSpawnScript>().ID;
-                    GameManager.DebateOpponent = opponentHit.GetComponent<OpponentOverworldScript>().debatePrefab;
+                    LastOpponent.lastOpponent = opponentHit.transform.parent.GetComponent<OpponentSpawnScript>().id;
+                    GameManager.debateOpponent = opponentHit.GetComponent<OpponentOverworldScript>().debatePrefab;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
                     StartCoroutine(_transBars.MoveThoseBars(true, "Debate"));
                 }
             }
-            else if (GameManager.Tutorials)
+            else if (GameManager.tutorials)
             {
                 infoOverlay.SetActive(true);
                 infoText.text = _moveControls;
@@ -141,6 +145,21 @@ namespace Player{
             else
             {
                 infoOverlay.SetActive(false);
+            }
+            
+            Collider2D defeatedHit = Physics2D.OverlapCircle(_currentPosition, 0.8f, _defeatedMask);
+            if (defeatedHit)
+            {
+                hitOpponent = defeatedHit;
+                if (Input.GetButtonDown("Activate")){
+                    var spawn = defeatedHit.transform.parent.GetComponent<OpponentSpawnScript>();
+                        spawn.Speak();
+                }
+            }
+            
+            if(hitOpponent != defeatedHit && hitOpponent != null)
+            {
+                hitOpponent.transform.GetChild(0).gameObject.SetActive(false);
             }
         }
         
