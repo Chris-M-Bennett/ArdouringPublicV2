@@ -34,12 +34,12 @@ namespace System
         [SerializeField] private MoveBarsScript tranBars;
         [SerializeField] private EventSystem eventSystem;
 
-        [Header("The player's HUD panel")]public DebateHudScript playerHud;
-        [Header("The opponent's HUD panel")]public DebateHudScript opponentHud;
+        [Header("The player's HUD panel")]public DebateHUDScript playerHud;
+        [Header("The opponent's HUD panel")]public DebateHUDScript opponentHud;
         
         public GameObject enemyTurn;
         public float trackX = -4.25f, trackY = -2.48f;
-        public string file;
+        //public string file;
         
         private bool _playerHadTurn = false;
         private DebateValuesScript _playerValues;
@@ -50,7 +50,7 @@ namespace System
         private int _opponentStatus = 0;
 
         [HideInInspector] public bool confirmExit = false; 
-        public bool PlayerHadTurn
+        [HideInInspector] public bool PlayerHadTurn
         {
             get { return _playerHadTurn; }
             set { _playerHadTurn = value; }
@@ -104,11 +104,14 @@ namespace System
             {
                 Debug.LogError($"File at {address} does not exist");
             }*/
+            
+            _opponentValues.Speak(Stages.Opening);
 
             StartCoroutine(tranBars.MoveThoseBars(false));
             StartCoroutine(PlayerTurn());
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         /// <summary>
         /// Co-routine for player's turn
         /// </summary>
@@ -118,7 +121,7 @@ namespace System
             StopCoroutine(OpponentTurn());
             if (GameManager.tutorials)
             {
-                int opponentEmot = (int)_opponentValues.emotionEnum;
+                Emotions opponentEmot = _opponentValues.emotionEnum;
                 notifyText.text =
                     "It's your turn! Select an emotion button from your panel to debate with the creature.\n";
                 notifyText.text += EmotionDescript(opponentEmot);
@@ -300,44 +303,44 @@ namespace System
         /// <summary>
         /// Generates tutorial for player about opponent emotions and how other emotions effect them 
         /// </summary>
-        /// <param name="emotInt"></param>
+        /// <param name="emotEnum"></param>
         /// <returns></returns>
-        private string EmotionDescript(int emotInt)
+        private string EmotionDescript(Emotions emotEnum)
         {
             string colour;
             string emot;
             string very;
             string fairly;
             string barely;
-            if (emotInt == 0)
+            if (emotEnum == Emotions.Happy)
             {
                 colour = "Green";
                 emot = "happy";
                 very = "sad";
                 fairly = "angry";
                 barely = "afraid";
-            }else if (emotInt == 1)
+            }else if (emotEnum == Emotions.Sad)
             {
                 colour = "Blue";
                 emot = "sad";
                 very = "angry";
                 fairly = "confident";
                 barely = "afraid";
-            }else if (emotInt == 2)
+            }else if (emotEnum == Emotions.Angry)
             {
                 colour = "Red";
                 emot = "angry";
                 very = "confident";
                 fairly = "afraid";
                 barely = "happy";
-            }else if (emotInt == 3)
+            }else if (emotEnum == Emotions.Proud)
             {
                 colour = "Purple";
                 emot = "confident";
                 very = "afraid";
                 fairly = "happy";
                 barely = "sad";
-            }else if (emotInt == 4)
+            }else if (emotEnum == Emotions.Afraid)
             {
                 colour = "Orange";
                 emot = "afraid";

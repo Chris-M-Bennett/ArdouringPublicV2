@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Space Whale Emotion Thresholds
   m_EditorClassIdentifier: 
   thresholds: 1e00000046000000
-  MyEmotions: 0000000001000000
+  myEmotions: 0000000001000000

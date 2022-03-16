@@ -12,7 +12,7 @@ namespace Player{
         [SerializeField] private Text notifyText;
         [SerializeField] private Text damageText;
         [SerializeField] private Transform damageEnd;
-        [SerializeField] private DebateHudScript opponentHud;
+        [SerializeField] private DebateHUDScript opponentHud;
         private DebateSystemScript _debateSystem;
         private GameObject _opponentGO;
         private static OpponentDebateValues _opponentValues;

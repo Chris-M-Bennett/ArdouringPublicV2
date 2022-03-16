@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace Opponents
@@ -19,6 +20,7 @@ namespace Opponents
 
         private Animator _animator;
         private static readonly int EmotionEnum = Animator.StringToHash("EmotionInt");
+        private TextMeshPro speechBubble;
         [HideInInspector] public int prevES;
         
         [SerializeField,TextArea,Tooltip("The bark said by the opponent at the start of a debate")]
@@ -34,6 +36,8 @@ namespace Opponents
         void Awake()
         {
             _animator = GetComponent<Animator>();
+            speechBubble = GetComponentInChildren<TextMeshPro>();
+            speechBubble.transform.parent.gameObject.SetActive(false);
             if (emotionThresholds != null)
             {
                     //myEmotions = emotionThresholds.emotions;
@@ -41,6 +45,21 @@ namespace Opponents
                     //emotionInt = myEmotions[rand];
                     emotionEnum = emotionThresholds.ChangeOpponentEmot(new Emotions());
                     _animator.SetInteger(EmotionEnum, (int)emotionEnum);
+            }
+        }
+
+        public void Speak(Stages stage)
+        {
+            speechBubble.transform.parent.gameObject.SetActive(true);
+            if (stage == Stages.Opening)
+            {
+                speechBubble.text = openingLine;
+            }else if (stage == Stages.Overloaded)
+            {
+                speechBubble.text = overloadedLine;
+            }else if (stage == Stages.Pacified)
+            {
+                speechBubble.text = pacifiedLine;
             }
         }
 
@@ -86,4 +105,12 @@ public enum Emotions
     Angry = 3,
     Proud = 4,
     Afraid = 5
+}
+
+public enum Stages
+{
+    Opening = 0,
+    Overloaded = 1,
+    Pacified = 2,
+    
 }

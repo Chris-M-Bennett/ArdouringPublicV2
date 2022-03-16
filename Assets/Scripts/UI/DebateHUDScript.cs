@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace UI
 {
-    public class DebateHudScript : MonoBehaviour
+    public class DebateHUDScript : MonoBehaviour
     {
         public Text nameText;
         public Text levelText;

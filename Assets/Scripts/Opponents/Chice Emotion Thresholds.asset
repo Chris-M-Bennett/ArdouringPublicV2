@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Chice Emotion Thresholds
   m_EditorClassIdentifier: 
   thresholds: 32000000
-  MyEmotions: 0000000005000000
+  myEmotions: 0000000005000000

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Storming Cloud Emotion Thresholds
   m_EditorClassIdentifier: 
   thresholds: 46000000
-  MyEmotions: 0300000004000000
+  myEmotions: 0300000004000000

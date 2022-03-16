@@ -539,7 +539,7 @@ MonoBehaviour:
   levelText: {fileID: 340961520}
   esText: {fileID: 1697321976}
   esSlider: {fileID: 1326428985}
-  playerPanel: {fileID: 0}
+  playerPanel: {fileID: 1905485765}
 --- !u!1 &234748997
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +815,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439581894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.3, y: 0.96, z: 0}
+  m_LocalPosition: {x: -7.52, y: 0.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2578,17 +2578,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be8aa75b2568db4f8aa1072f06f5209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Directions:
-  - {x: 0, y: 1}
-  - {x: 1, y: 0}
-  - {x: 0, y: -1}
-  - {x: -1, y: 0}
-  Values:
-  - 20
-  - 0
-  - 0
-  - 0
-  Result: {x: 0, y: 0}
+  directions: []
+  values: []
+  result: {x: 0, y: 0}
   player: {fileID: 5098022821350343924}
   opponentSpawn: {fileID: 439581896}
   testPrefab: {fileID: 3055323939854202916, guid: b0c223353bf834043917a2b1edef557d,
@@ -2598,8 +2590,8 @@ MonoBehaviour:
   background: {fileID: 122244846}
   tranBars: {fileID: 1419073307}
   eventSystem: {fileID: 1672373864}
-  playerHUD: {fileID: 1905485770}
-  opponentHUD: {fileID: 167449089}
+  playerHud: {fileID: 1905485770}
+  opponentHud: {fileID: 167449089}
   enemyTurn: {fileID: 4770124292554830722, guid: cd948803a6d13054fa3847be4a69ea88,
     type: 3}
   trackX: -4.25
@@ -3881,7 +3873,7 @@ MonoBehaviour:
   notifyText: {fileID: 497553}
   damageText: {fileID: 1456835759}
   damageEnd: {fileID: 95438711}
-  opponentHUD: {fileID: 167449089}
+  opponentHud: {fileID: 167449089}
   playerHadTurn: 0
 --- !u!114 &1905485770
 MonoBehaviour:
@@ -3895,10 +3887,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26aab06bf7fc920469e4373d2cc6470b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 234748999}
-  levelText: {fileID: 1818927983}
-  esText: {fileID: 554183080}
-  esSlider: {fileID: 2084739283}
+  nameText: {fileID: 716403537}
+  levelText: {fileID: 340961520}
+  esText: {fileID: 1697321976}
+  esSlider: {fileID: 1326428985}
   playerPanel: {fileID: 1905485765}
 --- !u!1 &2048547900
 GameObject:

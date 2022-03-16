@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using Opponents;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using static GameManager;
 
 namespace System
@@ -16,7 +18,7 @@ namespace System
         [SerializeField] private OpponentOverworldStatuses areaStatuses;
         public int id;
         private string _overworldTalk;
-        private TextMesh _speechBubble;
+        [FormerlySerializedAs("_speechBubble")] [SerializeField]private TextMeshPro speechBubble;
         [SerializeField] private GameObject sceneLoader;
 
         private int defeatState = 0;
@@ -37,8 +39,8 @@ namespace System
             if (defeatState > 0)
             {
                 Instantiate(defeatedOpponent, transform);
-                _speechBubble = defeatedOpponent.GetComponentInChildren<TextMesh>();
-                _overworldTalk = _speechBubble.text;
+                speechBubble = defeatedOpponent.transform.GetComponentInChildren<TextMeshPro>();
+                _overworldTalk = speechBubble.text;
             }
             else if (defeatState == 0)
             {
@@ -57,11 +59,11 @@ namespace System
         }
 
         public IEnumerator Speak(){
-            _speechBubble.gameObject.SetActive(true);
+            speechBubble.transform.parent.gameObject.SetActive(true);
             var chars = _overworldTalk.Split();
             for (int i = 0; i < chars.Length-1; i++)
             {
-                _speechBubble.text += chars[i];
+                speechBubble.text += chars[i];
                 yield return new WaitForSeconds(0.5f);
             }
         }
