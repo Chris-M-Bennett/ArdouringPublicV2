@@ -141,12 +141,14 @@ namespace System
             {
                 if (_opponentValues.currentES <= -100)
                 {
+                    _opponentValues.Speak(Stages.Pacified);
                     PlayerPrefs.SetInt("Pacifies",PlayerPrefs.GetInt("Pacifies",0)+1);
                     
                     _opponentStatus = 1;
                 }
                 else
                 {
+                    _opponentValues.Speak(Stages.Overloaded);
                     PlayerPrefs.SetInt("Overloads",PlayerPrefs.GetInt("Overloads",0)+1);
                     var emotString = "";
                     switch (_playerEmot)
