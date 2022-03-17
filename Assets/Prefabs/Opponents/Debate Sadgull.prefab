@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3434246371282112157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.44831666, y: 0.44831666, z: 0.29887778}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -103,8 +103,11 @@ MonoBehaviour:
   currentES: 100
   emotAmounts: 5a000000
   emotionThresholds: {fileID: 11400000, guid: a54afa744ede8ea44b7c99ade36aa3e0, type: 2}
-  emotionInt: 1
+  emotionEnum: 0
   prevES: 0
+  openingLine: 
+  overloadedLine: 
+  pacifiedLine: 
 --- !u!95 &8137055956711363871
 Animator:
   serializedVersion: 3

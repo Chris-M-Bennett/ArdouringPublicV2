@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
+      propertyPath: myName
+      value: Upset Post
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
       propertyPath: debatePrefab
       value: 
       objectReference: {fileID: 1102288556399668556, guid: 9c71b9a72bf78cc41968dec55b12b237,
@@ -47,17 +52,17 @@ PrefabInstance:
     - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.23977755
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.23977755
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.34253937
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}

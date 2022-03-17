@@ -17,8 +17,8 @@ namespace System
         [SerializeField] private Vector2 offSet;
         [SerializeField] private OpponentOverworldStatuses areaStatuses;
         public int id;
-        private string _overworldTalk;
-        [FormerlySerializedAs("_speechBubble")] [SerializeField]private TextMeshPro speechBubble;
+        [SerializeField] private string _overworldTalk; 
+        [SerializeField] private TextMeshPro speechBubble;
         [SerializeField] private GameObject sceneLoader;
 
         private int defeatState = 0;
@@ -39,8 +39,8 @@ namespace System
             if (defeatState > 0)
             {
                 Instantiate(defeatedOpponent, transform);
-                speechBubble = defeatedOpponent.transform.GetComponentInChildren<TextMeshPro>();
-                _overworldTalk = speechBubble.text;
+                //speechBubble = defeatedOpponent.transform.GetComponentInChildren<TextMeshPro>();
+                //_overworldTalk = speechBubble.text;
             }
             else if (defeatState == 0)
             {
@@ -59,11 +59,11 @@ namespace System
         }
 
         public IEnumerator Speak(){
-            speechBubble.transform.parent.gameObject.SetActive(true);
+            //speechBubble.transform.parent.gameObject.SetActive(true);
             var chars = _overworldTalk.Split();
             for (int i = 0; i < chars.Length-1; i++)
             {
-                speechBubble.text += chars[i];
+                //speechBubble.text += chars[i];
                 yield return new WaitForSeconds(0.5f);
             }
         }
