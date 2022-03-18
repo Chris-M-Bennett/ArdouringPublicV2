@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AngerQTEController : MonoBehaviour
+public class AngerQteController : MonoBehaviour
 {
     private float timeLimit, timer, markerY, upForce, dropSpeed;
     public float multiplierA;
-    private AngerQTEController _marker;
+    private AngerQteController _marker;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,7 @@ public class AngerQTEController : MonoBehaviour
         timer = 0f;
         upForce = 35f; //20f;
         dropSpeed = 1f;
-        _marker = GetComponent<AngerQTEController>();
+        _marker = GetComponent<AngerQteController>();
         // marker start y = -1.65f, marker x = -0.25
     }
 
@@ -24,13 +24,13 @@ public class AngerQTEController : MonoBehaviour
         if (timer >= timeLimit)
         {
             multiplierA = (_marker.transform.position.y / 3.3f) + 1f;
-            Debug.Log("Anger damage multiplier: " + multiplierA);
+            //Debug.Log("Anger damage multiplier: " + multiplierA);
         }
         else
         {
             timer += Time.deltaTime;
             _marker.transform.Translate(0f, -1f * dropSpeed * Time.deltaTime, 0f, Space.World);
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 _marker.transform.Translate(0f, 1f * upForce * Time.deltaTime, 0f, Space.World);
             }

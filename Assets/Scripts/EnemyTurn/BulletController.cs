@@ -4,20 +4,16 @@ using System.Globalization;
 using EnemyTurn;
 using Opponents;
 using UnityEngine;
-using Random = System.Random;
 
 public class BulletController : MonoBehaviour
 {
     private BulletController _bullet;
     public int damage;
-    private int toggle;
     private static DebateValuesScript _opponentValues;
     private static EnemyController _enemy;
     private float speed;
     private float distance;
     private float targetY;
-    private float posX;
-    //private string bossMotion;
     /**/
     public string[,] bulletLibrary = new string[8, 3]
     {
@@ -63,35 +59,19 @@ public class BulletController : MonoBehaviour
         _bullet = GetComponent<BulletController>();
         //speed = 1f;//_opponent.bulletSpeed;
         //Debug.Log("bullet speed: " + speed);
-        if (_opponentValues.debaterName == "Laughing Cat")
-        {
-            Random rnd = new Random();
-            toggle = rnd.Next(1, 3);
-        }
-        else
-        {
-            toggle = 3;
-        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         float currentY = _bullet.transform.position.y;
+
         distance = currentY - targetY;
-        if (toggle == 1)
-        {
-            posX = Mathf.Sin(Time.time) * 0.66f * Time.deltaTime;
-        }
-        if (toggle == 2)
-        {
-            posX = Mathf.Cos(Time.time) * 0.66f * Time.deltaTime;
-        }
 
         if (distance > 0f)
         {
             float direction = -1f; //targetY - currentY;
-            _bullet.transform.Translate(posX, direction * speed * Time.deltaTime, 0f, Space.World);
+            _bullet.transform.Translate(0f, direction * speed * Time.deltaTime, 0f, Space.World);
         }
         else
         {

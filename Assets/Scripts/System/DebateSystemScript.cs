@@ -48,9 +48,11 @@ namespace System
         private int _playerLevel;
         private int _playerEmot;
         private int _opponentStatus = 0;
+        private GameObject _speechBubble;
 
         [HideInInspector] public bool confirmExit = false; 
-        [HideInInspector] public bool PlayerHadTurn
+        
+        public bool PlayerHadTurn
         {
             get { return _playerHadTurn; }
             set { _playerHadTurn = value; }
@@ -104,12 +106,24 @@ namespace System
             {
                 Debug.LogError($"File at {address} does not exist");
             }*/
-            
-            _opponentValues.Speak(Stages.Opening);
 
+            _speechBubble = opponentGO.transform.GetChild(0).gameObject;
+            StartCoroutine(_opponentValues.Speak(Stages.Opening));
             StartCoroutine(tranBars.MoveThoseBars(false));
             StartCoroutine(PlayerTurn());
         }
+        
+        private void Update()
+        {
+            /*    result = Vector3.zero;
+                for (int i = 0; i < directions.Count; i++)
+                {
+                    var v = directions[i] * values[i];
+                    result += v;
+                }
+                Debug.DrawLine(Vector3.zero,result,Color.red,0.1f);*/
+        }
+
 
         // ReSharper disable Unity.PerformanceAnalysis
         /// <summary>
@@ -119,6 +133,7 @@ namespace System
         IEnumerator PlayerTurn()
         {
             StopCoroutine(OpponentTurn());
+
             if (GameManager.tutorials)
             {
                 Emotions opponentEmot = _opponentValues.emotionEnum;
@@ -139,16 +154,17 @@ namespace System
             
             if (_opponentValues.currentES <= -100 || _opponentValues.currentES >= 100)
             {
+                _speechBubble.SetActive(true);
                 if (_opponentValues.currentES <= -100)
                 {
-                    _opponentValues.Speak(Stages.Pacified);
+                    StartCoroutine(_opponentValues.Speak(Stages.Pacified));
                     PlayerPrefs.SetInt("Pacifies",PlayerPrefs.GetInt("Pacifies",0)+1);
                     
                     _opponentStatus = 1;
                 }
                 else
                 {
-                    _opponentValues.Speak(Stages.Overloaded);
+                    StartCoroutine(_opponentValues.Speak(Stages.Overloaded));
                     PlayerPrefs.SetInt("Overloads",PlayerPrefs.GetInt("Overloads",0)+1);
                     var emotString = "";
                     switch (_playerEmot)
@@ -196,7 +212,9 @@ namespace System
         IEnumerator OpponentTurn()
         {
             StopCoroutine(PlayerTurn());
+            _speechBubble.SetActive(false);
             _opponentValues.CheckThreshold(_opponentValues.currentES);
+            
             GameObject foe = Instantiate(enemyTurn,new Vector2(trackX,trackY),Quaternion.identity);
             //notifyText.text +=
             //    $" {_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
@@ -213,7 +231,6 @@ namespace System
             {
                 state = DebateState.Player;
                 PlayerHadTurn = false;
-                //yield return new WaitForSeconds(1f);
                 Destroy(foe);
                 eventSystem.enabled = true;
                 StartCoroutine(PlayerTurn());
@@ -260,8 +277,8 @@ namespace System
             
             PlayerPrefs.SetInt("playerES", _playerValues.currentES);
             PlayerPrefs.SetInt("playerExp", _playerExp);
-            yield return new WaitForSeconds(2f);
-            /*while (confirmExit == false)
+            yield return new WaitForSeconds(7f);
+           /* while (confirmExit == false)
             {
                 yield return null;
             }*/
@@ -285,18 +302,7 @@ namespace System
                 yield return new WaitForSeconds(0.1f);
             }
         }
-
-        private void Update()
-        {
-            result = Vector3.zero;
-            for (int i = 0; i < directions.Count; i++)
-            {
-                var v = directions[i] * values[i];
-                result += v;
-            }
-            Debug.DrawLine(Vector3.zero,result,Color.red,0.1f);
-        }
-
+        
         private void ChangeStats(string emotion)
         {
             

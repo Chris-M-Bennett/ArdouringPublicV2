@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using TMPro;
+using Unity.Collections;
 using UnityEngine;
 
 namespace Opponents
@@ -19,7 +21,7 @@ namespace Opponents
         public Emotions emotionEnum;
 
         private Animator _animator;
-        private static readonly int EmotionEnum = Animator.StringToHash("EmotionInt");
+        private static readonly int EmotionInt = Animator.StringToHash("EmotionInt");
         private TextMeshPro speechBubble;
         [HideInInspector] public int prevES;
         
@@ -37,29 +39,35 @@ namespace Opponents
         {
             _animator = GetComponent<Animator>();
             speechBubble = GetComponentInChildren<TextMeshPro>();
-            speechBubble.transform.parent.gameObject.SetActive(false);
             if (emotionThresholds != null)
             {
                     //myEmotions = emotionThresholds.emotions;
                     thresh = emotionThresholds.thresholds;
                     //emotionInt = myEmotions[rand];
                     emotionEnum = emotionThresholds.ChangeOpponentEmot(new Emotions());
-                    _animator.SetInteger(EmotionEnum, (int)emotionEnum);
+                    _animator.SetInteger(EmotionInt, (int)emotionEnum);
             }
         }
 
-        public void Speak(Stages stage)
+        // ReSharper disable once UnusedMethodReturnValue.Global
+        public IEnumerator Speak(Stages stage)
         {
-            speechBubble.transform.parent.gameObject.SetActive(true);
+            speechBubble.text = "";
+            var chars = new char[0];
             if (stage == Stages.Opening)
             {
-                speechBubble.text = openingLine;
+                chars = openingLine.ToCharArray();
             }else if (stage == Stages.Overloaded)
             {
-                speechBubble.text = overloadedLine;
+                chars = overloadedLine.ToCharArray();;
             }else if (stage == Stages.Pacified)
             {
-                speechBubble.text = pacifiedLine;
+                chars = pacifiedLine.ToCharArray();
+            }
+            for (int i = 0; i < chars.Length; i++)
+            {
+                speechBubble.text += chars[i];
+                yield return new WaitForSeconds(0.1f);
             }
         }
 
@@ -71,6 +79,7 @@ namespace Opponents
                 if ((currentES > i && prevES < i) || (currentES < i && prevES > i))
                 {
                     emotionEnum = emotionThresholds.ChangeOpponentEmot(emotionEnum);
+                    _animator.SetInteger(EmotionInt, (int)emotionEnum);
                 }
             }
             // for (int i = 0; i < thresh.Count; i++)
@@ -102,9 +111,9 @@ public enum Emotions
 {
     Happy = 0,
     Sad = 1,
-    Angry = 3,
-    Proud = 4,
-    Afraid = 5
+    Angry = 2,
+    Proud = 3,
+    Afraid = 4
 }
 
 public enum Stages

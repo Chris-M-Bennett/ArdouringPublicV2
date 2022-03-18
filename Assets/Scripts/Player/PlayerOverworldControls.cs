@@ -153,14 +153,14 @@ namespace Player{
                 hitOpponent = defeatedHit;
                 if (Input.GetButtonDown("Activate")){
                     var spawn = defeatedHit.transform.parent.GetComponent<OpponentSpawnScript>();
-                        spawn.Speak();
+                    StartCoroutine(spawn.Speak());
                 }
             }
             
-            if(hitOpponent != defeatedHit && hitOpponent != null)
+            /*if(hitOpponent != defeatedHit && hitOpponent != null)
             {
                 hitOpponent.transform.GetChild(0).gameObject.SetActive(false);
-            }
+            }*/
         }
         
     }

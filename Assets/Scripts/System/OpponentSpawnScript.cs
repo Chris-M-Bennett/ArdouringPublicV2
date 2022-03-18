@@ -17,10 +17,11 @@ namespace System
         [SerializeField] private Vector2 offSet;
         [SerializeField] private OpponentOverworldStatuses areaStatuses;
         public int id;
-        [SerializeField] private string _overworldTalk; 
-        [SerializeField] private TextMeshPro speechBubble;
+        private string _overworldTalk;
+        private TextMeshPro _speech;
         [SerializeField] private GameObject sceneLoader;
 
+        [SerializeField] private Transform _speechBubble;
         private int defeatState = 0;
 
         private void Start()
@@ -38,9 +39,11 @@ namespace System
             GameManager.areaStatuses.statuses[id] = defeatState;
             if (defeatState > 0)
             {
-                Instantiate(defeatedOpponent, transform);
-                //speechBubble = defeatedOpponent.transform.GetComponentInChildren<TextMeshPro>();
-                //_overworldTalk = speechBubble.text;
+                _speechBubble = Instantiate(defeatedOpponent, transform).transform.GetChild(0);
+                _speech = _speechBubble.GetComponentInChildren<TextMeshPro>();
+                _overworldTalk = _speech.text;
+                _speech.text = "";
+                _speechBubble.gameObject.SetActive(false);
             }
             else if (defeatState == 0)
             {
@@ -59,12 +62,12 @@ namespace System
         }
 
         public IEnumerator Speak(){
-            //speechBubble.transform.parent.gameObject.SetActive(true);
-            var chars = _overworldTalk.Split();
-            for (int i = 0; i < chars.Length-1; i++)
+            _speechBubble.gameObject.SetActive(true);
+            var chars = _overworldTalk.ToCharArray();
+            for (int i = 0; i < chars.Length; i++)
             {
-                //speechBubble.text += chars[i];
-                yield return new WaitForSeconds(0.5f);
+                _speech.text += chars[i];
+                yield return new WaitForSeconds(0.1f);
             }
         }
     }
