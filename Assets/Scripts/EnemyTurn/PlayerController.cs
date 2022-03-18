@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D hit)
     {
         
-        if (hit.gameObject.tag == "Bullet")
+        if (hit.gameObject.CompareTag("Bullet"))
         {
             currentES -= hit.GetComponent<BulletController>().damage;
             _playerValues.currentES = currentES;

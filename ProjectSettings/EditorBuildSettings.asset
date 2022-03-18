@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Lake Of Rage.unity
     guid: e3135a788f4b8ed42804628849c911f2
   - enabled: 0
-    path: Assets/Scenes/QTE Test Scene.unity
+    path: Assets/Scenes/QTE Test Scene2.unity
     guid: db4317f7c1d35c3419d83cf8520d8962
   m_configObjects: {}

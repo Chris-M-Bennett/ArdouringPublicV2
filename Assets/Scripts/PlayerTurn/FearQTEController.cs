@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FearQteController : MonoBehaviour
+public class FearQTEController : MonoBehaviour
 {
     private float timeLimit, timer, speed, barSpeed;
     public float multiplierF;
     private bool hit;
-    private FearQteController _marker;
+    private FearQTEController _marker;
     public GameObject bar;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +17,7 @@ public class FearQteController : MonoBehaviour
         speed = 3f;
         barSpeed = 1f;
         hit = false;
-        _marker = GetComponent<FearQteController>();
+        _marker = GetComponent<FearQTEController>();
     }
 
     // Update is called once per frame
@@ -27,7 +26,7 @@ public class FearQteController : MonoBehaviour
         if (timer >= timeLimit || hit)
         {
             multiplierF = (_marker.transform.position.y / 3.6f) + 1f; // may need adjustment
-            //Debug.Log("Fear damage multiplier: " + multiplierF);
+            Debug.Log("Fear damage multiplier: " + multiplierF);
         }
         else
         {
