@@ -210,6 +210,11 @@ PrefabInstance:
       propertyPath: emotAmounts.Array.data[4]
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8606474270780199747, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 49fdb167889371d49a62f255e2a8e98a, type: 3}
