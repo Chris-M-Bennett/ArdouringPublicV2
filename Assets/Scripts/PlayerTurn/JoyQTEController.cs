@@ -5,26 +5,25 @@ using UnityEngine;
 
 public class JoyQTEController : MonoBehaviour
 {
-    private float timer, timeLimit, multiplierJ;
-    private int slottedWedgeCount;
+    private float timer, timeLimit, multiplierJ, slottedWedgeCount, distX, distY;
     private JoyQTEController _marker;
-    public GameObject WedgeNL, WedgeNR, WedgeEU, WedgeED, WedgeSR, WedgeSL, WedgeWD, WedgeWU;
-    public GameObject JoyWheel;
+    //public GameObject WedgeNL, WedgeNR, WedgeEU, WedgeED, WedgeSR, WedgeSL, WedgeWD, WedgeWU;
+    public GameObject JoyWheel, CurrentWedge;
     // Start is called before the first frame update
     void Start()
     {
         timeLimit = 5f;
         timer = 0f;
-        slottedWedgeCount = 0;
+        slottedWedgeCount = 0f;
         _marker = GetComponent<JoyQTEController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer >= timeLimit || Input.GetKeyDown(KeyCode.E) || slottedWedgeCount == 8)
+        if (timer >= timeLimit || Input.GetKeyDown(KeyCode.E) || slottedWedgeCount == 8f)
         {
-            multiplierJ = ((slottedWedgeCount - 4) / 8) + 1f;
+            multiplierJ = (slottedWedgeCount / 8f) + 0.5f;
             Debug.Log("Joy damage multiplier: " + multiplierJ);
         }
         else
@@ -38,11 +37,11 @@ public class JoyQTEController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            _marker.transform.RotateAround(JoyWheel.transform.position, Vector3.forward, 72 * Time.deltaTime);
+            _marker.transform.RotateAround(JoyWheel.transform.position, Vector3.forward, 144 * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            _marker.transform.RotateAround(JoyWheel.transform.position, Vector3.back, 72 * Time.deltaTime);
+            _marker.transform.RotateAround(JoyWheel.transform.position, Vector3.back, 144 * Time.deltaTime);
         }
     }
 
@@ -50,6 +49,26 @@ public class JoyQTEController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            slottedWedgeCount += 1f;
+            CurrentWedge = wedge.gameObject; /*
+            if (JoyWheel.transform.position.x - CurrentWedge.transform.position.x > 0f)
+            {
+                distX = 0.4f;
+            }
+            else
+            {
+                distX = -0.4f;
+            }
+            if (JoyWheel.transform.position.y - CurrentWedge.transform.position.y > 0f)
+            {
+                distY = 0.4f;
+            }
+            else
+            {
+                distY = -0.4f;
+            } */
+            CurrentWedge.transform.Translate((JoyWheel.transform.position.x - CurrentWedge.transform.position.x)/3f, (JoyWheel.transform.position.y - CurrentWedge.transform.position.y)/3f, 0f, Space.World);
+            /*
             if (wedge.gameObject == WedgeNL)
             {
                 WedgeNL.transform.position = new Vector2 (-0.5f, 0.9f);
@@ -82,8 +101,7 @@ public class JoyQTEController : MonoBehaviour
             {
                 WedgeWU.transform.position = new Vector2 (-0.9f, 0.5f);
             }
-
-            slottedWedgeCount += 1;
+            */
         }
     }
 }

@@ -11,6 +11,11 @@ TagManager:
   - Defeated
   - EnemyTurn
   - Save
+  - AngerQTE
+  - FearQTE
+  - JoyQTE
+  - PrideQTE
+  - SorrowQTE
   layers:
   - Default
   - TransparentFX

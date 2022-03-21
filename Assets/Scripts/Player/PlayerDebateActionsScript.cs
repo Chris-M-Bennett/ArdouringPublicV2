@@ -21,6 +21,8 @@ namespace Player{
         private DebateState _turnState;
         private Vector3 _damagePos;
         private float _damageEndY;
+        //private float qteX, qteY; //spawn co-ords for player turn QTEs
+        //public GameObject SelectedQTE; //QTE prefab
 
         public bool playerHadTurn;
 
@@ -41,7 +43,8 @@ namespace Player{
             _damagePos = damageText.transform.position;
             _playerValues = GameObject.FindWithTag("Player").GetComponent<PlayerDebateValues>();
             _playerDamage = _playerValues.debaterLevel*2;
-            
+            //qteX = -7f;
+            //qteY = -0.5f;
         }
 
         private void CheckPlayerTurn(int emotion){
@@ -51,26 +54,36 @@ namespace Player{
         }
         public void HappyButton()
         {
+            //SelectedQTE = GameObject.FindGameObjectWithTag("JoyQTE");
+            //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
             CheckPlayerTurn(0);
         }
 
         public void SadButton()
         {
+            //SelectedQTE = GameObject.FindGameObjectWithTag("SorrowQTE");
+            //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
             CheckPlayerTurn(1);
         }
         
         public void AngryButton()
         {
+            //SelectedQTE = GameObject.FindGameObjectWithTag("AngerQTE");
+            //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
             CheckPlayerTurn(2);
         }
         
         public void ConfidentButton()
         {
+            //SelectedQTE = GameObject.FindGameObjectWithTag("PrideQTE");
+            //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
             CheckPlayerTurn(3);
         }
 
         public void AnxiousButton()
         {
+            //SelectedQTE = GameObject.FindGameObjectWithTag("FearQTE");
+            //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
             CheckPlayerTurn(4);
         }
 
