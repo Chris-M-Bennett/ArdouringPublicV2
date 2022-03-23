@@ -315,53 +315,55 @@ namespace System
         /// <returns></returns>
         private string EmotionDescript(Emotions emotEnum)
         {
-            string colour;
             string emot;
-            string very;
-            string fairly;
-            string barely;
+            string strongOveload;
+            string weakOverload;
+            string weakPacify;
+            string strongPacify;
             if (emotEnum == Emotions.Happy)
             {
-                colour = "Green";
                 emot = "happy";
-                very = "sad";
-                fairly = "angry";
-                barely = "afraid";
+                strongOveload = "sad";
+                weakOverload = "angry";
+                strongPacify = "proud";
+                weakPacify = "afraid";
             }else if (emotEnum == Emotions.Sad)
             {
-                colour = "Blue";
                 emot = "sad";
-                very = "angry";
-                fairly = "confident";
-                barely = "afraid";
+                strongOveload = "angry";
+                weakOverload = "proud";
+                strongPacify = "afraid";
+                weakPacify = "happy";
             }else if (emotEnum == Emotions.Angry)
             {
-                colour = "Red";
                 emot = "angry";
-                very = "confident";
-                fairly = "afraid";
-                barely = "happy";
+                strongOveload = "proud";
+                weakOverload = "afraid";
+                strongPacify = "happy";
+                weakPacify = "sad";
             }else if (emotEnum == Emotions.Proud)
             {
-                colour = "Purple";
-                emot = "confident";
-                very = "afraid";
-                fairly = "happy";
-                barely = "sad";
+                emot = "proud";
+                strongOveload = "afraid";
+                weakOverload = "happy";
+                strongPacify = "sad";
+                weakPacify = "angry";
             }else if (emotEnum == Emotions.Afraid)
             {
-                colour = "Orange";
                 emot = "afraid";
-                very = "happy";
-                fairly = "sad";
-                barely = "angry"; 
+                strongOveload = "happy";
+                weakOverload = "sad";
+                strongPacify = "angry";
+                weakPacify = "proud";
             }else
             {
                 Debug.LogError("Invalid emotion supplied to EmotionDescript function!");
                 return null;
             }
-            return $"{colour} opponents are {emot} and are very weak to {very} actions," +
-                   $" fairly weak to {fairly} actions, and barely weak to {barely} actions.";
+            return $"This opponent is {emot} and {strongOveload} actions have a greater impact towards overloading, " +
+                   $"{weakOverload} actions have a lesser impact towards overloading, {strongPacify} actions have a " +
+                   $" greater impact towards pacifying and {weakPacify} actions have a lesser impact towards pacifying. " +
+                   $"Using the {emot} action has a very slight varying effect that can impact towards overloading or pacifying.";
         }
     }
 }
