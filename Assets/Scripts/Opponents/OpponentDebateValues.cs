@@ -44,7 +44,7 @@ namespace Opponents
                     //myEmotions = emotionThresholds.emotions;
                     thresh = emotionThresholds.thresholds;
                     //emotionInt = myEmotions[rand];
-                    emotionEnum = emotionThresholds.ChangeOpponentEmot(new Emotions());
+                    //emotionEnum = emotionThresholds.ChangeOpponentEmot(new Emotions());
                     _animator.SetInteger(EmotionInt, (int)emotionEnum);
             }
         }
