@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PrideQteController : MonoBehaviour
+public class PrideQTEController : MonoBehaviour
 {
     private float distFromCrit, maxDist, timer, timeLimit, multiplierP;
     private bool stop;
-    private PrideQteController _marker;
+    private PrideQTEController _marker;
     public GameObject critPoint;
     public GameObject prideRing;
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class PrideQteController : MonoBehaviour
         timer = 0f;
         maxDist = 1.4f;
         stop = false;
-        _marker = GetComponent<PrideQteController>();
+        _marker = GetComponent<PrideQTEController>();
     }
 
     // Update is called once per frame

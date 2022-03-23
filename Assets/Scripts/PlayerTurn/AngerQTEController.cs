@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AngerQteController : MonoBehaviour
+public class AngerQTEController : MonoBehaviour
 {
     private float timeLimit, timer, markerY, upForce, dropSpeed;
     public float multiplierA;
-    private AngerQteController _marker;
+    private AngerQTEController _marker;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,7 @@ public class AngerQteController : MonoBehaviour
         timer = 0f;
         upForce = 35f; //20f;
         dropSpeed = 1f;
-        _marker = GetComponent<AngerQteController>();
+        _marker = GetComponent<AngerQTEController>();
         // marker start y = -1.65f, marker x = -0.25
     }
 
