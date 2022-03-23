@@ -139,6 +139,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.126214
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.126214
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.147
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.047
+      objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: maxES
@@ -161,13 +181,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
+      propertyPath: openingLine
+      value: "You won\u2019t catch me!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
       propertyPath: debaterLevel
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
+      propertyPath: pacifiedLine
+      value: What happened?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
       propertyPath: debaterDamage
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: overloadedLine
+      value: Let me go!
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}

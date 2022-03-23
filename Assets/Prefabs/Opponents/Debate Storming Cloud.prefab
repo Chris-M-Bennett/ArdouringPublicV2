@@ -159,6 +159,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.126214
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.126214
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.954
+      objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: maxES
@@ -181,13 +196,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
+      propertyPath: openingLine
+      value: The storm comes!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
       propertyPath: debaterLevel
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
+      propertyPath: pacifiedLine
+      value: "I\u2019m feeling calmer now"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
       propertyPath: debaterDamage
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: overloadedLine
+      value: "You can\u2019t!"
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}

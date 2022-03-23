@@ -277,8 +277,8 @@ MonoBehaviour:
   xStrafe: 0
   maxES: 0
   currentES: 0
-  Player: {fileID: 3631827488357627367}
-  ESbar: {fileID: 3631827488502341035}
+  player: {fileID: 3631827488357627367}
+  eSbar: {fileID: 3631827488502341035}
 --- !u!50 &3631827488357627371
 Rigidbody2D:
   serializedVersion: 4
@@ -451,11 +451,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 7806029063261115578, guid: 26bb790785c154f4cad229e81c55f4fb, type: 3}
+  bulletDamage: 0
+  bulletSpeed: 0
   turnTimer: 0
   turnLimit: 0
   startY: 0
   bulletX: 0
-  bulletSpeed: 0
   enemyTurn: {fileID: 4770124292554830722}
   currentEmotion: 104
   maxEnemyES: 100
