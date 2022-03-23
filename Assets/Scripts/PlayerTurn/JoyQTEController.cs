@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 
 public class JoyQTEController : MonoBehaviour
 {
     private float timer, timeLimit, multiplierJ, slottedWedgeCount, distX, distY;
     private JoyQTEController _marker;
+    private PlayerDebateActionsScript _playerAction;
     //public GameObject WedgeNL, WedgeNR, WedgeEU, WedgeED, WedgeSR, WedgeSL, WedgeWD, WedgeWU;
-    public GameObject JoyWheel, CurrentWedge;
+    public GameObject JoyWheel, CurrentWedge, BattleCanvas;
+    public MyQTEEvent myEvent;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +19,9 @@ public class JoyQTEController : MonoBehaviour
         timer = 0f;
         slottedWedgeCount = 0f;
         _marker = GetComponent<JoyQTEController>();
+        BattleCanvas = GameObject.FindGameObjectWithTag("BattleCanvas");
+        _playerAction = BattleCanvas.AddComponent<PlayerDebateActionsScript>();
+        myEvent = new MyQTEEvent();
     }
 
     // Update is called once per frame
@@ -24,7 +30,11 @@ public class JoyQTEController : MonoBehaviour
         if (timer >= timeLimit || Input.GetKeyDown(KeyCode.E) || slottedWedgeCount == 8f)
         {
             multiplierJ = (slottedWedgeCount / 8f) + 0.5f;
-            Debug.Log("Joy damage multiplier: " + multiplierJ);
+            //tell PlayerDebateActionsScript what multiplierJ is
+            //_playerAction.qteMultiplier = multiplierJ;
+            //_playerAction.CheckPlayerTurn(0);
+            //myEvent.Invoke(0, multiplierJ);
+            //Debug.Log("Joy damage multiplier: " + multiplierJ);
         }
         else
         {

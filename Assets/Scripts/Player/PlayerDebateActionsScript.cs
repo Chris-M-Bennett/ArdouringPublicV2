@@ -21,8 +21,10 @@ namespace Player{
         private DebateState _turnState;
         private Vector3 _damagePos;
         private float _damageEndY;
-        //private float qteX, qteY; //spawn co-ords for player turn QTEs
-        //public GameObject SelectedQTE; //QTE prefab
+        private float qteX, qteY; //spawn co-ords for player turn QTEs
+        public float qteMultiplier;
+        public GameObject SelectedQTE; //QTE prefab
+        //private JoyQTEController _joyQTE;
 
         public bool playerHadTurn;
 
@@ -43,20 +45,38 @@ namespace Player{
             _damagePos = damageText.transform.position;
             _playerValues = GameObject.FindWithTag("Player").GetComponent<PlayerDebateValues>();
             _playerDamage = _playerValues.debaterLevel*2;
-            //qteX = -7f;
-            //qteY = -0.5f;
+            qteX = -7f;
+            qteY = -0.5f;
         }
 
-        private void CheckPlayerTurn(int emotion){
+        public void Ping(int emotion, float multiplier)
+        {
+            Debug.Log("Process emotion: " + emotion);
+            Destroy(SelectedQTE);
+        }
+        public void CheckPlayerTurn(int emotion){
+            //destroy active qte game object
+            //Destroy(SelectedQTE);
             if(_debateSystem.state == DebateState.Player){
                 OpponentESChange(emotion);
             }
         }
         public void HappyButton()
         {
-            //SelectedQTE = GameObject.FindGameObjectWithTag("JoyQTE");
-            //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
-            CheckPlayerTurn(0);
+            SelectedQTE = Instantiate(Resources.Load<GameObject>("JoyQTE"),new Vector2(qteX,qteY),Quaternion.identity);
+            
+            // if SelectedQTE null, instantiate the QTE. otherwise do nothing (should work for all 5 buttons)
+            if (SelectedQTE != null)
+            {
+                //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
+                //SelectedQTE.GetComponentInChildren<JoyQTEController>().myEvent.AddListener(Ping);
+            }
+            else
+            {
+                Debug.Log("Couldn't find game QTE object");
+            }
+            
+            //CheckPlayerTurn(0);
         }
 
         public void SadButton()
@@ -159,6 +179,8 @@ namespace Player{
             {
                 emotMult = 2f;
             }
+
+            emotMult *= qteMultiplier;
             
             var modEmot = _playerDamage*emotMult*(emotAmounts[emotion]/10+1);
             var moddedDamage = (2*modEmot+(modEmot+overloads-pacifies));

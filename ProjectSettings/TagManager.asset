@@ -16,6 +16,7 @@ TagManager:
   - JoyQTE
   - PrideQTE
   - SorrowQTE
+  - BattleCanvas
   layers:
   - Default
   - TransparentFX

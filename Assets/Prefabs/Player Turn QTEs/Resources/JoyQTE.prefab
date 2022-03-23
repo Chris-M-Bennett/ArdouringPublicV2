@@ -629,15 +629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007686f37187bfa42a4259b2e452fb8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WedgeNL: {fileID: 223056543226142820}
-  WedgeNR: {fileID: 223056545234807522}
-  WedgeEU: {fileID: 223056543933992647}
-  WedgeED: {fileID: 223056543625956649}
-  WedgeSR: {fileID: 223056543426969806}
-  WedgeSL: {fileID: 223056544486511724}
-  WedgeWD: {fileID: 223056544983393116}
-  WedgeWU: {fileID: 223056544407565409}
   JoyWheel: {fileID: 223056543182035767}
+  CurrentWedge: {fileID: 0}
 --- !u!58 &223056543938511789
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1024,8 +1017,8 @@ GameObject:
   m_Component:
   - component: {fileID: 223056545111451695}
   m_Layer: 0
-  m_Name: JoyQTE 1
-  m_TagString: Untagged
+  m_Name: JoyQTE
+  m_TagString: JoyQTE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
