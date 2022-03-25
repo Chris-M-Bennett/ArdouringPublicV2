@@ -9,6 +9,7 @@ public class PrideQTEController : MonoBehaviour
     private PrideQTEController _marker;
     public GameObject critPoint;
     public GameObject prideRing;
+    public MyQTEEvent myEvent { get; set; }
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class PrideQTEController : MonoBehaviour
             stop = true;
             distFromCrit = Vector2.Distance (_marker.transform.position, critPoint.transform.position);
             multiplierP = (((distFromCrit - maxDist) * -1) / maxDist) + 0.5f;
+            myEvent.Invoke(3, multiplierP);
             //Debug.Log("Pride damage multiplier: " + multiplierP);
         }
         else

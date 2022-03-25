@@ -10,14 +10,15 @@ public class AngerQTEController : MonoBehaviour
     public float multiplierA;
     private AngerQTEController _marker;
     public GameObject Bar;
+    public MyQTEEvent myEvent { get; set; }
     
     // Start is called before the first frame update
     void Start()
     {
         timeLimit = 5f;
         timer = 0f;
-        upForce = 35f; //20f;
-        dropSpeed = 1f;
+        upForce = 6f;
+        dropSpeed = 0.3f;
         //barScale = Bar.transform.localScale.y;
         //barScale = 0f;
         _marker = GetComponent<AngerQTEController>();
@@ -30,12 +31,14 @@ public class AngerQTEController : MonoBehaviour
         if (timer >= timeLimit)
         {
             multiplierA = (_marker.transform.position.y / 3.3f) + 1f;
+            myEvent.Invoke(2, multiplierA);
             //Debug.Log("Anger damage multiplier: " + multiplierA);
         }
         else
         {
             timer += Time.deltaTime;
             _marker.transform.Translate(0f, -1f * dropSpeed * Time.deltaTime, 0f, Space.World);
+            
             barScale = (_marker.transform.position.y / 3.3f) + 0.5f;
             if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
             {

@@ -45,16 +45,19 @@ namespace Player{
             _damagePos = damageText.transform.position;
             _playerValues = GameObject.FindWithTag("Player").GetComponent<PlayerDebateValues>();
             _playerDamage = _playerValues.debaterLevel*2;
-            qteX = -7f;
-            qteY = -0.5f;
+            qteX = -3f;
+            qteY = -1.5f;
         }
 
-        public void Ping(int emotion, float multiplier)
+        private void Ping(int emotion, float multiplier)
         {
             Debug.Log("Process emotion: " + emotion);
             Destroy(SelectedQTE);
+            qteMultiplier = multiplier;
+            CheckPlayerTurn(emotion);
         }
-        public void CheckPlayerTurn(int emotion){
+
+        private void CheckPlayerTurn(int emotion){
             //destroy active qte game object
             //Destroy(SelectedQTE);
             if(_debateSystem.state == DebateState.Player){
@@ -63,48 +66,114 @@ namespace Player{
         }
         public void HappyButton()
         {
-            SelectedQTE = Instantiate(Resources.Load<GameObject>("JoyQTE"),new Vector2(qteX,qteY),Quaternion.identity);
-            
+            if (SelectedQTE == null)
+            {
+                SelectedQTE = Instantiate(Resources.Load<GameObject>("JoyQTE"),new Vector2(qteX,qteY),Quaternion.identity);
+                if (SelectedQTE != null)
+                {
+                    //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
+                    //SelectedQTE.GetComponentInChildren<JoyQTEController>().myEvent.AddListener(Ping);
+                    SelectedQTE.GetComponentInChildren<JoyQTEController>().myEvent = new MyQTEEvent();
+                    SelectedQTE.GetComponentInChildren<JoyQTEController>().myEvent.AddListener(Ping);
+                }
+                else
+                {
+                    Debug.Log("Couldn't find game QTE object");
+                }
+            }
+
             // if SelectedQTE null, instantiate the QTE. otherwise do nothing (should work for all 5 buttons)
-            if (SelectedQTE != null)
-            {
-                //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
-                //SelectedQTE.GetComponentInChildren<JoyQTEController>().myEvent.AddListener(Ping);
-            }
-            else
-            {
-                Debug.Log("Couldn't find game QTE object");
-            }
+            
             
             //CheckPlayerTurn(0);
         }
 
         public void SadButton()
         {
+            if (SelectedQTE == null)
+            {
+                SelectedQTE = Instantiate(Resources.Load<GameObject>("SorrowQTE"),new Vector2(qteX,qteY),Quaternion.identity);
+                if (SelectedQTE != null)
+                {
+                    //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
+                    //SelectedQTE.GetComponentInChildren<JoyQTEController>().myEvent.AddListener(Ping);
+                    SelectedQTE.GetComponentInChildren<SorrowQTEController>().myEvent = new MyQTEEvent();
+                    SelectedQTE.GetComponentInChildren<SorrowQTEController>().myEvent.AddListener(Ping);
+                }
+                else
+                {
+                    Debug.Log("Couldn't find game QTE object");
+                }
+            }
             //SelectedQTE = GameObject.FindGameObjectWithTag("SorrowQTE");
             //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
-            CheckPlayerTurn(1);
+            //CheckPlayerTurn(1);
         }
         
         public void AngryButton()
         {
+            if (SelectedQTE == null)
+            {
+                SelectedQTE = Instantiate(Resources.Load<GameObject>("AngerQTE"),new Vector2(qteX,qteY),Quaternion.identity);
+                if (SelectedQTE != null)
+                {
+                    //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
+                    //SelectedQTE.GetComponentInChildren<JoyQTEController>().myEvent.AddListener(Ping);
+                    SelectedQTE.GetComponentInChildren<AngerQTEController>().myEvent = new MyQTEEvent();
+                    SelectedQTE.GetComponentInChildren<AngerQTEController>().myEvent.AddListener(Ping);
+                }
+                else
+                {
+                    Debug.Log("Couldn't find game QTE object");
+                }
+            }
             //SelectedQTE = GameObject.FindGameObjectWithTag("AngerQTE");
             //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
-            CheckPlayerTurn(2);
+            //CheckPlayerTurn(2);
         }
         
         public void ConfidentButton()
         {
+            if (SelectedQTE == null)
+            {
+                SelectedQTE = Instantiate(Resources.Load<GameObject>("PrideQTE"),new Vector2(qteX,qteY),Quaternion.identity);
+                if (SelectedQTE != null)
+                {
+                    //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
+                    //SelectedQTE.GetComponentInChildren<JoyQTEController>().myEvent.AddListener(Ping);
+                    SelectedQTE.GetComponentInChildren<PrideQTEController>().myEvent = new MyQTEEvent();
+                    SelectedQTE.GetComponentInChildren<PrideQTEController>().myEvent.AddListener(Ping);
+                }
+                else
+                {
+                    Debug.Log("Couldn't find game QTE object");
+                }
+            }
             //SelectedQTE = GameObject.FindGameObjectWithTag("PrideQTE");
             //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
-            CheckPlayerTurn(3);
+            //CheckPlayerTurn(3);
         }
 
         public void AnxiousButton()
         {
+            if (SelectedQTE == null)
+            {
+                SelectedQTE = Instantiate(Resources.Load<GameObject>("FearQTE"),new Vector2(qteX,qteY),Quaternion.identity);
+                if (SelectedQTE != null)
+                {
+                    //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
+                    //SelectedQTE.GetComponentInChildren<JoyQTEController>().myEvent.AddListener(Ping);
+                    SelectedQTE.GetComponentInChildren<FearQTEController>().myEvent = new MyQTEEvent();
+                    SelectedQTE.GetComponentInChildren<FearQTEController>().myEvent.AddListener(Ping);
+                }
+                else
+                {
+                    Debug.Log("Couldn't find game QTE object");
+                }
+            }
             //SelectedQTE = GameObject.FindGameObjectWithTag("FearQTE");
             //GameObject qte = Instantiate(SelectedQTE,new Vector2(qteX,qteY),Quaternion.identity);
-            CheckPlayerTurn(4);
+            //CheckPlayerTurn(4);
         }
 
         public void RunButton()
@@ -133,7 +202,7 @@ namespace Player{
             var opponentEmot = _opponentValues.emotionEnum;
             var emotStrengths = GameManager.emotionStrengths[opponentEmot];
             var emotAmounts = _playerValues.emotAmounts;
-            Debug.Log(emotion);
+            //Debug.Log(emotion);
             //var opponentDifficulty = _opponentValues.emotAmounts[emotion]/10f;
             
             Color emotColor;
@@ -186,6 +255,7 @@ namespace Player{
             var moddedDamage = (2*modEmot+(modEmot+overloads-pacifies));
             damageDone = Mathf.RoundToInt(moddedDamage/*/opponentDifficulty*/)+randDamage;
             opponentES -= damageDone;
+            Debug.Log("Total Damage: " + damageDone + ", Multiplier: " + emotMult);
             StartCoroutine(DamageGrow(damageDone*-1, emotColor));
             
             var changedBy = "not changed";

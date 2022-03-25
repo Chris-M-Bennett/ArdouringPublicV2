@@ -200,7 +200,7 @@ namespace System
             else
             {
                 state = DebateState.Opponent;
-                yield return new WaitForSeconds(2f);
+                //yield return new WaitForSeconds(2f);
                 StartCoroutine(OpponentTurn());
             }
         }
@@ -212,6 +212,7 @@ namespace System
         IEnumerator OpponentTurn()
         {
             StopCoroutine(PlayerTurn());
+            yield return new WaitForSeconds(2f);
             _speechBubble.SetActive(false);
             _opponentValues.CheckThreshold(_opponentValues.currentES);
             

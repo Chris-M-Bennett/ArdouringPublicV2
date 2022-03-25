@@ -10,13 +10,14 @@ public class FearQTEController : MonoBehaviour
     private bool hit;
     private FearQTEController _marker;
     public GameObject bar;
+    public MyQTEEvent myEvent { get; set; }
     // Start is called before the first frame update
     void Start()
     {
         timeLimit = 5f;
         timer = 0f;
-        speed = 3f;
-        barSpeed = 2f;
+        speed = 0.3f;
+        barSpeed = 0.6f;
         hit = false;
         _marker = GetComponent<FearQTEController>();
     }
@@ -27,6 +28,7 @@ public class FearQTEController : MonoBehaviour
         if (timer >= timeLimit || hit)
         {
             multiplierF = (_marker.transform.position.y / 3.6f) + 1f; // may need adjustment
+            myEvent.Invoke(4, multiplierF);
             //Debug.Log("Fear damage multiplier: " + multiplierF);
         }
         else

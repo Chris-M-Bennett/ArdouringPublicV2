@@ -9,13 +9,14 @@ public class SorrowQTEController : MonoBehaviour
     private SorrowQTEController _marker;
     public GameObject TearDrop;
     public GameObject RainCloud;
+    public MyQTEEvent myEvent { get; set; }
     // Start is called before the first frame update
     void Start()
     {
         timeLimit = 5f;
         timer = 0f;
-        speed = 4f;
-        cloudSpeed = 3f;
+        speed = 1.2f;
+        cloudSpeed = 0.9f;
         csCooldown = 0f;
         cloudDirection = 1f;
         barFillRate = 0.76f;
@@ -28,7 +29,8 @@ public class SorrowQTEController : MonoBehaviour
         if (timer >= timeLimit)
         {
             multiplierS = (TearDrop.transform.position.y / 3.8f) + 1f; // may need adjustment
-            Debug.Log("Sorrow damage multiplier: " + multiplierS);
+            myEvent.Invoke(1, multiplierS);
+            //Debug.Log("Sorrow damage multiplier: " + multiplierS);
         }
         else
         {
