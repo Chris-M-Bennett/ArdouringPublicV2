@@ -103,5 +103,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7439443825052152805, guid: 1478a9994951af947925aeef9bdac4d2,
+        type: 3}
+      propertyPath: m_text
+      value: "I Don\u2019t Understand"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1478a9994951af947925aeef9bdac4d2, type: 3}

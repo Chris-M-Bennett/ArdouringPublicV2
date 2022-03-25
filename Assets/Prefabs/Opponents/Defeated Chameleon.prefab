@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 192086943550086011, guid: a701cde17cf6bf24880153841a477c7b,
         type: 3}
       propertyPath: m_text
-      value: This is dialogue
+      value: "I\u2019m Not The Only One Who Was Changed"
       objectReference: {fileID: 0}
     - target: {fileID: 220909362454128482, guid: a701cde17cf6bf24880153841a477c7b,
         type: 3}
