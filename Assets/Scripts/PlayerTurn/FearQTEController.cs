@@ -16,7 +16,7 @@ public class FearQTEController : MonoBehaviour
         timeLimit = 5f;
         timer = 0f;
         speed = 3f;
-        barSpeed = 1f;
+        barSpeed = 2f;
         hit = false;
         _marker = GetComponent<FearQTEController>();
     }
@@ -55,9 +55,9 @@ public class FearQTEController : MonoBehaviour
 
     private void HandleBarMove()
     {
-        if (timer >= 1.5f)
+        if (timer >= 1f)
         {
-            bar.transform.Translate(0f, -1f * barSpeed * Time.deltaTime, 0f, Space.World);
+            bar.transform.Translate(0f, 1f * barSpeed * Time.deltaTime, 0f, Space.World);
         }
     }
 
