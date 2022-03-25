@@ -132,6 +132,7 @@ namespace Player{
                     
                     LastOpponent.lastOpponent = opponentHit.transform.parent.GetComponent<OpponentSpawnScript>().id;
                     GameManager.debateOpponent = opponentHit.GetComponent<OpponentOverworldScript>().debatePrefab;
+                    GameManager.overworld = SceneManager.GetActiveScene().name;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
                     StartCoroutine(_transBars.MoveThoseBars(true, "Debate"));

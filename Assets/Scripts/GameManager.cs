@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static bool movedArea;
     public static bool tutorials = true;
     public static Sprite debateBg;
+    public static string overworld;
 
     public static Dictionary<Emotions, int[]> emotionStrengths = new Dictionary<Emotions, int[]>();
     

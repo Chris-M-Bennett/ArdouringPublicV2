@@ -203,7 +203,7 @@ namespace Player{
             var emotStrengths = GameManager.emotionStrengths[opponentEmot];
             var emotAmounts = _playerValues.emotAmounts;
             //Debug.Log(emotion);
-            //var opponentDifficulty = _opponentValues.emotAmounts[emotion]/10f;
+            var opponentDifficulty = _opponentValues.emotAmounts[emotion]/10f;
             
             Color emotColor;
             switch (emotion)
@@ -255,7 +255,7 @@ namespace Player{
             var moddedDamage = (2*modEmot+(modEmot+overloads-pacifies));
             damageDone = Mathf.RoundToInt(moddedDamage/*/opponentDifficulty*/)+randDamage;
             opponentES -= damageDone;
-            Debug.Log("Total Damage: " + damageDone + ", Multiplier: " + emotMult);
+            //Debug.Log("Total Damage: " + damageDone + ", Multiplier: " + emotMult);
             StartCoroutine(DamageGrow(damageDone*-1, emotColor));
             
             var changedBy = "not changed";
