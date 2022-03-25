@@ -37,7 +37,7 @@ public class AngerQTEController : MonoBehaviour
             timer += Time.deltaTime;
             _marker.transform.Translate(0f, -1f * dropSpeed * Time.deltaTime, 0f, Space.World);
             barScale = (_marker.transform.position.y / 3.3f) + 0.5f;
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
             {
                 _marker.transform.Translate(0f, 1f * upForce * Time.deltaTime, 0f, Space.World);
             }
