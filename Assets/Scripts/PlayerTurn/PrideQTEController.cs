@@ -22,7 +22,7 @@ public class PrideQTEController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer >= timeLimit || Input.GetKeyDown(KeyCode.E) || stop)
+        if (timer >= timeLimit || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || stop)
         {
             stop = true;
             distFromCrit = Vector2.Distance (_marker.transform.position, critPoint.transform.position);

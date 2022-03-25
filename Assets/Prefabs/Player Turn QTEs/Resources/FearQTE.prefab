@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6428209887001013210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.1, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: -2.1, z: 0}
+  m_LocalScale: {x: 10, y: 5, z: 0}
   m_Children: []
   m_Father: {fileID: 3753013589232605097}
   m_RootOrder: 2
@@ -140,7 +140,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 0}
   m_Children: []
   m_Father: {fileID: 3753013589232605097}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6428209887100889114
 SpriteRenderer:
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplierF: 0
-  bar: {fileID: 0}
+  bar: {fileID: 6428209887001013210}
 --- !u!1 &6428209887265260206
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +344,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6428209887721250117}
   - component: {fileID: 6428209887721250116}
+  - component: {fileID: 8423826990601447541}
+  - component: {fileID: 3516562611349372916}
   m_Layer: 0
   m_Name: Fear QTE Maze
   m_TagString: Untagged
@@ -358,13 +360,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6428209887721250118}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 0}
   m_Children: []
   m_Father: {fileID: 3753013589232605097}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &6428209887721250116
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -415,45 +417,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &6428209888119300317
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6428209888119300306}
-  - component: {fileID: 6428209888119300307}
-  - component: {fileID: 6428209888119300304}
-  m_Layer: 0
-  m_Name: Maze Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6428209888119300306
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6428209888119300317}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
-  m_Children: []
-  m_Father: {fileID: 3753013589232605097}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &6428209888119300307
+--- !u!60 &8423826990601447541
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6428209888119300317}
+  m_GameObject: {fileID: 6428209887721250118}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -472,40 +442,40 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.7, y: 2.2}
-      - {x: -0.7, y: 2.2}
-      - {x: -0.7, y: -2.2}
-      - {x: 0.7, y: -2.2}
-    - - {x: -0.5, y: -2}
-      - {x: 0.5, y: -2}
-      - {x: 0.5, y: -0.8}
-      - {x: -0.1, y: -0.8}
-      - {x: -0.1, y: -0.4}
-      - {x: 0.5, y: -0.4}
-      - {x: 0.5, y: 0.8}
-      - {x: -0.1, y: 0.8}
-      - {x: -0.1, y: 1.2}
-      - {x: 0.5, y: 1.2}
-      - {x: 0.5, y: 2}
-      - {x: 0.1, y: 2}
-      - {x: 0.1, y: 1.6}
-      - {x: -0.5, y: 1.6}
-      - {x: -0.5, y: 0.4}
-      - {x: 0.1, y: 0.4}
-      - {x: 0.1, y: 0}
-      - {x: -0.5, y: 0}
-      - {x: -0.5, y: -1.2}
-      - {x: 0.1, y: -1.2}
-      - {x: 0.1, y: -1.6}
-      - {x: -0.5, y: -1.6}
---- !u!50 &6428209888119300304
+    - - {x: 0.07, y: 0.22}
+      - {x: -0.07, y: 0.22}
+      - {x: -0.07, y: -0.22}
+      - {x: 0.07, y: -0.22}
+    - - {x: -0.05, y: -0.2}
+      - {x: 0.05, y: -0.2}
+      - {x: 0.05, y: -0.08}
+      - {x: -0.01, y: -0.08}
+      - {x: -0.01, y: -0.04}
+      - {x: 0.05, y: -0.04}
+      - {x: 0.05, y: 0.08}
+      - {x: -0.01, y: 0.08}
+      - {x: -0.01, y: 0.12}
+      - {x: 0.05, y: 0.12}
+      - {x: 0.05, y: 0.2}
+      - {x: 0.01, y: 0.2}
+      - {x: 0.01, y: 0.16}
+      - {x: -0.05, y: 0.16}
+      - {x: -0.05, y: 0.04}
+      - {x: 0.01, y: 0.04}
+      - {x: 0.01, y: 0}
+      - {x: -0.05, y: 0}
+      - {x: -0.05, y: -0.12}
+      - {x: 0.01, y: -0.12}
+      - {x: 0.01, y: -0.16}
+      - {x: -0.05, y: -0.16}
+--- !u!50 &3516562611349372916
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6428209888119300317}
+  m_GameObject: {fileID: 6428209887721250118}
   m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -611,7 +581,7 @@ GameObject:
   - component: {fileID: 3753013589232605097}
   m_Layer: 0
   m_Name: FearQTE
-  m_TagString: FearQTE
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,7 +601,6 @@ Transform:
   - {fileID: 6428209888824984554}
   - {fileID: 6428209887001013209}
   - {fileID: 6428209887721250117}
-  - {fileID: 6428209888119300306}
   - {fileID: 6428209887100889115}
   m_Father: {fileID: 0}
   m_RootOrder: 0

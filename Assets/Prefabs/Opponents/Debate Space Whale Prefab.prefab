@@ -101,27 +101,27 @@ PrefabInstance:
     - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.12
+      value: 0.65671194
       objectReference: {fileID: 0}
     - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.12
+      value: 0.65671194
       objectReference: {fileID: 0}
     - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.12
+      value: 0.65671194
       objectReference: {fileID: 0}
     - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.954
+      value: 13.12
       objectReference: {fileID: 0}
     - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1.84
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
@@ -150,13 +150,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
+      propertyPath: openingLine
+      value: My Power Is Out Of This World!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
       propertyPath: debaterLevel
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
+      propertyPath: pacifiedLine
+      value: Down To Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
       propertyPath: debaterDamage
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: overloadedLine
+      value: "Doesn\u2019t Make Sense"
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
