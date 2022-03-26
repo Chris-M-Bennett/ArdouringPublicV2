@@ -29,6 +29,8 @@ namespace UI
         public void SetES(DebateValuesScript debater){
             esText.text = $"Emotional Strain: {debater.currentES}";
             esSlider.value = debater.currentES;
+            //Debug.Log("CurrentES (from SetES in HUD script): " + debater.currentES);
+            //Debug.Log("type: " + debater.GetType().FullName);
         }
     }
 }

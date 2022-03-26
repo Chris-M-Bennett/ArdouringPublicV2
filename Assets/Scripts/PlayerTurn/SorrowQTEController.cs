@@ -30,7 +30,7 @@ public class SorrowQTEController : MonoBehaviour
         {
             multiplierS = (TearDrop.transform.position.y / 3.8f) + 1f; // may need adjustment
             myEvent.Invoke(1, multiplierS);
-            //Debug.Log("Sorrow damage multiplier: " + multiplierS);
+            Debug.Log("Sorrow damage multiplier: " + multiplierS);
         }
         else
         {

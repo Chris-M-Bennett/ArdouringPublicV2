@@ -29,7 +29,7 @@ public class FearQTEController : MonoBehaviour
         {
             multiplierF = (_marker.transform.position.y / 3.6f) + 1f; // may need adjustment
             myEvent.Invoke(4, multiplierF);
-            //Debug.Log("Fear damage multiplier: " + multiplierF);
+            Debug.Log("Fear damage multiplier: " + multiplierF);
         }
         else
         {
