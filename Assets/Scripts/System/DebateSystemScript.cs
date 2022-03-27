@@ -68,14 +68,7 @@ namespace System
         [HideInInspector]public DebateState state = DebateState.Start;
         private IEnumerator _debateSetup;
 
-        void Start()
-        {
-            background.sprite = GameManager.debateBg;
-            _playerValues = player.GetComponent<PlayerDebateValues>();
-            _playerValues.currentES = PlayerPrefs.GetInt("playerES", 100);
-            playerHud.SetES(_playerValues);
-            _playerExp = PlayerPrefs.GetInt("playerExp", 0);
-
+        private void Awake(){
             if (GameManager.debateOpponent)
             {
                 opponentGO = Instantiate(GameManager.debateOpponent, opponentSpawn);
@@ -85,7 +78,16 @@ namespace System
             }
 
             _opponentValues = opponentGO.GetComponent<OpponentDebateValues>();
-            
+        }
+
+        void Start()
+        {
+            background.sprite = GameManager.debateBg;
+            _playerValues = player.GetComponent<PlayerDebateValues>();
+            _playerValues.currentES = PlayerPrefs.GetInt("playerES", 100);
+            playerHud.SetHud(_playerValues);
+            _playerExp = PlayerPrefs.GetInt("playerExp", 0);
+
             opponentHud.SetHud(_opponentValues);
             statsText.text = $"Happy Power: {PlayerPrefs.GetInt("playerHappy", 1)}" +
                              $"\n\nSad Power: {PlayerPrefs.GetInt("playerSad", 1)}" +
@@ -221,7 +223,8 @@ namespace System
             //    $" {_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
             eventSystem.enabled = false;
             StartCoroutine(DamageAnim(player));
-            playerHud.SetES(_playerValues);
+            Debug.Log(playerHud.name);
+            //playerHud.SetES(_playerValues);
             yield return new WaitForSeconds(12f);
             if (_playerValues.currentES <= 0)
             {

@@ -1,4 +1,5 @@
-﻿using Opponents;
+﻿using System;
+using Opponents;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,15 +9,20 @@ namespace UI
     {
         public Text nameText;
         public Text levelText;
-        public Text esText;
-        public Slider esSlider;
+        public Text _esText;
+        public Slider _esSlider;
         [SerializeField] GameObject playerPanel;
-    
+
+        private void Awake(){
+            _esSlider = gameObject.transform.GetComponentInChildren<Slider>();
+            _esText = _esSlider.transform.Find("Emotional Stability").GetComponent<Text>();
+        }
+
         public void SetHud(DebateValuesScript debater){
             nameText.text = debater.debaterName;
-            esText.text = $"Emotional Strain: {debater.currentES}";
-            esSlider.value = debater.currentES;
-            esSlider.maxValue = debater.maxES;
+            _esText.text = $"Emotional Strain: {debater.currentES}";
+            _esSlider.value = debater.currentES;
+            _esSlider.maxValue = debater.maxES;
             if(gameObject == playerPanel)
             {
                 levelText.text = "Level: "+PlayerPrefs.GetInt("playerLevel",1);
@@ -27,10 +33,8 @@ namespace UI
         }
 
         public void SetES(DebateValuesScript debater){
-            esText.text = $"Emotional Strain: {debater.currentES}";
-            esSlider.value = debater.currentES;
-            //Debug.Log("CurrentES (from SetES in HUD script): " + debater.currentES);
-            //Debug.Log("type: " + debater.GetType().FullName);
+            _esText.text = $"Emotional Strain: {debater.currentES}";
+            _esSlider.value = debater.currentES;
         }
     }
 }

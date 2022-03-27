@@ -102,7 +102,7 @@ namespace Player{
                 }
                 else
                 {
-                    Debug.Log("Couldn't find game QTE object");
+                    Debug.LogError("Couldn't find game QTE object");
                 }
             }
             //SelectedQTE = GameObject.FindGameObjectWithTag("SorrowQTE");
@@ -124,7 +124,7 @@ namespace Player{
                 }
                 else
                 {
-                    Debug.Log("Couldn't find game QTE object");
+                    Debug.LogError("Couldn't find game QTE object");
                 }
             }
             //SelectedQTE = GameObject.FindGameObjectWithTag("AngerQTE");
@@ -271,7 +271,7 @@ namespace Player{
             }
             notifyText.text = $"The {_opponentValues.debaterName}'s emotional strain has {changedBy}.";
             notifyText.text += $" They seem {overOrPass}";
-            //Debug.Log("Opponent's ES (pre-clamp): " + opponentES);
+            Debug.Log("Opponent's ES (pre-clamp): " + opponentES);
 
             if (opponentES > _opponentValues.maxES)
             {
@@ -281,7 +281,6 @@ namespace Player{
             {
                 opponentES = -100;
             }
-            //Debug.Log("Opponent's ES: " + opponentES);
             _opponentValues.currentES = opponentES;
             opponentHud.SetES(_opponentValues);
             _debateSystem.PlayerEmot = emotion;
