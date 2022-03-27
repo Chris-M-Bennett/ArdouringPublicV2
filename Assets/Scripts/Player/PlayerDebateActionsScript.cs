@@ -47,6 +47,7 @@ namespace Player{
             _playerDamage = _playerValues.debaterLevel*2;
             qteX = -3f;
             qteY = -1.5f;
+            
         }
 
         private void Ping(int emotion, float multiplier)

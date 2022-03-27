@@ -33,13 +33,13 @@ namespace Player{
         private static readonly int X = Animator.StringToHash("X");
         private static readonly int Running = Animator.StringToHash("Running");
         private Rigidbody2D _rb;
-        private SpriteRenderer _sprite;
         private Collider2D hitOpponent;
 
         private void Awake(){
-            if (GameManager.newGame)
+            if (GameManager.newGame || PlayerPrefs.GetInt("playerES")<=0)
             {
                 transform.position = startPosition;
+                PlayerPrefs.SetInt("playerES",100);
             }else if (GameManager.movedArea)
             {
                 transform.position = enterPosition;
@@ -49,7 +49,6 @@ namespace Player{
                 transform.position = new Vector2(PlayerPrefs.GetFloat("playerXPos", _currentPosition.x), 
                     PlayerPrefs.GetFloat("playerYPos", _currentPosition.y));
                 _currentPosition = transform.position;
-                 
             }
         }
 
@@ -63,7 +62,6 @@ namespace Player{
             _transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
             _anim = GetComponent<Animator>();
             _rb = GetComponent<Rigidbody2D>();
-            _sprite = GetComponent<SpriteRenderer>();
             infoText.text = _moveControls;
         }
 

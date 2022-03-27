@@ -103,7 +103,7 @@ MonoBehaviour:
   maxES: 100
   startES: 100
   currentES: 100
-  emotAmounts: 1e000000
+  emotAmounts: 0100000003000000010000000100000001000000
   emotionThresholds: {fileID: 11400000, guid: 0412aaf085b5bb543a1078f0e870a166, type: 2}
   emotionEnum: 0
   prevES: 0

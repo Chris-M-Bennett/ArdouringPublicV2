@@ -65,8 +65,8 @@ namespace UI
 
         public void MainMenu()
         {
+            WriteFile();
             SceneManager.LoadSceneAsync("MainMenu");
-            
         }
     }
 }

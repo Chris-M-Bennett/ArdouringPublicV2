@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3dd51ac1bb842f9add6bbf5304c6d21, type: 3}
   m_Name: HappinessAreaStatuses
   m_EditorClassIdentifier: 
-  statuses: 000000000000000000000000000000000000000000000000
+  statuses: 0000000000000000000000000000000000000000

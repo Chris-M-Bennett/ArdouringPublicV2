@@ -20,6 +20,8 @@ namespace System
 
         public Vector2 result = new Vector2(0, 0);
         
+        private float timeTaken;
+        
         [SerializeField, Header("The Player game object in the scene")]
         private GameObject player;
         [SerializeField, Header("The point where the enemy is placed")]
@@ -117,6 +119,7 @@ namespace System
         
         private void Update()
         {
+            timeTaken += Time.deltaTime;
             /*    result = Vector3.zero;
                 for (int i = 0; i < directions.Count; i++)
                 {
@@ -156,6 +159,11 @@ namespace System
             
             if (_opponentValues.currentES <= -100 || _opponentValues.currentES >= 100)
             {
+                StopCoroutine(_opponentValues.Speak(Stages.Pacified));
+                GameManager.defeatingCount += 1;
+                var minutesSeconds = $"{Mathf.FloorToInt(timeTaken/60)}:{Mathf.Clamp(Mathf.RoundToInt(timeTaken%60), 0f, 59f)}";
+                GameManager.debateTimes.Add(new []{minutesSeconds,_opponentValues.debaterName});
+                
                 _speechBubble.SetActive(true);
                 if (_opponentValues.currentES <= -100)
                 {
@@ -273,6 +281,20 @@ namespace System
             {
                 // _playerExp += 1;
                 notifyText.text = "You lost the debate!";
+                
+                if(GameManager.overworld == SceneManager.GetSceneByBuildIndex(1).name)
+                {
+                    GameManager.happyDeathCount += 1;
+                } else if (GameManager.overworld == SceneManager.GetSceneByBuildIndex(4).name)
+                {
+                    GameManager.sadDeathCount += 1;
+                } else if (GameManager.overworld == SceneManager.GetSceneByBuildIndex(5).name)
+                {
+                    GameManager.angryDeathCount +=1;
+                }else if (GameManager.overworld == SceneManager.GetSceneByBuildIndex(6).name)
+                {
+                    GameManager.proudDeathCount += 1;
+                }
             }
             else
             {
@@ -281,7 +303,7 @@ namespace System
             
             PlayerPrefs.SetInt("playerES", _playerValues.currentES);
             PlayerPrefs.SetInt("playerExp", _playerExp);
-            yield return new WaitForSeconds(7f);
+            yield return new WaitForSeconds(4f);
            /* while (confirmExit == false)
             {
                 yield return null;
