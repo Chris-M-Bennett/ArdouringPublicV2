@@ -33,7 +33,7 @@ public class AngerQTEController : MonoBehaviour
         {
             multiplierA = (_marker.transform.position.y / (3.3f *0.3f)) + 1f + yOffset;
             myEvent.Invoke(2, multiplierA);
-            Debug.Log("Anger damage multiplier: " + multiplierA);
+            //Debug.Log("Anger damage multiplier: " + multiplierA);
         }
         else
         {

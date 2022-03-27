@@ -249,11 +249,11 @@ namespace Player{
                 emotMult = 2f;
             }
 
-            emotMult *= qteMultiplier;
+            //emotMult *= qteMultiplier;
             
             var modEmot = _playerDamage*emotMult*(emotAmounts[emotion]/10+1);
             var moddedDamage = (2*modEmot+(modEmot+overloads-pacifies));
-            damageDone = Mathf.RoundToInt(moddedDamage/*/opponentDifficulty*/)+randDamage;
+            damageDone = Mathf.RoundToInt(moddedDamage *qteMultiplier/*/opponentDifficulty*/)+randDamage;
             opponentES -= damageDone;
             //Debug.Log("Total Damage: " + damageDone + ", Multiplier: " + emotMult);
             StartCoroutine(DamageGrow(damageDone*-1, emotColor));

@@ -15,7 +15,7 @@ public class PrideQTEController : MonoBehaviour
     {
         timeLimit = 5f;
         timer = 0f;
-        maxDist = 1.4f;
+        maxDist = 1.4f * 0.3f;
         stop = false;
         _marker = GetComponent<PrideQTEController>();
     }
@@ -29,7 +29,7 @@ public class PrideQTEController : MonoBehaviour
             distFromCrit = Vector2.Distance (_marker.transform.position, critPoint.transform.position);
             multiplierP = (((distFromCrit - maxDist) * -1) / maxDist) + 0.5f;
             myEvent.Invoke(3, multiplierP);
-            Debug.Log("Pride damage multiplier: " + multiplierP);
+            //Debug.Log("Pride damage multiplier: " + multiplierP);
         }
         else
         {
