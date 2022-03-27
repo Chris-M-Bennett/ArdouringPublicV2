@@ -19,7 +19,7 @@ public class SorrowQTEController : MonoBehaviour
         cloudSpeed = 0.9f;
         csCooldown = 0f;
         cloudDirection = 1f;
-        barFillRate = 0.76f;
+        barFillRate = 0.228f;// 0.76f;
         _marker = GetComponent<SorrowQTEController>();
     }
 
@@ -28,9 +28,9 @@ public class SorrowQTEController : MonoBehaviour
     {
         if (timer >= timeLimit)
         {
-            multiplierS = (TearDrop.transform.position.y / 3.8f) + 1f; // may need adjustment
+            multiplierS = ((TearDrop.transform.position.y + 1.5f) / (3.8f *0.3f)) + 1f; // may need adjustment
             myEvent.Invoke(1, multiplierS);
-            Debug.Log("Sorrow damage multiplier: " + multiplierS);
+            //Debug.Log("Sorrow damage multiplier: " + multiplierS);
         }
         else
         {
@@ -54,12 +54,12 @@ public class SorrowQTEController : MonoBehaviour
 
     private void HandleCloudMovement()
     {
-        
-        if (RainCloud.transform.position.x >= 2.85f)
+
+        if (RainCloud.transform.position.x + 3f >= (2.85f * 0.3f)) 
         {
             cloudDirection = -1f;
         }
-        if (RainCloud.transform.position.x <= -3.45f)
+        if (RainCloud.transform.position.x + 3f <= (-3.45f * 0.3f))
         {
             cloudDirection = 1f;
         }
@@ -67,7 +67,7 @@ public class SorrowQTEController : MonoBehaviour
         if (csCooldown >= 0.25f)
         {
             csCooldown = 0f;
-            cloudStrafe = Random.Range(-5f, 3f);
+            cloudStrafe = Random.Range(-1.5f, 0.9f);
             //cloudStrafe *= -1f;
         }
         RainCloud.transform.Translate(cloudDirection * (cloudSpeed + cloudStrafe) * Time.deltaTime, 0f, 0f, Space.World);
@@ -75,7 +75,7 @@ public class SorrowQTEController : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D water)
     {
-        if (water.gameObject == RainCloud && TearDrop.transform.position.y <= 1.9f)
+        if (water.gameObject == RainCloud && TearDrop.transform.position.y <= (1.9f * 0.3f) +1.5f)
         {
            TearDrop.transform.Translate(0f, 1f * barFillRate * Time.deltaTime, 0f, Space.World);
         }
