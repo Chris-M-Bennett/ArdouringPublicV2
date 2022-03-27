@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -32,13 +33,14 @@ namespace UI{
         }
 
         internal void WriteFile(){
-            string path = Application.dataPath + $"/{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}.json";
-            if (File.Exists(path))
+            
+            string path = Application.dataPath + "/Metric Data";
+            if (!Directory.Exists(path))
             {
-                File.Create(path);
+                Directory.CreateDirectory(path);
             }
             
-            StreamWriter writer = new StreamWriter(path,true);
+            StreamWriter writer = new StreamWriter(path+$"/{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}.json",true);
             writer.WriteLine($"No. times happiness area was entered: {GameManager.happyEnterCount}\n");
             writer.WriteLine($"No. times sadness area was entered: {GameManager.sadEnterCount}\n");
             writer.WriteLine($"No. times angry area was entered: {GameManager.angryEnterCount}\n");

@@ -231,7 +231,6 @@ namespace System
             //    $" {_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
             eventSystem.enabled = false;
             StartCoroutine(DamageAnim(player));
-            Debug.Log(playerHud.name);
             //playerHud.SetES(_playerValues);
             yield return new WaitForSeconds(12f);
             if (_playerValues.currentES <= 0)

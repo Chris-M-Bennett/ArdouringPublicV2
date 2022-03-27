@@ -52,7 +52,7 @@ namespace Player{
 
         private void Ping(int emotion, float multiplier)
         {
-            Debug.Log("Process emotion: " + emotion);
+            //Debug.Log("Process emotion: " + emotion);
             Destroy(SelectedQTE);
             qteMultiplier = multiplier;
             CheckPlayerTurn(emotion);
@@ -254,7 +254,7 @@ namespace Player{
             
             var modEmot = _playerDamage*emotMult*(emotAmounts[emotion]/10+1);
             var moddedDamage = (2*modEmot+(modEmot+overloads-pacifies));
-            damageDone = Mathf.RoundToInt(moddedDamage *qteMultiplier/*/opponentDifficulty*/)+randDamage;
+            damageDone = Mathf.RoundToInt(moddedDamage *qteMultiplier/opponentDifficulty)+randDamage;
             opponentES -= damageDone;
             //Debug.Log("Total Damage: " + damageDone + ", Multiplier: " + emotMult);
             StartCoroutine(DamageGrow(damageDone*-1, emotColor));
@@ -272,7 +272,6 @@ namespace Player{
             }
             notifyText.text = $"The {_opponentValues.debaterName}'s emotional strain has {changedBy}.";
             notifyText.text += $" They seem {overOrPass}";
-            Debug.Log("Opponent's ES (pre-clamp): " + opponentES);
 
             if (opponentES > _opponentValues.maxES)
             {
