@@ -95,11 +95,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 7806029063261115578, guid: 26bb790785c154f4cad229e81c55f4fb, type: 3}
+  bulletDamage: 0
+  bulletSpeed: 0
   turnTimer: 0
   turnLimit: 0
   startY: 5.82
   bulletX: 0
+  enemyTurn: {fileID: 0}
   currentEmotion: 0
   maxEnemyES: 0
   nickname: 
-  rows: 0

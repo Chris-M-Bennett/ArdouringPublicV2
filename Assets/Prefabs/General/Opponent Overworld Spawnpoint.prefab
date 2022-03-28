@@ -43,3 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6db56723afadfc418367044f7743c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  liveOpponent: {fileID: 0}
+  defeatedOpponent: {fileID: 0}
+  lastDest: {fileID: 0}
+  currentDest: {fileID: 0}
+  offSet: {x: 0, y: 0}
+  areaStatuses: {fileID: 0}
+  id: 0
+  sceneLoader: {fileID: 0}
+  _speechBubble: {fileID: 0}
