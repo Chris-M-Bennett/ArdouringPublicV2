@@ -56,7 +56,7 @@ PrefabInstance:
     - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.056502
+      value: 0.139
       objectReference: {fileID: 0}
     - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
@@ -81,17 +81,17 @@ PrefabInstance:
     - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 7.4303126
+      value: 4.1795506
       objectReference: {fileID: 0}
     - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.47
+      value: -3.525
       objectReference: {fileID: 0}
     - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.89
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
@@ -101,7 +101,7 @@ PrefabInstance:
     - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.17732987
+      value: 0.359093
       objectReference: {fileID: 0}
     - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
@@ -116,17 +116,17 @@ PrefabInstance:
     - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.83
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: maxES
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: startES
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
@@ -156,7 +156,7 @@ PrefabInstance:
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: debaterDamage
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
