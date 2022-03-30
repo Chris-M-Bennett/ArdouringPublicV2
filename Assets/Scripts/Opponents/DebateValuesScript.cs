@@ -14,5 +14,17 @@ namespace Opponents
         public int currentES = 100;
         [Tooltip("Amounts of each emotion opponent starts with")]public int[] emotAmounts = new int[5];
 
+        private void OnValidate()
+        {
+            var i = 0;
+            foreach (var emotion in emotAmounts)
+            {
+                if (emotion == 0)
+                {
+                    emotAmounts[i] = 1;
+                }
+                i++;
+            }
+        }
     }
 }

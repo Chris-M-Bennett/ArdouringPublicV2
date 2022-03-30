@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Starting Town Long Building Top Sprite
+  m_Name: Happiness Spirit Bottom Tile
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1546297059313494555, guid: f2b06ea10667915498ca5e1bc96978ac,
+  m_Sprite: {fileID: 3099533401597554849, guid: f2b06ea10667915498ca5e1bc96978ac,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:

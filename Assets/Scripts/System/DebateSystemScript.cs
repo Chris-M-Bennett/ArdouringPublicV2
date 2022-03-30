@@ -35,6 +35,7 @@ namespace System
 
         [SerializeField] private MoveBarsScript tranBars;
         [SerializeField] private EventSystem eventSystem;
+        [SerializeField] private GameObject statsBooster;
 
         [Header("The player's HUD panel")]public DebateHUDScript playerHud;
         [Header("The opponent's HUD panel")]public DebateHUDScript opponentHud;
@@ -95,16 +96,13 @@ namespace System
                              $"\n\nPacifies: {PlayerPrefs.GetInt("pacifies", 0)}";
             
             state = DebateState.Player;
-            
-            /*var address = "Assets/Dialogue/Dialogue.csv";
-            if(File.Exists(getPath(address),FileMode.Open, FileAccess.ReadWrite))
-            {'
-                StreamReader dialStream = new StreamReader("(Assets/Dialogue/Dialogue.csv)");
-                file = dialStream.ReadToEnd(); 
-            } else
-            {
-                Debug.LogError($"File at {address} does not exist");
-            }*/
+
+            var statTexts = statsBooster.GetComponent<EmotionStatsChangeScript>();
+            statTexts.happyStat.text = PlayerPrefs.GetInt("playerHappy").ToString();
+            statTexts.sadStat.text = PlayerPrefs.GetInt("playerSad").ToString();
+            statTexts.angryStat.text = PlayerPrefs.GetInt("playerAngry").ToString();
+            statTexts.proudStat.text = PlayerPrefs.GetInt("playerProud").ToString();
+            statTexts.afraidStat.text = PlayerPrefs.GetInt("playerAfraid").ToString();
 
             _speechBubble = opponentGO.transform.GetChild(0).gameObject;
             StartCoroutine(_opponentValues.Speak(Stages.Opening));
@@ -164,6 +162,7 @@ namespace System
                 {
                     StartCoroutine(_opponentValues.Speak(Stages.Pacified));
                     PlayerPrefs.SetInt("Pacifies",PlayerPrefs.GetInt("Pacifies",0)+1);
+                    statsBooster.SetActive(true);
                     
                     _opponentStatus = 1;
                 }
@@ -184,7 +183,7 @@ namespace System
                             emotString = "playerAngry";
                             break;
                         case 3:
-                            emotString = "playerConfident";
+                            emotString = "playerProud";
                             break;
                         case 4:
                             emotString = "playerAfraid";
@@ -255,21 +254,13 @@ namespace System
             {
                 _playerLevel += 1;
                 PlayerPrefs.SetInt("playerLevel", _playerLevel);
-
-                /*foreach (int emot in _playerValues.emotAmounts)
-                {
-                    _playerValues.emotAmounts[emot]++;
-                }*/
+                
                 _playerExp = 0;
             }
             if (state == DebateState.Won)
             {
                 _playerExp += 2;
                 notifyText.text = "You won the debate!";
-                if (_opponentStatus != 1)
-                {
-                    confirmExit = true;
-                }
             }
             else if (state == DebateState.Lost)
             {
@@ -297,12 +288,22 @@ namespace System
             
             PlayerPrefs.SetInt("playerES", _playerValues.currentES);
             PlayerPrefs.SetInt("playerExp", _playerExp);
-            yield return new WaitForSeconds(4f);
-           /* while (confirmExit == false)
+            
+            if (_opponentStatus != 1)
+            {
+                confirmExit = true;
+                yield return new WaitForSeconds(4f);
+            }
+            
+            while (!confirmExit)
             {
                 yield return null;
-            }*/
-            SceneManager.LoadSceneAsync(GameManager.overworld);
+            }
+
+            if (confirmExit)
+            {
+                SceneManager.LoadSceneAsync(GameManager.overworld);
+            }
         }
 
         /// <summary>

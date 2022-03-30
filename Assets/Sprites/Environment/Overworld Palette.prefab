@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1979146835458220213}
   - component: {fileID: 2587711112989576979}
   - component: {fileID: 2772505781577310691}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Layer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8606766676825743456}
   - component: {fileID: 6918613473804439114}
-  m_Layer: 31
+  m_Layer: 0
   m_Name: Overworld Palette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8910345270081398761}
   m_Enabled: 1
-  m_CellSize: {x: 0.11, y: 0.05, z: 0}
+  m_CellSize: {x: 1, y: 1, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0

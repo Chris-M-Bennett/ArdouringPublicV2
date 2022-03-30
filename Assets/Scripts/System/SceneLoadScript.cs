@@ -17,10 +17,10 @@ namespace System
             } else if (sceneToLoad == "Sadness Area")
             {
                GameManager.sadEnterCount += 1;
-            } else if (sceneToLoad == "Angry Area")
+            } else if (sceneToLoad == "Anger Area")
             {
                GameManager.angryEnterCount += 1;
-            } else if (sceneToLoad == "Proud Area")
+            } else if (sceneToLoad == "Pride Area")
             {
                GameManager.proudEnterCount += 1;
             }

@@ -9,8 +9,8 @@ namespace UI
     {
         public Text nameText;
         public Text levelText;
-        public Text _esText;
-        public Slider _esSlider;
+        [HideInInspector] public Text _esText;
+        [HideInInspector] public Slider _esSlider;
         [SerializeField] GameObject playerPanel;
 
         private void Awake(){

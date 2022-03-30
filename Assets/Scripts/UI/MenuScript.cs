@@ -19,7 +19,7 @@ namespace UI{
             PlayerPrefs.SetInt("playerHappy", 1);
             PlayerPrefs.SetInt("playerSad", 1);
             PlayerPrefs.SetInt("playerAngry", 1);
-            PlayerPrefs.SetInt("playerConfident", 1);
+            PlayerPrefs.SetInt("playerProud", 1);
             PlayerPrefs.SetInt("playerAfraid", 1);
             PlayerPrefs.SetInt("playerLevel", 1);
             PlayerPrefs.SetInt("playerES", 100);

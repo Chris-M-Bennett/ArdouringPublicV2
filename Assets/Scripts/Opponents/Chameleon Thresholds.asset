@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Chameleon Thresholds
   m_EditorClassIdentifier: 
   thresholds: 3c000000
-  myEmotions: 0000000001000000030000000400000005000000
+  myEmotions: 0000000001000000020000000300000004000000
