@@ -6,29 +6,31 @@ namespace UI
 {
     public class EmotionStatsChangeScript : MonoBehaviour
     {
-        [SerializeField] private Text emotStat;
-        [SerializeField] private string emotName;
-        [SerializeField] private bool add;
+        [SerializeField] private Text happyStat;
+        [SerializeField] private Text sadStat;
+        [SerializeField] private Text angryStat;
+        [SerializeField] private Text proudStat;
+        [SerializeField] private Text afraidStat;
+        private int points;
         private int changeAmount;
-        private int current;
+        private int happyCurrent;
+        private int sadCurrent;
+        private int angryCurrent;
+        private int proudCurrent;
+        private int afraidCurrent;
 
         private void Start()
         {
-            current = PlayerPrefs.GetInt(emotName, 1);
-            emotStat.text = current.ToString();
+            happyCurrent = PlayerPrefs.GetInt("playerHappy");
         }
-
-        public void ChangeEmotAmount()
-        {
-            if (add && changeAmount < 3)
+        
+        public void IncreaseHappy(){
+            var happyValue = Int32.Parse(happyStat.text);
+            if(happyValue < happyCurrent + 3)
             {
-                changeAmount++;
+                happyValue ++;
+                happyStat.text = happyValue.ToString();
             }
-            else if (!add && changeAmount >= 0)
-            {
-                changeAmount--;
-            }
-            emotStat.text = $"{current+changeAmount}";
         }
 
     }

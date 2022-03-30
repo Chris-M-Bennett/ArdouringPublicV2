@@ -91,12 +91,7 @@ namespace System
             _playerExp = PlayerPrefs.GetInt("playerExp", 0);
 
             opponentHud.SetHud(_opponentValues);
-            statsText.text = $"Happy Power: {PlayerPrefs.GetInt("playerHappy", 1)}" +
-                             $"\n\nSad Power: {PlayerPrefs.GetInt("playerSad", 1)}" +
-                             $"\n\nAngry Power: {PlayerPrefs.GetInt("playerAngry", 1)}" +
-                             $"\n\nConfident Power: {PlayerPrefs.GetInt("playerConfident", 1)}" +
-                             $"\n\nAfraid Power: {PlayerPrefs.GetInt("playerAfraid", 1)}" +
-                             $"\n\nOverloads: {PlayerPrefs.GetInt("overloads",0)}" +
+            statsText.text += $"\n\nOverloads: {PlayerPrefs.GetInt("overloads",0)}" +
                              $"\n\nPacifies: {PlayerPrefs.GetInt("pacifies", 0)}";
             
             state = DebateState.Player;
