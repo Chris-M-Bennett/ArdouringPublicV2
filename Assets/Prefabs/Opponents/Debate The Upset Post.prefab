@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102288556399668556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90.03, y: -10.02, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalPosition: {x: 91.3, y: 2.1, z: 0}
+  m_LocalScale: {x: 81.880005, y: 81.880005, z: 81.880005}
   m_Children:
   - {fileID: 6785138336414534611}
   m_Father: {fileID: 0}
@@ -99,10 +99,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debaterName: The Upset Post
   debaterLevel: 1
-  debaterDamage: 5
+  debaterDamage: 2
   maxES: 100
-  startES: 100
-  currentES: 100
+  startES: 0
+  currentES: 0
   emotAmounts: 0100000003000000010000000100000001000000
   emotionThresholds: {fileID: 11400000, guid: 0412aaf085b5bb543a1078f0e870a166, type: 2}
   emotionEnum: 0
