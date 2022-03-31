@@ -987,6 +987,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6793316564654322530, guid: 69eec84dec6395e4f8f7c4077b778350,
+        type: 3}
+      propertyPath: nextPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6793316564654322530, guid: 69eec84dec6395e4f8f7c4077b778350,
+        type: 3}
+      propertyPath: nextPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1093067014}
+    - target: {fileID: -6793316564654322530, guid: 69eec84dec6395e4f8f7c4077b778350,
+        type: 3}
+      propertyPath: nextPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1263448386}
     - target: {fileID: 5479162876942242591, guid: 69eec84dec6395e4f8f7c4077b778350,
         type: 3}
       propertyPath: m_RootOrder
@@ -1525,7 +1540,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 344bcdee77e5d3d4dbf10f0c5d91cba8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -2033,7 +2048,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1e9e4b751df1cc549a12542a1e6ab793, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -2115,7 +2130,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 844227e2968c91a45963f350a65d7ad6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2556,7 +2571,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 4fb227a157c786345b0d8c51c0318500, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -3573,6 +3588,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6793316564654322530, guid: 69eec84dec6395e4f8f7c4077b778350,
+        type: 3}
+      propertyPath: isEnd
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6793316564654322530, guid: 69eec84dec6395e4f8f7c4077b778350,
+        type: 3}
+      propertyPath: nextPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6793316564654322530, guid: 69eec84dec6395e4f8f7c4077b778350,
+        type: 3}
+      propertyPath: nextPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1093067014}
+    - target: {fileID: -6793316564654322530, guid: 69eec84dec6395e4f8f7c4077b778350,
+        type: 3}
+      propertyPath: nextPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1263448386}
     - target: {fileID: 5479162876942242591, guid: 69eec84dec6395e4f8f7c4077b778350,
         type: 3}
       propertyPath: m_RootOrder
