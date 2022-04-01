@@ -17,6 +17,24 @@ TextureImporter:
   - first:
       213: 2671225474255156249
     second: Beach of Tears Sprite Sheet_7
+  - first:
+      213: -6195482826259723706
+    second: Beach of Tears Sprite Sheet_8
+  - first:
+      213: -6411203600309763257
+    second: Beach of Tears Sprite Sheet_9
+  - first:
+      213: -8476434927538137017
+    second: Beach of Tears Sprite Sheet_10
+  - first:
+      213: 4362517094892579858
+    second: Beach of Tears Sprite Sheet_11
+  - first:
+      213: 2279070009765014430
+    second: Beach of Tears Sprite Sheet_12
+  - first:
+      213: -2023736678697899723
+    second: Beach of Tears Sprite Sheet_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -177,12 +195,12 @@ TextureImporter:
       name: Beach of Tears Sprite Sheet_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 156
-        width: 28
-        height: 42
+        x: 25
+        y: 177
+        width: 17
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -198,13 +216,13 @@ TextureImporter:
       name: Beach of Tears Sprite Sheet_1
       rect:
         serializedVersion: 2
-        x: 54
-        y: 149
-        width: 90
-        height: 50
+        x: 57
+        y: 151
+        width: 83
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 8}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -219,12 +237,12 @@ TextureImporter:
       name: Beach of Tears Sprite Sheet_2
       rect:
         serializedVersion: 2
-        x: 18
-        y: 100
-        width: 28
-        height: 42
+        x: 20
+        y: 104
+        width: 24
+        height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -240,13 +258,13 @@ TextureImporter:
       name: Beach of Tears Sprite Sheet_3
       rect:
         serializedVersion: 2
-        x: 52
-        y: 109
-        width: 17
-        height: 17
+        x: 53
+        y: 110
+        width: 15
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -261,12 +279,12 @@ TextureImporter:
       name: Beach of Tears Sprite Sheet_4
       rect:
         serializedVersion: 2
-        x: 23
-        y: 60
-        width: 21
-        height: 37
+        x: 25
+        y: 78
+        width: 17
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -282,12 +300,12 @@ TextureImporter:
       name: Beach of Tears Sprite Sheet_5
       rect:
         serializedVersion: 2
-        x: 18
-        y: 3
-        width: 27
-        height: 37
+        x: 20
+        y: 5
+        width: 24
+        height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -303,13 +321,13 @@ TextureImporter:
       name: Beach of Tears Sprite Sheet_6
       rect:
         serializedVersion: 2
-        x: 51
-        y: 9
-        width: 19
-        height: 18
+        x: 52
+        y: 11
+        width: 17
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 0, z: 1, w: 3}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -324,19 +342,145 @@ TextureImporter:
       name: Beach of Tears Sprite Sheet_7
       rect:
         serializedVersion: 2
-        x: 54
-        y: 49
-        width: 88
-        height: 51
+        x: 56
+        y: 52
+        width: 85
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 0, z: 1, w: 9}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 914f3f38a69121520800000000000000
       internalID: 2671225474255156249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach of Tears Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 161
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a81c0d139350aa0800000000000000
+      internalID: -6195482826259723706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach of Tears Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 174
+        width: 83
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743c4d42b44d607a0800000000000000
+      internalID: -6411203600309763257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach of Tears Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 118
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748106ee757ad5a80800000000000000
+      internalID: -8476434927538137017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach of Tears Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 62
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 0, z: 1, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c24a72f26ca8c30800000000000000
+      internalID: 4362517094892579858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach of Tears Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 19
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b2a4e4912e0af10800000000000000
+      internalID: 2279070009765014430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beach of Tears Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 75
+        width: 83
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5396843863e3ae3e0800000000000000
+      internalID: -2023736678697899723
       vertices: []
       indices: 
       edges: []

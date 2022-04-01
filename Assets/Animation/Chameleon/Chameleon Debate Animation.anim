@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Chameleon Overworld Up Animation
+  m_Name: Chameleon Debate Animation
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 86a5d60e0b3e85244936ba4df8aefa5c, type: 3}
+      value: {fileID: 21300000, guid: 2e4d81a3ef9f0fa49999694a278114c7, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 86a5d60e0b3e85244936ba4df8aefa5c, type: 3}
+    - {fileID: 21300000, guid: 2e4d81a3ef9f0fa49999694a278114c7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
