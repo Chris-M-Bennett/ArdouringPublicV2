@@ -27,12 +27,12 @@ namespace UI{
         }
 
         public void QuitGame(){
-            WriteFile();
-            Application.Quit();
+            //WriteFile();
             //EditorApplication.isPlaying = false;
+            Application.Quit();
         }
 
-        internal void WriteFile(){
+        /*internal void WriteFile(){
             
             string path = Application.dataPath + "/Metric Data";
             if (!Directory.Exists(path))
@@ -59,6 +59,6 @@ namespace UI{
                 i++;
             }
             writer.Close();
-        }
+        }*/
     }
 }
