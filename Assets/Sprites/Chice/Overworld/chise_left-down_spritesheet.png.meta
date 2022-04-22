@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: 33228ec207284224fb97d626698e3abf
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6309779632499715713
+    second: chise_left-down_spritesheet_0
+  - first:
+      213: -8100473840974846087
+    second: chise_left-down_spritesheet_1
+  - first:
+      213: -2333779127291005533
+    second: chise_left-down_spritesheet_2
+  - first:
+      213: -6367092059519035658
+    second: chise_left-down_spritesheet_3
+  - first:
+      213: -7934744721207658343
+    second: chise_left-down_spritesheet_4
+  - first:
+      213: -2496528443627544388
+    second: chise_left-down_spritesheet_5
+  - first:
+      213: -1353485958107661230
+    second: chise_left-down_spritesheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -40,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +92,168 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: chise_left-down_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 142
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ee3262527d09750800000000000000
+      internalID: 6309779632499715713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chise_left-down_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 31
+        width: 148
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977a954b5f5559f80800000000000000
+      internalID: -8100473840974846087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chise_left-down_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 31
+        width: 151
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a53995af30cc9fd0800000000000000
+      internalID: -2333779127291005533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chise_left-down_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 32
+        width: 151
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f65824918b83a7a0800000000000000
+      internalID: -6367092059519035658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chise_left-down_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 28
+        width: 148
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998f20557bf12e190800000000000000
+      internalID: -7934744721207658343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chise_left-down_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 27
+        width: 155
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0ebe19b9c8a5dd0800000000000000
+      internalID: -2496528443627544388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chise_left-down_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 33
+        width: 150
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c738231b3773de0800000000000000
+      internalID: -1353485958107661230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

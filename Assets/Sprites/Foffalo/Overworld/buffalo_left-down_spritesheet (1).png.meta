@@ -1,0 +1,512 @@
+fileFormatVersion: 2
+guid: 99c139d1011eb1945bc8f3a096803bda
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2497676604732547051
+    second: buffalo_left-down_spritesheet (1)_0
+  - first:
+      213: 4567814120339422661
+    second: buffalo_left-down_spritesheet (1)_1
+  - first:
+      213: 8317894159672187022
+    second: buffalo_left-down_spritesheet (1)_2
+  - first:
+      213: 8618522841554217689
+    second: buffalo_left-down_spritesheet (1)_3
+  - first:
+      213: -2697004666866087533
+    second: buffalo_left-down_spritesheet (1)_4
+  - first:
+      213: -7557841991212400757
+    second: buffalo_left-down_spritesheet (1)_5
+  - first:
+      213: -1364022172102919172
+    second: buffalo_left-down_spritesheet (1)_6
+  - first:
+      213: 4108195978623486561
+    second: buffalo_left-down_spritesheet (1)_7
+  - first:
+      213: 8601955972449501501
+    second: buffalo_left-down_spritesheet (1)_8
+  - first:
+      213: 1082279184293445624
+    second: buffalo_left-down_spritesheet (1)_9
+  - first:
+      213: -6119551229750951988
+    second: buffalo_left-down_spritesheet (1)_10
+  - first:
+      213: -5861378609454451693
+    second: buffalo_left-down_spritesheet (1)_11
+  - first:
+      213: 2182304719099412330
+    second: buffalo_left-down_spritesheet (1)_12
+  - first:
+      213: -7499578610845761743
+    second: buffalo_left-down_spritesheet (1)_13
+  - first:
+      213: -1287677941641222492
+    second: buffalo_left-down_spritesheet (1)_14
+  - first:
+      213: 275176804426968237
+    second: buffalo_left-down_spritesheet (1)_15
+  - first:
+      213: 4326753605814016620
+    second: buffalo_left-down_spritesheet (1)_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 21
+        width: 169
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef13e483a789a220800000000000000
+      internalID: 2497676604732547051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_1
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 21
+        width: 163
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd38dabdb2246f30800000000000000
+      internalID: 4567814120339422661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_2
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 24
+        width: 151
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e889e8a0ba81f6370800000000000000
+      internalID: 8317894159672187022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_3
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 19
+        width: 156
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9daed6b8cd42b9770800000000000000
+      internalID: 8618522841554217689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_4
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 24
+        width: 161
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39940e97b80529ad0800000000000000
+      internalID: -2697004666866087533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 13
+        width: 167
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ff04d80c62d1790800000000000000
+      internalID: -7557841991212400757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_6
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 26
+        width: 151
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb7c06bf05021de0800000000000000
+      internalID: -1364022172102919172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 21
+        width: 153
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a8a85f97e330930800000000000000
+      internalID: 4108195978623486561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 34
+        width: 172
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31076fb169406770800000000000000
+      internalID: 8601955972449501501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 28
+        width: 169
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff3c971f27050f00800000000000000
+      internalID: 1082279184293445624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_10
+      rect:
+        serializedVersion: 2
+        x: 2108
+        y: 21
+        width: 178
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfb3ed449cf21ba0800000000000000
+      internalID: -6119551229750951988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_11
+      rect:
+        serializedVersion: 2
+        x: 2311
+        y: 13
+        width: 173
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314f469a53338aea0800000000000000
+      internalID: -5861378609454451693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_12
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 30
+        width: 169
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f3495649a194e10800000000000000
+      internalID: 2182304719099412330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_13
+      rect:
+        serializedVersion: 2
+        x: 2721
+        y: 26
+        width: 163
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13fbb67ecf42ce790800000000000000
+      internalID: -7499578610845761743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_14
+      rect:
+        serializedVersion: 2
+        x: 2934
+        y: 26
+        width: 161
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a66e570cbf312ee0800000000000000
+      internalID: -1287677941641222492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_15
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 28
+        width: 169
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daceb4e78df91d300800000000000000
+      internalID: 275176804426968237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_left-down_spritesheet (1)_16
+      rect:
+        serializedVersion: 2
+        x: 3355
+        y: 26
+        width: 175
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a5f29fa77bb0c30800000000000000
+      internalID: 4326753605814016620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

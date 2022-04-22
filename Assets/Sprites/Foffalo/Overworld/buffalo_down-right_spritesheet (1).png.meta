@@ -1,0 +1,485 @@
+fileFormatVersion: 2
+guid: 4e1aac68420506849a40a64a618ec41b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6660039273217103904
+    second: buffalo_down-right_spritesheet (1)_9
+  - first:
+      213: -2220776276330589725
+    second: buffalo_down-right_spritesheet (1)_10
+  - first:
+      213: 6098537465168773176
+    second: buffalo_down-right_spritesheet (1)_11
+  - first:
+      213: -6580803780327068301
+    second: buffalo_down-right_spritesheet (1)_12
+  - first:
+      213: -3836855710775495534
+    second: buffalo_down-right_spritesheet (1)_13
+  - first:
+      213: 2922774047137444726
+    second: buffalo_down-right_spritesheet (1)_14
+  - first:
+      213: 2755860355570402831
+    second: buffalo_down-right_spritesheet (1)_15
+  - first:
+      213: 7994533914550122406
+    second: buffalo_down-right_spritesheet (1)_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 31
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33e27638d8118d40800000000000000
+      internalID: 5584772329821627198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 36
+        width: 159
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58dd32044222dad40800000000000000
+      internalID: 5597167450981653893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_2
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 31
+        width: 146
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890ce91e68b91e9a0800000000000000
+      internalID: -6205507807926632296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_3
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 23
+        width: 155
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9421554dcc3edd30800000000000000
+      internalID: 4458067533472277659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_4
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 29
+        width: 161
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaae4ab3e4236c690800000000000000
+      internalID: -7582317611042149718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 36
+        width: 161
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc0a4345b34a65a0800000000000000
+      internalID: -6527330264123044623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_6
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 40
+        width: 161
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9ceb57abc7c5550800000000000000
+      internalID: 6150928331362453925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 34
+        width: 152
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ee695c32de90930800000000000000
+      internalID: 4110076872846929548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 36
+        width: 147
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb67aec7dea934d0800000000000000
+      internalID: -3154297822088041473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 21
+        width: 167
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028914ebe663d6c50800000000000000
+      internalID: 6660039273217103904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_10
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 31
+        width: 166
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e153bb2eb73e21e0800000000000000
+      internalID: -2220776276330589725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_11
+      rect:
+        serializedVersion: 2
+        x: 2316
+        y: 29
+        width: 157
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830cbcc538b52a450800000000000000
+      internalID: 6098537465168773176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_12
+      rect:
+        serializedVersion: 2
+        x: 2521
+        y: 25
+        width: 157
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37dae0114d94ca4a0800000000000000
+      internalID: -6580803780327068301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_13
+      rect:
+        serializedVersion: 2
+        x: 2727
+        y: 13
+        width: 153
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2943cc04f00c0cac0800000000000000
+      internalID: -3836855710775495534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_14
+      rect:
+        serializedVersion: 2
+        x: 2938
+        y: 23
+        width: 154
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673bb56a287cf8820800000000000000
+      internalID: 2922774047137444726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_15
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 19
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f060b586468ce3620800000000000000
+      internalID: 2755860355570402831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buffalo_down-right_spritesheet (1)_16
+      rect:
+        serializedVersion: 2
+        x: 3352
+        y: 31
+        width: 153
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7b2990d3a42fe60800000000000000
+      internalID: 7994533914550122406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

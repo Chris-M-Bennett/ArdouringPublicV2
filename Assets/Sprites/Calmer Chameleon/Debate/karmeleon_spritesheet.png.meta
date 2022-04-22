@@ -5,6 +5,15 @@ TextureImporter:
   - first:
       213: -6416336959613230273
     second: karmeleon_spritesheet_0
+  - first:
+      213: -2217075664246185544
+    second: karmeleon_spritesheet_1
+  - first:
+      213: -2733985378455120231
+    second: karmeleon_spritesheet_2
+  - first:
+      213: -3777069414688115584
+    second: karmeleon_spritesheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -170,7 +179,7 @@ TextureImporter:
         width: 796
         height: 578
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,6 +187,69 @@ TextureImporter:
       bones: []
       spriteID: f332b0bc78794f6a0800000000000000
       internalID: -6416336959613230273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karmeleon_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1332
+        width: 813
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b161701e6d5b31e0800000000000000
+      internalID: -2217075664246185544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karmeleon_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 247
+        width: 802
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996121898ceee0ad0800000000000000
+      internalID: -2733985378455120231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karmeleon_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 1322
+        width: 819
+        height: 587
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084b58d0167259bc0800000000000000
+      internalID: -3777069414688115584
       vertices: []
       indices: 
       edges: []

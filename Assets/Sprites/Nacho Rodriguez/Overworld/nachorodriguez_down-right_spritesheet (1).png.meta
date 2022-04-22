@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: caf85fd66dc2ee04dbe7ea40f0bc6283
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8031109841487548296
+    second: nachorodriguez_down-right_spritesheet (1)_20
+  - first:
+      213: 1729292252363917077
+    second: nachorodriguez_down-right_spritesheet (1)_21
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 29
+        width: 210
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a1063ae81dfeaa0800000000000000
+      internalID: -6129450157271410027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_1
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 32
+        width: 205
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 079cb4f3fc15ddca0800000000000000
+      internalID: -5990541978770880144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_2
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 50
+        width: 194
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4644fae535a17f520800000000000000
+      internalID: 2735684244024018020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_3
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 47
+        width: 196
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a1f1248e8f375a0800000000000000
+      internalID: -6524597758704281039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_4
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 49
+        width: 200
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b83678694aab6e20800000000000000
+      internalID: 3344954380514638008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 46
+        width: 193
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4eb1bc56bd1ae0f0800000000000000
+      internalID: -1087023690980147636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_6
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 32
+        width: 193
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da0b0d0c16087760800000000000000
+      internalID: 7455715900659534546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_7
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 53
+        width: 197
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ba38d18e33dec80800000000000000
+      internalID: -8291914266898617488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_8
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 56
+        width: 198
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beaa74099eb473010800000000000000
+      internalID: 1168486094846012139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 52
+        width: 200
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd96c1e851a6ee50800000000000000
+      internalID: 6838330487325761019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_10
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 55
+        width: 197
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847568d7e4fb40260800000000000000
+      internalID: 7062980459458090824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_11
+      rect:
+        serializedVersion: 2
+        x: 2301
+        y: 54
+        width: 192
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31f82f5c3c4a68f0800000000000000
+      internalID: -546540582593826501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_12
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 53
+        width: 200
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1d33a3ad2f10660800000000000000
+      internalID: 7350423085938627069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_13
+      rect:
+        serializedVersion: 2
+        x: 2714
+        y: 50
+        width: 193
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd2cf9279748cb20800000000000000
+      internalID: 3154850253543058932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_14
+      rect:
+        serializedVersion: 2
+        x: 2918
+        y: 51
+        width: 191
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a12973067048a850800000000000000
+      internalID: 6388426947033637286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_15
+      rect:
+        serializedVersion: 2
+        x: 3124
+        y: 57
+        width: 202
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f9072d910f0f690800000000000000
+      internalID: -7570286979914358995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_16
+      rect:
+        serializedVersion: 2
+        x: 3341
+        y: 49
+        width: 196
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773933b31f3f38b30800000000000000
+      internalID: 4288539487592747895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_17
+      rect:
+        serializedVersion: 2
+        x: 3555
+        y: 50
+        width: 192
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f107be9f98965ea0800000000000000
+      internalID: -5884348051782958604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_18
+      rect:
+        serializedVersion: 2
+        x: 3754
+        y: 51
+        width: 193
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2d4b815c55ecb90800000000000000
+      internalID: -7219738847616904513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_19
+      rect:
+        serializedVersion: 2
+        x: 3958
+        y: 49
+        width: 201
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d4b44d3d1e51c70800000000000000
+      internalID: 8941300935130041741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_20
+      rect:
+        serializedVersion: 2
+        x: 4168
+        y: 47
+        width: 198
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f4206a9db347f60800000000000000
+      internalID: 8031109841487548296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nachorodriguez_down-right_spritesheet (1)_21
+      rect:
+        serializedVersion: 2
+        x: 4374
+        y: 49
+        width: 198
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5178cfe242eaff710800000000000000
+      internalID: 1729292252363917077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

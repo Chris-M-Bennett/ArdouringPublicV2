@@ -1,0 +1,368 @@
+fileFormatVersion: 2
+guid: 224c3c4ba45e7b24fb9e9dc62b860e55
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7337918459158717180
+    second: laughingcat_left-down_spritesheet (2)_0
+  - first:
+      213: -5045377332524387136
+    second: laughingcat_left-down_spritesheet (2)_1
+  - first:
+      213: 7990603963431970556
+    second: laughingcat_left-down_spritesheet (2)_2
+  - first:
+      213: 2874758459085938496
+    second: laughingcat_left-down_spritesheet (2)_3
+  - first:
+      213: 152314336008840370
+    second: laughingcat_left-down_spritesheet (2)_4
+  - first:
+      213: 119892253422112395
+    second: laughingcat_left-down_spritesheet (2)_5
+  - first:
+      213: 2170224269031199489
+    second: laughingcat_left-down_spritesheet (2)_6
+  - first:
+      213: 5354562729132261119
+    second: laughingcat_left-down_spritesheet (2)_7
+  - first:
+      213: 1401540396904036568
+    second: laughingcat_left-down_spritesheet (2)_8
+  - first:
+      213: -5578634673314984557
+    second: laughingcat_left-down_spritesheet (2)_9
+  - first:
+      213: -805408012435756689
+    second: laughingcat_left-down_spritesheet (2)_10
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: laughingcat_left-down_spritesheet (2)_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 19
+        width: 191
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2efece5f585d560800000000000000
+      internalID: 7337918459158717180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laughingcat_left-down_spritesheet (2)_1
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 17
+        width: 172
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c473113c083bf9b0800000000000000
+      internalID: -5045377332524387136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laughingcat_left-down_spritesheet (2)_2
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 13
+        width: 171
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6e03df7f354ee60800000000000000
+      internalID: 7990603963431970556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laughingcat_left-down_spritesheet (2)_3
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 20
+        width: 174
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fddd0669135e720800000000000000
+      internalID: 2874758459085938496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laughingcat_left-down_spritesheet (2)_4
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 21
+        width: 183
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4a104e4112d1200800000000000000
+      internalID: 152314336008840370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laughingcat_left-down_spritesheet (2)_5
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 11
+        width: 191
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ecb888e51f9a100800000000000000
+      internalID: 119892253422112395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laughingcat_left-down_spritesheet (2)_6
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 11
+        width: 187
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103598e697f2e1e10800000000000000
+      internalID: 2170224269031199489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laughingcat_left-down_spritesheet (2)_7
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 12
+        width: 181
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe7975be6a3f4a40800000000000000
+      internalID: 5354562729132261119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laughingcat_left-down_spritesheet (2)_8
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 17
+        width: 188
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d833d7b095437310800000000000000
+      internalID: 1401540396904036568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laughingcat_left-down_spritesheet (2)_9
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 11
+        width: 202
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d026d4255b492b0800000000000000
+      internalID: -5578634673314984557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laughingcat_left-down_spritesheet (2)_10
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 20
+        width: 193
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69638f0ead92d4f0800000000000000
+      internalID: -805408012435756689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

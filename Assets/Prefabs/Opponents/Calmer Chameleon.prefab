@@ -39,22 +39,22 @@ PrefabInstance:
         type: 3}
       propertyPath: animationClips.Array.data[0]
       value: 
-      objectReference: {fileID: 7400000, guid: 5129181c61d34fa44a0620055686d916, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: animationClips.Array.data[1]
       value: 
-      objectReference: {fileID: 7400000, guid: 847d3e48672e25f40bc02140147e4d9c, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: animationClips.Array.data[2]
       value: 
-      objectReference: {fileID: 7400000, guid: dd02a7e765ad8604e9866eea3f5928e1, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: animationClips.Array.data[3]
       value: 
-      objectReference: {fileID: 7400000, guid: fdb6356b180632b4f82c0b6a2d4e8d23, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: animationClips.Array.data[4]
@@ -79,7 +79,7 @@ PrefabInstance:
         type: 3}
       propertyPath: animationClips.Array.data[8]
       value: 
-      objectReference: {fileID: 7400000, guid: 5129181c61d34fa44a0620055686d916, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_Size.x
@@ -108,12 +108,12 @@ PrefabInstance:
     - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 12.68
+      value: 1.78
       objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 10.8
+      value: 1.56
       objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
@@ -123,12 +123,12 @@ PrefabInstance:
     - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
@@ -159,7 +159,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 86a5d60e0b3e85244936ba4df8aefa5c,
+      objectReference: {fileID: -8204569825142274865, guid: 8e88036cf998587448865749b7ad2fb7,
         type: 3}
     - target: {fileID: 2978396957570500080, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
@@ -185,12 +185,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 188c8c2800d5cd940a9dcbcd47cdbb3e,
+      objectReference: {fileID: 8495535123075768010, guid: 8e88036cf998587448865749b7ad2fb7,
         type: 3}
     - target: {fileID: 2978396957682207817, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957682207818, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957682207818, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3073540072749954762, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
@@ -201,11 +211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Animations.Array.data[0]
       value: 
-      objectReference: {fileID: 7400000, guid: 5129181c61d34fa44a0620055686d916, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8317754853003186089, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_Animations.Array.data[1]
       value: 
-      objectReference: {fileID: 7400000, guid: 847d3e48672e25f40bc02140147e4d9c, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e731a199acc924442a0d5fcba8122031, type: 3}

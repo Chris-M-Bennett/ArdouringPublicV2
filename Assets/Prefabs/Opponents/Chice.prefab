@@ -97,12 +97,12 @@ PrefabInstance:
     - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 18.56
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 10.8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
@@ -148,7 +148,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 67562d49ebea7254fb62f00e4c4ab47a,
+      objectReference: {fileID: 6309779632499715713, guid: 33228ec207284224fb97d626698e3abf,
         type: 3}
     - target: {fileID: 2978396957570500080, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
@@ -159,6 +159,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957682207817, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957682207817, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957682207817, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8100473840974846087, guid: 33228ec207284224fb97d626698e3abf,
+        type: 3}
+    - target: {fileID: 2978396957682207817, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3073540072749954762, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
