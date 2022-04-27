@@ -1,0 +1,506 @@
+fileFormatVersion: 2
+guid: af88480d152a16e4a88b40e9cf0da9fa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4575632757636861377
+    second: bluebird_left-up_spritesheet_10
+  - first:
+      213: -1923469044563567369
+    second: bluebird_left-up_spritesheet_11
+  - first:
+      213: 5536412023752411191
+    second: bluebird_left-up_spritesheet_12
+  - first:
+      213: -5470957142775343795
+    second: bluebird_left-up_spritesheet_13
+  - first:
+      213: -8188897057179063641
+    second: bluebird_left-up_spritesheet_14
+  - first:
+      213: -7655771778544830545
+    second: bluebird_left-up_spritesheet_15
+  - first:
+      213: 1674128120461507125
+    second: bluebird_left-up_spritesheet_16
+  - first:
+      213: -8525207508020285971
+    second: bluebird_left-up_spritesheet_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 6
+        width: 152
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb322a45dcf55dfd0800000000000000
+      internalID: -2317841097719405633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 18
+        width: 143
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b4869480b3618f0800000000000000
+      internalID: -570203396038440184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 17
+        width: 142
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce180b4ef4de4bc0800000000000000
+      internalID: -3796863247181144369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 14
+        width: 147
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddbfab53d8d167b10800000000000000
+      internalID: 1978801578604952541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 17
+        width: 159
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c09708e3c576c20800000000000000
+      internalID: 3199627483783171222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 8
+        width: 142
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac9b7e3fb0fa1640800000000000000
+      internalID: 5051614636227140777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 15
+        width: 159
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe4e7d8b6d1ea7b0800000000000000
+      internalID: -5211195371048513860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 16
+        width: 146
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04926e5f796ee1cc0800000000000000
+      internalID: -3738297100330981056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 18
+        width: 163
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250aa94fc01c11600800000000000000
+      internalID: 437342900219191378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1915
+        y: 11
+        width: 165
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c09051125d676080800000000000000
+      internalID: -9194259915008339775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 16
+        width: 164
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd069510c9ef7f30800000000000000
+      internalID: 4575632757636861377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2337
+        y: 10
+        width: 162
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc145e48177e45e0800000000000000
+      internalID: -1923469044563567369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 2539
+        y: 10
+        width: 158
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738c6f5076945dc40800000000000000
+      internalID: 5536412023752411191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2748
+        y: 14
+        width: 159
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d455d7b07714314b0800000000000000
+      internalID: -5470957142775343795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 14
+        width: 156
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aaa99c53813b5e80800000000000000
+      internalID: -8188897057179063641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 3161
+        y: 9
+        width: 160
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7ff52212c31c590800000000000000
+      internalID: -7655771778544830545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 18
+        width: 150
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ab998d7a2bb3710800000000000000
+      internalID: 1674128120461507125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_left-up_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 7
+        width: 149
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded25ff90f060b980800000000000000
+      internalID: -8525207508020285971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

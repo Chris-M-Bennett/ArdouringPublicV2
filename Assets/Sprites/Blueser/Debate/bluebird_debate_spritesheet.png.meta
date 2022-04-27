@@ -1,0 +1,536 @@
+fileFormatVersion: 2
+guid: 4033131d752bdcf4d9636d202dab06e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2167224966903335801
+    second: bluebird_debate_spritesheet_0
+  - first:
+      213: -5348251899829703626
+    second: bluebird_debate_spritesheet_1
+  - first:
+      213: 6540848453746620369
+    second: bluebird_debate_spritesheet_2
+  - first:
+      213: -2819792600821119593
+    second: bluebird_debate_spritesheet_3
+  - first:
+      213: 8273457397216723976
+    second: bluebird_debate_spritesheet_4
+  - first:
+      213: -1850680996990246079
+    second: bluebird_debate_spritesheet_5
+  - first:
+      213: -3704228878479984736
+    second: bluebird_debate_spritesheet_6
+  - first:
+      213: -5517539754977100698
+    second: bluebird_debate_spritesheet_7
+  - first:
+      213: 6393823153902753620
+    second: bluebird_debate_spritesheet_8
+  - first:
+      213: -2963521865669668188
+    second: bluebird_debate_spritesheet_9
+  - first:
+      213: 7506793285394095199
+    second: bluebird_debate_spritesheet_10
+  - first:
+      213: 2523364371572208169
+    second: bluebird_debate_spritesheet_11
+  - first:
+      213: 4965679640536768738
+    second: bluebird_debate_spritesheet_12
+  - first:
+      213: -3972956636668219587
+    second: bluebird_debate_spritesheet_13
+  - first:
+      213: -5894256822389711454
+    second: bluebird_debate_spritesheet_14
+  - first:
+      213: 2821990101883356438
+    second: bluebird_debate_spritesheet_15
+  - first:
+      213: -4556716559416127066
+    second: bluebird_debate_spritesheet_16
+  - first:
+      213: -9153395265693216847
+    second: bluebird_debate_spritesheet_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 5
+        width: 73
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7847e5300687ce1e0800000000000000
+      internalID: -2167224966903335801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 5
+        width: 72
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ca75dbb3137c5b0800000000000000
+      internalID: -5348251899829703626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 5
+        width: 72
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7fa378303c5ca50800000000000000
+      internalID: 6540848453746620369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 6
+        width: 64
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79548c7c1951ed8d0800000000000000
+      internalID: -2819792600821119593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 7
+        width: 70
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8044e690ba931d270800000000000000
+      internalID: 8273457397216723976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 5
+        width: 70
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143a4d5407f0156e0800000000000000
+      internalID: -1850680996990246079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 6
+        width: 80
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7f47bf57fe79cc0800000000000000
+      internalID: -3704228878479984736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 4
+        width: 66
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c7e7673d2cd63b0800000000000000
+      internalID: -5517539754977100698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 5
+        width: 69
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4579a05584c6bb850800000000000000
+      internalID: 6393823153902753620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 4
+        width: 70
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a218a880947fd6d0800000000000000
+      internalID: -2963521865669668188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 7
+        width: 67
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5cd33a68bc7d2860800000000000000
+      internalID: 7506793285394095199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 7
+        width: 68
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922307ec68ac40320800000000000000
+      internalID: 2523364371572208169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 5
+        width: 69
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e06592e253a9e440800000000000000
+      internalID: 4965679640536768738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 6
+        width: 71
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3f2c531df83dd8c0800000000000000
+      internalID: -3972956636668219587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 6
+        width: 71
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2add98e26a4633ea0800000000000000
+      internalID: -5894256822389711454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 5
+        width: 66
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6150d6ecb09b92720800000000000000
+      internalID: 2821990101883356438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 7
+        width: 77
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a19cd58e6a43c0c0800000000000000
+      internalID: -4556716559416127066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bluebird_debate_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 6
+        width: 68
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf0d9ba08b98f080800000000000000
+      internalID: -9153395265693216847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
