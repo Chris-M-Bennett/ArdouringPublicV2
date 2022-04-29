@@ -22,7 +22,7 @@ PrefabInstance:
         type: 3}
       propertyPath: defeatedPrefab
       value: 
-      objectReference: {fileID: 3289603090124718409, guid: f0fff69861f7f0347ab321d9c94db749,
+      objectReference: {fileID: 2231650143601886642, guid: 28fd759ec2b8d1a4184d57566e0c73b2,
         type: 3}
     - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
