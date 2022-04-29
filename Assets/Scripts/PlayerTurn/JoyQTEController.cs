@@ -1,46 +1,71 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Opponents;
 using Player;
 using UnityEngine;
 
 public class JoyQTEController : MonoBehaviour
 {
-    private float timer, timeLimit, multiplierJ, slottedWedgeCount, distX, distY;
+    private float timer, timeLimit, multiplierJ, slottedWedgeCount, distX, distY, readingTime;
     private JoyQTEController _marker;
     //private PlayerDebateActionsScript _playerAction;
     //public GameObject WedgeNL, WedgeNR, WedgeEU, WedgeED, WedgeSR, WedgeSL, WedgeWD, WedgeWU;
     public GameObject JoyWheel, CurrentWedge;
+    private bool tutorial;
     public MyQTEEvent myEvent { get; set; }
     // Start is called before the first frame update
+    private static DebateValuesScript _opponentValues;
     void Start()
     {
         timeLimit = 5f;
+        readingTime = 10f;
         timer = 0f;
         slottedWedgeCount = 0f;
         _marker = GetComponent<JoyQTEController>();
         //_playerAction = BattleCanvas.AddComponent<PlayerDebateActionsScript>();
         //myEvent = new MyQTEEvent();
-
+        _opponentValues = GameObject.FindWithTag("Opponent").GetComponent<DebateValuesScript>();
+        if (_opponentValues.debaterName == "Tutorial Goblin")
+        {
+            tutorial = true;
+        }
+        else
+        {
+            tutorial = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer >= timeLimit || slottedWedgeCount == 8f)
+        if (!tutorial)
         {
-            multiplierJ = (slottedWedgeCount / 8f) + 0.5f;
-            //tell PlayerDebateActionsScript what multiplierJ is
-            //_playerAction.qteMultiplier = multiplierJ;
-            //_playerAction.CheckPlayerTurn(0);
-            myEvent.Invoke(0, multiplierJ);
-            //Debug.Log("Joy damage multiplier: " + multiplierJ);
+            if (timer >= timeLimit || slottedWedgeCount == 8f)
+            {
+                multiplierJ = (slottedWedgeCount / 8f) + 0.5f;
+                //tell PlayerDebateActionsScript what multiplierJ is
+                //_playerAction.qteMultiplier = multiplierJ;
+                //_playerAction.CheckPlayerTurn(0);
+                myEvent.Invoke(0, multiplierJ);
+                //Debug.Log("Joy damage multiplier: " + multiplierJ);
+            }
+            else
+            {
+                timer += Time.deltaTime;
+                HandleMovement();
+            }
         }
         else
         {
             timer += Time.deltaTime;
-            HandleMovement();
-        }
+            //tool tip explaining the QTE
+            if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && timer >= readingTime) //button to unfreeze
+            {
+                timer = 0f;
+                tutorial = false;
+            }
+        }    
     }
 
     private void HandleMovement()

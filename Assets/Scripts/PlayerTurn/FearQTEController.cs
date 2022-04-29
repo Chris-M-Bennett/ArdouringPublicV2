@@ -1,43 +1,68 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Opponents;
 using UnityEngine;
 
 public class FearQTEController : MonoBehaviour
 {
-    private float timeLimit, timer, speed, barSpeed, yOffset;
+    private float timeLimit, timer, speed, barSpeed, yOffset, readingTime;
     public float multiplierF;
-    private bool hit;
+    private bool hit, tutorial;
     private FearQTEController _marker;
     public GameObject bar;
     public MyQTEEvent myEvent { get; set; }
     // Start is called before the first frame update
+    private static DebateValuesScript _opponentValues;
     void Start()
     {
         timeLimit = 5f;
+        readingTime = 10f;
         timer = 0f;
         speed = 1f;
         barSpeed = 1f;
         yOffset = 1.5f;
         hit = false;
         _marker = GetComponent<FearQTEController>();
+        _opponentValues = GameObject.FindWithTag("Opponent").GetComponent<DebateValuesScript>();
+        if (_opponentValues.debaterName == "Tutorial Goblin")
+        {
+            tutorial = true;
+        }
+        else
+        {
+            tutorial = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer >= timeLimit || hit)
+        if(!tutorial)
         {
-            multiplierF = ((_marker.transform.position.y + yOffset) / (3.6f*0.3f) ) + 1f; // may need adjustment
-            myEvent.Invoke(4, multiplierF);
-            //Debug.Log("Fear damage multiplier: " + multiplierF);
-            //Debug.Log("Timer: " + timer + ", Hit: " + hit);
+            if (timer >= timeLimit || hit)
+            {
+                multiplierF = ((_marker.transform.position.y + yOffset) / (3.6f*0.3f) ) + 1f; // may need adjustment
+                myEvent.Invoke(4, multiplierF);
+                //Debug.Log("Fear damage multiplier: " + multiplierF);
+                //Debug.Log("Timer: " + timer + ", Hit: " + hit);
+            }
+            else
+            {
+                timer += Time.deltaTime;
+                HandleMovement();
+                HandleBarMove();
+            }
         }
         else
         {
             timer += Time.deltaTime;
-            HandleMovement();
-            HandleBarMove();
+            //tool tip explaining the QTE
+            if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && timer >= readingTime) //button to unfreeze
+            {
+                timer = 0f;
+                tutorial = false;
+            }
         }
     }
 

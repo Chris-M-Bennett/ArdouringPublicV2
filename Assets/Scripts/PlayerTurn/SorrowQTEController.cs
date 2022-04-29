@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Opponents;
 using UnityEngine;
 
 public class SorrowQTEController : MonoBehaviour
 {
-    private float timeLimit, timer, speed, cloudSpeed, cloudStrafe, csCooldown, cloudDirection, barFillRate;
+    private float timeLimit, timer, speed, cloudSpeed, cloudStrafe, csCooldown, cloudDirection, barFillRate, readingTime;
     public float multiplierS;
     private SorrowQTEController _marker;
     public GameObject TearDrop;
     public GameObject RainCloud;
+    private bool tutorial;
     public MyQTEEvent myEvent { get; set; }
     // Start is called before the first frame update
+    private static DebateValuesScript _opponentValues;
     void Start()
     {
         timeLimit = 5f;
+        readingTime = 10f;
         timer = 0f;
         speed = 1.2f;
         cloudSpeed = 0.9f;
@@ -21,22 +25,44 @@ public class SorrowQTEController : MonoBehaviour
         cloudDirection = 1f;
         barFillRate = 0.228f;// 0.76f;
         _marker = GetComponent<SorrowQTEController>();
+        _opponentValues = GameObject.FindWithTag("Opponent").GetComponent<DebateValuesScript>();
+        if (_opponentValues.debaterName == "Tutorial Goblin")
+        {
+            tutorial = true;
+        }
+        else
+        {
+            tutorial = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer >= timeLimit)
+        if (!tutorial)
         {
-            multiplierS = ((TearDrop.transform.position.y + 1.5f) / (3.8f *0.3f)) + 1f; // may need adjustment
-            myEvent.Invoke(1, multiplierS);
-            //Debug.Log("Sorrow damage multiplier: " + multiplierS);
+            if (timer >= timeLimit)
+            {
+                multiplierS = ((TearDrop.transform.position.y + 1.5f) / (3.8f *0.3f)) + 1f; // may need adjustment
+                myEvent.Invoke(1, multiplierS);
+                //Debug.Log("Sorrow damage multiplier: " + multiplierS);
+            }
+            else
+            {
+                timer += Time.deltaTime;
+                HandleStrafing();
+                HandleCloudMovement();
+            }
         }
         else
         {
             timer += Time.deltaTime;
-            HandleStrafing();
-            HandleCloudMovement();
+            //tool tip explaining the QTE
+            if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && timer >= readingTime) //button to unfreeze
+            {
+                timer = 0f;
+                tutorial = false;
+            }
         }
     }
 
