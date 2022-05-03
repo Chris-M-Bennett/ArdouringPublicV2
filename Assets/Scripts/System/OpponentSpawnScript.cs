@@ -20,7 +20,9 @@ namespace System
         private string _overworldTalk;
         private TextMeshPro _speech;
         [SerializeField] private GameObject sceneLoader;
-
+        [SerializeField, Tooltip("Whether the opponent is the boss of the area")]
+        private bool isBoss;
+        
         [SerializeField] private Transform _speechBubble;
         private int defeatState = 0;
 

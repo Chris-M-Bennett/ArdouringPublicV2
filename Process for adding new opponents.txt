@@ -9,26 +9,32 @@ Process for adding new opponents:
 
 5. Drag the "Debate Opponent Prefab" from the Prefabs folder into the scene, rename the generated object to "Debate (Opponent Name)" and drag the opponent's base sprite to the Sprite field of the Sprite Renderer
 
-6.Scroll the Inspector to the "Debate Values" script and fill out the opponent's name, level, base damage, maximum emotional stability, and the number of its starting emotion; Happy = 0, Sad = 1, Angry = 2, Confident = 3, Afraid = 4
+6.Scroll the Inspector to the "Debate Values" script and fill out the opponent's name, level, base damage, maximum emotional stability.
 
 7. Drag the previously created thresholds object to the field of the same name.
 
 8. Click the arrow next to "Emot Amounts" and set "Size" to 5. In the "Element" fields generated, enter percentages for emotion with the numbers as step 6.
 
-9. Drag the Debate object to Prefabs folder to create a prefab of it and remove the object from the scene.
+9. Select its starting emotion from the drop-down next to "Emotion Enum".
 
-10. Drag the "Defeated Opponent Prefab" from the Prefabs folder into the scene and rename the generated object to "Defeated (Opponent Name)" and drag the opponent's base sprite to the Sprite field of the Sprite Renderer.
+10. Fill out the line for the opponent to say at the start of the debate under "Opening Line", the line for the opponent to say when they are overloaded under "Overloaded Line", and the line for the opponent to say when they are pacified under "Pacified Line".
 
-11. Drag the Defeated object to Prefabs folder to create a prefab of it and remove the object from the scene.
+11. Drag the Debate object to Prefabs folder to create a prefab of it and remove the object from the scene.
 
-12. Drag the "Overworld Opponent Prefab" from the Prefabs folder into the Overworld scene, rename the generated object to "(Opponent Name)" and drag the opponent's base sprite to the Sprite field of the Sprite Renderer
+12. Drag the "Defeated Opponent Prefab" from the Prefabs folder into the scene and rename the generated object to "Defeated (Opponent Name)" and drag the opponent's base sprite to the Sprite field of the Sprite Renderer.
 
-13.Scroll the Inspector to the "Opponent Overworld Script" and drag the previously created debate and defeated prefabs of the same name.
+13. Drag the Defeated object to Prefabs folder to create a prefab of it and remove the object from the scene.
 
-14. Create an empty game object and move it to the point in the environment where this opponent should stay once defeated. Name it "Defeat Point (Opponent Name)".
+14. Drag the "Opponent Overworld Prefab" from the Prefabs folder into the Overworld scene, rename the generated object to "(Opponent Name)" and drag the opponent's base sprite to the Sprite field of the Sprite Renderer
 
-15. Drag this point from the Hierarchy to the "Defeat Point" field on the overworld opponent object.
+15.Scroll the Inspector to the "Opponent Overworld Script" and drag the previously created debate and defeated prefabs of the same name.
 
-16. From the list of "Move To" Points in the Hierarchy, drag a point for the opponent to move away from to the "Last Dest" field and a point for the opponent to move toward to the "Current Dest" field. Ensure the opponent overworld object is between these points.
+16. Drag the Overworld Opponent object to Prefabs folder to create a prefab of it and remove the object from the scene.
 
-17. Set the "Move Speed" field to speed at which the opponent should move between points. Default is 2.
+17. Drag the "Opponent Overworld Spawnpoint" from the Prefabs folder into the Overworld scene to the position where the opponent should appear when pacified. Ensure that the number at the end of the object's name matches the number of spawnpoints now in the scene. E.g. the 2nd spawnpoint placed should be "Opponent Overworld Spawnpoint (2)".
+
+18. Set the x and y values next the "Offset" to the number of grid squares the Overworld Opponent should be placed away from the spawnpoint. E.g. x: -2 y: 5.5 would place the Overworld Opponent two squares left and five and a half squares up from the spawnpoint.
+
+19. From the list of "Move To" Points in the Hierarchy, drag a point for the opponent to move away from to the "Last Dest" field and a point for the opponent to move toward to the "Current Dest" field. Ensure that the offset from the spawnpoint places the spawned Overworld Opponent object is between these points.
+
+20. Set the "Move Speed" field to speed at which the opponent should move between points. Default is 2.

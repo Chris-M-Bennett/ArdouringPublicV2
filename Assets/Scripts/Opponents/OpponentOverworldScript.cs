@@ -10,11 +10,11 @@ namespace Opponents
     {
         [Header("Mouse over field names for description of what to add")]
         [SerializeField, Tooltip("The opponent's name")] public string myName;
-        [SerializeField, Tooltip("The prefab used for this opponent in debates")] public GameObject debatePrefab;
-        [SerializeField, Tooltip("The prefab used if this opponent is defeated")] private GameObject defeatedPrefab;
-        //[SerializeField, Tooltip("The point game object where the defeated prefab should be placed")] private Transform defeatPoint;
+        [SerializeField, Tooltip("The prefab used for this opponent in debates")]
+        public GameObject debatePrefab;
+        [SerializeField, Tooltip("The prefab used if this opponent is defeated")]
+        private GameObject defeatedPrefab;
         [SerializeField, Tooltip("The speed at which the opponent should move between points")] private float moveSpeed = 2f;
-        //[SerializeField] private LastOpponent lastOpponent;
 
         private SpriteRenderer _mainRenderer;
         private Color _mainColour;
