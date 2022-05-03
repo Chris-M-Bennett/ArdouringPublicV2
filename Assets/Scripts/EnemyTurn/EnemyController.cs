@@ -15,6 +15,7 @@ namespace EnemyTurn{
         private float timer;
         public float turnTimer;
         public float turnLimit;
+        private float readingTime;
         //private float bulletSize = 0.36f;
         public float startY;
         public float bulletX;
@@ -23,6 +24,7 @@ namespace EnemyTurn{
         public int maxEnemyES;
         public string nickname;
         private static DebateValuesScript _opponentValues;
+        private bool tutorial;
         //public Vector2 startPos;
         /*
     public bool[,] attackPattern = new bool[4,5]
@@ -47,7 +49,7 @@ namespace EnemyTurn{
     */
         private int patternRow;
         private int rows;
-        public string[,] patternLibrary = new string[8,7]
+        public string[,] patternLibrary = new string[9,7]
         {
             {"Chameleon","......~~~.~...~~.~.~~~.~~.~~~.",".~..~.~..~~~.~~~..~.~..~..~~.~~~.~~","~...~.~.~...~...~.~.~...~..~....~..~~.~~..~....~..","0.33","1.2","12"}, //used to be Calmer Chameleon, now only Chameleon works, idk why
             {"Chice",".....~.~..~~~...~..........~.~..~~~...~.......~.~..~~~...~..",".....~....~~....~~......~...~~..~~.",".....~.~.~.~.~.~.~.~.....~.~.~~.~.~.~.~..~.~.","0.3","1.5","10"},
@@ -56,7 +58,8 @@ namespace EnemyTurn{
             {"Laughing Cat","~......~.~..~.~~...~.~~..~..~~...~~..~~.","~..~....~~.~.~.~..~.~~~...~.~.~~...~.~..","..~~.~.~.~...~~..~~..~.~~~..~...~~.~..~.","0.3","1","10"},
             {"Sadgull","..~~...~~~.~..~..~~...~.~...~~.~~..~~..~","....~..~~.~~~....~~...~~.~~.~...~.~~..~.","...~~...~..~...~...~~~....~~..~.~~.~.~..~","0.24","0.8","12"},
             {"Space Whale","...~...~.~..~~.~~...~.~...~..~~...~.~...","..~~....~.~~...~.~....~.~.~..~....~..~.~","~...~....~..~..~~......~.....~...~~....~..~..","0.35","0.9","10"},
-            {"The Upset Post","~..~....~~~~....~.~...~.~~..~...~..~~...","~..~~.~~~~..~..~~~....~~~~~~..~.~..~~..~",".~.~~...~~.~..~~~~..~..~~..~~...~.~~~..~","0.33","1","10"}
+            {"The Upset Post","~..~....~~~~....~.~...~.~~..~...~..~~...","~..~~.~~~~..~..~~~....~~~~~~..~.~..~~..~",".~.~~...~~.~..~~~~..~..~~..~~...~.~~~..~","0.33","1","10"},
+            {"Tutorial Goblin","~.~~.......~~.~.....","~.~~.......~~.~.....","~.~~.......~~.~.....","0.33","1","1"}
         };
     
         /*
@@ -80,6 +83,14 @@ namespace EnemyTurn{
             //patternString = "~~..~~~......~~..~~~......~..~~..~...~.~......~.~.~.~...~..~.....~.....~.....~.....~..........~...~...~...~........~....";
             _opponentValues = GameObject.FindWithTag("Opponent").GetComponent<DebateValuesScript>();
             //Debug.Log("Opponent: " + _opponentValues.debaterName);
+            if (_opponentValues.debaterName == "Tutorial Goblin")
+            {
+                tutorial = true;
+            }
+            else
+            {
+                tutorial = false;
+            }
             bool matchedDebater = false;
             for (int m = 0; m < patternLibrary.GetLength(0); m++)
             {
@@ -136,33 +147,46 @@ namespace EnemyTurn{
         // Update is called once per frame
         void FixedUpdate()
         {
-            if (turnTimer < turnLimit)
+            if(!tutorial)
             {
-                //for (int i = 0; i < attackPattern.GetLength(0); i++)
-                //{
-            
-                timer += Time.deltaTime;
-                if (timer > bulletInterval)
+                if (turnTimer < turnLimit)
                 {
-                    FirePattern(patternRow);
-                    //Debug.Log("Attack Pattern #: " + patternRow);
-                    if (patternRow < attackPattern.GetLength(0) - 1)
+                    //for (int i = 0; i < attackPattern.GetLength(0); i++)
+                    //{
+            
+                    timer += Time.deltaTime;
+                    if (timer > bulletInterval)
                     {
-                        patternRow++;
+                        FirePattern(patternRow);
+                        //Debug.Log("Attack Pattern #: " + patternRow);
+                        if (patternRow < attackPattern.GetLength(0) - 1)
+                        {
+                            patternRow++;
+                        }
+                        else
+                        {
+                            patternRow = 0;
+                        }
+                        timer = 0f;
                     }
-                    else
-                    {
-                        patternRow = 0;
-                    }
-                    timer = 0f;
+                    //}
                 }
-                //}
+                else
+                {
+                    //Destroy(enemyTurn);
+                }
+                turnTimer += Time.deltaTime;
             }
             else
             {
-                //Destroy(enemyTurn);
+                timer += Time.deltaTime;
+                //tool tip explaining the QTE
+                if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && timer >= readingTime) //button to unfreeze
+                {
+                    timer = 0f;
+                    tutorial = false;
+                }
             }
-            turnTimer += Time.deltaTime;
         }
 
         private void RndFirePattern()

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Opponents;
 using UnityEngine;
 
 public class PrideQTEController : MonoBehaviour
@@ -11,6 +12,7 @@ public class PrideQTEController : MonoBehaviour
     public GameObject prideRing;
     public MyQTEEvent myEvent { get; set; }
     // Start is called before the first frame update
+    private static DebateValuesScript _opponentValues;
     void Start()
     {
         timeLimit = 5f;
@@ -18,8 +20,16 @@ public class PrideQTEController : MonoBehaviour
         timer = 0f;
         maxDist = 1.4f * 0.3f;
         stop = false;
-        tutorial = false;
         _marker = GetComponent<PrideQTEController>();
+        _opponentValues = GameObject.FindWithTag("Opponent").GetComponent<DebateValuesScript>();
+        if (_opponentValues.debaterName == "Tutorial Goblin")
+        {
+            tutorial = true;
+        }
+        else
+        {
+            tutorial = false;
+        }
     }
 
     // Update is called once per frame
