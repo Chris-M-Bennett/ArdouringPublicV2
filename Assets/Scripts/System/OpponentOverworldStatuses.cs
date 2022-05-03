@@ -16,6 +16,7 @@ namespace System{
                     statuses[i] = 0;
                 }
             }
+            
         }
 
         public void Reset()

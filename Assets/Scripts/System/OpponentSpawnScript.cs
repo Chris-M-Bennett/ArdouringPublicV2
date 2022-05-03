@@ -15,7 +15,7 @@ namespace System
         [SerializeField, Tooltip("The movement point the spawned live opponent should by moving towards")]
         private DirectOverworldMovementScript currentDest;
         [SerializeField] private Vector2 offSet;
-        [SerializeField] private OpponentOverworldStatuses areaStatuses;
+        [SerializeField] public OpponentOverworldStatuses areaStatuses;
         public int id;
         private string _overworldTalk;
         private TextMeshPro _speech;
