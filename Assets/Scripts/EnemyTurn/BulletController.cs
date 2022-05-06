@@ -11,6 +11,7 @@ public class BulletController : MonoBehaviour
     public int damage;
     private static DebateValuesScript _opponentValues;
     private static EnemyController _enemy;
+    private static PlayerController _player;
     private float speed;
     private float distance;
     private float targetY;
@@ -58,6 +59,7 @@ public class BulletController : MonoBehaviour
         
         targetY = -1.8f;//-4.2f;//-1.8f; //1.32f; //0.32f; used to stop off screen, now stop immediately before player (still collide but don't stick around after being dodged)
         _bullet = GetComponent<BulletController>();
+        _player = GetComponent<PlayerController>();
         //speed = 1f;//_opponent.bulletSpeed;
         //Debug.Log("bullet speed: " + speed);
     }
@@ -73,6 +75,15 @@ public class BulletController : MonoBehaviour
         {
             float direction = -1f; //targetY - currentY;
             _bullet.transform.Translate(0f, direction * speed * Time.deltaTime, 0f, Space.World);
+            if (_opponentValues.debaterName == "Space Whale")
+            {
+                Vector2 dir = (_bullet.transform.position - _player.transform.position).normalized;
+                _bullet.transform.Translate(dir.x, 0f * 0.3f * Time.deltaTime, 0f, Space.World);
+            }
+
+            if (_opponentValues.debaterName == "Laughing Cat")
+            {
+            }
         }
         else
         {
