@@ -16,17 +16,25 @@ public class BulletController : MonoBehaviour
     private float distance;
     private float targetY;
     /**/
-    public string[,] bulletLibrary = new string[9, 3]
+    public string[,] bulletLibrary = new string[17, 3]
     {
         {"Chameleon","1.2","12"}, //used to be Calmer Chameleon, now only Chameleon works, idk why
-        {"Chice","1.5","10"},
-        {"Storming Cloud","2","10"},
+        {"Chice","1.5","7"},
+        {"Storming Cloud","1.5","10"},
         {"Inferno","2.1","10"},
         {"Laughing Cat","1","10"},
         {"Sadgull","0.8","12"},
         {"Space Whale","0.9","10"},
         {"The Upset Post","1","10"},
-        {"Tutorial Goblin","1","1"}
+        {"Tutorial Goblin","1","1"},
+        {"Tall Bird","1.3","12"},
+        {"Aire","0.8","8"},
+        {"Nacho Rodriguez","1.1","8"},
+        {"Heartyfish","1.4","9"},
+        {"Meppo","0.7","13"},
+        {"Foffalo","1","8"},
+        {"Blueser","1.4","10"},
+        {"Null","1.7","10"}
     };
     //*/
     // Start is called before the first frame update
