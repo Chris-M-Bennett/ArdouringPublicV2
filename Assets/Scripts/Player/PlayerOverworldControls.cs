@@ -59,10 +59,11 @@ namespace Player{
             _structureMask = LayerMask.GetMask("Structures");
             _defeatedMask = LayerMask.GetMask("Defeated");
             
-            _transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
             _anim = GetComponent<Animator>();
             _rb = GetComponent<Rigidbody2D>();
             infoText.text = _moveControls;
+            _transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
+
         }
 
         private void FixedUpdate(){

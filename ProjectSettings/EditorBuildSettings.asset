@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: b30f0177618e86843b7155ed9d8600a0
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 2d89ab218d997d3408454403f383de9c
+  - enabled: 1
     path: Assets/Scenes/Happiness Area.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -23,10 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Anger Area.unity
     guid: e3135a788f4b8ed42804628849c911f2
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Pride Area.unity
     guid: b12d1649830e7654d9d88f2f4e5a3e12
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Fear Area.unity
     guid: 5f8fa675624d59f42afe68689223616e
   - enabled: 0
