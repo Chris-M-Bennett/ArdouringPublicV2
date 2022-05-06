@@ -31,6 +31,9 @@ namespace Opponents
         private string overloadedLine;
         [SerializeField,TextArea,Tooltip("The bark said by the opponent at the end of a debate if they have been overloaded")]
         private string pacifiedLine;
+
+        private ParticleSystem.MainModule _particles;
+        private Color[] _partColors = new Color[5] {Color.green, Color.blue, Color.red, Color.magenta, Color.yellow};
         
         
     
@@ -38,6 +41,7 @@ namespace Opponents
         void Awake()
         {
             _animator = GetComponent<Animator>();
+            _particles = GetComponentInChildren<ParticleSystem>().main;
             speechBubble = GetComponentInChildren<TextMeshPro>();
             if (emotionThresholds != null)
             {
@@ -46,6 +50,7 @@ namespace Opponents
                     //emotionInt = myEmotions[rand];
                     //emotionEnum = emotionThresholds.ChangeOpponentEmot(new Emotions());
                     _animator.SetInteger(EmotionInt, (int)emotionEnum);
+                    _particles.startColor = _partColors[(int)emotionEnum];
             }
         }
 
@@ -80,6 +85,7 @@ namespace Opponents
                 {
                     emotionEnum = emotionThresholds.ChangeOpponentEmot(emotionEnum);
                     _animator.SetInteger(EmotionInt, (int)emotionEnum);
+                    _particles.startColor = _partColors[(int)emotionEnum];
                 }
             }
             // for (int i = 0; i < thresh.Count; i++)

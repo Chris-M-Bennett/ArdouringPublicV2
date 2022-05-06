@@ -71,7 +71,13 @@ namespace System
         [HideInInspector]public DebateState state = DebateState.Start;
         private IEnumerator _debateSetup;
 
-        private void Awake(){
+        private void Awake()
+        {
+            if (!(Camera.main is null))
+            {
+                opponentSpawn.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(150, 420, 1));
+            }
+
             if (GameManager.debateOpponent)
             {
                 opponentGO = Instantiate(GameManager.debateOpponent, opponentSpawn);
