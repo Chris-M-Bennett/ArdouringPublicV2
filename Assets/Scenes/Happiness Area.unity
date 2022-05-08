@@ -482,6 +482,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284367967510775908, guid: cd903f9fe365bf148a2e3edc5bbe74c8,
         type: 3}
+      propertyPath: isBoss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284367967510775908, guid: cd903f9fe365bf148a2e3edc5bbe74c8,
+        type: 3}
       propertyPath: offSet.x
       value: 2
       objectReference: {fileID: 0}
@@ -520,6 +525,18 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd903f9fe365bf148a2e3edc5bbe74c8, type: 3}
+--- !u!114 &98981279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4284367967510775908, guid: cd903f9fe365bf148a2e3edc5bbe74c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 98981278}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6db56723afadfc418367044f7743c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &99021926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6279805774934472653, guid: 2ae793dac9d3a5c4c83772e757b0745a,
@@ -1984,7 +2001,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616726848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16917421, y: -22.050003, z: -10}
+  m_LocalPosition: {x: 0.034055322, y: -22.050003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2265,7 +2282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891938216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16917421, y: -25.175823, z: -10}
+  m_LocalPosition: {x: 0.034055322, y: -25.175823, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 502138431}
@@ -4939,6 +4956,7 @@ GameObject:
   - component: {fileID: 1956338906}
   - component: {fileID: 1956338905}
   - component: {fileID: 1956338908}
+  - component: {fileID: 1956338909}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -5048,6 +5066,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1956338909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956338904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74267f9412aa37844af8cbaf0bbddaf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaBoss: {fileID: 98981279}
+  greyScale: {fileID: 2100000, guid: dd6610c2d66742f4299a9bc237fafd9f, type: 2}
 --- !u!1001 &1974141711
 PrefabInstance:
   m_ObjectHideFlags: 0
