@@ -75,7 +75,10 @@ namespace System
         {
             if (!(Camera.main is null))
             {
-                opponentSpawn.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(150, 420, 1));
+                var main = Camera.main;
+                var pixelHeight = main.pixelHeight;
+                opponentSpawn.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(
+                    main.pixelWidth/6, pixelHeight-(pixelHeight/6), 1));
             }
 
             if (GameManager.debateOpponent)
@@ -159,10 +162,8 @@ namespace System
             if (_opponentValues.currentES <= -100 || _opponentValues.currentES >= 100)
             {
                 StopCoroutine(_opponentValues.Speak(Stages.Pacified));
-                GameManager.defeatingCount += 1;
                 var minutesSeconds = $"{Mathf.FloorToInt(timeTaken/60)}:{Mathf.Clamp(Mathf.RoundToInt(timeTaken%60), 0f, 59f)}";
-                GameManager.debateTimes.Add(new []{minutesSeconds,_opponentValues.debaterName});
-                
+
                 _speechBubble.SetActive(true);
                 if (_opponentValues.currentES <= -100)
                 {
@@ -273,19 +274,7 @@ namespace System
                 // _playerExp += 1;
                 notifyText.text = "You lost the debate!";
                 
-                if(GameManager.overworld == SceneManager.GetSceneByBuildIndex(1).name)
-                {
-                    GameManager.happyDeathCount += 1;
-                } else if (GameManager.overworld == SceneManager.GetSceneByBuildIndex(4).name)
-                {
-                    GameManager.sadDeathCount += 1;
-                } else if (GameManager.overworld == SceneManager.GetSceneByBuildIndex(5).name)
-                {
-                    GameManager.angryDeathCount +=1;
-                }else if (GameManager.overworld == SceneManager.GetSceneByBuildIndex(6).name)
-                {
-                    GameManager.proudDeathCount += 1;
-                }
+
             }
             else
             {

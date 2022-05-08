@@ -1,0 +1,266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7948902941373488356
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: maxES
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotionInt
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debaterName
+      value: Calmer Chameleon
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debaterLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debaterDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotionThresholds
+      value: 
+      objectReference: {fileID: 11400000, guid: 77cc7a7152e902644b87ddc521951e8a,
+        type: 2}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[2]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[3]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977881048577376066, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 09a8ce12dc7a502418659d1fe5c3b950, type: 2}
+    - target: {fileID: 3447058797830848698, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 057744679a51c8b4c8d68714a9a4a498,
+        type: 3}
+    - target: {fileID: 3606078854977148642, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606078854977148642, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006720, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_Name
+      value: Debate Chameleon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006721, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006721, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006721, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6416336959613230273, guid: 7eaca8b4015d7c748898400499789d57,
+        type: 3}
+    - target: {fileID: 4915289711706006721, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1500803
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.133275
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2968364
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.49230915
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.974976
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: maxES
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debateMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 03d1af1f198daa941a00a795fab8141e, type: 3}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debaterName
+      value: Chameleon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: openingLine
+      value: I can be anything!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debaterLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: pacifiedLine
+      value: I'm not the only one who's changed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debaterDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: overloadedLine
+      value: "I can\u2019t change"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotionThresholds
+      value: 
+      objectReference: {fileID: 11400000, guid: 77cc7a7152e902644b87ddc521951e8a,
+        type: 2}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[3]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[4]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606474270780199747, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 49fdb167889371d49a62f255e2a8e98a, type: 3}

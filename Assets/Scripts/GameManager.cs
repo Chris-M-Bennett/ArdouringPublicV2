@@ -13,18 +13,6 @@ public class GameManager : MonoBehaviour
     public static bool tutorials = true;
     public static Sprite debateBg;
     public static string overworld;
-    
-    public static int happyEnterCount;
-    public static int happyDeathCount;
-    public static int sadEnterCount;
-    public static int sadDeathCount;
-    public static int angryEnterCount;
-    public static int angryDeathCount;
-    public static int proudEnterCount;
-    public static int proudDeathCount;
-    public static int defeatingCount;
-    
-    public static List<string[]> debateTimes = new List<string[]>();
 
     public static Dictionary<Emotions, int[]> emotionStrengths = new Dictionary<Emotions, int[]>();
     

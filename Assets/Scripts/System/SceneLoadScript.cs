@@ -11,19 +11,6 @@ namespace System
       {
          if (player.CompareTag("Player"))
          {
-            if(sceneToLoad == "Happiness Area")
-            {
-               GameManager.happyEnterCount += 1;
-            } else if (sceneToLoad == "Sadness Area")
-            {
-               GameManager.sadEnterCount += 1;
-            } else if (sceneToLoad == "Anger Area")
-            {
-               GameManager.angryEnterCount += 1;
-            } else if (sceneToLoad == "Pride Area")
-            {
-               GameManager.proudEnterCount += 1;
-            }
             GameManager.movedArea = true;
             SceneManager.LoadSceneAsync(sceneToLoad);
          }

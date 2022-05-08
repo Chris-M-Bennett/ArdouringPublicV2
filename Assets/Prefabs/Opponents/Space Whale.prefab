@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7028529719151789046
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: myName
+      value: Space Whale
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: debatePrefab
+      value: 
+      objectReference: {fileID: 121681528965824084, guid: 6d158015ef7675a499616d4f45343b87,
+        type: 3}
+    - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: defeatedPrefab
+      value: 
+      objectReference: {fileID: 2231650143601886642, guid: 28fd759ec2b8d1a4184d57566e0c73b2,
+        type: 3}
+    - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 20.087835
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 6.607877
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.14034367
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.18429768
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 5.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500046, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.77210176
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.77210176
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.77210176
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500080, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500080, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500080, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 04068820a3abab248b6a92bee14c9de5,
+        type: 3}
+    - target: {fileID: 2978396957570500080, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978396957570500081, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Name
+      value: Space Whale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3073540072749954762, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 08090205849440344af28163fb2e592c, type: 2}
+    m_RemovedComponents:
+    - {fileID: 2525881679091200032, guid: e731a199acc924442a0d5fcba8122031, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: e731a199acc924442a0d5fcba8122031, type: 3}

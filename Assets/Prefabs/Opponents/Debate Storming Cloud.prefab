@@ -1,0 +1,271 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3069497022474474638
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: maxES
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotionInt
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debaterName
+      value: Chice
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debaterLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debaterDamage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotionThresholds
+      value: 
+      objectReference: {fileID: 11400000, guid: 1b5dc75ebcf6139409aeb4253b9b2d8b,
+        type: 2}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[3]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[4]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977881048577376066, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6a5a38c75212be649b3534ed0bf169d5, type: 2}
+    - target: {fileID: 3447058797830848698, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 057744679a51c8b4c8d68714a9a4a498,
+        type: 3}
+    - target: {fileID: 3606078854977148642, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606078854977148642, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006720, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_Name
+      value: Debate Storming Cloud
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006721, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006721, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5905418000239934650, guid: 961da46905de91044a2b4f4f873e172e,
+        type: 3}
+    - target: {fileID: 4915289711706006721, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 651.1794
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 651.1794
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 232.56406
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7818124
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.4799767
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.513
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05773421
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.021078471
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3375896
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.3953
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0847
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: maxES
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotion
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotionInt
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debaterName
+      value: Storming Cloud
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotionEnum
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: openingLine
+      value: The storm comes!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debaterLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: pacifiedLine
+      value: "I\u2019m feeling calmer now"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debaterDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: overloadedLine
+      value: "You can\u2019t!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotionThresholds
+      value: 
+      objectReference: {fileID: 11400000, guid: 25e42daa37f3ea5448798755c98684be,
+        type: 2}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[0]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[2]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[3]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: emotAmounts.Array.data[4]
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 912509662349270247, guid: 49fdb167889371d49a62f255e2a8e98a, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 49fdb167889371d49a62f255e2a8e98a, type: 3}

@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/QTE Test Scene.unity
     guid: db4317f7c1d35c3419d83cf8520d8962
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: fb40d2375143080439d5b79b0cba0282
   m_configObjects: {}

@@ -23,8 +23,11 @@ namespace Opponents
         private Animator _animator;
         private static readonly int EmotionInt = Animator.StringToHash("EmotionInt");
         private TextMeshPro speechBubble;
+        private AudioSource _audioSource;
         [HideInInspector] public int prevES;
         
+        [SerializeField, Tooltip("Music to play during debate")] 
+        private AudioClip debateMusic;
         [SerializeField,TextArea,Tooltip("The bark said by the opponent at the start of a debate")]
         private string openingLine;
         [SerializeField,TextArea,Tooltip("The bark said by the opponent at the end of a debate if they have been overloaded")]
@@ -42,7 +45,11 @@ namespace Opponents
         {
             _animator = GetComponent<Animator>();
             _particles = GetComponentInChildren<ParticleSystem>().main;
+           _audioSource = GetComponent<AudioSource>();
             speechBubble = GetComponentInChildren<TextMeshPro>();
+            var music = FindObjectOfType<AudioSource>();
+            music.clip = debateMusic;
+            music.Play();
             if (emotionThresholds != null)
             {
                     //myEmotions = emotionThresholds.emotions;
@@ -58,6 +65,7 @@ namespace Opponents
         public IEnumerator Speak(Stages stage)
         {
             speechBubble.text = "";
+            _audioSource.Play();
             var chars = new char[0];
             if (stage == Stages.Opening)
             {
