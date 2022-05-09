@@ -36,6 +36,7 @@ namespace System
         [SerializeField] private MoveBarsScript tranBars;
         [SerializeField] private EventSystem eventSystem;
         [SerializeField] private GameObject statsBooster;
+        [SerializeField] private LastOpponentTracker tracker;
 
         [Header("The player's HUD panel")]public DebateHUDScript playerHud;
         [Header("The opponent's HUD panel")]public DebateHUDScript opponentHud;
@@ -204,7 +205,7 @@ namespace System
                     
                     _opponentStatus = -1;
                 }
-                GameManager.areaStatuses.statuses[LastOpponent.lastOpponent] = _opponentStatus;
+                GameManager.areaStatuses.statuses[tracker.LastOpponent] = _opponentStatus;
                 state = DebateState.Won;
                 StartCoroutine(EndDebate());
             }
@@ -228,8 +229,6 @@ namespace System
             _opponentValues.CheckThreshold(_opponentValues.currentES);
             
             GameObject foe = Instantiate(enemyTurn,new Vector2(trackX,trackY),Quaternion.identity);
-            //notifyText.text +=
-            //    $" {_opponentValues.debaterName} dealt {_opponentValues.debaterDamage} points of emotional strain to you";
             eventSystem.enabled = false;
             StartCoroutine(DamageAnim(player));
             //playerHud.SetES(_playerValues);
@@ -271,9 +270,8 @@ namespace System
             }
             else if (state == DebateState.Lost)
             {
-                // _playerExp += 1;
-                notifyText.text = "You lost the debate!";
-                
+                SceneManager.LoadScene("Game Over");
+                StopCoroutine(EndDebate());
 
             }
             else

@@ -107,7 +107,7 @@ MonoBehaviour:
   infoText: {fileID: 0}
   interiorBg: {fileID: 0}
   exteriorBg: {fileID: 0}
-  lastOpponent: {fileID: 11400000, guid: fa3278b2b0b68594b896755ea8fc1ac6, type: 2}
+  tracker: {fileID: 11400000, guid: fa3278b2b0b68594b896755ea8fc1ac6, type: 2}
 --- !u!50 &7506753996847144629
 Rigidbody2D:
   serializedVersion: 4
@@ -163,4 +163,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 1.15

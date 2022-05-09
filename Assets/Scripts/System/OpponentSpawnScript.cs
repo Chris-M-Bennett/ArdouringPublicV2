@@ -21,9 +21,9 @@ namespace System
         private TextMeshPro _speech;
         [SerializeField] private GameObject sceneLoader;
         [SerializeField, Tooltip("Whether the opponent is the boss of the area")]
-        private bool isBoss;
+        public bool isBoss;
         
-        [SerializeField] private Transform _speechBubble;
+        [HideInInspector] public Transform speechBubble;
         private int defeatState = 0;
 
         private void Start()
@@ -41,11 +41,11 @@ namespace System
             GameManager.areaStatuses.statuses[id] = defeatState;
             if (defeatState > 0)
             {
-                _speechBubble = Instantiate(defeatedOpponent, transform).transform.GetChild(0);
-                _speech = _speechBubble.GetComponentInChildren<TextMeshPro>();
+                speechBubble = Instantiate(defeatedOpponent, transform).transform.GetChild(0);
+                _speech = speechBubble.GetComponentInChildren<TextMeshPro>();
                 _overworldTalk = _speech.text;
                 _speech.text = "";
-                _speechBubble.gameObject.SetActive(false);
+                speechBubble.gameObject.SetActive(false);
             }
             else if (defeatState == 0)
             {
@@ -64,7 +64,7 @@ namespace System
         }
 
         public IEnumerator Speak(){
-            _speechBubble.gameObject.SetActive(true);
+            speechBubble.gameObject.SetActive(true);
             var chars = _overworldTalk.ToCharArray();
             for (int i = 0; i < chars.Length; i++)
             {

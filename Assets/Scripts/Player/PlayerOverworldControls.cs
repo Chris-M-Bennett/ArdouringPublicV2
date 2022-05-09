@@ -20,9 +20,10 @@ namespace Player{
         [SerializeField] private Text infoText;
         [SerializeField] private Sprite interiorBg;
         [SerializeField] private Sprite exteriorBg;
-        [SerializeField] private LastOpponent lastOpponent;
+        [SerializeField] private LastOpponentTracker tracker;
 
-        private MoveBarsScript _transBars;
+        private MoveBarsScript _transBarsOut;
+        private MoveBarsScript _transBarsIn;
         private Vector2 _currentPosition;
         private bool _isRunning = false;
         private LayerMask _opponentMask;
@@ -62,8 +63,9 @@ namespace Player{
             _anim = GetComponent<Animator>();
             _rb = GetComponent<Rigidbody2D>();
             infoText.text = _moveControls;
-            _transBars = GameObject.FindWithTag("Transition Bars").GetComponent<MoveBarsScript>();
-
+            _transBarsOut = GameObject.FindWithTag("Transition Out").GetComponent<MoveBarsScript>();
+            _transBarsIn = GameObject.FindWithTag("Transition In").GetComponent<MoveBarsScript>();
+            StartCoroutine(_transBarsIn.MoveThoseBars(false));
         }
 
         private void FixedUpdate(){
@@ -109,7 +111,7 @@ namespace Player{
         private void Update()
         {
             _currentPosition = transform.position;
-            Collider2D opponentHit = Physics2D.OverlapCircle(_currentPosition, 0.8f, _opponentMask);
+            Collider2D opponentHit = Physics2D.OverlapCircle(_currentPosition, 1.2f, _opponentMask);
             if (opponentHit)
             {
                 infoOverlay.SetActive(true);
@@ -128,13 +130,15 @@ namespace Player{
                     {
                         GameManager.debateBg = exteriorBg;
                     }
-                    
-                    LastOpponent.lastOpponent = opponentHit.transform.parent.GetComponent<OpponentSpawnScript>().id;
+
+                    var opponentTransform = opponentHit.transform.parent;
+                    tracker.LastOpponent = opponentTransform.GetComponent<OpponentSpawnScript>().id;
+                    GameManager.wasBoss = opponentTransform.GetComponent<OpponentSpawnScript>().isBoss;
                     GameManager.debateOpponent = opponentHit.GetComponent<OpponentOverworldScript>().debatePrefab;
                     GameManager.overworld = SceneManager.GetActiveScene().name;
                     PlayerPrefs.SetFloat("playerXPos", _currentPosition.x);
                     PlayerPrefs.SetFloat("playerYPos", _currentPosition.y);
-                    StartCoroutine(_transBars.MoveThoseBars(true, "Debate"));
+                    StartCoroutine(_transBarsOut.MoveThoseBars(true, "Debate"));
                 }
             }
             else if (GameManager.tutorials)
@@ -156,11 +160,6 @@ namespace Player{
                     StartCoroutine(spawn.Speak());
                 }
             }
-            
-            /*if(hitOpponent != defeatedHit && hitOpponent != null)
-            {
-                hitOpponent.transform.GetChild(0).gameObject.SetActive(false);
-            }*/
         }
         
     }

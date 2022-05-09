@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
     public static GameObject debateOpponent;
+    public static int opponentID;
     public static bool wasBoss = false;
     public static OpponentOverworldStatuses areaStatuses;
     public static bool newGame = true;

@@ -24,7 +24,7 @@ namespace UI
             }
             else
             {
-                SceneManager.LoadScene("Debate");
+                SceneManager.LoadScene(scene);
             }
         }
 

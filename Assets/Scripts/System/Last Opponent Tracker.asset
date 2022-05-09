@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5589db2880c38a48945c1d25b9eedc4, type: 3}
+  m_Script: {fileID: 11500000, guid: 90dad6a4607d45c409544de69c67860d, type: 3}
   m_Name: Last Opponent Tracker
   m_EditorClassIdentifier: 

@@ -6,7 +6,6 @@ TagManager:
   tags:
   - BattleOption
   - Opponent
-  - Transition Bars
   - Bullet
   - Defeated
   - EnemyTurn
@@ -17,6 +16,9 @@ TagManager:
   - PrideQTE
   - SorrowQTE
   - BattleCanvas
+  - Transition In
+  - Transition Out
+  - Transition Bars
   layers:
   - Default
   - TransparentFX

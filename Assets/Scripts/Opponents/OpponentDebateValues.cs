@@ -77,9 +77,9 @@ namespace Opponents
             {
                 chars = pacifiedLine.ToCharArray();
             }
-            for (int i = 0; i < chars.Length; i++)
+            foreach (var t in chars)
             {
-                speechBubble.text += chars[i];
+                speechBubble.text += t;
                 yield return new WaitForSeconds(0.1f);
             }
         }

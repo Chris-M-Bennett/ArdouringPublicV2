@@ -32,11 +32,11 @@ namespace Opponents
         private static readonly int IsUp = Animator.StringToHash("IsUp");
         private static readonly int IsRight = Animator.StringToHash("IsRight");
         
-        private DirectOverworldMovementScript lastDest;
+        private DirectOverworldMovementScript _lastDest;
         public DirectOverworldMovementScript LastDest
         {
-            get { return lastDest; }
-            set { lastDest = value; }
+            get { return _lastDest; }
+            set { _lastDest = value; }
         } 
         private DirectOverworldMovementScript currentDest;
         public DirectOverworldMovementScript CurrentDest
@@ -80,7 +80,7 @@ namespace Opponents
 
         public void MoveMe(DirectOverworldMovementScript moveTo)
         {
-            lastDest = currentDest;
+            _lastDest = currentDest;
             currentDest = moveTo;
             _agent.destination = moveTo.transform.position;
         }

@@ -64,41 +64,6 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 6.266667
       objectReference: {fileID: 0}
-    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.0000186
-      objectReference: {fileID: 0}
-    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.0000186
-      objectReference: {fileID: 0}
-    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4.000037
-      objectReference: {fileID: 0}
-    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2978396957570500047, guid: e731a199acc924442a0d5fcba8122031,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2978396957570500080, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
       propertyPath: m_Size.x
@@ -125,6 +90,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laughing Cat
       objectReference: {fileID: 0}
+    - target: {fileID: 3073540072749954762, guid: e731a199acc924442a0d5fcba8122031,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ee06b9a880df346408755e2735b0378a, type: 2}
     m_RemovedComponents:
     - {fileID: 2525881679091200032, guid: e731a199acc924442a0d5fcba8122031, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e731a199acc924442a0d5fcba8122031, type: 3}

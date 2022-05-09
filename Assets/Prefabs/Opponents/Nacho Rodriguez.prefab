@@ -228,12 +228,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f8ec86f3ff4104ea5febc6e71c5e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: 
+  myName: Nacho Rodriguez
   debatePrefab: {fileID: 7033773697418524314, guid: 716ac4c789ab7af4b81a7e93192fff39,
     type: 3}
   defeatedPrefab: {fileID: 3921177481806081886, guid: 0d6828d1bed405b4d975e2f650369ad7,
     type: 3}
-  moveSpeed: 2
+  moveSpeed: 3.5
 --- !u!95 &6920100569676318921
 Animator:
   serializedVersion: 3
@@ -244,7 +244,7 @@ Animator:
   m_GameObject: {fileID: 7204403586076343282}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92c2e06f62b9b6f4e987b232cb037f9c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 16c6e741935c88b4dbd09b24c7ea882a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
