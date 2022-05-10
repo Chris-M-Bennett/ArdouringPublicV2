@@ -95,6 +95,7 @@ namespace System
 
         void Start()
         {
+            Debug.Log(GameManager.wasBoss);
             background.sprite = GameManager.debateBg;
             _playerValues = player.GetComponent<PlayerDebateValues>();
             _playerValues.currentES = PlayerPrefs.GetInt("playerES", 100);
@@ -315,11 +316,6 @@ namespace System
                 i++;
                 yield return new WaitForSeconds(0.1f);
             }
-        }
-        
-        private void ChangeStats(string emotion)
-        {
-            
         }
 
         /// <summary>

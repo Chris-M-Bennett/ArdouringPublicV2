@@ -10,20 +10,21 @@ namespace UI
     {
         [SerializeField] private GameObject overlay;
         [SerializeField] private LastOpponentTracker tracker;
-        private Text _dialogue;
+        private Text _dialogueText;
+        private string _dialogueString;
         // Start is called before the first frame update
         void Start()
         {
             if (GameManager.wasBoss)
             {
                 overlay.SetActive(true);
-                _dialogue = overlay.GetComponentInChildren<Text>();
-                _dialogue.text = "";
+                _dialogueText = overlay.GetComponentInChildren<Text>();
+                _dialogueText.text = "";
                 var areaOverloads = 0;
                 var areaPacifies = 0;
-                foreach (var status in GameManager.areaStatuses.statuses)
+                foreach (var t in GameManager.areaStatuses.statuses)
                 {
-                    switch (GameManager.areaStatuses.statuses[status])
+                    switch (t)
                     {
                         case -1:
                             areaOverloads++;
@@ -34,44 +35,45 @@ namespace UI
                     }
                 }
                 var state = GameManager.areaStatuses.statuses[tracker.LastOpponent];
-                if(areaOverloads < areaPacifies || (areaOverloads == areaPacifies && state == 1))
+                var equal = areaOverloads == areaPacifies && state == 1;
+                Debug.Log(state);
+                if(areaOverloads < areaPacifies || equal)
                 {
                     if (GameManager.overworld == SceneManager.GetSceneByBuildIndex(2).name)
                     {
-                        _dialogue.text = "Well, good for you. But do you really think this will change anything?";
+                        _dialogueString = "Well, good for you. But do you really think this will change anything?";
                     }
                     else if(GameManager.overworld == SceneManager.GetSceneByBuildIndex(3).name)
                     {
-                        _dialogue.text = "You know you can't win!";
+                        _dialogueString = "You know you can't win!";
                     }
                     else if (GameManager.overworld == SceneManager.GetSceneByBuildIndex(4).name)
                     {
-                        _dialogue.text = "How boring you are.";
+                        _dialogueString = "How boring you are.";
                     }
                     else if (GameManager.overworld == SceneManager.GetSceneByBuildIndex(5).name)
                     {
-                        _dialogue.text = "You'll soon see how pointless this is!";
+                        _dialogueString = "You'll soon see how pointless this is!";
                     }
-                }else if (areaOverloads > areaPacifies || (areaOverloads == areaPacifies && state == -1))
+                }else if (areaOverloads > areaPacifies || !equal)
                 {
                     if (GameManager.overworld == SceneManager.GetSceneByBuildIndex(2).name)
                     {
-                        _dialogue.text = "I didn't expect you to do that!";
+                        _dialogueString = "I didn't expect you to do that!";
                     }
                     else if(GameManager.overworld == SceneManager.GetSceneByBuildIndex(3).name)
                     {
-                        _dialogue.text = "You're not acting like much of a hero are you?";
+                        _dialogueString = "You're not acting like much of a hero are you?";
                     }
                     else if (GameManager.overworld == SceneManager.GetSceneByBuildIndex(4).name)
                     {
-                        _dialogue.text = "Well done! Well done!.";
+                        _dialogueString = "Well done! Well done!.";
                     }
                     else if (GameManager.overworld == SceneManager.GetSceneByBuildIndex(5).name)
                     {
-                        _dialogue.text = "You're worse than me!";
+                        _dialogueString = "You're worse than me!";
                     }
                 }
-
                 StartCoroutine(Speak());
 
             }
@@ -79,13 +81,18 @@ namespace UI
 
         private IEnumerator Speak()
         {
-            var chars = new char[0];
+            var chars = _dialogueString.ToCharArray();
             foreach (var t in chars)
             {
-                _dialogue.text += t;
+                _dialogueText.text += t;
                 yield return new WaitForSeconds(0.1f);
-            } 
-            overlay.SetActive(false);
+            }
+            if (_dialogueText.text == _dialogueString)
+            {
+                yield return new WaitForSeconds(1.5f);
+                overlay.SetActive(false);
+            }
+            
         }
     }
 }

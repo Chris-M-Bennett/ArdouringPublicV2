@@ -205,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 3669885897049525769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.768707, y: -15.021606, z: 0}
-  m_LocalScale: {x: 314.85672, y: 314.85672, z: 209.90451}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_Children:
   - {fileID: 544913055891214871}
   m_Father: {fileID: 0}
@@ -283,6 +283,7 @@ MonoBehaviour:
   emotionThresholds: {fileID: 11400000, guid: d929938b4ca64db49993452fb975a475, type: 2}
   emotionEnum: 1
   prevES: 0
+  debateMusic: {fileID: 0}
   openingLine: Nothing Can Touch Me
   overloadedLine: My Heart Is Slowing, What Have You Done?
   pacifiedLine: "That Wasn\u2019t Me"

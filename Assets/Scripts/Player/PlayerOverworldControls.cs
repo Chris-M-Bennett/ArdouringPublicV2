@@ -41,9 +41,10 @@ namespace Player{
             {
                 transform.position = startPosition;
                 PlayerPrefs.SetInt("playerES",100);
-            }else if (GameManager.movedArea)
+            }else if (GameManager.movedArea || GameManager.wasBoss)
             {
                 transform.position = enterPosition;
+                GameManager.wasBoss = false;
                 GameManager.movedArea = false;
             }else
             {

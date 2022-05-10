@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 7323635150449783097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 26.675133, y: -15.064645, z: 0}
-  m_LocalScale: {x: 369.57187, y: 369.57187, z: 246.38126}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_Children:
   - {fileID: 5819531513093139751}
   m_Father: {fileID: 0}
@@ -193,6 +193,7 @@ MonoBehaviour:
   emotionThresholds: {fileID: 11400000, guid: 6cd05e56d4deba1408eba0b702e8daa1, type: 2}
   emotionEnum: 0
   prevES: 0
+  debateMusic: {fileID: 0}
   openingLine: Well Here We Are, Let's Get Started
   overloadedLine: You Just Proved My Point, You Are Worse Than Me, I Win, Hero
   pacifiedLine: But Why, Why Help Me?

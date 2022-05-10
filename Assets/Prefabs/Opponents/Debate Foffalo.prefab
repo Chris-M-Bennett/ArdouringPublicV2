@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 5545480242492909668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 37.47788, y: -15.279839, z: 0}
-  m_LocalScale: {x: 451.5745, y: 451.5745, z: 387.06384}
+  m_LocalScale: {x: 2.7, y: 2.7, z: 1}
   m_Children:
   - {fileID: 8760740047834625146}
   m_Father: {fileID: 0}
@@ -193,6 +193,7 @@ MonoBehaviour:
   emotionThresholds: {fileID: 11400000, guid: d0b99711dc2bfdf41a0fcf56b8945fb4, type: 2}
   emotionEnum: 0
   prevES: 0
+  debateMusic: {fileID: 0}
   openingLine: "I\u2019ll Fight You If I Must"
   overloadedLine: "I Didn\u2019t Deserve This"
   pacifiedLine: Thanks, I Suppose
