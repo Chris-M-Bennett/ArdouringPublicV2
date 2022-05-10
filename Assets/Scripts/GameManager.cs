@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public static bool movedArea;
     public static bool tutorials = true;
     public static bool loadFromSave;
+    public static SaveState saveState;
+    public static bool loadFromSave;
     public static bool healed;
     public static SaveState saveState;
     public static Sprite debateBg;
