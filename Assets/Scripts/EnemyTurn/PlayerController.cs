@@ -59,7 +59,17 @@ public class PlayerController : MonoBehaviour
             currentES = maxES;
         }
         */
-        currentES = _playerValues.currentES;
+        if (GameManager.healed)
+        {
+            currentES = maxES;
+            _playerValues.currentES = currentES;
+            GameManager.healed = false;
+        }
+        else
+        {
+            currentES = _playerValues.currentES;
+        }
+        
         /*
         if (_save.healed)
         {

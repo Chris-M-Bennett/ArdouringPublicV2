@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 2155603079574153955}
   - component: {fileID: 2152042074797776739}
   - component: {fileID: 219875231389283868}
-  - component: {fileID: 4515647336569006613}
   m_Layer: 0
-  m_Name: SAVE
+  m_Name: HEAL
   m_TagString: Save
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,28 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3066a5847e4d5d342baee496b9045c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healed: 0
---- !u!50 &4515647336569006613
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813406163267127506}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &6125151527346617099
 GameObject:
   m_ObjectHideFlags: 0

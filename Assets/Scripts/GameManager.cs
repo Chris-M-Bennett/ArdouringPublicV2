@@ -7,12 +7,14 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
     public static GameObject debateOpponent;
+    public static int opponentID;
     public static bool wasBoss = false;
     public static OpponentOverworldStatuses areaStatuses;
     public static bool newGame = true;
     public static bool movedArea;
     public static bool tutorials = true;
     public static bool loadFromSave;
+    public static bool healed;
     public static SaveState saveState;
     public static Sprite debateBg;
     public static string overworld;
