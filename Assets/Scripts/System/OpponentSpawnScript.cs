@@ -30,6 +30,17 @@ namespace System
         {
             if (GameManager.areaStatuses != areaStatuses)
             {
+                /*
+                if (GameManager.loadFromSave)
+                {
+                    areaStatuses = GameManager.areaStatuses;
+                    GameManager.loadFromSave = false;
+                }
+                else
+                {
+                    GameManager.areaStatuses = areaStatuses;
+                }*/
+                //areaStatuses = GameManager.areaStatuses;
                 GameManager.areaStatuses = areaStatuses;
             }
             if (newGame)
