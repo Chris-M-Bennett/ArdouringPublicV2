@@ -14,7 +14,7 @@ public class SavePoint : MonoBehaviour
     private static DebateValuesScript _playerValues;
     private static PlayerOverworldControls _overworldPlayer;
     //private Vector2 playerPos;
-    public bool healed, loaded;
+    //public bool healed, loaded;
     //private static GameManager _gameManager;
 
     private void Start()
@@ -22,7 +22,7 @@ public class SavePoint : MonoBehaviour
         //_gameManager = GetComponent<GameManager>();
         _playerValues = GameObject.FindWithTag("Player").GetComponent<PlayerDebateValues>();
         _overworldPlayer = GameObject.FindWithTag("Player").GetComponent<PlayerOverworldControls>();
-        healed = false;
+        //healed = false;
     }
     /*
     private void OnCollisionEnter2D(Collision2D touch)
@@ -35,8 +35,17 @@ public class SavePoint : MonoBehaviour
         }
     }
     */
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        {
+            GameManager.healed = true;
+        }
+    }
+
     private void Update()
     {
+        /*
         // if (loaded)
         // {
         //     _overworldPlayer.transform.position = new Vector2(playerPos.X,playerPos.Y);
@@ -63,6 +72,6 @@ public class SavePoint : MonoBehaviour
             _overworldPlayer.transform.position = new Vector2(playerPos.X,playerPos.Y);
             //areaStatuses = JsonConvert.DeserializeObject<OpponentOverworldStatuses>(File.ReadAllText(@"c:\Users\Jake\Desktop\TestSaveFolder\saveTest.json"));
 
-        }    
+        }  */  
     }
 }
