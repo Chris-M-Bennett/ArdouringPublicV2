@@ -16,9 +16,6 @@ public class GameManager : MonoBehaviour
     public static bool loadFromSave;
     public static bool healed;
     public static SaveState saveState;
-    public static bool loadFromSave;
-    public static bool healed;
-    public static SaveState saveState;
     public static Sprite debateBg;
     public static string overworld;
     

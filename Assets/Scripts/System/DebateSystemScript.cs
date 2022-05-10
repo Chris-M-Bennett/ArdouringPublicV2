@@ -95,7 +95,6 @@ namespace System
 
         void Start()
         {
-            Debug.Log(GameManager.wasBoss);
             background.sprite = GameManager.debateBg;
             _playerValues = player.GetComponent<PlayerDebateValues>();
             _playerValues.currentES = PlayerPrefs.GetInt("playerES", 100);
