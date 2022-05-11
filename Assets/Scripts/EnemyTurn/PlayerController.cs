@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
         {
             timer += Time.deltaTime;
             //tool tip explaining the QTE
-            if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && timer >= readingTime) //button to unfreeze
+            if (/*(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) &&*/ timer >= readingTime) //button to unfreeze
             {
                 timer = 0f;
                 tutorial = false;
