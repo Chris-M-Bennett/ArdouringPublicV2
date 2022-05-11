@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Opponents;
 using TMPro;
+using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 using static GameManager;
@@ -22,6 +23,7 @@ namespace System
         [SerializeField] private GameObject sceneLoader;
         [SerializeField, Tooltip("Whether the opponent is the boss of the area")]
         public bool isBoss;
+        [SerializeField] private NullDialogueScript nullChecker;
         
         [HideInInspector] public Transform speechBubble;
         private int defeatState = 0;

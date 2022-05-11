@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5453484133013661838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.2246041, y: 135.15332, z: 0}
-  m_LocalScale: {x: 505.78986, y: 505.78986, z: 337.1932}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 9137606431292667024}
   m_Father: {fileID: 0}
@@ -107,6 +107,7 @@ MonoBehaviour:
   emotionThresholds: {fileID: 11400000, guid: e28f2a30329748840a5d227f7138a833, type: 2}
   emotionEnum: 3
   prevES: 0
+  debateMusic: {fileID: 0}
   openingLine: This Is Pointless And You Know It
   overloadedLine: "You\u2019ll Regret This"
   pacifiedLine: Maybe I Was Wrong

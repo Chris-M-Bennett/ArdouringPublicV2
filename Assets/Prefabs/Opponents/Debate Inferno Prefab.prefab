@@ -62,17 +62,17 @@ PrefabInstance:
     - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 316.08157
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 316.08157
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 210.72107
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
@@ -193,12 +193,12 @@ PrefabInstance:
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: emotAmounts.Array.size
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: emotAmounts.Array.data[0]
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}

@@ -316,11 +316,6 @@ namespace System
                 yield return new WaitForSeconds(0.1f);
             }
         }
-        
-        private void ChangeStats(string emotion)
-        {
-            
-        }
 
         /// <summary>
         /// Generates tutorial for player about opponent emotions and how other emotions effect them 

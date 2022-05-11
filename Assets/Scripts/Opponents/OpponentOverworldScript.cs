@@ -17,16 +17,13 @@ namespace Opponents
         [SerializeField, Tooltip("The speed at which the opponent should move between points")] private float moveSpeed = 2f;
 
         private SpriteRenderer _mainRenderer;
-        private Color _mainColour;
         private SpriteRenderer _otherRenderer;
-        private Color _otherColour;
         private Vector2 _currentPosition;
         private Vector2 _lastPosition;
         private Vector2 _dir;
         private Animator _anim;
         private MoveBarsScript _transBars;
         private NavMeshAgent _agent;
-        private PlayerOverworldControls _player;
         private static readonly int IsLeft = Animator.StringToHash("IsLeft");
         private static readonly int IsDown = Animator.StringToHash("IsDown");
         private static readonly int IsUp = Animator.StringToHash("IsUp");
@@ -48,11 +45,8 @@ namespace Opponents
         void Start()
         {
             _mainRenderer = GetComponent<SpriteRenderer>();
-            _mainColour = _mainRenderer.color;
             _otherRenderer = GetComponentInChildren<SpriteRenderer>();
-            _otherColour = _otherRenderer.color;
             _anim = GetComponent<Animator>();
-            _player = GameObject.FindWithTag("Player").GetComponent<PlayerOverworldControls>();
             transform.eulerAngles = Vector3.zero;
             if(GetComponent<NavMeshAgent>()){
                 _agent = GetComponent<NavMeshAgent>();

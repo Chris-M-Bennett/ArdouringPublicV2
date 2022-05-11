@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1102288556399668556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 214, y: 2.1, z: 0}
-  m_LocalScale: {x: 451.5716, y: 451.5716, z: 451.5716}
+  m_LocalScale: {x: 2.3, y: 2.3, z: 1}
   m_Children:
   - {fileID: 6785138336414534611}
   m_Father: {fileID: 0}
@@ -103,10 +103,11 @@ MonoBehaviour:
   maxES: 100
   startES: 0
   currentES: 0
-  emotAmounts: 0100000003000000010000000100000001000000
+  emotAmounts: 0200000005000000
   emotionThresholds: {fileID: 11400000, guid: 0412aaf085b5bb543a1078f0e870a166, type: 2}
   emotionEnum: 0
   prevES: 0
+  debateMusic: {fileID: 0}
   openingLine: "Don\u2019t Talk To Me"
   overloadedLine: Why?
   pacifiedLine: You Actually Helped Me
@@ -157,14 +158,14 @@ RectTransform:
   m_GameObject: {fileID: 2852356962439208377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3375, y: 6.7, z: 1}
+  m_LocalScale: {x: 1.3375, y: 5.108817, z: 1}
   m_Children: []
   m_Father: {fileID: 6785138336414534611}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.724, y: -1.47}
+  m_AnchoredPosition: {x: -1.724, y: -1.03}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1500756764778636709

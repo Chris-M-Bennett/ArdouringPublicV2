@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: emotAmounts.Array.data[4]
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1075139797127240616, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 64a4d7c7235532045ad0fc770d0d5fe6, type: 3}
     - target: {fileID: 1977881048577376066, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_Controller
@@ -113,17 +118,17 @@ PrefabInstance:
     - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 358.2181
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 358.2181
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 238.81206
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4915289711706006734, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
@@ -140,50 +145,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.8851316
-      objectReference: {fileID: 0}
-    - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4.241563
-      objectReference: {fileID: 0}
-    - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1.987
-      objectReference: {fileID: 0}
-    - target: {fileID: 5282595218653124575, guid: 49fdb167889371d49a62f255e2a8e98a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.14515208
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.047908444
-      objectReference: {fileID: 0}
-    - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.47277805
-      objectReference: {fileID: 0}
     - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.761
+      value: 0.904
       objectReference: {fileID: 0}
     - target: {fileID: 8167132502286825694, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.067
+      value: -0.596
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
@@ -200,6 +170,11 @@ PrefabInstance:
       propertyPath: emotionInt
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
+      propertyPath: debateMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 03d1af1f198daa941a00a795fab8141e, type: 3}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: debaterName
@@ -238,13 +213,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
+      propertyPath: emotAmounts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
+        type: 3}
       propertyPath: emotAmounts.Array.data[0]
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}
       propertyPath: emotAmounts.Array.data[1]
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8211629860587874396, guid: 49fdb167889371d49a62f255e2a8e98a,
         type: 3}

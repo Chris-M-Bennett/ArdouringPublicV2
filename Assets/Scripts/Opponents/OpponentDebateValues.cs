@@ -45,7 +45,7 @@ namespace Opponents
         {
             _animator = GetComponent<Animator>();
             _particles = GetComponentInChildren<ParticleSystem>().main;
-           _audioSource = GetComponent<AudioSource>();
+           _audioSource = gameObject.GetComponent<AudioSource>();
             speechBubble = GetComponentInChildren<TextMeshPro>();
             var music = FindObjectOfType<AudioSource>();
             music.clip = debateMusic;
@@ -69,7 +69,8 @@ namespace Opponents
             var chars = new char[0];
             if (stage == Stages.Opening)
             {
-                chars = openingLine.ToCharArray();
+                chars =
+                    openingLine.ToCharArray();
             }else if (stage == Stages.Overloaded)
             {
                 chars = overloadedLine.ToCharArray();;

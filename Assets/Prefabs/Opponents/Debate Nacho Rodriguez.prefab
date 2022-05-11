@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7033773697418524314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 48.108463, y: -14.892489, z: 0}
-  m_LocalScale: {x: 361.7308, y: 361.7308, z: 241.15385}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1}
   m_Children:
   - {fileID: 6124083672650476164}
   m_Father: {fileID: 0}
@@ -107,6 +107,7 @@ MonoBehaviour:
   emotionThresholds: {fileID: 11400000, guid: 354916466f0574c4d9244c886b9a32b9, type: 2}
   emotionEnum: 0
   prevES: 0
+  debateMusic: {fileID: 0}
   openingLine: You will feel my bite!
   overloadedLine: "I Can\u2019t Fight Any Longer"
   pacifiedLine: You Were Only Trying To Help Me

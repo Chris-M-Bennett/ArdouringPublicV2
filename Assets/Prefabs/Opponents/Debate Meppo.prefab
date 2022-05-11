@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 903309815852839979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 32.054985, y: -15.2368, z: 0}
-  m_LocalScale: {x: 350.4407, y: 350.4407, z: 233.62717}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1}
   m_Children:
   - {fileID: 4172819473437042741}
   m_Father: {fileID: 0}
@@ -193,6 +193,7 @@ MonoBehaviour:
   emotionThresholds: {fileID: 11400000, guid: c82aa9471ebde0448a8946790453471a, type: 2}
   emotionEnum: 1
   prevES: 0
+  debateMusic: {fileID: 0}
   openingLine: "I\u2019ll Crush You!"
   overloadedLine: I Feel Weak
   pacifiedLine: "I Didn\u2019t Want To Hurt You\r"
