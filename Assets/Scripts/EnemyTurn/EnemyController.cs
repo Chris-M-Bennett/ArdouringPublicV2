@@ -4,6 +4,7 @@ using Opponents;
 using UnityEngine;
 using Random = System.Random;
 
+
 namespace EnemyTurn{
     public class EnemyController : MonoBehaviour
     {
@@ -86,6 +87,7 @@ namespace EnemyTurn{
             timer = 0f;
             turnTimer = 0f;
             turnLimit = 10f;
+            readingTime = 5f;
             //bulletInterval = 0.33f; //0.66f;
             patternRow = 0;
             //patternString = "~~..~~~......~~..~~~......~..~~..~...~.~......~.~.~.~...~..~.....~.....~.....~.....~..........~...~...~...~........~....";

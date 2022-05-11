@@ -229,6 +229,10 @@ namespace System
             _opponentValues.CheckThreshold(_opponentValues.currentES);
             
             GameObject foe = Instantiate(enemyTurn,new Vector2(trackX,trackY),Quaternion.identity);
+            if (_opponentValues.debaterName == "Tutorial Goblin")
+            {
+                yield return new WaitForSeconds(5f);
+            }
             eventSystem.enabled = false;
             StartCoroutine(DamageAnim(player));
             //playerHud.SetES(_playerValues);

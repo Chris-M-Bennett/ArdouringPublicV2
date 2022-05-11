@@ -16,7 +16,7 @@ public class PrideQTEController : MonoBehaviour
     void Start()
     {
         timeLimit = 5f;
-        readingTime = 10f;
+        readingTime = 5f;
         timer = 0f;
         maxDist = 1.4f * 0.3f;
         stop = false;

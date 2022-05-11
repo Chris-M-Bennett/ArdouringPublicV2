@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     //public GameObject text;
     public GameObject eSbar;
     private static DebateValuesScript _playerValues;
+    private static DebateValuesScript _opponentValues;
+    private float timer, readingTime;
     //private static SavePoint _save;
     //private static EnemyController _opponent;
     //private int opponentDamage;
@@ -33,6 +35,7 @@ public class PlayerController : MonoBehaviour
     //public GameObject dss;
     //public int debateES;
     // Start is called before the first frame update
+    private bool tutorial;
     void Start()
     {
         posX = -3.25f;
@@ -59,6 +62,19 @@ public class PlayerController : MonoBehaviour
             currentES = maxES;
         }
         */
+        _opponentValues = GameObject.FindWithTag("Opponent").GetComponent<DebateValuesScript>();
+        //Debug.Log("Opponent: " + _opponentValues.debaterName);
+        if (_opponentValues.debaterName == "Tutorial Goblin")
+        {
+            tutorial = true;
+        }
+        else
+        {
+            tutorial = false;
+        }
+
+        readingTime = 5f;
+        
         if (GameManager.healed)
         {
             currentES = maxES;
@@ -100,18 +116,32 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentES > 0)
+        if (!tutorial)
         {
-            HandleStrafe();
+            if (currentES > 0)
+            {
+                HandleStrafe();
+            }
+            else
+            {
+                if (quitTimer == 0)
+                {
+                    //GameObject note = Instantiate(text,new Vector2(2f,0f),Quaternion.identity);
+                    //Debug.Log("Game Over");
+                }
+
+                //GameOver();
+            }
         }
         else
         {
-            if (quitTimer == 0)
+            timer += Time.deltaTime;
+            //tool tip explaining the QTE
+            if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return)) && timer >= readingTime) //button to unfreeze
             {
-                //GameObject note = Instantiate(text,new Vector2(2f,0f),Quaternion.identity);
-                //Debug.Log("Game Over");
+                timer = 0f;
+                tutorial = false;
             }
-            //GameOver();
         }
     }
 

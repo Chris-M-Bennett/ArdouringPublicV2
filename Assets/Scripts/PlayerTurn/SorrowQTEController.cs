@@ -17,7 +17,7 @@ public class SorrowQTEController : MonoBehaviour
     void Start()
     {
         timeLimit = 5f;
-        readingTime = 10f;
+        readingTime = 5f;
         timer = 0f;
         speed = 1.2f;
         cloudSpeed = 0.9f;

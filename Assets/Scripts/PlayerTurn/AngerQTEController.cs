@@ -19,7 +19,7 @@ public class AngerQTEController : MonoBehaviour
     void Start()
     {
         timeLimit = 5f;
-        readingTime = 10f;
+        readingTime = 5f;
         timer = 0f;
         upForce = 6f;
         dropSpeed = 0.3f;

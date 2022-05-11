@@ -17,7 +17,7 @@ public class FearQTEController : MonoBehaviour
     void Start()
     {
         timeLimit = 5f;
-        readingTime = 10f;
+        readingTime = 5f;
         timer = 0f;
         speed = 1f;
         barSpeed = 1f;

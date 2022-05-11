@@ -21,7 +21,7 @@ PrefabInstance:
         type: 3}
       propertyPath: debatePrefab
       value: 
-      objectReference: {fileID: 9147995396798684574, guid: 3516828ff896b1244920a519b593cc80,
+      objectReference: {fileID: 5741046370755563971, guid: fe3e13fcbb713fe4683ce30c13600a09,
         type: 3}
     - target: {fileID: 2978396957570500044, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}
@@ -148,7 +148,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8a476ff36fb159647a83bf988dc83691,
+      objectReference: {fileID: 21300000, guid: 5d3c4167c66fc2d4ab60fe67cc06dba3,
         type: 3}
     - target: {fileID: 2978396957570500080, guid: e731a199acc924442a0d5fcba8122031,
         type: 3}

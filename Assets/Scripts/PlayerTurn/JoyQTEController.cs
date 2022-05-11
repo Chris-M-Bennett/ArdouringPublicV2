@@ -19,7 +19,7 @@ public class JoyQTEController : MonoBehaviour
     void Start()
     {
         timeLimit = 5f;
-        readingTime = 10f;
+        readingTime = 5f;
         timer = 0f;
         slottedWedgeCount = 0f;
         _marker = GetComponent<JoyQTEController>();
